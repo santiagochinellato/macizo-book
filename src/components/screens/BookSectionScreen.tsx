@@ -17,7 +17,6 @@ import type {
 } from "@/types/presentation";
 
 type LucideIconName = keyof typeof LucideIcons;
-
 type ColSpan = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 
 function spanToCols(span: CardSpan | undefined): { colSpan: ColSpan; colSpanSm: ColSpan } {
@@ -30,6 +29,17 @@ function spanToCols(span: CardSpan | undefined): { colSpan: ColSpan; colSpanSm: 
   }
 }
 
+/** Aspect ratio for image cards based on their span */
+function spanToAspect(span: CardSpan | undefined): string {
+  switch (span) {
+    case "1x1":  return "aspect-[4/3]";
+    case "half": return "aspect-[4/3]";
+    case "2x1":  return "aspect-[16/9]";
+    case "3x1":  return "aspect-[21/9]";
+    default:     return "aspect-[4/3]";
+  }
+}
+
 // ─── Sub-card components ──────────────────────────────────────────────────────
 
 function DynamicIcon({ name, size = 20 }: { name: string; size?: number }) {
@@ -38,78 +48,93 @@ function DynamicIcon({ name, size = 20 }: { name: string; size?: number }) {
   return <Icon size={size} />;
 }
 
-interface ImageCardProps { card: ImageBookCard }
-
-function ImageCardContent({ card }: ImageCardProps) {
+// Image card — fills the entire BentoCard. Caption and badge are overlays.
+function ImageCardContent({ card }: { card: ImageBookCard }) {
+  const aspectClass = spanToAspect(card.span);
   return (
-    <div className="flex flex-col gap-0 h-full">
-      <div
-        className="relative w-full overflow-hidden rounded-[var(--radius-md)] flex-1"
-        style={{ minHeight: 180 }}
-      >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={card.src}
-          alt={card.alt}
-          className="w-full h-full object-cover"
-          style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }}
-        />
-        {card.badge && (
-          <div
-            className="absolute top-2.5 left-2.5 px-2 py-0.5 rounded text-[10px] font-semibold uppercase tracking-wider"
-            style={{
-              background: "var(--primary)",
-              color: "#fff",
-            }}
-          >
-            {card.badge}
-          </div>
-        )}
-      </div>
-      {card.caption && (
-        <p
-          className="text-xs mt-2.5 leading-relaxed"
-          style={{ color: "var(--text-muted)" }}
+    <div className={`relative w-full overflow-hidden ${aspectClass}`}>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={card.src}
+        alt={card.alt}
+        style={{
+          position: "absolute",
+          inset: 0,
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          display: "block",
+        }}
+      />
+
+      {/* Badge — top left */}
+      {card.badge && (
+        <div
+          className="absolute top-3 left-3 px-2 py-0.5 text-[9px] font-bold uppercase tracking-widest"
+          style={{
+            background: "var(--primary)",
+            color: "#fff",
+            borderRadius: "var(--radius-sm)",
+          }}
         >
-          {card.caption}
-        </p>
+          {card.badge}
+        </div>
+      )}
+
+      {/* Caption — bottom gradient overlay */}
+      {card.caption && (
+        <div
+          className="absolute bottom-0 left-0 right-0 px-4 py-3"
+          style={{
+            background: "linear-gradient(to top, rgba(15,23,42,0.75) 0%, transparent 100%)",
+          }}
+        >
+          <p className="text-xs font-medium leading-snug" style={{ color: "rgba(255,255,255,0.92)" }}>
+            {card.caption}
+          </p>
+        </div>
       )}
     </div>
   );
 }
 
-interface WireframeCardProps { card: WireframeBookCard }
-
-function WireframeCardContent({ card }: WireframeCardProps) {
+// Wireframe card — technical treatment with high min-height
+function WireframeCardContent({ card }: { card: WireframeBookCard }) {
   return (
     <div className="flex flex-col gap-3 h-full">
-      {/* Wireframe image container — light technical treatment */}
       <div
-        className="relative w-full overflow-hidden rounded-[var(--radius-md)] flex-1"
+        className="relative w-full overflow-hidden flex-1"
         style={{
-          minHeight: 180,
+          minHeight: 220,
           background: "#f4f4f8",
-          border: "1px dashed #d1d1dc",
+          border: "1px solid #d1d1dc",
+          borderRadius: "var(--radius-sm)",
         }}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={card.src}
           alt={card.alt}
-          className="w-full h-full object-contain p-2"
-          style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }}
+          style={{
+            position: "absolute",
+            inset: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            objectPosition: "top",
+          }}
         />
         <div
-          className="absolute top-2.5 left-2.5 px-2 py-0.5 rounded text-[10px] font-semibold uppercase tracking-wider"
+          className="absolute top-2.5 left-2.5 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-widest"
           style={{
-            background: "rgba(10,37,64,0.08)",
+            background: "rgba(26,92,56,0.12)",
             color: "var(--primary)",
+            borderRadius: "var(--radius-sm)",
           }}
         >
-          Wireframe
+          Propuesta UI
         </div>
       </div>
-      {/* Label */}
       <div className="flex flex-col gap-0.5">
         <span className="text-sm font-semibold" style={{ color: "var(--text-primary)" }}>
           {card.title}
@@ -124,9 +149,8 @@ function WireframeCardContent({ card }: WireframeCardProps) {
   );
 }
 
-interface TextCardProps { card: TextBookCard }
-
-function TextCardContent({ card }: TextCardProps) {
+// Text card
+function TextCardContent({ card }: { card: TextBookCard }) {
   return (
     <div
       className="flex flex-col gap-3 h-full"
@@ -138,22 +162,16 @@ function TextCardContent({ card }: TextCardProps) {
     >
       {card.eyebrow && (
         <span
-          className="text-[10px] font-semibold uppercase tracking-widest"
+          className="text-[9px] font-bold uppercase tracking-widest"
           style={{ color: "var(--primary)" }}
         >
           {card.eyebrow}
         </span>
       )}
-      <h3
-        className="text-base sm:text-lg font-bold leading-snug"
-        style={{ color: "var(--text-primary)" }}
-      >
+      <h3 className="text-base sm:text-lg font-bold leading-snug" style={{ color: "var(--text-primary)" }}>
         {card.heading}
       </h3>
-      <p
-        className="text-sm leading-relaxed"
-        style={{ color: "var(--text-muted)" }}
-      >
+      <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
         {card.body}
       </p>
       {card.bullets && card.bullets.length > 0 && (
@@ -161,13 +179,11 @@ function TextCardContent({ card }: TextCardProps) {
           {card.bullets.map((b, i) => (
             <li key={i} className="flex items-start gap-2">
               <span
-                className="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0"
-                style={{ background: "var(--primary)", opacity: 0.6 }}
+                className="mt-[5px] w-1.5 h-1.5 rounded-full flex-shrink-0"
+                style={{ background: "var(--primary)" }}
                 aria-hidden="true"
               />
-              <span className="text-xs leading-relaxed" style={{ color: "var(--text-muted)" }}>
-                {b}
-              </span>
+              <span className="text-xs leading-relaxed" style={{ color: "var(--text-muted)" }}>{b}</span>
             </li>
           ))}
         </ul>
@@ -176,20 +192,20 @@ function TextCardContent({ card }: TextCardProps) {
   );
 }
 
-interface MetricCardProps { card: MetricBookCard }
-
-function MetricCardContent({ card }: MetricCardProps) {
+// Metric card
+function MetricCardContent({ card }: { card: MetricBookCard }) {
   return (
-    <div className="flex flex-col gap-3 h-full justify-between">
+    <div className="flex flex-col gap-4 h-full justify-between">
       {card.icon && (
         <div
-          className="flex items-center justify-center w-10 h-10 rounded-xl flex-shrink-0"
+          className="flex items-center justify-center w-9 h-9 flex-shrink-0"
           style={{
-            background: "color-mix(in srgb, var(--primary) 10%, transparent)",
+            background: "rgba(26,92,56,0.08)",
             color: "var(--primary)",
+            borderRadius: "var(--radius-md)",
           }}
         >
-          <DynamicIcon name={card.icon} size={18} />
+          <DynamicIcon name={card.icon} size={17} />
         </div>
       )}
       <div className="flex flex-col gap-0.5">
@@ -199,7 +215,7 @@ function MetricCardContent({ card }: MetricCardProps) {
         >
           {card.value}
         </span>
-        <span className="text-xs font-semibold uppercase tracking-wider" style={{ color: "var(--text-subtle)" }}>
+        <span className="text-[10px] font-bold uppercase tracking-widest mt-1" style={{ color: "var(--text-subtle)" }}>
           {card.label}
         </span>
       </div>
@@ -228,22 +244,18 @@ function renderCard(card: BookCard, i: number, reduced: boolean | null) {
     >
       <motion.div
         variants={reduced ? undefined : fadeUp}
-        className={card.type === "image" ? "h-full" : "h-full"}
+        className="h-full"
       >
-        {card.type === "image" && (
-          <div className="p-4 h-full flex flex-col">
-            <ImageCardContent card={card} />
-          </div>
-        )}
+        {card.type === "image"    && <ImageCardContent    card={card} />}
         {card.type === "wireframe" && <WireframeCardContent card={card} />}
-        {card.type === "text" && <TextCardContent card={card} />}
-        {card.type === "metric" && <MetricCardContent card={card} />}
+        {card.type === "text"     && <TextCardContent     card={card} />}
+        {card.type === "metric"   && <MetricCardContent   card={card} />}
       </motion.div>
     </BentoCard>
   );
 }
 
-// ─── Main component ───────────────────────────────────────────────────────────
+// ─── Main screen ─────────────────────────────────────────────────────────────
 
 interface BookSectionScreenProps {
   data: BookSectionScreenData;
@@ -271,11 +283,11 @@ export function BookSectionScreen({ data }: BookSectionScreenProps) {
           <div className="flex items-center gap-2">
             <span
               className="block flex-shrink-0"
-              style={{ width: 16, height: 2, background: "var(--primary)", borderRadius: 99 }}
+              style={{ width: 14, height: 2, background: "var(--primary)", borderRadius: 0 }}
               aria-hidden="true"
             />
             <span
-              className="text-[10px] font-semibold uppercase tracking-widest"
+              className="text-[9px] font-bold uppercase tracking-widest"
               style={{ color: "var(--primary)" }}
             >
               {data.title}
@@ -288,7 +300,6 @@ export function BookSectionScreen({ data }: BookSectionScreenProps) {
           )}
         </motion.div>
 
-        {/* Bento grid of cards */}
         <BentoGrid>
           {data.cards.map((card, i) => renderCard(card, i, reduced))}
         </BentoGrid>

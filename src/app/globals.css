@@ -1,60 +1,56 @@
 @import "tailwindcss";
 
 :root {
-  /* Surfaces */
-  --surface-bg: #f7f7f9;
-  --surface-card: #ffffff;
+  /* ─── Surfaces — white is the protagonist ─── */
+  --surface-bg: #f8fafc;        /* very light slate — creates card lift */
+  --surface-card: #ffffff;      /* white cards on subtle bg */
   --surface-panel: #ffffff;
   --surface-elevated: #ffffff;
-  --surface-overlay: rgba(247, 247, 249, 0.96);
+  --surface-overlay: rgba(248, 250, 252, 0.96);
 
-  /* Text */
-  --text-primary: #141417;
-  --text-muted: #6b7280;
-  --text-subtle: #9ca3af;
+  /* ─── Text ─── */
+  --text-primary: #0f172a;      /* slate-900 — deep navy, not pure black */
+  --text-muted: #64748b;        /* slate-500 */
+  --text-subtle: #94a3b8;       /* slate-400 */
   --text-inverted: #ffffff;
 
-  /* Accent / Brand — Navy Stripe style */
-  --primary: #0a2540;
-  --primary-hover: #0d2f4f;
-  --primary-light: #4c6a92;
-  --primary-glow: rgba(10, 37, 64, 0.07);
-  --primary-glow-strong: rgba(10, 37, 64, 0.13);
+  /* ─── MacizoDigital brand accent — Forest Green ─── */
+  --primary: #1a5c38;           /* deep forest green — light-primary */
+  --primary-hover: #145030;
+  --primary-light: #22c55e;     /* holographic-dim — mid green */
+  --accent: #4ade80;            /* holographic — bright lime, use sparingly */
+  --primary-glow: rgba(26, 92, 56, 0.07);
+  --primary-glow-strong: rgba(26, 92, 56, 0.13);
 
-  /* State colors */
-  --success: #059669;
+  /* ─── State colors ─── */
+  --success: #1a5c38;
   --warning: #d97706;
   --danger: #dc2626;
-  --success-glow: rgba(5, 150, 105, 0.1);
 
-  /* Borders */
-  --border: #eaeaf0;
-  --border-strong: #d1d1dc;
-  --border-focus: rgba(10, 37, 64, 0.4);
+  /* ─── Borders ─── */
+  --border: #e2e8f0;            /* slate-200 */
+  --border-strong: #cbd5e1;     /* slate-300 */
+  --border-focus: rgba(26, 92, 56, 0.45);
 
-  /* Sidebar */
+  /* ─── Layout ─── */
   --sidebar-width: 240px;
   --sidebar-collapsed: 64px;
 
-  /* Radius */
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 14px;
-  --radius-xl: 18px;
+  /* ─── Border radius — sharp / architectural ─── */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 6px;
+  --radius-xl: 8px;
 
-  /* Shadows — micro-shadows for depth, no glow */
+  /* ─── Shadows ─── */
   --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
-  --shadow-card-hover: 0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.04);
+  --shadow-card-hover: 0 4px 14px rgba(0, 0, 0, 0.09), 0 2px 4px rgba(0, 0, 0, 0.04);
   --shadow-elevated: 0 8px 24px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   background: var(--surface-bg);
@@ -65,24 +61,14 @@ body {
 }
 
 ::selection {
-  background: rgba(10, 37, 64, 0.1);
+  background: rgba(26, 92, 56, 0.12);
   color: var(--text-primary);
 }
 
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.12);
-  border-radius: 99px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, 0.2);
-}
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(0, 0, 0, 0.1); border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(0, 0, 0, 0.18); }
 
 @media (prefers-reduced-motion: reduce) {
   * {

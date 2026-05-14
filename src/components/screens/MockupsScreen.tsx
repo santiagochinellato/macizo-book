@@ -205,22 +205,26 @@ export function MockupsScreen({ data }: MockupsScreenProps) {
           animate="visible"
         >
           <div className="flex flex-col gap-1">
-            <span
-              className="text-[10px] font-semibold uppercase tracking-widest"
-              style={{ color: "var(--primary)" }}
-            >
-              Portfolio
-            </span>
+            <div className="flex items-center gap-2">
+              <span
+                className="block flex-shrink-0"
+                style={{ width: 14, height: 2, background: "var(--primary)", borderRadius: 0 }}
+                aria-hidden="true"
+              />
+              <span className="text-[9px] font-bold uppercase tracking-widest" style={{ color: "var(--primary)" }}>
+                Portfolio
+              </span>
+            </div>
             <h1
               className="font-bold"
               style={{ fontSize: "clamp(20px, 3vw, 32px)", color: "var(--text-primary)" }}
             >
-              Trabajos realizados
+              Visión Final
             </h1>
           </div>
 
           <motion.div
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3"
             variants={reduced ? undefined : stagger}
             initial="hidden"
             animate="visible"
@@ -230,10 +234,12 @@ export function MockupsScreen({ data }: MockupsScreenProps) {
                 key={image.id}
                 layoutId={`mockup-${image.id}`}
                 variants={reduced ? undefined : scaleIn}
-                className="group relative overflow-hidden rounded-[var(--radius-lg)] cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)] aspect-video"
+                className="group relative overflow-hidden cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)] aspect-[4/3]"
                 style={{
                   background: "var(--surface-card)",
                   border: "1px solid var(--border)",
+                  borderRadius: "var(--radius-md)",
+                  boxShadow: "var(--shadow-card)",
                 }}
                 onClick={() => setSelectedId(image.id)}
                 aria-label={`Ver imagen: ${image.alt}`}
@@ -241,9 +247,9 @@ export function MockupsScreen({ data }: MockupsScreenProps) {
                   reduced
                     ? undefined
                     : {
-                        borderColor: "color-mix(in srgb, var(--primary) 40%, var(--border))",
-                        boxShadow: "0 0 24px var(--primary-glow)",
-                        transition: { duration: 0.2 },
+                        boxShadow: "var(--shadow-card-hover)",
+                        borderColor: "color-mix(in srgb, var(--primary) 30%, var(--border))",
+                        transition: { duration: 0.15 },
                       }
                 }
                 transition={{ type: "spring", damping: 30, stiffness: 300 }}

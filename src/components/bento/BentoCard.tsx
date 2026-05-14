@@ -79,18 +79,17 @@ export function BentoCard({
       )}
       style={{
         background: "var(--surface-card)",
-        border: highlight
-          ? "1px solid color-mix(in srgb, var(--primary) 25%, var(--border))"
-          : "1px solid var(--border)",
-        boxShadow: highlight ? "var(--shadow-card), inset 0 0 0 1px var(--primary-glow-strong)" : "var(--shadow-card)",
+        border: "1px solid var(--border)",
+        borderLeft: highlight ? "3px solid var(--primary)" : "1px solid var(--border)",
+        boxShadow: "var(--shadow-card)",
       }}
       whileHover={
         reduced || !onClick
           ? undefined
           : {
               boxShadow: "var(--shadow-card-hover)",
-              borderColor: "color-mix(in srgb, var(--primary) 20%, var(--border))",
-              transition: { duration: 0.18 },
+              borderColor: "color-mix(in srgb, var(--primary) 25%, var(--border))",
+              transition: { duration: 0.15 },
             }
       }
       onClick={onClick}

@@ -92,22 +92,35 @@ export function OverviewScreen({ data, meta, client, agency }: OverviewScreenPro
           {/* Hero image — full width, if provided */}
           {data.heroImage && (
             <BentoCard colSpan={12} noPadding>
-              <motion.div variants={reduced ? undefined : fadeUp} className="relative w-full overflow-hidden rounded-[var(--radius-lg)]" style={{ minHeight: 220 }}>
+              <motion.div
+                variants={reduced ? undefined : fadeUp}
+                className="relative w-full overflow-hidden"
+                style={{ aspectRatio: "21/9", minHeight: 200 }}
+              >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={data.heroImage.src}
                   alt={data.heroImage.alt}
-                  className="w-full h-full object-cover"
-                  style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }}
+                  style={{
+                    position: "absolute", inset: 0,
+                    width: "100%", height: "100%",
+                    objectFit: "cover", objectPosition: "center 30%",
+                  }}
                 />
                 <div
                   className="absolute inset-0"
-                  style={{ background: "linear-gradient(to top, rgba(10,37,64,0.55) 0%, transparent 60%)" }}
+                  style={{ background: "linear-gradient(to top, rgba(15,23,42,0.68) 0%, transparent 55%)" }}
                   aria-hidden="true"
                 />
                 {data.heroImage.caption && (
-                  <div className="absolute bottom-0 left-0 right-0 p-4">
-                    <span className="text-sm font-semibold text-white drop-shadow">{data.heroImage.caption}</span>
+                  <div className="absolute bottom-0 left-0 right-0 px-5 py-4">
+                    <div
+                      className="inline-block px-2 py-0.5 text-[9px] font-bold uppercase tracking-widest mb-1.5"
+                      style={{ background: "var(--primary)", color: "#fff", borderRadius: "var(--radius-sm)" }}
+                    >
+                      Visión
+                    </div>
+                    <p className="text-sm font-semibold text-white leading-snug">{data.heroImage.caption}</p>
                   </div>
                 )}
               </motion.div>
@@ -118,7 +131,7 @@ export function OverviewScreen({ data, meta, client, agency }: OverviewScreenPro
           <BentoCard colSpan={12} colSpanSm={8}>
             <motion.div variants={reduced ? undefined : fadeUp} className="flex flex-col gap-3 h-full">
               <span
-                className="text-[10px] font-semibold uppercase tracking-widest"
+                className="text-[9px] font-bold uppercase tracking-widest"
                 style={{ color: "var(--primary)" }}
               >
                 Visión
@@ -139,12 +152,12 @@ export function OverviewScreen({ data, meta, client, agency }: OverviewScreenPro
               className="flex flex-col gap-2 h-full justify-between"
             >
               <div className="flex flex-col gap-1">
-                <span
-                  className="text-[10px] font-semibold uppercase tracking-widest"
-                  style={{ color: "var(--text-subtle)" }}
-                >
-                  Inversión total
-                </span>
+              <span
+                className="text-[9px] font-bold uppercase tracking-widest"
+                style={{ color: "var(--text-subtle)" }}
+              >
+                Inversión total
+              </span>
                 <div
                   className="text-3xl sm:text-4xl font-bold tabular-nums"
                   style={{ color: "var(--primary)", lineHeight: 1.1 }}
