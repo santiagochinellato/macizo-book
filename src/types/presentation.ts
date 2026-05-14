@@ -57,6 +57,7 @@ export interface OverviewScreenData {
   vision: string;
   objectives: OverviewObjective[];
   totalPrice: number;
+  heroImage?: { src: string; alt: string; caption?: string };
 }
 
 export interface TimelinePhase {
@@ -125,9 +126,61 @@ export interface MockupsScreenData {
   images: MockupImage[];
 }
 
+// ─── Book-section card types ───────────────────────────────────────────────────
+
+/** 1x1 = 4 cols · half = 6 cols · 2x1 = 8 cols · 3x1 = 12 cols (full) */
+export type CardSpan = "1x1" | "half" | "2x1" | "3x1";
+
+export interface ImageBookCard {
+  type: "image";
+  src: string;
+  alt: string;
+  caption?: string;
+  /** Short badge shown over the image, e.g. "Sitio actual" or "Render fotorrealista" */
+  badge?: string;
+  span?: CardSpan;
+}
+
+export interface WireframeBookCard {
+  type: "wireframe";
+  src: string;
+  alt: string;
+  title: string;
+  description?: string;
+  span?: CardSpan;
+}
+
+export interface TextBookCard {
+  type: "text";
+  eyebrow?: string;
+  heading: string;
+  body: string;
+  span?: CardSpan;
+  /** Renders with navy accent border */
+  accent?: boolean;
+  bullets?: string[];
+}
+
+export interface MetricBookCard {
+  type: "metric";
+  value: string;
+  label: string;
+  description?: string;
+  icon?: string;
+  span?: CardSpan;
+}
+
+export type BookCard = ImageBookCard | WireframeBookCard | TextBookCard | MetricBookCard;
+
+export interface BookSectionScreenData {
+  title: string;
+  subtitle?: string;
+  cards: BookCard[];
+}
+
 // ─── Screen union ──────────────────────────────────────────────────────────────
 
-export type ScreenType = "overview" | "roadmap" | "product" | "pricing" | "mockups";
+export type ScreenType = "overview" | "roadmap" | "product" | "pricing" | "mockups" | "book-section";
 
 export interface OverviewScreen {
   id: string;
@@ -169,12 +222,21 @@ export interface MockupsScreen {
   data: MockupsScreenData;
 }
 
+export interface BookSectionScreen {
+  id: string;
+  type: "book-section";
+  enabled: boolean;
+  label?: string;
+  data: BookSectionScreenData;
+}
+
 export type Screen =
   | OverviewScreen
   | RoadmapScreen
   | ProductScreen
   | PricingScreen
-  | MockupsScreen;
+  | MockupsScreen
+  | BookSectionScreen;
 
 // ─── Root config ───────────────────────────────────────────────────────────────
 

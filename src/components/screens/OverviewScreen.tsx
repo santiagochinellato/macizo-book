@@ -89,6 +89,31 @@ export function OverviewScreen({ data, meta, client, agency }: OverviewScreenPro
         </motion.div>
 
         <BentoGrid>
+          {/* Hero image — full width, if provided */}
+          {data.heroImage && (
+            <BentoCard colSpan={12} noPadding>
+              <motion.div variants={reduced ? undefined : fadeUp} className="relative w-full overflow-hidden rounded-[var(--radius-lg)]" style={{ minHeight: 220 }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={data.heroImage.src}
+                  alt={data.heroImage.alt}
+                  className="w-full h-full object-cover"
+                  style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }}
+                />
+                <div
+                  className="absolute inset-0"
+                  style={{ background: "linear-gradient(to top, rgba(10,37,64,0.55) 0%, transparent 60%)" }}
+                  aria-hidden="true"
+                />
+                {data.heroImage.caption && (
+                  <div className="absolute bottom-0 left-0 right-0 p-4">
+                    <span className="text-sm font-semibold text-white drop-shadow">{data.heroImage.caption}</span>
+                  </div>
+                )}
+              </motion.div>
+            </BentoCard>
+          )}
+
           {/* Vision card — 8 cols */}
           <BentoCard colSpan={12} colSpanSm={8}>
             <motion.div variants={reduced ? undefined : fadeUp} className="flex flex-col gap-3 h-full">

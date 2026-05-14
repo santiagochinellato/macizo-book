@@ -2,7 +2,7 @@
   "slug": "ciudad-oeste",
   "version": 2,
   "theme": {
-    "accentColor": "#0070f3"
+    "accentColor": "#0a2540"
   },
   "agency": {
     "name": "MacizoDigital",
@@ -29,8 +29,8 @@
   "meta": {
     "type": "presupuesto",
     "number": "2026-010",
-    "title": "Sitio Web Institucional",
-    "subtitle": "Diseño, desarrollo y estrategia digital",
+    "title": "Transformación Digital Ciudad Oeste",
+    "subtitle": "Diseño, desarrollo y estrategia de experiencia digital",
     "date": "2026-05-14",
     "validUntil": "2026-06-14",
     "status": "enviado",
@@ -42,20 +42,25 @@
       "id": "overview",
       "type": "overview",
       "enabled": true,
-      "label": "Resumen",
+      "label": "Visión General",
       "data": {
-        "headline": "Sitio Web Institucional para Ciudad Oeste",
-        "vision": "Ciudad Oeste necesita una presencia digital que refleje su nivel de atención médica y genere confianza antes de que el paciente pise la clínica. La primera consulta hoy ocurre en Google — hay que estar ahí con autoridad.",
+        "headline": "De clínica a destino digital de confianza",
+        "vision": "Ciudad Oeste tiene la calidad médica de una institución de primer nivel. Pero su presencia digital no lo refleja. Esta propuesta transforma ese gap en ventaja competitiva: un sitio que genera confianza antes de la primera consulta, convierte buscadores en pacientes y posiciona la marca en Google desde el día uno.",
+        "heroImage": {
+          "src": "/portfolio/ciudad-oeste/render.jpg",
+          "alt": "Render arquitectónico Ciudad Oeste Centro Médico",
+          "caption": "Ciudad Oeste — La identidad física que el digital debe reflejar"
+        },
         "objectives": [
           {
             "icon": "Globe",
-            "title": "Presencia digital sólida",
-            "description": "Sitio web optimizado para conversión y búsquedas locales en Bariloche."
+            "title": "Presencia digital de primer nivel",
+            "description": "Sitio web que refleja la calidad institucional y genera confianza antes de la consulta."
           },
           {
-            "icon": "Shield",
-            "title": "SEO desde el día uno",
-            "description": "Estructura semántica, schema.org para salud y Google Business optimizado."
+            "icon": "Search",
+            "title": "SEO local dominante",
+            "description": "Estructura semántica, schema.org para salud y Google Business optimizado en Bariloche."
           },
           {
             "icon": "Zap",
@@ -65,10 +70,147 @@
           {
             "icon": "Users",
             "title": "Experiencia del paciente",
-            "description": "Flujo de contacto claro, turnos y ubicación accesibles en 2 clics."
+            "description": "Flujo de contacto, turnos y especialidades accesibles en 2 clics desde mobile."
           }
         ],
         "totalPrice": 2600
+      }
+    },
+    {
+      "id": "diagnostico",
+      "type": "book-section",
+      "enabled": true,
+      "label": "Diagnóstico",
+      "data": {
+        "title": "Diagnóstico Digital",
+        "subtitle": "Análisis del estado actual — el punto de partida de la transformación",
+        "cards": [
+          {
+            "type": "text",
+            "eyebrow": "El problema",
+            "heading": "El sitio actual no convierte ni posiciona",
+            "body": "El sitio web de Ciudad Oeste tiene un diseño desactualizado, sin optimización SEO, sin estructura semántica, y con una experiencia mobile deficiente. En un contexto donde el 70% de las búsquedas de salud se hacen desde el celular, esto representa una pérdida directa de pacientes.",
+            "span": "2x1",
+            "accent": true,
+            "bullets": [
+              "Diseño no responsive — se rompe en mobile",
+              "Sin meta tags ni schema.org para salud",
+              "Velocidad de carga superior a 5 segundos",
+              "Sin CTA claro para contacto o turnos",
+              "Navegación confusa — especialidades difíciles de encontrar"
+            ]
+          },
+          {
+            "type": "metric",
+            "value": "5.2s",
+            "label": "Tiempo de carga actual",
+            "description": "Google penaliza sitios que cardan más de 3s. El objetivo es < 1.5s.",
+            "icon": "Timer",
+            "span": "1x1"
+          },
+          {
+            "type": "image",
+            "src": "/portfolio/ciudad-oeste/current/home.jpg",
+            "alt": "Captura del home actual de Ciudad Oeste",
+            "caption": "Home actual — diseño desactualizado sin jerarquía visual clara",
+            "badge": "Estado actual",
+            "span": "half"
+          },
+          {
+            "type": "image",
+            "src": "/portfolio/ciudad-oeste/current/especialidades.jpg",
+            "alt": "Página de especialidades actual",
+            "caption": "Especialidades — información crítica difícil de encontrar en mobile",
+            "badge": "Estado actual",
+            "span": "half"
+          },
+          {
+            "type": "image",
+            "src": "/portfolio/ciudad-oeste/current/contacto.jpg",
+            "alt": "Página de contacto actual",
+            "caption": "Contacto — sin formulario optimizado ni CTA de WhatsApp",
+            "badge": "Estado actual",
+            "span": "1x1"
+          },
+          {
+            "type": "text",
+            "eyebrow": "La oportunidad",
+            "heading": "Cada problema es una palanca de crecimiento",
+            "body": "Cada debilidad identificada es una oportunidad concreta. Un sitio nuevo, bien construido, puede triplicar el tiempo en sesión, duplicar las consultas por contacto y posicionar a Ciudad Oeste en las primeras posiciones de Google en Bariloche.",
+            "span": "2x1",
+            "bullets": [
+              "Rediseño mobile-first con UX orientada a conversión",
+              "SEO técnico + schema.org para organizaciones de salud",
+              "Integración directa de WhatsApp y formulario de turnos",
+              "CMS autogestionable para actualizar especialidades"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "arquitectura",
+      "type": "book-section",
+      "enabled": true,
+      "label": "Arquitectura",
+      "data": {
+        "title": "Arquitectura de la Experiencia",
+        "subtitle": "Los wireframes que definen el nuevo flujo de información y conversión",
+        "cards": [
+          {
+            "type": "wireframe",
+            "src": "/portfolio/ciudad-oeste/wireframes/home.png",
+            "alt": "Wireframe del nuevo home — Ciudad Oeste",
+            "title": "Home — Primera impresión que convierte",
+            "description": "Hero con CTA de turno prominente, sección de especialidades con navegación rápida y testimonios de pacientes. Diseñado para mobile-first.",
+            "span": "2x1"
+          },
+          {
+            "type": "image",
+            "src": "/portfolio/ciudad-oeste/mostrador.png",
+            "alt": "Render del mostrador de recepción de Ciudad Oeste",
+            "caption": "La identidad física de la clínica inspira el lenguaje visual del nuevo sitio",
+            "badge": "Identidad de marca",
+            "span": "1x1"
+          },
+          {
+            "type": "wireframe",
+            "src": "/portfolio/ciudad-oeste/wireframes/especialidades.png",
+            "alt": "Wireframe de especialidades y perfil de médico",
+            "title": "Perfil de Especialidad",
+            "description": "Cada especialidad con su listado de profesionales, días de atención y CTA directo.",
+            "span": "half"
+          },
+          {
+            "type": "wireframe",
+            "src": "/portfolio/ciudad-oeste/wireframes/contacto.png",
+            "alt": "Wireframe del flujo de contacto y turnos",
+            "title": "Flujo de Contacto",
+            "description": "Formulario simplificado + WhatsApp + mapa. Conversión en un solo scroll.",
+            "span": "half"
+          },
+          {
+            "type": "text",
+            "eyebrow": "Principios de UX",
+            "heading": "Cada decisión de diseño tiene una razón estratégica",
+            "body": "La arquitectura de información fue diseñada para reducir la fricción en el camino hacia el turno. El paciente que llega desde Google no quiere leer — quiere encontrar su especialidad, ver al médico disponible y contactar. Ese flujo está optimizado en 3 pasos máximo.",
+            "span": "2x1",
+            "bullets": [
+              "Jerarquía visual: logo → especialidades → CTA de turno",
+              "Mobile-first: diseñado en 375px y escalado a desktop",
+              "Accesibilidad: contraste AA, textos legibles, tap targets de 44px",
+              "Velocidad perceptual: carga progresiva con skeleton screens"
+            ]
+          },
+          {
+            "type": "metric",
+            "value": "3",
+            "label": "Pasos máximos hasta el turno",
+            "description": "Home → Especialidad → Contacto. El flujo de conversión más corto posible.",
+            "icon": "ArrowRight",
+            "span": "1x1"
+          }
+        ]
       }
     },
     {
@@ -83,70 +225,57 @@
             "number": 1,
             "title": "Diagnóstico",
             "duration": "1 semana",
-            "tasks": ["Relevamiento técnico", "Brief de marca", "Análisis de competencia local", "Auditoría SEO actual"]
+            "tasks": [
+              "Relevamiento técnico del sitio actual",
+              "Brief de marca y tono de voz",
+              "Análisis de competencia local (otras clínicas en Bariloche)",
+              "Auditoría SEO del sitio existente"
+            ]
           },
           {
             "id": "p2",
             "number": 2,
-            "title": "Diseño",
+            "title": "Diseño UX/UI",
             "duration": "2 semanas",
-            "tasks": ["Wireframes mobile y desktop", "Diseño UI en Figma", "Revisión y aprobación cliente"]
+            "tasks": [
+              "Wireframes mobile y desktop (aprobados en esta fase)",
+              "Diseño UI de alta fidelidad en Figma",
+              "Definición del sistema de diseño (tipografía, colores, componentes)",
+              "Revisión y aprobación del cliente"
+            ]
           },
           {
             "id": "p3",
             "number": 3,
             "title": "Desarrollo",
             "duration": "3 semanas",
-            "tasks": ["Maquetado responsive", "Integración CMS", "Optimización de imágenes", "Testing cross-browser"]
+            "tasks": [
+              "Maquetado responsive con Next.js App Router",
+              "Integración de CMS headless Sanity",
+              "SEO técnico: meta tags, schema.org, sitemap",
+              "Testing cross-browser y performance audit"
+            ]
           },
           {
             "id": "p4",
             "number": 4,
             "title": "Lanzamiento",
             "duration": "1 semana",
-            "tasks": ["Deploy en Vercel", "Migración DNS", "Configuración SEO final", "Capacitación del equipo"]
+            "tasks": [
+              "Deploy en Vercel con CDN global",
+              "Migración y configuración DNS",
+              "Configuración Google Analytics 4 + Google Business",
+              "Capacitación del equipo para gestión de contenidos"
+            ]
           }
         ],
         "technologies": [
-          { "name": "Next.js", "description": "Framework React para producción" },
-          { "name": "TypeScript", "description": "Tipado estático para mayor robustez" },
-          { "name": "Tailwind CSS", "description": "Estilos utilitarios y responsive" },
-          { "name": "Vercel", "description": "Deploy y hosting edge-first" },
-          { "name": "Sanity CMS", "description": "Gestión de contenido headless" },
-          { "name": "Google Analytics 4", "description": "Métricas y conversiones" }
-        ]
-      }
-    },
-    {
-      "id": "product",
-      "type": "product",
-      "enabled": true,
-      "label": "Descripción",
-      "data": {
-        "architectureTitle": "Arquitectura moderna y escalable",
-        "architectureDescription": "Construimos sobre Next.js App Router con renderizado híbrido: páginas estáticas para máxima velocidad y componentes dinámicos donde se necesita. El CMS headless permite al equipo de Ciudad Oeste actualizar contenido sin tocar código. Hosting en Vercel con CDN global garantiza disponibilidad del 99.9%.",
-        "features": [
-          {
-            "id": "f1",
-            "title": "Diseño mobile-first",
-            "description": "El 70% de las búsquedas de salud se hacen desde el celular. El diseño prioriza la experiencia móvil sin sacrificar el desktop.",
-            "image": "/portfolio/mobile-health.jpg",
-            "imageAlt": "Diseño mobile de sitio de salud"
-          },
-          {
-            "id": "f2",
-            "title": "CMS autogestionable",
-            "description": "El equipo puede actualizar médicos, horarios, noticias y servicios sin depender de un desarrollador. Interfaz visual e intuitiva.",
-            "image": "/portfolio/cms-dashboard.jpg",
-            "imageAlt": "Dashboard CMS Sanity"
-          },
-          {
-            "id": "f3",
-            "title": "SEO técnico incluido",
-            "description": "Meta tags dinámicos, schema.org para organizaciones de salud, sitemap automático y Open Graph para redes sociales.",
-            "image": "/portfolio/seo-audit.jpg",
-            "imageAlt": "Auditoría SEO técnica"
-          }
+          { "name": "Next.js", "description": "Framework React para producción — SSG + SSR" },
+          { "name": "TypeScript", "description": "Tipado estático para mayor robustez y mantenibilidad" },
+          { "name": "Tailwind CSS", "description": "Estilos utilitarios, responsive y accesibles" },
+          { "name": "Vercel", "description": "Hosting edge-first, CDN global, deploys automáticos" },
+          { "name": "Sanity CMS", "description": "Gestión de contenido headless — el equipo actualiza sin código" },
+          { "name": "Google Analytics 4", "description": "Métricas de conversión y comportamiento de pacientes" }
         ]
       }
     },
@@ -159,33 +288,41 @@
         "items": [
           {
             "id": "i1",
-            "category": "Diseño",
-            "name": "Diseño UI/UX completo",
-            "description": "Wireframes + diseño de alta fidelidad en Figma para todas las páginas",
-            "unitPrice": 800,
-            "total": 800
-          },
-          {
-            "id": "i2",
-            "category": "Desarrollo",
-            "name": "Desarrollo Next.js",
-            "description": "Frontend completo + integración CMS headless Sanity",
-            "unitPrice": 1200,
-            "total": 1200
-          },
-          {
-            "id": "i3",
-            "category": "SEO",
-            "name": "SEO Técnico",
-            "description": "Estructura semántica, meta tags, schema.org para salud, Google Business",
+            "category": "Estrategia & Diseño",
+            "name": "UX Research + Wireframes",
+            "description": "Diagnóstico, arquitectura de información, wireframes mobile/desktop en Figma",
             "unitPrice": 400,
             "total": 400
           },
           {
+            "id": "i2",
+            "category": "Estrategia & Diseño",
+            "name": "Diseño UI de alta fidelidad",
+            "description": "Sistema de diseño completo + diseño de todas las páginas en Figma",
+            "unitPrice": 400,
+            "total": 400
+          },
+          {
+            "id": "i3",
+            "category": "Desarrollo",
+            "name": "Desarrollo Next.js completo",
+            "description": "Frontend responsive + integración CMS headless Sanity + 7 páginas",
+            "unitPrice": 1200,
+            "total": 1200
+          },
+          {
             "id": "i4",
+            "category": "Marketing Digital",
+            "name": "SEO Técnico",
+            "description": "Schema.org para salud, meta tags dinámicos, sitemap, Google Business",
+            "unitPrice": 400,
+            "total": 400
+          },
+          {
+            "id": "i5",
             "category": "Infraestructura",
             "name": "Dominio + Hosting 1 año",
-            "description": "Vercel Pro + dominio .com.ar",
+            "description": "Vercel Pro + dominio .com.ar con SSL incluido",
             "unitPrice": 200,
             "total": 200,
             "highlight": true
@@ -194,57 +331,62 @@
         "subtotal": 2600,
         "discount": 0,
         "total": 2600,
-        "paymentMethods": ["Transferencia bancaria", "Cripto (USDT/USDC)", "PayPal"],
-        "terms": [
-          "50% al inicio del proyecto",
-          "50% al lanzamiento del sitio",
-          "Garantía de 30 días post-lanzamiento"
+        "paymentMethods": [
+          "Transferencia bancaria (ARS o USD)",
+          "Cripto (USDT/USDC en red Polygon)",
+          "PayPal"
         ],
-        "note": "Presupuesto válido hasta el 14 de junio de 2026. Precios en USD."
+        "terms": [
+          "50% al inicio del proyecto para reservar agenda",
+          "50% al lanzamiento del sitio en producción",
+          "Garantía de correcciones 30 días post-lanzamiento",
+          "Soporte técnico incluido el primer mes"
+        ],
+        "note": "Presupuesto válido hasta el 14 de junio de 2026. Precios en USD. No incluye contenido fotográfico ni redacción de textos."
       }
     },
     {
       "id": "mockups",
       "type": "mockups",
       "enabled": true,
-      "label": "Portfolio",
+      "label": "Visión Final",
       "data": {
         "images": [
           {
+            "id": "r1",
+            "src": "/portfolio/ciudad-oeste/render.jpg",
+            "alt": "Render arquitectónico principal — Ciudad Oeste",
+            "caption": "Vista exterior — la identidad que el digital debe reflejar"
+          },
+          {
+            "id": "r2",
+            "src": "/portfolio/ciudad-oeste/mostrador.png",
+            "alt": "Render del mostrador de recepción",
+            "caption": "Recepción — punto de contacto que inspira el diseño del header"
+          },
+          {
             "id": "m1",
             "src": "/portfolio/martin-quero.jpg",
-            "alt": "Martin Quero Coach",
+            "alt": "Martin Quero Coach — trabajo anterior",
             "caption": "Coach ejecutivo — diseño de marca y conversión"
           },
           {
             "id": "m2",
             "src": "/portfolio/baritrekking.jpg",
-            "alt": "Baritrekking",
+            "alt": "Baritrekking — trabajo anterior",
             "caption": "Turismo aventura — booking online integrado"
           },
           {
             "id": "m3",
             "src": "/portfolio/estetica-patagonica.jpg",
-            "alt": "Estética Patagónica",
+            "alt": "Estética Patagónica — trabajo anterior",
             "caption": "Centro de estética — agenda y e-commerce"
           },
           {
             "id": "m4",
-            "src": "/portfolio/inmobiliaria-andes.jpg",
-            "alt": "Inmobiliaria Andes",
-            "caption": "Inmobiliaria — catálogo y filtros avanzados"
-          },
-          {
-            "id": "m5",
-            "src": "/portfolio/gastro-patagonia.jpg",
-            "alt": "Gastro Patagonia",
-            "caption": "Restaurante — menú digital y reservas"
-          },
-          {
-            "id": "m6",
             "src": "/portfolio/clinica-dental.jpg",
-            "alt": "Clínica Dental del Sur",
-            "caption": "Salud dental — turnos y especialidades"
+            "alt": "Clínica Dental del Sur — trabajo anterior de salud",
+            "caption": "Salud dental — caso de éxito en el mismo rubro"
           }
         ]
       }

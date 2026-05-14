@@ -8,6 +8,7 @@ import {
   Layers,
   CreditCard,
   Image as ImageIcon,
+  BookOpen,
   ChevronLeft,
   ChevronRight,
   ExternalLink,
@@ -23,6 +24,7 @@ const SCREEN_ICONS: Record<Screen["type"], React.ReactNode> = {
   product: <Layers size={17} />,
   pricing: <CreditCard size={17} />,
   mockups: <ImageIcon size={17} />,
+  "book-section": <BookOpen size={17} />,
 };
 
 const SCREEN_DEFAULT_LABELS: Record<Screen["type"], string> = {
@@ -31,6 +33,7 @@ const SCREEN_DEFAULT_LABELS: Record<Screen["type"], string> = {
   product: "Producto",
   pricing: "Inversión",
   mockups: "Mockups",
+  "book-section": "Sección",
 };
 
 interface SidebarProps {
@@ -253,7 +256,7 @@ export function Sidebar({
           onClick={onToggleCollapse}
           className="flex items-center justify-center w-full h-8 rounded-lg transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)]"
           style={{
-            background: "var(--surface-elevated)",
+            background: "var(--surface-elevated, #1f1f26)",
             color: "var(--text-subtle)",
           }}
           aria-label={isCollapsed ? "Expandir sidebar" : "Colapsar sidebar"}

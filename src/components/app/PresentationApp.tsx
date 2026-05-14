@@ -9,6 +9,7 @@ import { RoadmapScreen } from "@/components/screens/RoadmapScreen";
 import { ProductScreen } from "@/components/screens/ProductScreen";
 import { PricingScreen } from "@/components/screens/PricingScreen";
 import { MockupsScreen } from "@/components/screens/MockupsScreen";
+import { BookSectionScreen } from "@/components/screens/BookSectionScreen";
 import type {
   PresentationConfig,
   Screen,
@@ -17,6 +18,7 @@ import type {
   ProductScreen as ProductScreenType,
   PricingScreen as PricingScreenType,
   MockupsScreen as MockupsScreenType,
+  BookSectionScreen as BookSectionScreenType,
 } from "@/types/presentation";
 
 interface PresentationAppProps {
@@ -62,6 +64,13 @@ function renderScreen(screen: Screen, config: PresentationConfig) {
         <MockupsScreen
           key={screen.id}
           data={(screen as MockupsScreenType).data}
+        />
+      );
+    case "book-section":
+      return (
+        <BookSectionScreen
+          key={screen.id}
+          data={(screen as BookSectionScreenType).data}
         />
       );
     default: {
