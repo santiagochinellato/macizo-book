@@ -1,24 +1,8 @@
 {
   "slug": "ciudad-oeste",
+  "version": 2,
   "theme": {
-    "colors": {
-      "background": "#f5f7fa",
-      "foreground": "#0d1f3c",
-      "surface": "#ffffff",
-      "primary": "#1b3a6b",
-      "accent": "#c9a96e",
-      "muted": "#6b7a99",
-      "border": "#dde3ed",
-      "success": "#2e7d52"
-    },
-    "typography": {
-      "fontDisplay": "Playfair Display",
-      "fontBody": "DM Sans",
-      "fontDisplayUrl": "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800",
-      "fontBodyUrl": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600"
-    },
-    "radius": "10px",
-    "shadow": "0 4px 20px rgba(13,31,60,0.08)"
+    "accentColor": "#0070f3"
   },
   "agency": {
     "name": "MacizoDigital",
@@ -53,76 +37,45 @@
     "currency": "USD",
     "language": "es"
   },
-  "sections": [
-    { "id": "cover", "type": "cover", "enabled": true, "data": {} },
-    { "id": "client", "type": "client", "enabled": true, "data": {} },
+  "screens": [
     {
-      "id": "summary",
-      "type": "summary",
+      "id": "overview",
+      "type": "overview",
       "enabled": true,
+      "label": "Resumen",
       "data": {
-        "intro": "Ciudad Oeste necesita una presencia digital que refleje su nivel de atención médica y genere confianza en los pacientes antes de que pisen la clínica. Hoy, la primera consulta ocurre en Google — y hay que estar ahí con autoridad.",
-        "highlights": [
-          { "icon": "Globe", "text": "Sitio web optimizado para conversión" },
-          { "icon": "Shield", "text": "SEO local desde el día uno" },
-          { "icon": "Zap", "text": "Velocidad y performance garantizados" }
-        ],
-        "problem": "El sitio actual no es mobile-friendly, carga en más de 4 segundos y no aparece en búsquedas locales de Bariloche."
-      }
-    },
-    {
-      "id": "scope",
-      "type": "scope",
-      "enabled": true,
-      "data": {
-        "items": [
+        "headline": "Sitio Web Institucional para Ciudad Oeste",
+        "vision": "Ciudad Oeste necesita una presencia digital que refleje su nivel de atención médica y genere confianza antes de que el paciente pise la clínica. La primera consulta hoy ocurre en Google — hay que estar ahí con autoridad.",
+        "objectives": [
           {
-            "id": "s1",
-            "icon": "Layout",
-            "title": "Diseño UI/UX",
-            "description": "Diseño responsivo basado en identidad de marca existente. Wireframes + diseño de alta fidelidad en Figma.",
-            "tags": ["Figma", "Mobile-first"],
-            "included": true
+            "icon": "Globe",
+            "title": "Presencia digital sólida",
+            "description": "Sitio web optimizado para conversión y búsquedas locales en Bariloche."
           },
           {
-            "id": "s2",
-            "icon": "Code2",
-            "title": "Desarrollo Next.js",
-            "description": "Sitio rápido, seguro y escalable con CMS headless para que el equipo pueda actualizar contenido.",
-            "tags": ["Next.js", "TypeScript"],
-            "included": true
+            "icon": "Shield",
+            "title": "SEO desde el día uno",
+            "description": "Estructura semántica, schema.org para salud y Google Business optimizado."
           },
           {
-            "id": "s3",
-            "icon": "Search",
-            "title": "SEO Técnico",
-            "description": "Estructura semántica, meta tags, schema.org para salud, Google Business optimizado.",
-            "tags": ["SEO", "Core Web Vitals"],
-            "included": true
+            "icon": "Zap",
+            "title": "Performance garantizada",
+            "description": "Core Web Vitals en verde. Carga bajo 1.5s en mobile con red 4G."
           },
           {
-            "id": "s4",
-            "icon": "MapPin",
-            "title": "Google Business",
-            "description": "Optimización del perfil de Google Business Profile para búsquedas locales.",
-            "tags": ["Local SEO"],
-            "included": true
-          },
-          {
-            "id": "s5",
-            "icon": "BarChart",
-            "title": "Analytics & Reportes",
-            "description": "Configuración de Google Analytics 4 y Search Console con dashboards de seguimiento.",
-            "tags": ["GA4"],
-            "included": false
+            "icon": "Users",
+            "title": "Experiencia del paciente",
+            "description": "Flujo de contacto claro, turnos y ubicación accesibles en 2 clics."
           }
-        ]
+        ],
+        "totalPrice": 2600
       }
     },
     {
-      "id": "timeline",
-      "type": "timeline",
+      "id": "roadmap",
+      "type": "roadmap",
       "enabled": true,
+      "label": "Plan de trabajo",
       "data": {
         "phases": [
           {
@@ -153,20 +106,62 @@
             "duration": "1 semana",
             "tasks": ["Deploy en Vercel", "Migración DNS", "Configuración SEO final", "Capacitación del equipo"]
           }
+        ],
+        "technologies": [
+          { "name": "Next.js", "description": "Framework React para producción" },
+          { "name": "TypeScript", "description": "Tipado estático para mayor robustez" },
+          { "name": "Tailwind CSS", "description": "Estilos utilitarios y responsive" },
+          { "name": "Vercel", "description": "Deploy y hosting edge-first" },
+          { "name": "Sanity CMS", "description": "Gestión de contenido headless" },
+          { "name": "Google Analytics 4", "description": "Métricas y conversiones" }
         ]
       }
     },
     {
-      "id": "investment",
-      "type": "investment",
+      "id": "product",
+      "type": "product",
       "enabled": true,
+      "label": "Descripción",
+      "data": {
+        "architectureTitle": "Arquitectura moderna y escalable",
+        "architectureDescription": "Construimos sobre Next.js App Router con renderizado híbrido: páginas estáticas para máxima velocidad y componentes dinámicos donde se necesita. El CMS headless permite al equipo de Ciudad Oeste actualizar contenido sin tocar código. Hosting en Vercel con CDN global garantiza disponibilidad del 99.9%.",
+        "features": [
+          {
+            "id": "f1",
+            "title": "Diseño mobile-first",
+            "description": "El 70% de las búsquedas de salud se hacen desde el celular. El diseño prioriza la experiencia móvil sin sacrificar el desktop.",
+            "image": "/portfolio/mobile-health.jpg",
+            "imageAlt": "Diseño mobile de sitio de salud"
+          },
+          {
+            "id": "f2",
+            "title": "CMS autogestionable",
+            "description": "El equipo puede actualizar médicos, horarios, noticias y servicios sin depender de un desarrollador. Interfaz visual e intuitiva.",
+            "image": "/portfolio/cms-dashboard.jpg",
+            "imageAlt": "Dashboard CMS Sanity"
+          },
+          {
+            "id": "f3",
+            "title": "SEO técnico incluido",
+            "description": "Meta tags dinámicos, schema.org para organizaciones de salud, sitemap automático y Open Graph para redes sociales.",
+            "image": "/portfolio/seo-audit.jpg",
+            "imageAlt": "Auditoría SEO técnica"
+          }
+        ]
+      }
+    },
+    {
+      "id": "pricing",
+      "type": "pricing",
+      "enabled": true,
+      "label": "Inversión",
       "data": {
         "items": [
           {
             "id": "i1",
             "category": "Diseño",
             "name": "Diseño UI/UX completo",
-            "description": "Wireframes + diseño de alta fidelidad en Figma",
+            "description": "Wireframes + diseño de alta fidelidad en Figma para todas las páginas",
             "unitPrice": 800,
             "total": 800
           },
@@ -174,7 +169,7 @@
             "id": "i2",
             "category": "Desarrollo",
             "name": "Desarrollo Next.js",
-            "description": "Frontend completo + integración CMS headless",
+            "description": "Frontend completo + integración CMS headless Sanity",
             "unitPrice": 1200,
             "total": 1200
           },
@@ -182,7 +177,7 @@
             "id": "i3",
             "category": "SEO",
             "name": "SEO Técnico",
-            "description": "Estructura semántica, meta tags, schema.org",
+            "description": "Estructura semántica, meta tags, schema.org para salud, Google Business",
             "unitPrice": 400,
             "total": 400
           },
@@ -199,85 +194,57 @@
         "subtotal": 2600,
         "discount": 0,
         "total": 2600,
-        "note": "Presupuesto válido hasta el 14 de junio de 2026. Precios en USD. El 50% se abona al inicio del proyecto y el 50% restante al lanzamiento."
+        "paymentMethods": ["Transferencia bancaria", "Cripto (USDT/USDC)", "PayPal"],
+        "terms": [
+          "50% al inicio del proyecto",
+          "50% al lanzamiento del sitio",
+          "Garantía de 30 días post-lanzamiento"
+        ],
+        "note": "Presupuesto válido hasta el 14 de junio de 2026. Precios en USD."
       }
     },
     {
-      "id": "gallery",
-      "type": "gallery",
+      "id": "mockups",
+      "type": "mockups",
       "enabled": true,
-      "label": "Portfolio relevante",
+      "label": "Portfolio",
       "data": {
-        "layout": "grid",
         "images": [
           {
-            "id": "g1",
+            "id": "m1",
             "src": "/portfolio/martin-quero.jpg",
             "alt": "Martin Quero Coach",
-            "caption": "Coach ejecutivo — sitio de servicios profesionales",
-            "aspectRatio": "landscape"
+            "caption": "Coach ejecutivo — diseño de marca y conversión"
           },
           {
-            "id": "g2",
+            "id": "m2",
             "src": "/portfolio/baritrekking.jpg",
             "alt": "Baritrekking",
-            "caption": "Turismo aventura — booking online",
-            "aspectRatio": "landscape"
+            "caption": "Turismo aventura — booking online integrado"
           },
           {
-            "id": "g3",
+            "id": "m3",
             "src": "/portfolio/estetica-patagonica.jpg",
             "alt": "Estética Patagónica",
-            "caption": "Centro de estética — agenda online integrada",
-            "aspectRatio": "square"
-          }
-        ]
-      }
-    },
-    {
-      "id": "testimonials",
-      "type": "testimonials",
-      "enabled": true,
-      "data": {
-        "items": [
-          {
-            "id": "t1",
-            "quote": "MacizoDigital transformó nuestra presencia online. Pasamos de 20 consultas por mes a más de 80 desde el lanzamiento.",
-            "author": "Lic. Carla Díaz",
-            "role": "Directora",
-            "company": "Estudio CILS",
-            "rating": 5
+            "caption": "Centro de estética — agenda y e-commerce"
           },
           {
-            "id": "t2",
-            "quote": "El proceso fue muy profesional. Entregaron en los tiempos pactados y el resultado superó las expectativas.",
-            "author": "Martín Quero",
-            "role": "Coach Ejecutivo",
-            "company": "MQ Coaching",
-            "rating": 5
-          }
-        ]
-      }
-    },
-    {
-      "id": "cta",
-      "type": "cta",
-      "enabled": true,
-      "data": {
-        "message": "¿Seguimos avanzando?",
-        "subtext": "Este presupuesto tiene validez hasta el 14 de junio. Respondé o escribinos directamente para reservar tu lugar en agenda.",
-        "buttons": [
-          {
-            "label": "WhatsApp",
-            "icon": "MessageCircle",
-            "href": "https://wa.me/5492944000000",
-            "variant": "primary"
+            "id": "m4",
+            "src": "/portfolio/inmobiliaria-andes.jpg",
+            "alt": "Inmobiliaria Andes",
+            "caption": "Inmobiliaria — catálogo y filtros avanzados"
           },
           {
-            "label": "Enviar email",
-            "icon": "Mail",
-            "href": "mailto:hola@macizodigital.ar",
-            "variant": "outline"
+            "id": "m5",
+            "src": "/portfolio/gastro-patagonia.jpg",
+            "alt": "Gastro Patagonia",
+            "caption": "Restaurante — menú digital y reservas"
+          },
+          {
+            "id": "m6",
+            "src": "/portfolio/clinica-dental.jpg",
+            "alt": "Clínica Dental del Sur",
+            "caption": "Salud dental — turnos y especialidades"
           }
         ]
       }

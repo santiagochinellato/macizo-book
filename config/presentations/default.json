@@ -1,24 +1,8 @@
 {
   "slug": "default",
+  "version": 2,
   "theme": {
-    "colors": {
-      "background": "#f5f7fa",
-      "foreground": "#0d1f3c",
-      "surface": "#ffffff",
-      "primary": "#1b3a6b",
-      "accent": "#c9a96e",
-      "muted": "#6b7a99",
-      "border": "#dde3ed",
-      "success": "#2e7d52"
-    },
-    "typography": {
-      "fontDisplay": "Playfair Display",
-      "fontBody": "DM Sans",
-      "fontDisplayUrl": "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700",
-      "fontBodyUrl": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600"
-    },
-    "radius": "10px",
-    "shadow": "0 4px 20px rgba(13,31,60,0.08)"
+    "accentColor": "#0070f3"
   },
   "agency": {
     "name": "MacizoDigital",
@@ -28,7 +12,6 @@
     "website": "https://macizodigital.ar",
     "email": "hola@macizodigital.ar",
     "social": {
-      "instagram": "https://instagram.com/macizodigital",
       "whatsapp": "https://wa.me/5492944000000"
     }
   },
@@ -42,7 +25,7 @@
     }
   },
   "meta": {
-    "type": "presupuesto",
+    "type": "propuesta",
     "number": "2026-001",
     "title": "Propuesta Digital",
     "subtitle": "Diseño y desarrollo web",
@@ -51,29 +34,30 @@
     "currency": "USD",
     "language": "es"
   },
-  "sections": [
-    { "id": "cover", "type": "cover", "enabled": true, "data": {} },
-    { "id": "client", "type": "client", "enabled": true, "data": {} },
+  "screens": [
     {
-      "id": "summary",
-      "type": "summary",
+      "id": "overview",
+      "type": "overview",
       "enabled": true,
+      "label": "Resumen",
       "data": {
-        "intro": "Descripción del proyecto y objetivos principales.",
-        "highlights": [
-          { "icon": "Globe", "text": "Presencia digital sólida" },
-          { "icon": "Zap", "text": "Performance optimizada" },
-          { "icon": "Shield", "text": "Seguridad garantizada" }
-        ]
+        "headline": "Tu proyecto digital",
+        "vision": "Descripción general del proyecto y sus objetivos principales.",
+        "objectives": [
+          { "icon": "Globe", "title": "Presencia digital", "description": "Sitio web profesional y optimizado." },
+          { "icon": "Zap", "title": "Performance", "description": "Velocidad y experiencia de usuario." }
+        ],
+        "totalPrice": 0
       }
     },
-    { "id": "cta", "type": "cta", "enabled": true, "data": {
-      "message": "¿Empezamos?",
-      "subtext": "Contactanos para dar el primer paso.",
-      "buttons": [
-        { "label": "WhatsApp", "icon": "MessageCircle", "href": "https://wa.me/5492944000000", "variant": "primary" },
-        { "label": "Email", "icon": "Mail", "href": "mailto:hola@macizodigital.ar", "variant": "outline" }
-      ]
-    }}
+    {
+      "id": "mockups",
+      "type": "mockups",
+      "enabled": true,
+      "label": "Portfolio",
+      "data": {
+        "images": []
+      }
+    }
   ]
 }

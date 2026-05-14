@@ -1,12 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { loadPresentation, listPresentations } from "@/lib/config-loader";
-import { DocWrapper } from "@/components/layout/DocWrapper";
-import { DocHeader } from "@/components/layout/DocHeader";
-import { DocFooter } from "@/components/layout/DocFooter";
-import { GradientBar } from "@/components/layout/GradientBar";
-import { SectionNav } from "@/components/navigation/SectionNav";
-import { SectionsRenderer } from "@/components/sections/SectionsRenderer";
+import { PresentationApp } from "@/components/app/PresentationApp";
 import { DOC_TYPE_LABELS } from "@/lib/utils";
 
 interface PageProps {
@@ -51,16 +46,5 @@ export default async function PresentationPage({ params }: PageProps) {
     notFound();
   }
 
-  return (
-    <DocWrapper theme={config.theme}>
-      <DocHeader agency={config.agency} meta={config.meta} />
-      <GradientBar />
-      <SectionNav sections={config.sections} />
-      <main className="flex flex-col flex-1">
-        <SectionsRenderer config={config} />
-      </main>
-      <GradientBar />
-      <DocFooter agency={config.agency} meta={config.meta} />
-    </DocWrapper>
-  );
+  return <PresentationApp config={config} />;
 }

@@ -1,8 +1,46 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f5f7fa;
-  --foreground: #0d1f3c;
+  /* Surfaces */
+  --surface-bg: #0a0a0c;
+  --surface-card: #141417;
+  --surface-panel: #1a1a1f;
+  --surface-elevated: #1f1f26;
+  --surface-overlay: rgba(10, 10, 12, 0.92);
+
+  /* Text */
+  --text-primary: #f2f2f7;
+  --text-muted: #a0a0ab;
+  --text-subtle: #6b6b76;
+  --text-inverted: #0a0a0c;
+
+  /* Accent / Brand */
+  --primary: #0070f3;
+  --primary-hover: #1a7ff5;
+  --primary-light: #2da1f8;
+  --primary-glow: rgba(0, 112, 243, 0.18);
+  --primary-glow-strong: rgba(0, 112, 243, 0.3);
+
+  /* State colors */
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --success-glow: rgba(16, 185, 129, 0.15);
+
+  /* Borders */
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.14);
+  --border-focus: rgba(0, 112, 243, 0.5);
+
+  /* Sidebar */
+  --sidebar-width: 240px;
+  --sidebar-collapsed: 64px;
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 18px;
 }
 
 * {
@@ -14,11 +52,31 @@ html {
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: system-ui, sans-serif;
+  background: var(--surface-bg);
+  color: var(--text-primary);
+  font-family: var(--font-geist-sans, system-ui, sans-serif);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--primary-glow-strong);
+  color: var(--text-primary);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
 
 @media (prefers-reduced-motion: reduce) {

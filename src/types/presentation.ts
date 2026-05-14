@@ -1,28 +1,9 @@
-export interface ThemeConfig {
-  colors: {
-    background: string;
-    foreground: string;
-    surface: string;
-    primary: string;
-    accent: string;
-    muted: string;
-    border: string;
-    success: string;
-  };
-  typography: {
-    fontDisplay: string;
-    fontBody: string;
-    fontDisplayUrl: string;
-    fontBodyUrl: string;
-  };
-  radius: string;
-  shadow: string;
-}
+// ─── Shared primitives ────────────────────────────────────────────────────────
 
 export interface AgencyConfig {
   name: string;
-  logoLight: string;
-  logoDark: string;
+  logoLight?: string;
+  logoDark?: string;
   tagline: string;
   website: string;
   email: string;
@@ -59,13 +40,23 @@ export interface DocumentMeta {
   language: "es" | "en";
 }
 
-export interface ScopeItem {
-  id: string;
-  icon?: string;
+export interface ThemeConfig {
+  accentColor?: string;
+}
+
+// ─── Screen data types ─────────────────────────────────────────────────────────
+
+export interface OverviewObjective {
+  icon: string;
   title: string;
   description: string;
-  tags?: string[];
-  included: boolean;
+}
+
+export interface OverviewScreenData {
+  headline: string;
+  vision: string;
+  objectives: OverviewObjective[];
+  totalPrice: number;
 }
 
 export interface TimelinePhase {
@@ -74,7 +65,31 @@ export interface TimelinePhase {
   title: string;
   duration: string;
   tasks: string[];
-  color?: string;
+}
+
+export interface Technology {
+  name: string;
+  icon?: string;
+  description?: string;
+}
+
+export interface RoadmapScreenData {
+  phases: TimelinePhase[];
+  technologies: Technology[];
+}
+
+export interface ProductFeature {
+  id: string;
+  title: string;
+  description: string;
+  image?: string;
+  imageAlt?: string;
+}
+
+export interface ProductScreenData {
+  architectureTitle: string;
+  architectureDescription: string;
+  features: ProductFeature[];
 }
 
 export interface PriceItem {
@@ -89,107 +104,88 @@ export interface PriceItem {
   highlight?: boolean;
 }
 
-export interface GalleryImage {
-  id: string;
-  src: string;
-  alt: string;
-  caption?: string;
-  aspectRatio?: "square" | "landscape" | "portrait" | "wide";
-}
-
-export interface TestimonialItem {
-  id: string;
-  quote: string;
-  author: string;
-  role?: string;
-  company?: string;
-  avatar?: string;
-  rating?: number;
-}
-
-export interface CTAButton {
-  label: string;
-  icon?: string;
-  href: string;
-  variant: "primary" | "outline" | "ghost";
-}
-
-export interface SummaryHighlight {
-  icon: string;
-  text: string;
-}
-
-export interface SummaryData {
-  intro: string;
-  highlights: SummaryHighlight[];
-  problem?: string;
-}
-
-export interface ScopeData {
-  items: ScopeItem[];
-}
-
-export interface TimelineData {
-  phases: TimelinePhase[];
-}
-
-export interface InvestmentData {
+export interface PricingScreenData {
   items: PriceItem[];
   subtotal: number;
   discount?: number;
   total: number;
+  paymentMethods?: string[];
+  terms?: string[];
   note?: string;
 }
 
-export interface GalleryData {
-  images: GalleryImage[];
-  layout?: "grid" | "masonry";
-}
-
-export interface TestimonialsData {
-  items: TestimonialItem[];
-}
-
-export interface CTAData {
-  message: string;
-  subtext?: string;
-  buttons: CTAButton[];
-}
-
-export type SectionData =
-  | SummaryData
-  | ScopeData
-  | TimelineData
-  | InvestmentData
-  | GalleryData
-  | TestimonialsData
-  | CTAData
-  | Record<string, unknown>;
-
-export interface Section {
+export interface MockupImage {
   id: string;
-  type:
-    | "cover"
-    | "client"
-    | "summary"
-    | "scope"
-    | "timeline"
-    | "investment"
-    | "gallery"
-    | "testimonials"
-    | "cta";
+  src: string;
+  alt: string;
+  caption?: string;
+}
+
+export interface MockupsScreenData {
+  images: MockupImage[];
+}
+
+// ─── Screen union ──────────────────────────────────────────────────────────────
+
+export type ScreenType = "overview" | "roadmap" | "product" | "pricing" | "mockups";
+
+export interface OverviewScreen {
+  id: string;
+  type: "overview";
   enabled: boolean;
   label?: string;
-  data: SectionData;
+  data: OverviewScreenData;
 }
+
+export interface RoadmapScreen {
+  id: string;
+  type: "roadmap";
+  enabled: boolean;
+  label?: string;
+  data: RoadmapScreenData;
+}
+
+export interface ProductScreen {
+  id: string;
+  type: "product";
+  enabled: boolean;
+  label?: string;
+  data: ProductScreenData;
+}
+
+export interface PricingScreen {
+  id: string;
+  type: "pricing";
+  enabled: boolean;
+  label?: string;
+  data: PricingScreenData;
+}
+
+export interface MockupsScreen {
+  id: string;
+  type: "mockups";
+  enabled: boolean;
+  label?: string;
+  data: MockupsScreenData;
+}
+
+export type Screen =
+  | OverviewScreen
+  | RoadmapScreen
+  | ProductScreen
+  | PricingScreen
+  | MockupsScreen;
+
+// ─── Root config ───────────────────────────────────────────────────────────────
 
 export interface PresentationConfig {
   slug: string;
+  version: 2;
   theme: ThemeConfig;
   agency: AgencyConfig;
   client: ClientConfig;
   meta: DocumentMeta;
-  sections: Section[];
+  screens: Screen[];
 }
 
 export interface PresentationListItem {

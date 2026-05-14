@@ -37,10 +37,10 @@ export const STATUS_LABELS: Record<DocumentMeta["status"], string> = {
 };
 
 export const STATUS_COLORS: Record<DocumentMeta["status"], string> = {
-  borrador: "#6b7a99",
-  enviado: "#1b3a6b",
-  aprobado: "#2e7d52",
-  rechazado: "#c0392b",
+  borrador: "#6b6b76",
+  enviado: "#2da1f8",
+  aprobado: "#10b981",
+  rechazado: "#ef4444",
 };
 
 export const DOC_TYPE_LABELS: Record<DocumentMeta["type"], string> = {

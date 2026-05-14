@@ -19,7 +19,7 @@ export function AnimatedNumber({
   className,
 }: AnimatedNumberProps) {
   const ref = useRef<HTMLSpanElement>(null);
-  const isInView = useInView(ref, { once: true, margin: "-80px" });
+  const isInView = useInView(ref, { once: true });
   const reduced = useReducedMotion();
   const [displayed, setDisplayed] = useState(0);
 
@@ -31,13 +31,12 @@ export function AnimatedNumber({
     }
 
     const startTime = performance.now();
-    const startValue = 0;
 
     function update(now: number) {
       const elapsed = now - startTime;
       const progress = Math.min(elapsed / duration, 1);
       const eased = 1 - Math.pow(1 - progress, 3);
-      setDisplayed(Math.round(startValue + (value - startValue) * eased));
+      setDisplayed(Math.round(value * eased));
       if (progress < 1) requestAnimationFrame(update);
     }
 
