@@ -1,0 +1,79 @@
+# MacizoDigital Presentation Book — Cursor Rules
+
+## Identidad del proyecto
+Este es un sistema de presentaciones digitales para MacizoDigital, una agencia web de Bariloche, Argentina.
+Cada presentación (presupuesto, propuesta, informe) se configura 100% desde un JSON.
+
+## Stack
+- Next.js 15+ App Router
+- TypeScript strict (sin "any" implícito)
+- Tailwind CSS v4
+- Framer Motion para todas las animaciones
+- Lucide React para íconos
+
+## Convenciones de código
+
+### Componentes
+- Siempre funcionales con TypeScript
+- Props tipadas con interface, nunca type alias para props
+- Exportación nombrada + default export en el mismo archivo
+- Filename en PascalCase para componentes
+
+### Estilos
+- CSS Variables para todos los tokens de tema (colores, fuentes, radios)
+- Tailwind solo para spacing, layout y estados (hover, focus)
+- NO hardcodear colores hex en componentes: siempre `var(--accent)`, `var(--primary)`, etc.
+- Las clases de Tailwind van primero, luego style para CSS vars
+
+### Animaciones
+- Todas las animaciones con Framer Motion (no CSS keyframes salvo excepciones muy puntuales)
+- Variants centralizados en `src/lib/motion-variants.ts`
+- `useReducedMotion()` respetado en todas partes
+- Scroll reveal con `whileInView` y `viewport={{ once: true, margin: "-80px" }}`
+
+### Responsive
+- Mobile-first siempre
+- Breakpoints: sm(640), md(768), lg(1024)
+- No usar breakpoints xl o 2xl salvo justificación explícita
+- Padding del documento: px-5 sm:px-8 lg:px-14
+
+### JSON / Config
+- Nunca hardcodear texto de contenido en componentes
+- Todo texto viene del JSON de presentación via props
+- Los componentes de sección reciben sus datos tipados
+
+### Performance
+- next/image para todas las imágenes
+- Suspense boundaries en secciones pesadas
+- Font loading con `next/font/google` + display: swap
+
+### Accesibilidad
+- Roles ARIA en elementos interactivos
+- Alt text en todas las imágenes
+- Focus visible en todos los elementos clickeables
+- Contraste mínimo AA
+
+## Qué NO hacer
+- No usar `any` en TypeScript
+- No usar `!important` en CSS
+- No instalar librerías de UI completas (shadcn, chakra, etc.) — construir desde cero
+- No usar `useEffect` para lógica que puede ser computed/derived
+- No crear componentes con más de 200 líneas (dividir)
+- No usar colores hardcodeados en JSX/TSX
+
+## Patrones preferidos
+- Server Components por defecto, Client Components solo cuando necesario
+- Data fetching en Server Components (cargar JSON en el servidor)
+- `"use client"` solo en componentes con animaciones, interacciones o hooks del navegador
+- Composición sobre herencia, siempre
+
+## Nomenclatura
+- Carpetas: kebab-case
+- Componentes: PascalCase
+- Hooks: camelCase con prefijo "use"
+- Constantes: UPPER_SNAKE_CASE
+- Types/Interfaces: PascalCase con sufijo descriptivo (Config, Props, Data)
+
+## Git
+- Commits en español, imperativo: "Agregar sección Timeline", "Corregir lightbox mobile"
+- Branches: `feature/nombre-feature`, `fix/nombre-bug`

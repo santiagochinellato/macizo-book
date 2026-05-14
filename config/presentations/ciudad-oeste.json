@@ -1,0 +1,286 @@
+{
+  "slug": "ciudad-oeste",
+  "theme": {
+    "colors": {
+      "background": "#f5f7fa",
+      "foreground": "#0d1f3c",
+      "surface": "#ffffff",
+      "primary": "#1b3a6b",
+      "accent": "#c9a96e",
+      "muted": "#6b7a99",
+      "border": "#dde3ed",
+      "success": "#2e7d52"
+    },
+    "typography": {
+      "fontDisplay": "Playfair Display",
+      "fontBody": "DM Sans",
+      "fontDisplayUrl": "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800",
+      "fontBodyUrl": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600"
+    },
+    "radius": "10px",
+    "shadow": "0 4px 20px rgba(13,31,60,0.08)"
+  },
+  "agency": {
+    "name": "MacizoDigital",
+    "logoLight": "/logos/macizo-white.svg",
+    "logoDark": "/logos/macizo-dark.svg",
+    "tagline": "No construimos páginas. Construimos cimientos.",
+    "website": "https://macizodigital.ar",
+    "email": "hola@macizodigital.ar",
+    "social": {
+      "instagram": "https://instagram.com/macizodigital",
+      "whatsapp": "https://wa.me/5492944000000"
+    }
+  },
+  "client": {
+    "name": "Ciudad Oeste Centro Médico",
+    "logo": "/logos/ciudad-oeste.png",
+    "industry": "Salud",
+    "contact": {
+      "name": "Dr. Rodrigo Fernández",
+      "role": "Director",
+      "email": "contacto@ciudadoeste.com.ar"
+    }
+  },
+  "meta": {
+    "type": "presupuesto",
+    "number": "2026-010",
+    "title": "Sitio Web Institucional",
+    "subtitle": "Diseño, desarrollo y estrategia digital",
+    "date": "2026-05-14",
+    "validUntil": "2026-06-14",
+    "status": "enviado",
+    "currency": "USD",
+    "language": "es"
+  },
+  "sections": [
+    { "id": "cover", "type": "cover", "enabled": true, "data": {} },
+    { "id": "client", "type": "client", "enabled": true, "data": {} },
+    {
+      "id": "summary",
+      "type": "summary",
+      "enabled": true,
+      "data": {
+        "intro": "Ciudad Oeste necesita una presencia digital que refleje su nivel de atención médica y genere confianza en los pacientes antes de que pisen la clínica. Hoy, la primera consulta ocurre en Google — y hay que estar ahí con autoridad.",
+        "highlights": [
+          { "icon": "Globe", "text": "Sitio web optimizado para conversión" },
+          { "icon": "Shield", "text": "SEO local desde el día uno" },
+          { "icon": "Zap", "text": "Velocidad y performance garantizados" }
+        ],
+        "problem": "El sitio actual no es mobile-friendly, carga en más de 4 segundos y no aparece en búsquedas locales de Bariloche."
+      }
+    },
+    {
+      "id": "scope",
+      "type": "scope",
+      "enabled": true,
+      "data": {
+        "items": [
+          {
+            "id": "s1",
+            "icon": "Layout",
+            "title": "Diseño UI/UX",
+            "description": "Diseño responsivo basado en identidad de marca existente. Wireframes + diseño de alta fidelidad en Figma.",
+            "tags": ["Figma", "Mobile-first"],
+            "included": true
+          },
+          {
+            "id": "s2",
+            "icon": "Code2",
+            "title": "Desarrollo Next.js",
+            "description": "Sitio rápido, seguro y escalable con CMS headless para que el equipo pueda actualizar contenido.",
+            "tags": ["Next.js", "TypeScript"],
+            "included": true
+          },
+          {
+            "id": "s3",
+            "icon": "Search",
+            "title": "SEO Técnico",
+            "description": "Estructura semántica, meta tags, schema.org para salud, Google Business optimizado.",
+            "tags": ["SEO", "Core Web Vitals"],
+            "included": true
+          },
+          {
+            "id": "s4",
+            "icon": "MapPin",
+            "title": "Google Business",
+            "description": "Optimización del perfil de Google Business Profile para búsquedas locales.",
+            "tags": ["Local SEO"],
+            "included": true
+          },
+          {
+            "id": "s5",
+            "icon": "BarChart",
+            "title": "Analytics & Reportes",
+            "description": "Configuración de Google Analytics 4 y Search Console con dashboards de seguimiento.",
+            "tags": ["GA4"],
+            "included": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "timeline",
+      "type": "timeline",
+      "enabled": true,
+      "data": {
+        "phases": [
+          {
+            "id": "p1",
+            "number": 1,
+            "title": "Diagnóstico",
+            "duration": "1 semana",
+            "tasks": ["Relevamiento técnico", "Brief de marca", "Análisis de competencia local", "Auditoría SEO actual"]
+          },
+          {
+            "id": "p2",
+            "number": 2,
+            "title": "Diseño",
+            "duration": "2 semanas",
+            "tasks": ["Wireframes mobile y desktop", "Diseño UI en Figma", "Revisión y aprobación cliente"]
+          },
+          {
+            "id": "p3",
+            "number": 3,
+            "title": "Desarrollo",
+            "duration": "3 semanas",
+            "tasks": ["Maquetado responsive", "Integración CMS", "Optimización de imágenes", "Testing cross-browser"]
+          },
+          {
+            "id": "p4",
+            "number": 4,
+            "title": "Lanzamiento",
+            "duration": "1 semana",
+            "tasks": ["Deploy en Vercel", "Migración DNS", "Configuración SEO final", "Capacitación del equipo"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "investment",
+      "type": "investment",
+      "enabled": true,
+      "data": {
+        "items": [
+          {
+            "id": "i1",
+            "category": "Diseño",
+            "name": "Diseño UI/UX completo",
+            "description": "Wireframes + diseño de alta fidelidad en Figma",
+            "unitPrice": 800,
+            "total": 800
+          },
+          {
+            "id": "i2",
+            "category": "Desarrollo",
+            "name": "Desarrollo Next.js",
+            "description": "Frontend completo + integración CMS headless",
+            "unitPrice": 1200,
+            "total": 1200
+          },
+          {
+            "id": "i3",
+            "category": "SEO",
+            "name": "SEO Técnico",
+            "description": "Estructura semántica, meta tags, schema.org",
+            "unitPrice": 400,
+            "total": 400
+          },
+          {
+            "id": "i4",
+            "category": "Infraestructura",
+            "name": "Dominio + Hosting 1 año",
+            "description": "Vercel Pro + dominio .com.ar",
+            "unitPrice": 200,
+            "total": 200,
+            "highlight": true
+          }
+        ],
+        "subtotal": 2600,
+        "discount": 0,
+        "total": 2600,
+        "note": "Presupuesto válido hasta el 14 de junio de 2026. Precios en USD. El 50% se abona al inicio del proyecto y el 50% restante al lanzamiento."
+      }
+    },
+    {
+      "id": "gallery",
+      "type": "gallery",
+      "enabled": true,
+      "label": "Portfolio relevante",
+      "data": {
+        "layout": "grid",
+        "images": [
+          {
+            "id": "g1",
+            "src": "/portfolio/martin-quero.jpg",
+            "alt": "Martin Quero Coach",
+            "caption": "Coach ejecutivo — sitio de servicios profesionales",
+            "aspectRatio": "landscape"
+          },
+          {
+            "id": "g2",
+            "src": "/portfolio/baritrekking.jpg",
+            "alt": "Baritrekking",
+            "caption": "Turismo aventura — booking online",
+            "aspectRatio": "landscape"
+          },
+          {
+            "id": "g3",
+            "src": "/portfolio/estetica-patagonica.jpg",
+            "alt": "Estética Patagónica",
+            "caption": "Centro de estética — agenda online integrada",
+            "aspectRatio": "square"
+          }
+        ]
+      }
+    },
+    {
+      "id": "testimonials",
+      "type": "testimonials",
+      "enabled": true,
+      "data": {
+        "items": [
+          {
+            "id": "t1",
+            "quote": "MacizoDigital transformó nuestra presencia online. Pasamos de 20 consultas por mes a más de 80 desde el lanzamiento.",
+            "author": "Lic. Carla Díaz",
+            "role": "Directora",
+            "company": "Estudio CILS",
+            "rating": 5
+          },
+          {
+            "id": "t2",
+            "quote": "El proceso fue muy profesional. Entregaron en los tiempos pactados y el resultado superó las expectativas.",
+            "author": "Martín Quero",
+            "role": "Coach Ejecutivo",
+            "company": "MQ Coaching",
+            "rating": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "cta",
+      "type": "cta",
+      "enabled": true,
+      "data": {
+        "message": "¿Seguimos avanzando?",
+        "subtext": "Este presupuesto tiene validez hasta el 14 de junio. Respondé o escribinos directamente para reservar tu lugar en agenda.",
+        "buttons": [
+          {
+            "label": "WhatsApp",
+            "icon": "MessageCircle",
+            "href": "https://wa.me/5492944000000",
+            "variant": "primary"
+          },
+          {
+            "label": "Enviar email",
+            "icon": "Mail",
+            "href": "mailto:hola@macizodigital.ar",
+            "variant": "outline"
+          }
+        ]
+      }
+    }
+  ]
+}
