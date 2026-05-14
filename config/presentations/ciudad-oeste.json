@@ -2,37 +2,36 @@
   "slug": "ciudad-oeste",
   "version": 2,
   "theme": {
-    "accentColor": "#0a2540"
+    "accentColor": "#1a5c38"
   },
   "agency": {
     "name": "MacizoDigital",
     "logoLight": "/logos/macizo-white.svg",
     "logoDark": "/logos/macizo-dark.svg",
     "tagline": "No construimos páginas. Construimos cimientos.",
-    "website": "https://macizodigital.ar",
-    "email": "hola@macizodigital.ar",
+    "website": "https://macizodigital.com.ar",
+    "email": "hola@macizodigital.com",
+    "phone": "+54 9 2942 227526",
     "social": {
-      "instagram": "https://instagram.com/macizodigital",
-      "whatsapp": "https://wa.me/5492944000000"
+      "whatsapp": "https://wa.me/5492942227526"
     }
   },
   "client": {
     "name": "Ciudad Oeste Centro Médico",
-    "logo": "/logos/ciudad-oeste.png",
-    "industry": "Salud",
+    "industry": "Salud — Centro médico de alta categoría",
     "contact": {
-      "name": "Dr. Rodrigo Fernández",
-      "role": "Director",
+      "name": "Ciudad Oeste",
+      "role": "Dirección",
       "email": "contacto@ciudadoeste.com.ar"
     }
   },
   "meta": {
     "type": "presupuesto",
-    "number": "2026-010",
-    "title": "Transformación Digital Ciudad Oeste",
-    "subtitle": "Diseño, desarrollo y estrategia de experiencia digital",
+    "number": "2026-CO1",
+    "title": "Sitio Web Institucional — 5 páginas",
+    "subtitle": "Next.js 16 · Panel autoadministrable · SEO · Deploy",
     "date": "2026-05-14",
-    "validUntil": "2026-06-14",
+    "validUntil": "2026-05-29",
     "status": "enviado",
     "currency": "USD",
     "language": "es"
@@ -42,196 +41,202 @@
       "id": "overview",
       "type": "overview",
       "enabled": true,
-      "label": "Visión General",
+      "label": "Resumen",
       "data": {
-        "headline": "De clínica a destino digital de confianza",
-        "vision": "Ciudad Oeste tiene la calidad médica de una institución de primer nivel. Pero su presencia digital no lo refleja. Esta propuesta transforma ese gap en ventaja competitiva: un sitio que genera confianza antes de la primera consulta, convierte buscadores en pacientes y posiciona la marca en Google desde el día uno.",
+        "headline": "Presencia digital de alta categoría para Ciudad Oeste",
+        "vision": "Ciudad Oeste es un nuevo centro médico que necesita establecer su presencia digital sólida desde el primer día. Esta propuesta contempla el desarrollo de un sitio web institucional de 5 páginas, pensado para captar pacientes y atraer profesionales médicos de primer nivel, autoadministrable sin depender de un desarrollador.",
         "heroImage": {
           "src": "/logos/ciudad-oeste/Gemini_Generated_Image_riv51lriv51lriv5.png",
-          "alt": "Render exterior nocturno — Ciudad Oeste Centro Médico",
-          "caption": "Ciudad Oeste — la solidez física que la nueva presencia digital va a reflejar"
+          "alt": "Render exterior de Ciudad Oeste Centro Médico",
+          "caption": "Ciudad Oeste — la calidad del centro físico que la presencia digital debe reflejar desde el primer día"
         },
         "objectives": [
           {
-            "icon": "Globe",
-            "title": "Presencia digital de primer nivel",
-            "description": "Sitio que refleja la calidad institucional y genera confianza antes de la consulta."
+            "icon": "ShieldCheck",
+            "title": "Credibilidad institucional",
+            "description": "Generar confianza de alta categoría desde el primer clic — antes de que el paciente pise la clínica."
           },
           {
-            "icon": "Search",
-            "title": "SEO local dominante",
-            "description": "Schema.org para salud, Google Business optimizado y búsquedas locales en Bariloche."
-          },
-          {
-            "icon": "Zap",
-            "title": "Performance garantizada",
-            "description": "Core Web Vitals en verde. Carga bajo 1.5s en mobile con red 4G."
+            "icon": "Calendar",
+            "title": "Sistema de turnos integrado",
+            "description": "Acceso al sistema de turnos desde cualquier página del sitio, con CTAs diferenciados."
           },
           {
             "icon": "Users",
-            "title": "Experiencia del paciente",
-            "description": "Especialidades, médicos y turnos accesibles en 2 clics desde mobile."
+            "title": "Doble audiencia",
+            "description": "El sitio capta pacientes y simultáneamente actúa como landing de reclutamiento para médicos."
+          },
+          {
+            "icon": "Settings",
+            "title": "Panel autoadministrable",
+            "description": "El equipo actualiza profesionales, horarios y textos sin código ni desarrollador."
           }
         ],
-        "totalPrice": 2600
+        "totalPrice": 450
       }
     },
     {
-      "id": "diagnostico",
+      "id": "contexto",
       "type": "book-section",
       "enabled": true,
-      "label": "Diagnóstico",
+      "label": "Contexto",
       "data": {
-        "title": "Diagnóstico Digital",
-        "subtitle": "Análisis del estado actual — el punto de partida de la transformación",
+        "title": "El Contexto & La Oportunidad",
+        "subtitle": "Ciudad Oeste es un centro nuevo — el momento para construir bien es ahora",
         "cards": [
           {
             "type": "text",
-            "eyebrow": "El problema",
-            "heading": "El sitio actual no convierte ni posiciona",
-            "body": "El sitio web de Ciudad Oeste tiene un diseño desactualizado, sin optimización SEO, sin estructura semántica, y con una experiencia mobile deficiente. En un contexto donde el 70% de las búsquedas de salud se hacen desde el celular, esto representa una pérdida directa de pacientes.",
+            "eyebrow": "Situación actual",
+            "heading": "Un centro de alta categoría sin presencia digital aún",
+            "body": "Ciudad Oeste entra a un mercado donde los competidores ya tienen sitios web profesionales con sistema de turnos online. El segmento objetivo investiga antes de elegir su centro médico. Sin presencia digital, el centro no existe para ese paciente.",
             "span": "2x1",
             "accent": true,
             "bullets": [
-              "Sin estructura semántica ni schema.org para salud",
-              "Velocidad de carga superior a 5 segundos",
-              "Sin CTA visible para sacar turno desde mobile",
-              "Navegación confusa — especialidades difíciles de encontrar",
-              "No aparece en Google Maps ni en búsquedas locales"
+              "Pacientes que buscan online no encuentran al centro",
+              "Sin credibilidad institucional para nuevos pacientes",
+              "Dependencia total del boca a boca y sistemas externos",
+              "Sin directorio de profesionales accesible 24/7",
+              "Imposible atraer médicos de forma orgánica"
             ]
           },
           {
             "type": "metric",
-            "value": "5.2s",
-            "label": "Tiempo de carga actual",
-            "description": "Google penaliza sitios que tardan más de 3s. El objetivo es < 1.5s.",
-            "icon": "Timer",
+            "value": "0",
+            "label": "Presencia digital actual",
+            "description": "Construir desde cero es la oportunidad: sin deuda técnica, sin legado — directo al estándar más alto.",
+            "icon": "Globe",
             "span": "1x1"
           },
           {
             "type": "image",
-            "src": "/logos/ciudad-oeste/home.png",
-            "alt": "Home actual del sitio de Ciudad Oeste",
-            "caption": "Home — jerarquía visual difusa y sin CTA de conversión claro",
-            "badge": "Estado actual",
+            "src": "/logos/ciudad-oeste/Gemini_Generated_Image_aqs3zfaqs3zfaqs3.png",
+            "alt": "Recepción de Ciudad Oeste — calidad institucional",
+            "caption": "La institución física ya tiene el nivel. El digital tiene que estar a la altura.",
+            "badge": "El punto de partida",
             "span": "half"
-          },
-          {
-            "type": "image",
-            "src": "/logos/ciudad-oeste/ESPECIALIDADES.png",
-            "alt": "Página de especialidades actual",
-            "caption": "Especialidades — información crítica poco accesible desde mobile",
-            "badge": "Estado actual",
-            "span": "half"
-          },
-          {
-            "type": "image",
-            "src": "/logos/ciudad-oeste/contacto.png",
-            "alt": "Página de contacto actual",
-            "caption": "Contacto — sin formulario optimizado, sin WhatsApp, sin mapa embebido",
-            "badge": "Estado actual",
-            "span": "1x1"
           },
           {
             "type": "text",
-            "eyebrow": "La oportunidad",
-            "heading": "Cada debilidad identificada es una palanca de crecimiento",
-            "body": "Un sitio nuevo, bien construido sobre los principios correctos, puede triplicar el tiempo en sesión, duplicar las consultas por contacto y posicionar a Ciudad Oeste en las primeras posiciones de Google en Bariloche en 90 días.",
-            "span": "2x1",
+            "eyebrow": "Con Ciudad Oeste online",
+            "heading": "El sitio trabaja 24/7 captando pacientes y profesionales",
+            "body": "Un sitio bien construido transforma la ausencia digital en ventaja competitiva inmediata. Ciudad Oeste puede posicionarse como referente digital del sector médico en Bariloche desde el primer deploy.",
+            "span": "half",
             "bullets": [
-              "Rediseño mobile-first con UX orientada a conversión",
-              "SEO técnico + schema.org para organizaciones de salud",
-              "Integración directa de WhatsApp y formulario de turnos",
-              "CMS autogestionable para médicos, horarios y noticias"
+              "Presencia permanente en Google y redes sociales",
+              "Credibilidad de alta categoría desde el primer clic",
+              "Directorio de profesionales filtrable y actualizable",
+              "Landing de reclutamiento para médicos y especialistas",
+              "Capta pacientes incluso fuera del horario laboral"
             ]
+          },
+          {
+            "type": "image",
+            "src": "/logos/ciudad-oeste/Gemini_Generated_Image_fvz93sfvz93sfvz9.png",
+            "alt": "Consultorio médico de Ciudad Oeste",
+            "caption": "La experiencia de atención que el sitio debe comunicar con excelencia",
+            "badge": "La experiencia a mostrar",
+            "span": "1x1"
+          },
+          {
+            "type": "metric",
+            "value": "2",
+            "label": "Audiencias objetivo",
+            "description": "Pacientes que buscan atención médica de calidad + profesionales que buscan dónde desarrollarse.",
+            "icon": "Target",
+            "span": "1x1"
+          },
+          {
+            "type": "metric",
+            "value": "4w",
+            "label": "Entrega en producción",
+            "description": "4 semanas desde el kick-off hasta el sitio live en producción con soporte activo.",
+            "icon": "Clock",
+            "span": "1x1"
           }
         ]
       }
     },
     {
-      "id": "experiencia",
+      "id": "solucion",
       "type": "book-section",
       "enabled": true,
-      "label": "Nueva Experiencia",
+      "label": "La Solución",
       "data": {
-        "title": "La Nueva Experiencia Digital",
-        "subtitle": "Diseños UI de alta fidelidad — así se verá el nuevo Ciudad Oeste en producción",
+        "title": "Sitio Web Institucional — 5 páginas + Panel Admin",
+        "subtitle": "Diseño de alta fidelidad aprobado antes de comenzar el desarrollo",
         "cards": [
           {
             "type": "image",
             "src": "/logos/ciudad-oeste/wireframes/home.png",
-            "alt": "Diseño UI del nuevo home — Ciudad Oeste",
-            "caption": "Home — hero con CTA de turno, especialidades de acceso rápido y sección de profesionales",
-            "badge": "Propuesta UI · Home",
+            "alt": "Diseño del Home — Ciudad Oeste",
+            "caption": "Home — identidad institucional + CTA sistema de turnos + especialidades destacadas",
+            "badge": "Página 1 · Home",
             "span": "half"
           },
           {
             "type": "image",
-            "src": "/logos/ciudad-oeste/Gemini_Generated_Image_aqs3zfaqs3zfaqs3.png",
-            "alt": "Render de la recepción de Ciudad Oeste con escalera",
-            "caption": "La identidad física — calidez, mármol y madera que el diseño digital traduce en color y tipografía",
-            "badge": "Identidad física",
+            "src": "/logos/ciudad-oeste/wireframes/NOSOTROS.png",
+            "alt": "Diseño de Sobre Nosotros — Ciudad Oeste",
+            "caption": "Sobre Nosotros — genera confianza en pacientes + landing de reclutamiento para médicos",
+            "badge": "Página 2 · Nosotros",
+            "span": "half"
+          },
+          {
+            "type": "image",
+            "src": "/logos/ciudad-oeste/wireframes/PROFESIONALES.png",
+            "alt": "Diseño del Directorio de Profesionales",
+            "caption": "Profesionales — directorio filtrable por especialidad con horarios, foto, matrícula y CTA de turno",
+            "badge": "Página 3 · Profesionales",
             "span": "half"
           },
           {
             "type": "image",
             "src": "/logos/ciudad-oeste/wireframes/ESPECIALIDADES.png",
-            "alt": "Diseño UI de especialidades y perfil de médicos",
-            "caption": "Especialidades — card por especialidad, perfil de médicos y CTA de turno integrado",
-            "badge": "Propuesta UI · Especialidades",
+            "alt": "Diseño de la página de Especialidades",
+            "caption": "Especialidades — catálogo con descripción, acceso a profesionales y horarios por área",
+            "badge": "Página 4 · Especialidades",
             "span": "half"
           },
           {
             "type": "image",
             "src": "/logos/ciudad-oeste/wireframes/contacto.png",
-            "alt": "Diseño UI del flujo de contacto",
-            "caption": "Contacto — formulario simplificado + WhatsApp + mapa. Conversión en un scroll",
-            "badge": "Propuesta UI · Contacto",
+            "alt": "Diseño de la página de Contacto",
+            "caption": "Contacto — formulario validado, mapa, datos institucionales y CTAs: turno urgente + consulta general",
+            "badge": "Página 5 · Contacto",
             "span": "half"
           },
           {
             "type": "text",
-            "eyebrow": "Principios de UX aplicados",
-            "heading": "Cada pantalla diseñada para reducir la fricción hasta el turno",
-            "body": "La arquitectura de información fue construida desde los datos: el paciente que llega de Google quiere encontrar su especialidad, ver el médico disponible y contactar. Ese flujo está optimizado en 3 pasos máximo desde cualquier dispositivo.",
-            "span": "2x1",
+            "eyebrow": "Página 6 · Panel Admin",
+            "heading": "Panel autoadministrable sin código",
+            "body": "El equipo de Ciudad Oeste gestiona el sitio desde un dashboard interno con usuario y contraseña. Sin depender de un desarrollador para actualizaciones del día a día.",
+            "span": "half",
             "bullets": [
-              "Mobile-first: diseñado en 375px, escalado perfecto a desktop",
-              "Accesibilidad WCAG AA: contraste, etiquetas y tap-targets de 44px",
-              "Velocidad perceptual: skeleton screens y carga progresiva",
-              "SEO desde el HTML: schema.org MedicalOrganization en cada página"
+              "Agregar y editar profesionales: foto, especialidad, matrícula, horarios",
+              "Modificar textos de páginas clave",
+              "Actualizar horarios de atención por especialidad",
+              "Auth.js v5 + Prisma ORM + PostgreSQL"
             ]
           },
           {
-            "type": "image",
-            "src": "/logos/ciudad-oeste/wireframes/NOSOTROS.png",
-            "alt": "Diseño UI de la página Nosotros",
-            "caption": "Nosotros — historia institucional, valores y equipo directivo",
-            "badge": "Propuesta UI · Nosotros",
-            "span": "1x1"
+            "type": "text",
+            "eyebrow": "Stack tecnológico",
+            "heading": "Next.js 16 + TypeScript — el estándar más alto del mercado",
+            "body": "Construido sobre el stack más robusto y escalable disponible. Preparado para crecer: nuevas páginas, sistemas de turnos propios, portal del paciente, múltiples sedes.",
+            "span": "2x1",
+            "bullets": [
+              "Next.js 16 · TypeScript · Tailwind CSS v4 · shadcn/ui",
+              "Prisma ORM + PostgreSQL · Auth.js v5",
+              "tRPC + Zod · TanStack Query v5",
+              "Resend (email transaccional) · Framer Motion · Vercel"
+            ]
           },
           {
             "type": "metric",
-            "value": "7",
-            "label": "Páginas del nuevo sitio",
-            "description": "Home, Especialidades, Profesionales, Nosotros, Institucional, Contacto y Blog.",
+            "value": "5",
+            "label": "Páginas incluidas",
+            "description": "Home, Nosotros, Profesionales, Especialidades y Contacto. Más panel admin.",
             "icon": "LayoutGrid",
-            "span": "1x1"
-          },
-          {
-            "type": "image",
-            "src": "/logos/ciudad-oeste/wireframes/PROFESIONALES.png",
-            "alt": "Diseño UI de la página de profesionales",
-            "caption": "Profesionales — directorio de médicos con especialidad, días y perfil detallado",
-            "badge": "Propuesta UI · Profesionales",
-            "span": "1x1"
-          },
-          {
-            "type": "metric",
-            "value": "< 1.5s",
-            "label": "Tiempo de carga objetivo",
-            "description": "Vercel CDN global + Next.js SSG garantiza la velocidad más alta posible.",
-            "icon": "Gauge",
             "span": "1x1"
           }
         ]
@@ -247,59 +252,50 @@
           {
             "id": "p1",
             "number": 1,
-            "title": "Diagnóstico",
-            "duration": "1 semana",
+            "title": "Discovery y Diseño",
+            "duration": "Semana 1",
             "tasks": [
-              "Relevamiento técnico del sitio actual",
-              "Brief de marca y tono de voz institucional",
-              "Análisis de competencia local (otras clínicas en Bariloche)",
-              "Auditoría SEO y Core Web Vitals del sitio existente"
+              "Reunión de kick-off: paleta, tipografía, referencias visuales",
+              "Recolección de materiales: fotos, textos, logos",
+              "Entrega de mockups alta fidelidad de las 5 páginas",
+              "Aprobación del cliente antes de comenzar el desarrollo"
             ]
           },
           {
             "id": "p2",
             "number": 2,
-            "title": "Diseño UX/UI",
-            "duration": "2 semanas",
+            "title": "Desarrollo + Panel Admin",
+            "duration": "Semanas 2–3",
             "tasks": [
-              "Arquitectura de información y wireframes aprobados",
-              "Sistema de diseño: tokens, tipografía, componentes",
-              "Diseño UI de alta fidelidad en Figma (todas las páginas)",
-              "Revisión y aprobación del cliente"
+              "Maquetado frontend de las 5 páginas (Next.js + Tailwind)",
+              "Panel autoadministrable: profesionales, horarios, textos",
+              "Integración formulario de contacto con Resend",
+              "Revisiones según mockups aprobados"
             ]
           },
           {
             "id": "p3",
             "number": 3,
-            "title": "Desarrollo",
-            "duration": "3 semanas",
+            "title": "QA, Deploy y Entrega",
+            "duration": "Semana 4",
             "tasks": [
-              "Frontend responsive con Next.js App Router",
-              "Integración de CMS headless Sanity (gestión autónoma)",
-              "SEO técnico: schema.org MedicalOrganization, meta tags, sitemap",
-              "Testing cross-browser y audit de performance"
-            ]
-          },
-          {
-            "id": "p4",
-            "number": 4,
-            "title": "Lanzamiento",
-            "duration": "1 semana",
-            "tasks": [
-              "Deploy en Vercel con CDN global",
-              "Migración DNS y configuración SSL",
-              "Configuración Google Analytics 4 + Google Business Profile",
-              "Capacitación del equipo para gestión de contenidos"
+              "Testing performance: Core Web Vitals en verde",
+              "Testing responsivo: mobile, tablet y desktop",
+              "Deploy en producción + configuración SEO básico",
+              "Capacitación al equipo para uso del panel admin",
+              "Soporte activo 30 días post-lanzamiento"
             ]
           }
         ],
         "technologies": [
-          { "name": "Next.js", "description": "Framework React — SSG + SSR para máxima velocidad" },
-          { "name": "TypeScript", "description": "Tipado estático para robustez y mantenibilidad" },
-          { "name": "Tailwind CSS", "description": "Estilos responsive, accesibles y coherentes" },
-          { "name": "Vercel", "description": "Hosting edge-first, CDN global, deploys automáticos" },
-          { "name": "Sanity CMS", "description": "El equipo actualiza médicos, horarios y noticias sin código" },
-          { "name": "Google Analytics 4", "description": "Métricas de conversión y comportamiento de pacientes" }
+          { "name": "Next.js 16", "description": "Framework React — SSG + SSR + App Router" },
+          { "name": "TypeScript", "description": "Tipado estático — robustez y mantenibilidad" },
+          { "name": "Tailwind CSS v4", "description": "Estilos utilitarios responsive" },
+          { "name": "shadcn/ui", "description": "Componentes UI de alta calidad" },
+          { "name": "Prisma + PostgreSQL", "description": "Base de datos del panel admin" },
+          { "name": "Auth.js v5 + tRPC + Zod", "description": "Autenticación y API tipada y validada" },
+          { "name": "Resend", "description": "Email transaccional del formulario de contacto" },
+          { "name": "Vercel", "description": "Deploy, CDN global y hosting edge-first" }
         ]
       }
     },
@@ -312,99 +308,93 @@
         "items": [
           {
             "id": "i1",
-            "category": "Estrategia & Diseño",
-            "name": "UX Research + Wireframes",
-            "description": "Diagnóstico, arquitectura de información, wireframes mobile/desktop aprobados",
-            "unitPrice": 400,
-            "total": 400
+            "category": "Diseño",
+            "name": "Diseño UX/UI",
+            "description": "Mockups de alta fidelidad de las 5 páginas — aprobados antes de desarrollar",
+            "unitPrice": 80,
+            "total": 80
           },
           {
             "id": "i2",
-            "category": "Estrategia & Diseño",
-            "name": "Diseño UI de alta fidelidad",
-            "description": "Sistema de diseño completo + todas las páginas en Figma, listos para desarrollo",
-            "unitPrice": 400,
-            "total": 400
+            "category": "Desarrollo",
+            "name": "Desarrollo frontend — 5 páginas",
+            "description": "Next.js 16 + Tailwind CSS v4 + shadcn/ui, responsive y optimizado",
+            "unitPrice": 200,
+            "total": 200
           },
           {
             "id": "i3",
             "category": "Desarrollo",
-            "name": "Desarrollo Next.js completo",
-            "description": "7 páginas responsive + CMS headless Sanity + formulario de contacto integrado",
-            "unitPrice": 1200,
-            "total": 1200
+            "name": "Panel autoadministrable",
+            "description": "Gestión de profesionales, horarios y textos — Auth.js + Prisma + PostgreSQL",
+            "unitPrice": 100,
+            "total": 100
           },
           {
             "id": "i4",
-            "category": "Marketing Digital",
-            "name": "SEO Técnico",
-            "description": "Schema.org MedicalOrganization, meta tags dinámicos, sitemap, Google Business",
-            "unitPrice": 400,
-            "total": 400
-          },
-          {
-            "id": "i5",
-            "category": "Infraestructura",
-            "name": "Dominio + Hosting 1 año",
-            "description": "Vercel Pro + dominio .com.ar con SSL incluido",
-            "unitPrice": 200,
-            "total": 200,
+            "category": "Lanzamiento",
+            "name": "Deploy + SEO básico + Formulario + Soporte 30 días",
+            "description": "Puesta en producción en Vercel, SEO on-page, formulario con Resend, soporte post-lanzamiento",
+            "unitPrice": 70,
+            "total": 70,
             "highlight": true
           }
         ],
-        "subtotal": 2600,
+        "subtotal": 450,
         "discount": 0,
-        "total": 2600,
+        "total": 450,
         "paymentMethods": [
-          "Transferencia bancaria (ARS o USD)",
-          "Cripto (USDT/USDC en red Polygon)",
-          "PayPal"
+          "Pago único: $450 USD (100% al confirmar)",
+          "2 pagos: $225 al inicio + $225 al entregar en producción",
+          "Transferencia bancaria (ARS) · USDT/USDC · Wise / PayPal · Mercado Pago"
         ],
         "terms": [
-          "50% al inicio del proyecto para reservar agenda",
-          "50% al lanzamiento del sitio en producción",
-          "Garantía de correcciones 30 días post-lanzamiento",
-          "Soporte técnico el primer mes incluido"
+          "El presupuesto cubre exclusivamente el sitio de 5 páginas descripto",
+          "El cliente entrega textos, imágenes y logos en los primeros 3 días hábiles",
+          "Hasta 2 rondas de revisión por página incluidas",
+          "El primer pago (50% o 100%) habilita el inicio del desarrollo",
+          "Hosting y dominio no incluidos — aprox. USD 5–15/mes, asesoramiento disponible",
+          "Soporte 30 días: cubre bugs y errores — no incluye nuevas funcionalidades"
         ],
-        "note": "Presupuesto válido hasta el 14 de junio de 2026. Precios en USD. No incluye redacción de textos ni fotografía profesional."
+        "note": "Presupuesto válido hasta el 29 de mayo de 2026. Precios en USD. En pago ARS se toma el tipo de cambio del día de la transacción."
       }
     },
     {
       "id": "mockups",
       "type": "mockups",
       "enabled": true,
-      "label": "Visión Final",
+      "label": "Visión",
       "data": {
         "images": [
           {
             "id": "r1",
             "src": "/logos/ciudad-oeste/Gemini_Generated_Image_riv51lriv51lriv5.png",
             "alt": "Render exterior nocturno — Ciudad Oeste",
-            "caption": "Exterior nocturno — la fachada iluminada que inspira el diseño digital"
+            "caption": "Exterior nocturno — la identidad física que el digital debe reflejar"
           },
           {
             "id": "r2",
             "src": "/logos/ciudad-oeste/Gemini_Generated_Image_cb01cpcb01cpcb01.png",
             "alt": "Render exterior luz dorada — Ciudad Oeste",
-            "caption": "Exterior dorado — la calidez de la institución en su mejor ángulo"
+            "caption": "Exterior en luz natural — calidez y solidez institucional"
           },
           {
             "id": "r3",
             "src": "/logos/ciudad-oeste/Gemini_Generated_Image_ehvez4ehvez4ehve.png",
-            "alt": "Fachada frontal con cartel luminoso — Ciudad Oeste",
-            "caption": "Entrada principal — identidad de marca física en la fachada"
+            "alt": "Fachada frontal con cartel luminoso",
+            "caption": "Entrada principal — identidad de marca en la fachada"
           },
           {
             "id": "r4",
             "src": "/logos/ciudad-oeste/co-mostrador.png",
             "alt": "Mostrador de recepción — Ciudad Oeste",
-            "caption": "Recepción — mármol, madera y branding que el digital va a reflejar"
+            "caption": "Recepción — mármol, madera y branding que define el tono visual del sitio"
           },
           {
             "id": "r5",
             "src": "/logos/ciudad-oeste/Gemini_Generated_Image_aqs3zfaqs3zfaqs3.png",
-            "alt": "Recepción con escalera espiral — Ciudad Oeste",
-            "caption": "Hall principal — la arquitectura que transmite confianza y modernidad"
+            "alt": "Recepción con escalera espiral",
+            "caption": "Hall principal — arquitectura que comunica confianza y modernidad"
           },
           {
             "id": "r6",
@@ -415,14 +405,14 @@
           {
             "id": "r7",
             "src": "/logos/ciudad-oeste/Gemini_Generated_Image_fvz93sfvz93sfvz9.png",
-            "alt": "Consultorio médico — Ciudad Oeste",
+            "alt": "Consultorio médico",
             "caption": "Consultorio — la experiencia de atención que el sitio debe comunicar"
           },
           {
             "id": "r8",
             "src": "/logos/ciudad-oeste/Gemini_Generated_Image_g783nfg783nfg783.png",
-            "alt": "Edificio al atardecer con Andes de fondo — Ciudad Oeste",
-            "caption": "Ciudad Oeste en su contexto — Bariloche, Patagonia, excelencia médica"
+            "alt": "Edificio al atardecer con Andes de fondo",
+            "caption": "Ciudad Oeste — Bariloche, Patagonia, excelencia médica"
           }
         ]
       }
