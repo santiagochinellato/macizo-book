@@ -33,7 +33,7 @@ export function RoadmapScreen({ data }: RoadmapScreenProps) {
         <motion.div variants={reduced ? undefined : fadeUp} className="flex flex-col gap-1">
           <span
             className="text-[10px] font-semibold uppercase tracking-widest"
-            style={{ color: "var(--primary-light)" }}
+            style={{ color: "var(--primary)" }}
           >
             Plan de trabajo
           </span>
@@ -84,7 +84,7 @@ export function RoadmapScreen({ data }: RoadmapScreenProps) {
                 <motion.div
                   className="absolute top-[18px] left-4 h-px"
                   style={{
-                    background: "linear-gradient(to right, var(--primary), var(--primary-light))",
+                    background: "linear-gradient(to right, var(--primary), var(--primary))",
                     originX: 0,
                     right: 4,
                   }}
@@ -131,7 +131,7 @@ export function RoadmapScreen({ data }: RoadmapScreenProps) {
                           </span>
                           <span
                             className="flex items-center gap-1 text-[10px] flex-shrink-0"
-                            style={{ color: "var(--primary-light)" }}
+                            style={{ color: "var(--primary)" }}
                           >
                             <Clock size={9} />
                             {phase.duration}
@@ -147,7 +147,7 @@ export function RoadmapScreen({ data }: RoadmapScreenProps) {
                               <CheckCircle2
                                 size={9}
                                 className="flex-shrink-0 mt-0.5"
-                                style={{ color: "var(--primary-light)", opacity: 0.6 }}
+                                style={{ color: "var(--primary)", opacity: 0.6 }}
                               />
                               {task}
                             </li>
@@ -198,7 +198,7 @@ export function RoadmapScreen({ data }: RoadmapScreenProps) {
                         </span>
                         <span
                           className="flex items-center gap-1 text-[10px] flex-shrink-0"
-                          style={{ color: "var(--primary-light)" }}
+                          style={{ color: "var(--primary)" }}
                         >
                           <Clock size={9} />
                           {phase.duration}

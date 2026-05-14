@@ -94,7 +94,7 @@ export function OverviewScreen({ data, meta, client, agency }: OverviewScreenPro
             <motion.div variants={reduced ? undefined : fadeUp} className="flex flex-col gap-3 h-full">
               <span
                 className="text-[10px] font-semibold uppercase tracking-widest"
-                style={{ color: "var(--primary-light)" }}
+                style={{ color: "var(--primary)" }}
               >
                 Visión
               </span>
@@ -122,7 +122,7 @@ export function OverviewScreen({ data, meta, client, agency }: OverviewScreenPro
                 </span>
                 <div
                   className="text-3xl sm:text-4xl font-bold tabular-nums"
-                  style={{ color: "var(--primary-light)", lineHeight: 1.1 }}
+                  style={{ color: "var(--primary)", lineHeight: 1.1 }}
                 >
                   <AnimatedNumber value={data.totalPrice} currency={meta.currency} />
                 </div>
@@ -161,7 +161,7 @@ export function OverviewScreen({ data, meta, client, agency }: OverviewScreenPro
                   className="flex items-center justify-center w-10 h-10 rounded-xl"
                   style={{
                     background: "color-mix(in srgb, var(--primary) 12%, transparent)",
-                    color: "var(--primary-light)",
+                    color: "var(--primary)",
                   }}
                 >
                   <DynamicIcon name={obj.icon} size={18} />
@@ -216,7 +216,7 @@ export function OverviewScreen({ data, meta, client, agency }: OverviewScreenPro
                   href={`mailto:${agency.email}`}
                   className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-semibold transition-opacity hover:opacity-80"
                   style={{
-                    background: "var(--surface-elevated, #1f1f26)",
+                    background: "var(--surface-elevated)",
                     color: "var(--text-muted)",
                     border: "1px solid var(--border)",
                   }}

@@ -39,7 +39,11 @@ function LightboxModal({ image, images, onClose, onNext, onPrev }: LightboxProps
   return (
     <motion.div
       className="fixed inset-0 z-50 flex items-center justify-center p-4"
-      style={{ background: "var(--surface-overlay)" }}
+      style={{
+        background: "var(--surface-overlay)",
+        backdropFilter: "blur(12px)",
+        WebkitBackdropFilter: "blur(12px)",
+      }}
       variants={reduced ? undefined : overlayFade}
       initial="hidden"
       animate="visible"
@@ -52,7 +56,12 @@ function LightboxModal({ image, images, onClose, onNext, onPrev }: LightboxProps
       {/* Close */}
       <button
         className="absolute top-4 right-4 z-10 flex items-center justify-center w-9 h-9 rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)]"
-        style={{ background: "var(--surface-elevated, #1f1f26)", color: "var(--text-muted)" }}
+        style={{
+          background: "var(--surface-card)",
+          color: "var(--text-muted)",
+          border: "1px solid var(--border)",
+          boxShadow: "var(--shadow-card)",
+        }}
         onClick={onClose}
         aria-label="Cerrar"
       >
@@ -73,7 +82,12 @@ function LightboxModal({ image, images, onClose, onNext, onPrev }: LightboxProps
       {images.length > 1 && (
         <button
           className="absolute left-4 flex items-center justify-center w-9 h-9 rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)]"
-          style={{ background: "var(--surface-elevated, #1f1f26)", color: "var(--text-muted)" }}
+          style={{
+            background: "var(--surface-card)",
+            color: "var(--text-muted)",
+            border: "1px solid var(--border)",
+            boxShadow: "var(--shadow-card)",
+          }}
           onClick={(e) => { e.stopPropagation(); onPrev(); }}
           aria-label="Imagen anterior"
         >
@@ -85,7 +99,12 @@ function LightboxModal({ image, images, onClose, onNext, onPrev }: LightboxProps
       {images.length > 1 && (
         <button
           className="absolute right-4 flex items-center justify-center w-9 h-9 rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)]"
-          style={{ background: "var(--surface-elevated, #1f1f26)", color: "var(--text-muted)" }}
+          style={{
+            background: "var(--surface-card)",
+            color: "var(--text-muted)",
+            border: "1px solid var(--border)",
+            boxShadow: "var(--shadow-card)",
+          }}
           onClick={(e) => { e.stopPropagation(); onNext(); }}
           aria-label="Imagen siguiente"
         >
@@ -97,12 +116,13 @@ function LightboxModal({ image, images, onClose, onNext, onPrev }: LightboxProps
       <motion.div
         layoutId={`mockup-${image.id}`}
         className="relative rounded-[var(--radius-lg)] overflow-hidden"
-        style={{
+          style={{
           maxWidth: "88vw",
           maxHeight: "82vh",
           width: "100%",
           aspectRatio: "16/9",
-          border: "1px solid var(--border-strong)",
+          border: "1px solid var(--border)",
+          boxShadow: "var(--shadow-elevated)",
         }}
         onClick={(e) => e.stopPropagation()}
         transition={{ type: "spring", damping: 30, stiffness: 300 }}
@@ -187,7 +207,7 @@ export function MockupsScreen({ data }: MockupsScreenProps) {
           <div className="flex flex-col gap-1">
             <span
               className="text-[10px] font-semibold uppercase tracking-widest"
-              style={{ color: "var(--primary-light)" }}
+              style={{ color: "var(--primary)" }}
             >
               Portfolio
             </span>

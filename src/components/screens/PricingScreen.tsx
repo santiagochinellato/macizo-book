@@ -36,7 +36,7 @@ export function PricingScreen({ data, meta }: PricingScreenProps) {
         <motion.div variants={reduced ? undefined : fadeUp} className="flex flex-col gap-1">
           <span
             className="text-[10px] font-semibold uppercase tracking-widest"
-            style={{ color: "var(--primary-light)" }}
+            style={{ color: "var(--primary)" }}
           >
             Detalle de inversión
           </span>
@@ -94,7 +94,7 @@ export function PricingScreen({ data, meta }: PricingScreenProps) {
                       )}
                       <span
                         className="text-sm font-medium"
-                        style={{ color: item.highlight ? "var(--primary-light)" : "var(--text-primary)" }}
+                        style={{ color: item.highlight ? "var(--primary)" : "var(--text-primary)" }}
                       >
                         {item.name}
                       </span>
@@ -143,7 +143,7 @@ export function PricingScreen({ data, meta }: PricingScreenProps) {
                   </span>
                   <span
                     className="text-2xl font-bold tabular-nums"
-                    style={{ color: "var(--primary-light)" }}
+                    style={{ color: "var(--primary)" }}
                   >
                     <AnimatedNumber value={total} currency={meta.currency} />
                   </span>
@@ -207,7 +207,7 @@ export function PricingScreen({ data, meta }: PricingScreenProps) {
                         <CheckCircle2
                           size={12}
                           className="flex-shrink-0 mt-0.5"
-                          style={{ color: "var(--primary-light)" }}
+                          style={{ color: "var(--primary)" }}
                         />
                         {term}
                       </li>

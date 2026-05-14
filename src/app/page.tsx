@@ -22,6 +22,12 @@ export default async function IndexPage() {
       className="min-h-screen"
       style={{ background: "var(--surface-bg)" }}
     >
+      <style>{`
+        .presentation-card:hover {
+          box-shadow: var(--shadow-card-hover);
+          border-color: color-mix(in srgb, var(--primary) 15%, var(--border));
+        }
+      `}</style>
       {/* Header */}
       <header
         className="px-6 sm:px-10 py-5 flex items-center justify-between"
@@ -73,7 +79,7 @@ export default async function IndexPage() {
           />
           <span
             className="text-[10px] font-semibold uppercase tracking-widest"
-            style={{ color: "var(--primary-light)" }}
+            style={{ color: "var(--primary)" }}
           >
             Presentaciones
           </span>
@@ -94,7 +100,7 @@ export default async function IndexPage() {
               Agregá un archivo JSON en{" "}
               <code
                 className="px-1.5 py-0.5 rounded font-mono text-[10px]"
-                style={{ background: "var(--surface-panel)", color: "var(--primary-light)" }}
+                style={{ background: "var(--surface-panel)", color: "var(--primary)" }}
               >
                 config/presentations/
               </code>
@@ -111,10 +117,11 @@ export default async function IndexPage() {
                 <li key={p.slug}>
                   <Link
                     href={`/p/${p.slug}`}
-                    className="group flex flex-col gap-4 p-5 rounded-[var(--radius-lg)] transition-all hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--surface-bg)]"
+                    className="presentation-card group flex flex-col gap-4 p-5 rounded-[var(--radius-lg)] transition-all hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--surface-bg)]"
                     style={{
                       background: "var(--surface-card)",
                       border: "1px solid var(--border)",
+                      boxShadow: "var(--shadow-card)",
                       transitionDuration: "200ms",
                       transitionTimingFunction: "ease-out",
                     }}
@@ -124,7 +131,7 @@ export default async function IndexPage() {
                       <div className="flex flex-col gap-0.5">
                         <span
                           className="text-[10px] font-semibold uppercase tracking-wider"
-                          style={{ color: "var(--primary-light)" }}
+                          style={{ color: "var(--primary)" }}
                         >
                           {p.client.industry ?? typeLabel}
                         </span>

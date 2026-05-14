@@ -33,7 +33,7 @@ export function ProductScreen({ data }: ProductScreenProps) {
         <motion.div variants={reduced ? undefined : fadeUp} className="flex flex-col gap-1">
           <span
             className="text-[10px] font-semibold uppercase tracking-widest"
-            style={{ color: "var(--primary-light)" }}
+            style={{ color: "var(--primary)" }}
           >
             Descripción del producto
           </span>
@@ -78,7 +78,7 @@ export function ProductScreen({ data }: ProductScreenProps) {
                 <div key={stat.label} className="flex flex-col gap-0.5">
                   <span
                     className="text-xl font-bold"
-                    style={{ color: "var(--primary-light)" }}
+                    style={{ color: "var(--primary)" }}
                   >
                     {stat.value}
                   </span>
@@ -116,7 +116,7 @@ export function ProductScreen({ data }: ProductScreenProps) {
                         className="text-xs font-mono px-2 py-0.5 rounded"
                         style={{
                           background: "var(--primary-glow)",
-                          color: "var(--primary-light)",
+                          color: "var(--primary)",
                         }}
                       >
                         0{i + 1}

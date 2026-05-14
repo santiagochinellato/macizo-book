@@ -70,6 +70,7 @@ export function Sidebar({
       style={{
         background: "var(--surface-panel)",
         borderRight: "1px solid var(--border)",
+        boxShadow: "2px 0 8px rgba(0,0,0,0.04)",
       }}
       aria-label="Navegación de secciones"
     >
@@ -173,9 +174,9 @@ export function Sidebar({
                   className="w-full flex items-center gap-3 rounded-lg px-2 py-2.5 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)]"
                   style={{
                     background: isActive
-                      ? "color-mix(in srgb, var(--primary) 12%, transparent)"
+                      ? "color-mix(in srgb, var(--primary) 8%, transparent)"
                       : "transparent",
-                    color: isActive ? "var(--primary-light)" : "var(--text-muted)",
+                    color: isActive ? "var(--primary)" : "var(--text-muted)",
                   }}
                   aria-current={isActive ? "page" : undefined}
                   title={isCollapsed ? label : undefined}
@@ -195,7 +196,7 @@ export function Sidebar({
                     <span
                       className="relative z-10 flex items-center justify-center"
                       style={{
-                        color: isActive ? "var(--primary-light)" : "var(--text-subtle)",
+                        color: isActive ? "var(--primary)" : "var(--text-subtle)",
                       }}
                     >
                       {SCREEN_ICONS[screen.type]}
@@ -252,7 +253,7 @@ export function Sidebar({
           onClick={onToggleCollapse}
           className="flex items-center justify-center w-full h-8 rounded-lg transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)]"
           style={{
-            background: "var(--surface-elevated, #1f1f26)",
+            background: "var(--surface-elevated)",
             color: "var(--text-subtle)",
           }}
           aria-label={isCollapsed ? "Expandir sidebar" : "Colapsar sidebar"}
