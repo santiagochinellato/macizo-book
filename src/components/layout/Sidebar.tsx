@@ -1,7 +1,6 @@
 "use client";
 
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
-import * as LucideIcons from "lucide-react";
 import {
   LayoutDashboard,
   Map,
@@ -9,14 +8,14 @@ import {
   CreditCard,
   Image as ImageIcon,
   BookOpen,
+  Palette,
+  Handshake,
   ChevronLeft,
   ChevronRight,
   ExternalLink,
 } from "lucide-react";
 import type { Screen, AgencyConfig, ClientConfig, DocumentMeta } from "@/types/presentation";
 import { DOC_TYPE_LABELS, STATUS_LABELS, STATUS_COLORS } from "@/lib/utils";
-
-type LucideIconName = keyof typeof LucideIcons;
 
 const SCREEN_ICONS: Record<Screen["type"], React.ReactNode> = {
   overview: <LayoutDashboard size={17} />,
@@ -25,6 +24,8 @@ const SCREEN_ICONS: Record<Screen["type"], React.ReactNode> = {
   pricing: <CreditCard size={17} />,
   mockups: <ImageIcon size={17} />,
   "book-section": <BookOpen size={17} />,
+  "design-system": <Palette size={17} />,
+  closing: <Handshake size={17} />,
 };
 
 const SCREEN_DEFAULT_LABELS: Record<Screen["type"], string> = {
@@ -34,6 +35,8 @@ const SCREEN_DEFAULT_LABELS: Record<Screen["type"], string> = {
   pricing: "Inversión",
   mockups: "Mockups",
   "book-section": "Sección",
+  "design-system": "Diseño",
+  closing: "Cierre",
 };
 
 interface SidebarProps {
@@ -58,12 +61,9 @@ export function Sidebar({
   meta,
 }: SidebarProps) {
   const reduced = useReducedMotion();
-  const enabled = screens.filter((s) => s.enabled);
   const statusColor = STATUS_COLORS[meta.status];
   const statusLabel = STATUS_LABELS[meta.status];
   const typeLabel = DOC_TYPE_LABELS[meta.type];
-
-  const AgencyLogoIcon = LucideIcons["Layers" as LucideIconName] as React.ComponentType<{ size?: number; style?: React.CSSProperties }> | undefined;
 
   return (
     <motion.aside
@@ -86,7 +86,7 @@ export function Sidebar({
           className="flex items-center justify-center w-8 h-8 rounded-lg flex-shrink-0"
           style={{ background: "var(--primary)", color: "#fff" }}
         >
-          {AgencyLogoIcon ? <AgencyLogoIcon size={15} /> : null}
+          <Layers size={15} />
         </div>
         <AnimatePresence initial={false}>
           {!isCollapsed && (
@@ -166,7 +166,7 @@ export function Sidebar({
         )}
 
         <ul className="flex flex-col gap-0.5 px-2" role="list">
-          {enabled.map((screen) => {
+          {screens.map((screen) => {
             const isActive = screen.id === activeId;
             const label = screen.label ?? SCREEN_DEFAULT_LABELS[screen.type];
 

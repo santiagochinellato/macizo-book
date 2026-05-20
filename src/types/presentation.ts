@@ -77,6 +77,7 @@ export interface Technology {
 export interface RoadmapScreenData {
   phases: TimelinePhase[];
   technologies: Technology[];
+  clientRequirements?: string[];
 }
 
 export interface ProductFeature {
@@ -105,11 +106,19 @@ export interface PriceItem {
   highlight?: boolean;
 }
 
+export interface PaymentPlan {
+  title: string;
+  amount: string;
+  detail: string;
+  featured?: boolean;
+}
+
 export interface PricingScreenData {
   items: PriceItem[];
   subtotal: number;
   discount?: number;
   total: number;
+  paymentPlans?: PaymentPlan[];
   paymentMethods?: string[];
   terms?: string[];
   note?: string;
@@ -139,6 +148,13 @@ export interface ImageBookCard {
   /** Short badge shown over the image, e.g. "Sitio actual" or "Render fotorrealista" */
   badge?: string;
   span?: CardSpan;
+  /** When present, card becomes clickable and opens a PageDetailModal */
+  detail?: {
+    title: string;
+    description: string;
+    bullets?: string[];
+    stack?: string[];
+  };
 }
 
 export interface WireframeBookCard {
@@ -178,9 +194,48 @@ export interface BookSectionScreenData {
   cards: BookCard[];
 }
 
+// ─── Design system screen ──────────────────────────────────────────────────────
+
+export interface DesignColor {
+  name: string;
+  hex: string;
+  role: string;
+  textLight?: boolean;
+}
+
+export interface DesignFont {
+  name: string;
+  role: string;
+  sample: string;
+  weights: string;
+  category?: "serif" | "sans-serif" | "display";
+}
+
+export interface DesignPrinciple {
+  icon: string;
+  title: string;
+  description: string;
+}
+
+export interface DesignSystemScreenData {
+  title: string;
+  subtitle?: string;
+  description?: string;
+  palette: DesignColor[];
+  typography: DesignFont[];
+  principles?: DesignPrinciple[];
+}
+
+// ─── Closing screen ────────────────────────────────────────────────────────────
+
+export interface ClosingScreenData {
+  ctaHeading?: string;
+  ctaBody?: string;
+}
+
 // ─── Screen union ──────────────────────────────────────────────────────────────
 
-export type ScreenType = "overview" | "roadmap" | "product" | "pricing" | "mockups" | "book-section";
+export type ScreenType = "overview" | "roadmap" | "product" | "pricing" | "mockups" | "book-section" | "design-system" | "closing";
 
 export interface OverviewScreen {
   id: string;
@@ -230,13 +285,31 @@ export interface BookSectionScreen {
   data: BookSectionScreenData;
 }
 
+export interface DesignSystemScreen {
+  id: string;
+  type: "design-system";
+  enabled?: boolean;
+  label?: string;
+  data: DesignSystemScreenData;
+}
+
+export interface ClosingScreen {
+  id: string;
+  type: "closing";
+  enabled?: boolean;
+  label?: string;
+  data?: ClosingScreenData;
+}
+
 export type Screen =
   | OverviewScreen
   | RoadmapScreen
   | ProductScreen
   | PricingScreen
   | MockupsScreen
-  | BookSectionScreen;
+  | BookSectionScreen
+  | DesignSystemScreen
+  | ClosingScreen;
 
 // ─── Root config ───────────────────────────────────────────────────────────────
 

@@ -1,21 +1,33 @@
-import { promises as fs } from "fs";
-import path from "path";
 import type { PresentationConfig, PresentationListItem } from "@/types/presentation";
+import { getPresentation, listAllSlugs, listPresentationsForAdmin } from "@/lib/presentation-store";
 
 export async function loadPresentation(slug: string): Promise<PresentationConfig> {
-  const filePath = path.join(process.cwd(), "config", "presentations", `${slug}.json`);
-  const raw = await fs.readFile(filePath, "utf-8");
-  const config = JSON.parse(raw) as PresentationConfig;
+  const config = await getPresentation(slug);
+  if (!config) {
+    throw new Error(`Presentación no encontrada: ${slug}`);
+  }
   return config;
 }
 
 export async function listPresentations(): Promise<PresentationListItem[]> {
-  const dir = path.join(process.cwd(), "config", "presentations");
-  const files = await fs.readdir(dir);
-  const configs = await Promise.all(
-    files
-      .filter((f) => f.endsWith(".json"))
-      .map((f) => loadPresentation(f.replace(".json", "")))
-  );
-  return configs.map(({ slug, client, meta, agency }) => ({ slug, client, meta, agency }));
+  const entries = await listPresentationsForAdmin();
+  const items: PresentationListItem[] = [];
+
+  for (const entry of entries) {
+    const config = await getPresentation(entry.slug);
+    if (config) {
+      items.push({
+        slug: config.slug,
+        client: config.client,
+        meta: config.meta,
+        agency: config.agency,
+      });
+    }
+  }
+
+  return items;
+}
+
+export async function listPresentationSlugs(): Promise<string[]> {
+  return listAllSlugs();
 }

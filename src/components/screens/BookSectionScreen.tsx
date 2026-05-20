@@ -1,10 +1,30 @@
 "use client";
 
+import { useState, useCallback } from "react";
 import { motion, useReducedMotion } from "framer-motion";
-import * as LucideIcons from "lucide-react";
-import { Globe } from "lucide-react";
+import {
+  Globe,
+  Expand,
+  LayoutDashboard,
+  Search,
+  TrendingUp,
+  MapPin,
+  CalendarCheck,
+  Star,
+  Users,
+  Clock,
+  CheckCircle,
+  Rocket,
+  Code,
+  Smartphone,
+  BarChart,
+  ShieldCheck,
+  Zap,
+  type LucideProps,
+} from "lucide-react";
 import { BentoGrid } from "@/components/bento/BentoGrid";
 import { BentoCard } from "@/components/bento/BentoCard";
+import { PageDetailModal } from "@/components/ui/PageDetailModal";
 import { screenEnter, stagger, fadeUp } from "@/lib/motion-variants";
 import type {
   BookSectionScreenData,
@@ -16,8 +36,27 @@ import type {
   CardSpan,
 } from "@/types/presentation";
 
-type LucideIconName = keyof typeof LucideIcons;
 type ColSpan = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
+
+const ICON_REGISTRY: Record<string, React.ComponentType<LucideProps>> = {
+  Globe,
+  Expand,
+  LayoutDashboard,
+  Search,
+  TrendingUp,
+  MapPin,
+  CalendarCheck,
+  Star,
+  Users,
+  Clock,
+  CheckCircle,
+  Rocket,
+  Code,
+  Smartphone,
+  BarChart,
+  ShieldCheck,
+  Zap,
+};
 
 function spanToCols(span: CardSpan | undefined): { colSpan: ColSpan; colSpanSm: ColSpan } {
   switch (span) {
@@ -29,7 +68,6 @@ function spanToCols(span: CardSpan | undefined): { colSpan: ColSpan; colSpanSm: 
   }
 }
 
-/** Aspect ratio for image cards based on their span */
 function spanToAspect(span: CardSpan | undefined): string {
   switch (span) {
     case "1x1":  return "aspect-[4/3]";
@@ -43,31 +81,67 @@ function spanToAspect(span: CardSpan | undefined): string {
 // ─── Sub-card components ──────────────────────────────────────────────────────
 
 function DynamicIcon({ name, size = 20 }: { name: string; size?: number }) {
-  const Icon = LucideIcons[name as LucideIconName] as React.ComponentType<{ size?: number }> | undefined;
+  const Icon = ICON_REGISTRY[name];
   if (!Icon) return <Globe size={size} />;
   return <Icon size={size} />;
 }
 
-// Image card — fills the entire BentoCard. Caption and badge are overlays.
-function ImageCardContent({ card }: { card: ImageBookCard }) {
+interface ImageCardContentProps {
+  card: ImageBookCard;
+  clickable?: boolean;
+  onClick?: () => void;
+}
+
+function ImageCardContent({ card, clickable, onClick }: ImageCardContentProps) {
   const aspectClass = spanToAspect(card.span);
   return (
-    <div className={`relative w-full overflow-hidden ${aspectClass}`}>
+    <div
+      className={`relative w-full overflow-hidden ${aspectClass} ${clickable ? "cursor-pointer group" : ""}`}
+      onClick={clickable ? onClick : undefined}
+      role={clickable ? "button" : undefined}
+      tabIndex={clickable ? 0 : undefined}
+      onKeyDown={clickable && onClick ? (e) => { if (e.key === "Enter" || e.key === " ") onClick(); } : undefined}
+      aria-label={clickable ? `Ver detalle: ${card.alt}` : undefined}
+    >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={card.src}
         alt={card.alt}
+        loading="lazy"
+        decoding="async"
         style={{
           position: "absolute",
           inset: 0,
           width: "100%",
           height: "100%",
           objectFit: "cover",
+          objectPosition: "top",
           display: "block",
+          transition: "transform 0.4s ease",
         }}
+        className={clickable ? "group-hover:scale-[1.03]" : ""}
       />
 
-      {/* Badge — top left */}
+      {/* Expand hint on hover */}
+      {clickable && (
+        <div
+          className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
+          style={{ background: "rgba(15,23,42,0.28)" }}
+        >
+          <div
+            className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold"
+            style={{
+              backgroundColor: "rgba(255,255,255,0.92)",
+              borderRadius: "var(--radius-sm)",
+              color: "var(--primary)",
+            }}
+          >
+            <Expand size={13} />
+            Ver página
+          </div>
+        </div>
+      )}
+
       {card.badge && (
         <div
           className="absolute top-3 left-3 px-2 py-0.5 text-[9px] font-bold uppercase tracking-widest"
@@ -81,7 +155,6 @@ function ImageCardContent({ card }: { card: ImageBookCard }) {
         </div>
       )}
 
-      {/* Caption — bottom gradient overlay */}
       {card.caption && (
         <div
           className="absolute bottom-0 left-0 right-0 px-4 py-3"
@@ -98,7 +171,6 @@ function ImageCardContent({ card }: { card: ImageBookCard }) {
   );
 }
 
-// Wireframe card — technical treatment with high min-height
 function WireframeCardContent({ card }: { card: WireframeBookCard }) {
   return (
     <div className="flex flex-col gap-3 h-full">
@@ -115,6 +187,8 @@ function WireframeCardContent({ card }: { card: WireframeBookCard }) {
         <img
           src={card.src}
           alt={card.alt}
+          loading="lazy"
+          decoding="async"
           style={{
             position: "absolute",
             inset: 0,
@@ -149,7 +223,6 @@ function WireframeCardContent({ card }: { card: WireframeBookCard }) {
   );
 }
 
-// Text card
 function TextCardContent({ card }: { card: TextBookCard }) {
   return (
     <div
@@ -192,7 +265,6 @@ function TextCardContent({ card }: { card: TextBookCard }) {
   );
 }
 
-// Metric card
 function MetricCardContent({ card }: { card: MetricBookCard }) {
   return (
     <div className="flex flex-col gap-4 h-full justify-between">
@@ -228,33 +300,6 @@ function MetricCardContent({ card }: { card: MetricBookCard }) {
   );
 }
 
-// ─── Card dispatcher ──────────────────────────────────────────────────────────
-
-function renderCard(card: BookCard, i: number, reduced: boolean | null) {
-  const { colSpan, colSpanSm } = spanToCols(card.span);
-  const isHighlight = card.type === "metric" || (card.type === "text" && card.accent);
-
-  return (
-    <BentoCard
-      key={i}
-      colSpan={colSpan}
-      colSpanSm={colSpanSm}
-      highlight={isHighlight}
-      noPadding={card.type === "image"}
-    >
-      <motion.div
-        variants={reduced ? undefined : fadeUp}
-        className="h-full"
-      >
-        {card.type === "image"    && <ImageCardContent    card={card} />}
-        {card.type === "wireframe" && <WireframeCardContent card={card} />}
-        {card.type === "text"     && <TextCardContent     card={card} />}
-        {card.type === "metric"   && <MetricCardContent   card={card} />}
-      </motion.div>
-    </BentoCard>
-  );
-}
-
 // ─── Main screen ─────────────────────────────────────────────────────────────
 
 interface BookSectionScreenProps {
@@ -263,48 +308,117 @@ interface BookSectionScreenProps {
 
 export function BookSectionScreen({ data }: BookSectionScreenProps) {
   const reduced = useReducedMotion();
+  const [modalIndex, setModalIndex] = useState<number | null>(null);
+
+  // Build the list of image cards that have a `detail` property (in order)
+  const modalItems = data.cards
+    .filter((c): c is ImageBookCard => c.type === "image" && !!c.detail)
+    .map((c) => ({
+      src: c.src,
+      alt: c.alt,
+      caption: c.caption,
+      badge: c.badge,
+      detail: c.detail!,
+    }));
+
+  // Map each card to its index within modalItems (or -1 if it's not in the list)
+  let modalItemCounter = -1;
+  const cardModalIndex = data.cards.map((c) => {
+    if (c.type === "image" && c.detail) {
+      modalItemCounter++;
+      return modalItemCounter;
+    }
+    return -1;
+  });
+
+  const openModal = useCallback((idx: number) => setModalIndex(idx), []);
+  const closeModal = useCallback(() => setModalIndex(null), []);
+  const navigateModal = useCallback((idx: number) => setModalIndex(idx), []);
 
   return (
-    <motion.div
-      className="p-6 sm:p-8 min-h-full"
-      variants={reduced ? undefined : screenEnter}
-      initial="hidden"
-      animate="visible"
-      exit="exit"
-    >
+    <>
       <motion.div
-        className="flex flex-col gap-6 max-w-5xl mx-auto"
-        variants={reduced ? undefined : stagger}
+        className="p-6 sm:p-8 min-h-full"
+        variants={reduced ? undefined : screenEnter}
         initial="hidden"
         animate="visible"
+        exit="exit"
       >
-        {/* Section heading */}
-        <motion.div variants={reduced ? undefined : fadeUp} className="flex flex-col gap-1">
-          <div className="flex items-center gap-2">
-            <span
-              className="block flex-shrink-0"
-              style={{ width: 14, height: 2, background: "var(--primary)", borderRadius: 0 }}
-              aria-hidden="true"
-            />
-            <span
-              className="text-[9px] font-bold uppercase tracking-widest"
-              style={{ color: "var(--primary)" }}
-            >
-              {data.title}
-            </span>
-          </div>
-          {data.subtitle && (
-            <p className="text-sm" style={{ color: "var(--text-muted)" }}>
-              {data.subtitle}
-            </p>
-          )}
-        </motion.div>
+        <motion.div
+          className="flex flex-col gap-6 max-w-5xl mx-auto"
+          variants={reduced ? undefined : stagger}
+          initial="hidden"
+          animate="visible"
+        >
+          {/* Section heading */}
+          <motion.div variants={reduced ? undefined : fadeUp} className="flex flex-col gap-1">
+            <div className="flex items-center gap-2">
+              <span
+                className="block flex-shrink-0"
+                style={{ width: 14, height: 2, background: "var(--primary)", borderRadius: 0 }}
+                aria-hidden="true"
+              />
+              <span
+                className="text-[9px] font-bold uppercase tracking-widest"
+                style={{ color: "var(--primary)" }}
+              >
+                {data.title}
+              </span>
+            </div>
+            {data.subtitle && (
+              <p className="text-sm" style={{ color: "var(--text-muted)" }}>
+                {data.subtitle}
+              </p>
+            )}
+          </motion.div>
 
-        <BentoGrid>
-          {data.cards.map((card, i) => renderCard(card, i, reduced))}
-        </BentoGrid>
+          <BentoGrid>
+            {data.cards.map((card, i) => {
+              const { colSpan, colSpanSm } = spanToCols(card.span);
+              const isHighlight = card.type === "metric" || (card.type === "text" && card.accent);
+              const cardMIdx = cardModalIndex[i];
+              const isClickable = card.type === "image" && cardMIdx !== -1;
+
+              return (
+                <BentoCard
+                  key={i}
+                  colSpan={colSpan}
+                  colSpanSm={colSpanSm}
+                  highlight={isHighlight}
+                  noPadding={card.type === "image"}
+                >
+                  <motion.div
+                    variants={reduced ? undefined : fadeUp}
+                    className="h-full"
+                  >
+                    {card.type === "image" && (
+                      <ImageCardContent
+                        card={card}
+                        clickable={isClickable}
+                        onClick={isClickable ? () => openModal(cardMIdx) : undefined}
+                      />
+                    )}
+                    {card.type === "wireframe" && <WireframeCardContent card={card} />}
+                    {card.type === "text"      && <TextCardContent      card={card} />}
+                    {card.type === "metric"    && <MetricCardContent    card={card} />}
+                  </motion.div>
+                </BentoCard>
+              );
+            })}
+          </BentoGrid>
+        </motion.div>
       </motion.div>
-    </motion.div>
+
+      {/* Modal */}
+      {modalIndex !== null && modalItems.length > 0 && (
+        <PageDetailModal
+          items={modalItems}
+          currentIndex={modalIndex}
+          onClose={closeModal}
+          onNavigate={navigateModal}
+        />
+      )}
+    </>
   );
 }
 

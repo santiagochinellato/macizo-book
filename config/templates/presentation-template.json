@@ -1,0 +1,323 @@
+{
+  "slug": "nombre-cliente-kebab",
+  "version": 2,
+  "theme": {
+    "accentColor": "#1a5c38"
+  },
+  "agency": {
+    "name": "MacizoDigital",
+    "tagline": "Diseño web de impacto",
+    "website": "https://macizo.digital",
+    "email": "hola@macizo.digital",
+    "phone": "+54 9 11 3088-3000",
+    "social": {
+      "whatsapp": "https://wa.me/5491130883000",
+      "instagram": "https://instagram.com/macizo.digital"
+    }
+  },
+  "client": {
+    "name": "Nombre del Cliente",
+    "industry": "Rubro / Industria",
+    "contact": {
+      "name": "Nombre del contacto",
+      "role": "Cargo del contacto"
+    }
+  },
+  "meta": {
+    "type": "propuesta",
+    "number": "2026-XXX",
+    "title": "Título del proyecto",
+    "subtitle": "Subtítulo descriptivo del documento",
+    "date": "2026-05-20",
+    "validUntil": "2026-06-20",
+    "status": "enviado",
+    "currency": "USD",
+    "language": "es"
+  },
+  "screens": [
+    {
+      "id": "presentacion",
+      "type": "book-section",
+      "label": "Presentación",
+      "data": {
+        "title": "Presentación",
+        "subtitle": "Propuesta digital para [Nombre del Cliente]",
+        "cards": [
+          {
+            "type": "text",
+            "span": "2x1",
+            "accent": true,
+            "eyebrow": "Propuesta 2026-XXX",
+            "heading": "Titular principal que resume el valor de la propuesta.",
+            "body": "Párrafo de contexto: qué problema resuelve el proyecto y por qué importa ahora.",
+            "bullets": [
+              "Beneficio clave 1",
+              "Beneficio clave 2",
+              "Beneficio clave 3"
+            ]
+          },
+          {
+            "type": "metric",
+            "span": "1x1",
+            "icon": "TrendingUp",
+            "value": "3×",
+            "label": "métrica de impacto",
+            "description": "Dato o estadística que refuerza la necesidad del proyecto."
+          },
+          {
+            "type": "metric",
+            "span": "1x1",
+            "icon": "Search",
+            "value": "77%",
+            "label": "segunda métrica",
+            "description": "Otro dato relevante para el rubro del cliente."
+          },
+          {
+            "type": "text",
+            "span": "3x1",
+            "eyebrow": "Propuesta de valor",
+            "heading": "Qué entregamos y qué resultado esperamos.",
+            "body": "Descripción de la solución en términos de negocio, no solo técnicos."
+          }
+        ]
+      }
+    },
+    {
+      "id": "investigacion-diseno",
+      "type": "design-system",
+      "label": "Investigación y Diseño",
+      "data": {
+        "title": "Investigación y Diseño",
+        "subtitle": "Sistema visual propuesto",
+        "description": "Breve descripción del enfoque de diseño.",
+        "palette": [
+          {
+            "name": "Color primario",
+            "hex": "#0f2044",
+            "role": "Identidad · Header · Texto principal",
+            "textLight": true
+          },
+          {
+            "name": "Color acento",
+            "hex": "#c9a96e",
+            "role": "CTA · Botones · Detalles",
+            "textLight": false
+          }
+        ],
+        "typography": [
+          {
+            "name": "Fuente display",
+            "role": "Títulos y headlines",
+            "sample": "Titular de ejemplo.",
+            "weights": "Regular · SemiBold · Bold",
+            "category": "serif"
+          },
+          {
+            "name": "Fuente UI",
+            "role": "Cuerpo · Navegación · Botones",
+            "sample": "Texto de interfaz legible y moderno.",
+            "weights": "Regular · Medium · SemiBold",
+            "category": "sans-serif"
+          }
+        ],
+        "principles": [
+          {
+            "icon": "ShieldCheck",
+            "title": "Principio 1",
+            "description": "Descripción del principio de diseño."
+          },
+          {
+            "icon": "Smartphone",
+            "title": "Mobile-first",
+            "description": "El sitio funciona perfectamente desde 320px."
+          }
+        ]
+      }
+    },
+    {
+      "id": "solucion",
+      "type": "book-section",
+      "label": "La Solución",
+      "data": {
+        "title": "La Solución",
+        "subtitle": "Qué incluye el proyecto",
+        "cards": [
+          {
+            "type": "text",
+            "span": "3x1",
+            "eyebrow": "Alcance",
+            "heading": "Resumen del entregable",
+            "body": "Descripción de páginas, módulos o funcionalidades incluidas."
+          },
+          {
+            "type": "image",
+            "span": "half",
+            "src": "/logos/cliente/wireframe-ejemplo.png",
+            "alt": "Descripción de la imagen",
+            "badge": "Etiqueta",
+            "caption": "Pie de foto opcional",
+            "detail": {
+              "title": "Título del detalle",
+              "description": "Descripción ampliada al hacer clic.",
+              "bullets": ["Punto 1", "Punto 2"],
+              "stack": ["Next.js", "Tailwind CSS"]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "roadmap",
+      "type": "roadmap",
+      "label": "Plan de Trabajo",
+      "data": {
+        "phases": [
+          {
+            "id": "fase-1",
+            "number": 1,
+            "title": "Diseño y Arquitectura",
+            "duration": "1 sem",
+            "tasks": [
+              "Tarea 1 de la fase",
+              "Tarea 2 de la fase"
+            ]
+          },
+          {
+            "id": "fase-2",
+            "number": 2,
+            "title": "Desarrollo",
+            "duration": "2 sem",
+            "tasks": [
+              "Tarea 1 de desarrollo",
+              "Tarea 2 de desarrollo"
+            ]
+          },
+          {
+            "id": "fase-3",
+            "number": 3,
+            "title": "Revisión y Producción",
+            "duration": "1 sem",
+            "tasks": [
+              "Revisión con el cliente",
+              "Deploy y entrega"
+            ]
+          }
+        ],
+        "technologies": [
+          { "name": "Next.js", "description": "Framework web" },
+          { "name": "Tailwind CSS", "description": "Estilos responsive" },
+          { "name": "Vercel", "description": "Hosting" }
+        ],
+        "clientRequirements": [
+          "Material que debe proveer el cliente",
+          "Logo en alta resolución",
+          "Textos finales aprobados"
+        ]
+      }
+    },
+    {
+      "id": "overview",
+      "type": "overview",
+      "enabled": false,
+      "label": "Resumen",
+      "data": {
+        "headline": "Resumen ejecutivo",
+        "vision": "Visión del proyecto en una oración.",
+        "objectives": [
+          {
+            "icon": "Globe",
+            "title": "Objetivo 1",
+            "description": "Descripción del objetivo."
+          }
+        ],
+        "totalPrice": 0
+      }
+    },
+    {
+      "id": "product",
+      "type": "product",
+      "enabled": false,
+      "label": "Producto",
+      "data": {
+        "architectureTitle": "Arquitectura",
+        "architectureDescription": "Descripción técnica del producto.",
+        "features": [
+          {
+            "id": "feat-1",
+            "title": "Feature 1",
+            "description": "Descripción de la feature."
+          }
+        ]
+      }
+    },
+    {
+      "id": "mockups",
+      "type": "mockups",
+      "enabled": false,
+      "label": "Mockups",
+      "data": {
+        "images": [
+          {
+            "id": "mock-1",
+            "src": "/logos/cliente/mockup.png",
+            "alt": "Mockup principal",
+            "caption": "Vista del diseño"
+          }
+        ]
+      }
+    },
+    {
+      "id": "inversion",
+      "type": "pricing",
+      "label": "Inversión",
+      "data": {
+        "items": [
+          {
+            "id": "diseno",
+            "category": "Diseño",
+            "name": "Diseño UX/UI",
+            "description": "Wireframes y mockups",
+            "total": 100
+          },
+          {
+            "id": "desarrollo",
+            "category": "Desarrollo",
+            "name": "Desarrollo web",
+            "description": "Implementación responsive",
+            "total": 200,
+            "highlight": true
+          }
+        ],
+        "subtotal": 300,
+        "total": 300,
+        "paymentPlans": [
+          {
+            "title": "Pago único",
+            "amount": "$300 USD",
+            "detail": "100% al confirmar el proyecto.",
+            "featured": true
+          }
+        ],
+        "paymentMethods": [
+          "Transferencia bancaria (ARS o USD)",
+          "USDT / USDC",
+          "Mercado Pago (ARS)"
+        ],
+        "terms": [
+          "Propuesta válida hasta la fecha indicada en validUntil.",
+          "Incluye hasta 2 rondas de revisiones en diseño."
+        ],
+        "note": "Número de presupuesto: #2026-XXX"
+      }
+    },
+    {
+      "id": "cierre",
+      "type": "closing",
+      "label": "Cierre",
+      "data": {
+        "ctaHeading": "¿Empezamos?",
+        "ctaBody": "Mensaje de cierre personalizado para el cliente."
+      }
+    }
+  ]
+}

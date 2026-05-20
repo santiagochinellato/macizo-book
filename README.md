@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MacizoDigital — Generador de Presentaciones
 
-## Getting Started
+Sistema de presentaciones digitales (presupuestos, propuestas, informes) configuradas 100% desde JSON.
 
-First, run the development server:
+## Flujo de uso
+
+1. **Codex** completa la plantilla en `config/templates/presentation-template.json` (ver `docs/GUIA-JSON-PARA-CODEX.md`).
+2. **Admin** (`/admin`) — login con usuario/contraseña → arrastrar JSON → publicar.
+3. **Cliente** recibe URL `/p/{slug}` + código de 6 caracteres → ingresa código → ve la presentación.
+
+La raíz `/` no lista proyectos; solo muestra instrucciones de acceso privado.
+
+## Variables de entorno
+
+Copiá `.env.example` a `.env.local` y completá:
+
+| Variable | Descripción |
+|----------|-------------|
+| `BLOB_READ_WRITE_TOKEN` | Token de Vercel Blob (Storage → Blob en el dashboard) |
+| `ADMIN_USERNAME` | Usuario del panel admin |
+| `ADMIN_PASSWORD` | Contraseña del panel admin |
+| `SESSION_SECRET` | Secreto para cookies (mín. 16 chars). `openssl rand -base64 32` |
+
+En Vercel, agregá las mismas variables en **Settings → Environment Variables**.
+
+## Desarrollo local
 
 ```bash
+npm install
+cp .env.example .env.local
+# Completar variables en .env.local
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Sin `BLOB_READ_WRITE_TOKEN`, las presentaciones en `config/presentations/` siguen visibles en `/p/{slug}` **sin código** (útil para desarrollo).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Con Blob configurado, las presentaciones publicadas requieren código de acceso.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Migrar JSON locales a Blob
 
-## Learn More
+```bash
+npm run migrate:blob
+```
 
-To learn more about Next.js, take a look at the following resources:
+Muestra URL y código de acceso por cada archivo migrado. Guardá los códigos de forma segura.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Rutas
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Ruta | Acceso |
+|------|--------|
+| `/` | Público — landing sin listado |
+| `/p/[slug]` | Código de acceso (si está en registry de Blob) |
+| `/admin/login` | Login MacizoDigital |
+| `/admin` | Lista de proyectos |
+| `/admin/new` | Subir JSON |
 
-## Deploy on Vercel
+## Estructura
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `config/templates/presentation-template.json` — plantilla para Codex
+- `config/presentations/` — ejemplos locales / fallback dev
+- `src/types/presentation.ts` — contrato TypeScript
+- `src/lib/presentation-schema.ts` — validación Zod al publicar
+- `src/lib/presentation-store.ts` — Vercel Blob + registry
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deploy en Vercel
+
+1. Conectar repo y crear store **Blob**.
+2. Agregar variables de entorno.
+3. Ejecutar `npm run migrate:blob` localmente (o subir desde `/admin/new`).
+4. Compartir a cada cliente su URL y código.

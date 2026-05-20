@@ -10,6 +10,8 @@ import { ProductScreen } from "@/components/screens/ProductScreen";
 import { PricingScreen } from "@/components/screens/PricingScreen";
 import { MockupsScreen } from "@/components/screens/MockupsScreen";
 import { BookSectionScreen } from "@/components/screens/BookSectionScreen";
+import { DesignSystemScreen } from "@/components/screens/DesignSystemScreen";
+import { ClosingScreen } from "@/components/screens/ClosingScreen";
 import type {
   PresentationConfig,
   Screen,
@@ -19,6 +21,7 @@ import type {
   PricingScreen as PricingScreenType,
   MockupsScreen as MockupsScreenType,
   BookSectionScreen as BookSectionScreenType,
+  DesignSystemScreen as DesignSystemScreenType,
 } from "@/types/presentation";
 
 interface PresentationAppProps {
@@ -73,6 +76,20 @@ function renderScreen(screen: Screen, config: PresentationConfig) {
           data={(screen as BookSectionScreenType).data}
         />
       );
+    case "design-system":
+      return (
+        <DesignSystemScreen
+          key={screen.id}
+          data={(screen as DesignSystemScreenType).data}
+        />
+      );
+    case "closing":
+      return (
+        <ClosingScreen
+          key={screen.id}
+          config={config}
+        />
+      );
     default: {
       const _exhaustive: never = screen;
       return null;
@@ -81,7 +98,7 @@ function renderScreen(screen: Screen, config: PresentationConfig) {
 }
 
 export function PresentationApp({ config }: PresentationAppProps) {
-  const enabledScreens = config.screens.filter((s) => s.enabled);
+  const enabledScreens = config.screens.filter((s) => (s as Screen & { enabled?: boolean }).enabled !== false);
   const [activeId, setActiveId] = useState(enabledScreens[0]?.id ?? "");
   const [isCollapsed, setIsCollapsed] = useState(false);
 
