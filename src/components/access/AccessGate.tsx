@@ -2,8 +2,9 @@
 
 import { useState, useTransition } from "react";
 import { motion } from "framer-motion";
-import { Lock } from "lucide-react";
 import { verifyPresentationCode } from "@/app/actions/presentation";
+
+const BRAND_GREEN = "#1A5C38";
 
 interface AccessGateProps {
   slug: string;
@@ -11,7 +12,7 @@ interface AccessGateProps {
   agencyName: string;
 }
 
-export function AccessGate({ slug, clientName, agencyName }: AccessGateProps) {
+export function AccessGate({ slug, clientName }: AccessGateProps) {
   const [code, setCode] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [isPending, startTransition] = useTransition();
@@ -32,14 +33,14 @@ export function AccessGate({ slug, clientName, agencyName }: AccessGateProps) {
 
   return (
     <div
-      className="min-h-screen flex items-center justify-center px-5"
+      className="min-h-screen flex items-center justify-center px-5 py-12"
       style={{ background: "var(--surface-bg)" }}
     >
       <motion.div
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4 }}
-        className="w-full max-w-md p-8 rounded-[var(--radius-xl)]"
+        className="w-full max-w-md p-8 sm:p-10 rounded-[var(--radius-xl)] flex flex-col items-center text-center"
         style={{
           background: "var(--surface-card)",
           border: "1px solid var(--border)",
@@ -47,29 +48,38 @@ export function AccessGate({ slug, clientName, agencyName }: AccessGateProps) {
         }}
       >
         <div
-          className="w-12 h-12 rounded-xl flex items-center justify-center mb-6"
-          style={{ background: "var(--primary)", color: "#fff" }}
+          className="mb-8 flex-shrink-0"
+          style={{ width: 200, height: 64 }}
+          role="img"
+          aria-label="MacizoDigital"
         >
-          <Lock size={22} aria-hidden="true" />
+          <div
+            className="w-full h-full"
+            style={{
+              backgroundColor: BRAND_GREEN,
+              WebkitMaskImage: "url(/logos/MacizoDigitalWhite.svg)",
+              maskImage: "url(/logos/MacizoDigitalWhite.svg)",
+              WebkitMaskSize: "contain",
+              maskSize: "contain",
+              WebkitMaskRepeat: "no-repeat",
+              maskRepeat: "no-repeat",
+              WebkitMaskPosition: "center",
+              maskPosition: "center",
+            }}
+          />
         </div>
 
-        <p
-          className="text-[10px] font-semibold uppercase tracking-widest mb-2"
-          style={{ color: "var(--primary)" }}
-        >
-          {agencyName}
-        </p>
         <h1
-          className="text-xl font-semibold mb-1"
+          className="text-xl sm:text-2xl font-semibold leading-snug mb-2 max-w-sm"
           style={{ color: "var(--text-primary)" }}
         >
           {clientName}
         </h1>
-        <p className="text-sm mb-8" style={{ color: "var(--text-muted)" }}>
+        <p className="text-sm leading-relaxed mb-8 max-w-xs" style={{ color: "var(--text-muted)" }}>
           Ingresá el código de acceso que recibiste para ver esta presentación.
         </p>
 
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+        <form onSubmit={handleSubmit} className="w-full flex flex-col gap-4 items-center">
           <label htmlFor="access-code" className="sr-only">
             Código de acceso
           </label>
@@ -82,7 +92,7 @@ export function AccessGate({ slug, clientName, agencyName }: AccessGateProps) {
             maxLength={6}
             autoComplete="off"
             autoCapitalize="characters"
-            className="w-full px-4 py-3 rounded-lg text-center text-lg font-mono tracking-[0.3em] uppercase focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)]"
+            className="w-full px-4 py-3.5 rounded-lg text-center text-base font-mono tracking-[0.25em] uppercase focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--primary)]"
             style={{
               background: "var(--surface-panel)",
               border: "1px solid var(--border)",
@@ -93,7 +103,7 @@ export function AccessGate({ slug, clientName, agencyName }: AccessGateProps) {
           />
 
           {error && (
-            <p className="text-sm text-center" style={{ color: "var(--accent)" }} role="alert">
+            <p className="text-sm w-full" style={{ color: "var(--danger)" }} role="alert">
               {error}
             </p>
           )}
@@ -101,8 +111,11 @@ export function AccessGate({ slug, clientName, agencyName }: AccessGateProps) {
           <button
             type="submit"
             disabled={isPending || code.length < 4}
-            className="w-full py-3 rounded-lg text-sm font-semibold transition-opacity disabled:opacity-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)]"
-            style={{ background: "var(--primary)", color: "#fff" }}
+            className="w-full py-3.5 rounded-lg text-sm font-semibold transition-opacity disabled:opacity-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--primary)]"
+            style={{
+              background: BRAND_GREEN,
+              color: "var(--text-inverted)",
+            }}
           >
             {isPending ? "Verificando…" : "Acceder"}
           </button>
