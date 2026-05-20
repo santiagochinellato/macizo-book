@@ -62,7 +62,7 @@ export function PageDetailModal({
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.2 }}
-        className="fixed inset-0 z-50 flex items-center justify-center p-4"
+        className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4"
         style={{ backgroundColor: "rgba(15,23,42,0.85)", backdropFilter: "blur(8px)" }}
         onClick={onClose}
       >
@@ -72,20 +72,18 @@ export function PageDetailModal({
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.96, y: 12 }}
           transition={{ duration: 0.25, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="relative flex w-full max-w-5xl"
+          className="relative flex flex-col md:flex-row w-full max-w-5xl max-h-[95dvh] sm:max-h-[90vh] rounded-t-xl sm:rounded-[var(--radius-lg)]"
           style={{
             backgroundColor: "var(--surface-card)",
-            borderRadius: "var(--radius-lg)",
             border: "1px solid var(--border)",
             boxShadow: "var(--shadow-elevated)",
-            maxHeight: "90vh",
             overflow: "hidden",
           }}
           onClick={(e) => e.stopPropagation()}
         >
           {/* Image — 2/3, scrollable vertically */}
           <div
-            className="w-2/3 shrink-0 overflow-y-auto"
+            className="w-full md:w-2/3 shrink-0 overflow-y-auto max-h-[40dvh] md:max-h-none"
             style={{ scrollbarWidth: "thin", scrollbarColor: "var(--border) transparent" }}
           >
             <div className="relative">
@@ -111,7 +109,7 @@ export function PageDetailModal({
           </div>
 
           {/* Detail — 1/3, scrollable */}
-          <div className="flex flex-col w-1/3 overflow-y-auto p-8" style={{ borderLeft: "1px solid var(--border)" }}>
+          <div className="flex flex-col w-full md:w-1/3 overflow-y-auto p-5 sm:p-8 min-h-0 flex-1 border-t md:border-t-0 md:border-l border-[var(--border)]">
             {/* Dot pagination */}
             {items.length > 1 && (
               <div className="flex gap-1.5 mb-6">
@@ -211,11 +209,8 @@ export function PageDetailModal({
           {hasNext && (
             <button
               onClick={(e) => { e.stopPropagation(); onNavigate(currentIndex + 1); }}
-              className="absolute z-10 flex items-center justify-center w-9 h-9 transition-opacity hover:opacity-80"
+              className="absolute z-10 flex items-center justify-center w-9 h-9 transition-opacity hover:opacity-80 right-3 md:right-[calc(33%+12px)] top-1/2 -translate-y-1/2"
               style={{
-                right: "calc(33% + 12px)",
-                top: "50%",
-                transform: "translateY(-50%)",
                 backgroundColor: "rgba(255,255,255,0.92)",
                 border: "1px solid var(--border)",
                 borderRadius: "var(--radius-sm)",

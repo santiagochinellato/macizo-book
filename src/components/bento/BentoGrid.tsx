@@ -9,7 +9,7 @@ export function BentoGrid({ children, className }: BentoGridProps) {
   return (
     <div
       className={cn(
-        "grid grid-cols-12 gap-4 w-full",
+        "grid grid-cols-12 gap-3 sm:gap-4 w-full min-w-0",
         className
       )}
     >

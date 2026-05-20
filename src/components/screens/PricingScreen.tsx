@@ -18,7 +18,7 @@ export function PricingScreen({ data, meta }: PricingScreenProps) {
 
   return (
     <motion.div
-      className="p-6 sm:p-8 min-h-full"
+      className="min-h-full w-full min-w-0 px-5 sm:px-8 lg:px-14 py-6 sm:py-8"
       variants={reduced ? undefined : screenEnter}
       initial="hidden"
       animate="visible"
@@ -26,7 +26,7 @@ export function PricingScreen({ data, meta }: PricingScreenProps) {
       key="pricing"
     >
       <motion.div
-        className="flex flex-col gap-8 max-w-4xl mx-auto"
+        className="flex flex-col gap-8 max-w-4xl mx-auto w-full min-w-0"
         variants={reduced ? undefined : stagger}
         initial="hidden"
         animate="visible"
@@ -144,7 +144,7 @@ export function PricingScreen({ data, meta }: PricingScreenProps) {
             Desglose del presupuesto
           </span>
           <div
-            className="overflow-hidden"
+            className="overflow-x-auto overflow-hidden"
             style={{
               border: "1px solid var(--border)",
               borderRadius: "var(--radius-md)",

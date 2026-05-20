@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useMemo } from "react";
 import { AnimatePresence } from "framer-motion";
 import { AppShell } from "@/components/layout/AppShell";
 import { Sidebar } from "@/components/layout/Sidebar";
@@ -23,6 +23,17 @@ import type {
   BookSectionScreen as BookSectionScreenType,
   DesignSystemScreen as DesignSystemScreenType,
 } from "@/types/presentation";
+
+const SCREEN_DEFAULT_LABELS: Record<Screen["type"], string> = {
+  overview: "Resumen",
+  roadmap: "Roadmap",
+  product: "Producto",
+  pricing: "Inversión",
+  mockups: "Mockups",
+  "book-section": "Sección",
+  "design-system": "Diseño",
+  closing: "Cierre",
+};
 
 interface PresentationAppProps {
   config: PresentationConfig;
@@ -98,17 +109,34 @@ function renderScreen(screen: Screen, config: PresentationConfig) {
 }
 
 export function PresentationApp({ config }: PresentationAppProps) {
-  const enabledScreens = config.screens.filter((s) => (s as Screen & { enabled?: boolean }).enabled !== false);
+  const enabledScreens = config.screens.filter(
+    (s) => (s as Screen & { enabled?: boolean }).enabled !== false
+  );
   const [activeId, setActiveId] = useState(enabledScreens[0]?.id ?? "");
   const [isCollapsed, setIsCollapsed] = useState(false);
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
-  const handleSelect = useCallback((id: string) => setActiveId(id), []);
+  const handleSelect = useCallback((id: string) => {
+    setActiveId(id);
+  }, []);
+
   const handleToggle = useCallback(() => setIsCollapsed((v) => !v), []);
+  const closeMobileNav = useCallback(() => setMobileNavOpen(false), []);
+  const openMobileNav = useCallback(() => setMobileNavOpen(true), []);
 
   const activeScreen = enabledScreens.find((s) => s.id === activeId);
 
+  const sectionTitle = useMemo(() => {
+    if (!activeScreen) return "Presentación";
+    return activeScreen.label ?? SCREEN_DEFAULT_LABELS[activeScreen.type];
+  }, [activeScreen]);
+
   return (
     <AppShell
+      sectionTitle={sectionTitle}
+      mobileNavOpen={mobileNavOpen}
+      onMobileNavOpen={openMobileNav}
+      onMobileNavClose={closeMobileNav}
       sidebar={
         <Sidebar
           screens={enabledScreens}
@@ -119,6 +147,7 @@ export function PresentationApp({ config }: PresentationAppProps) {
           agency={config.agency}
           client={config.client}
           meta={config.meta}
+          onCloseMobile={closeMobileNav}
         />
       }
     >

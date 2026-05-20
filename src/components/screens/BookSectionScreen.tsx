@@ -58,13 +58,17 @@ const ICON_REGISTRY: Record<string, React.ComponentType<LucideProps>> = {
   Zap,
 };
 
-function spanToCols(span: CardSpan | undefined): { colSpan: ColSpan; colSpanSm: ColSpan } {
+function spanToCols(span: CardSpan | undefined): {
+  colSpan: ColSpan;
+  colSpanSm: ColSpan;
+  colSpanMd: ColSpan;
+} {
   switch (span) {
-    case "1x1":  return { colSpan: 12, colSpanSm: 4 };
-    case "half": return { colSpan: 12, colSpanSm: 6 };
-    case "2x1":  return { colSpan: 12, colSpanSm: 8 };
-    case "3x1":  return { colSpan: 12, colSpanSm: 12 };
-    default:     return { colSpan: 12, colSpanSm: 6 };
+    case "1x1":  return { colSpan: 12, colSpanSm: 6, colSpanMd: 4 };
+    case "half": return { colSpan: 12, colSpanSm: 6, colSpanMd: 6 };
+    case "2x1":  return { colSpan: 12, colSpanSm: 12, colSpanMd: 8 };
+    case "3x1":  return { colSpan: 12, colSpanSm: 12, colSpanMd: 12 };
+    default:     return { colSpan: 12, colSpanSm: 6, colSpanMd: 6 };
   }
 }
 
@@ -338,14 +342,14 @@ export function BookSectionScreen({ data }: BookSectionScreenProps) {
   return (
     <>
       <motion.div
-        className="p-6 sm:p-8 min-h-full"
+        className="min-h-full w-full min-w-0 px-5 sm:px-8 lg:px-14 py-6 sm:py-8"
         variants={reduced ? undefined : screenEnter}
         initial="hidden"
         animate="visible"
         exit="exit"
       >
         <motion.div
-          className="flex flex-col gap-6 max-w-5xl mx-auto"
+          className="flex flex-col gap-6 max-w-5xl mx-auto w-full min-w-0"
           variants={reduced ? undefined : stagger}
           initial="hidden"
           animate="visible"
@@ -374,7 +378,7 @@ export function BookSectionScreen({ data }: BookSectionScreenProps) {
 
           <BentoGrid>
             {data.cards.map((card, i) => {
-              const { colSpan, colSpanSm } = spanToCols(card.span);
+              const { colSpan, colSpanSm, colSpanMd } = spanToCols(card.span);
               const isHighlight = card.type === "metric" || (card.type === "text" && card.accent);
               const cardMIdx = cardModalIndex[i];
               const isClickable = card.type === "image" && cardMIdx !== -1;
@@ -384,6 +388,7 @@ export function BookSectionScreen({ data }: BookSectionScreenProps) {
                   key={i}
                   colSpan={colSpan}
                   colSpanSm={colSpanSm}
+                  colSpanMd={colSpanMd}
                   highlight={isHighlight}
                   noPadding={card.type === "image"}
                 >

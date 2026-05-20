@@ -13,9 +13,11 @@ import {
   ChevronLeft,
   ChevronRight,
   ExternalLink,
+  X,
 } from "lucide-react";
 import type { Screen, AgencyConfig, ClientConfig, DocumentMeta } from "@/types/presentation";
 import { DOC_TYPE_LABELS, STATUS_LABELS, STATUS_COLORS } from "@/lib/utils";
+import { useIsDesktopNav } from "@/hooks/useMediaQuery";
 
 const SCREEN_ICONS: Record<Screen["type"], React.ReactNode> = {
   overview: <LayoutDashboard size={17} />,
@@ -48,6 +50,7 @@ interface SidebarProps {
   agency: AgencyConfig;
   client: ClientConfig;
   meta: DocumentMeta;
+  onCloseMobile?: () => void;
 }
 
 export function Sidebar({
@@ -59,28 +62,36 @@ export function Sidebar({
   agency,
   client,
   meta,
+  onCloseMobile,
 }: SidebarProps) {
   const reduced = useReducedMotion();
+  const isDesktop = useIsDesktopNav();
   const statusColor = STATUS_COLORS[meta.status];
   const statusLabel = STATUS_LABELS[meta.status];
   const typeLabel = DOC_TYPE_LABELS[meta.type];
+  const showLabels = isDesktop ? !isCollapsed : true;
+
+  const handleSelect = (id: string) => {
+    onSelect(id);
+    onCloseMobile?.();
+  };
 
   return (
     <motion.aside
-      animate={{ width: isCollapsed ? 64 : 240 }}
+      animate={isDesktop ? { width: isCollapsed ? 64 : 240 } : { width: "100%" }}
       transition={reduced ? { duration: 0 } : { duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-      className="flex-shrink-0 flex flex-col h-full overflow-hidden relative z-20"
+      className="flex flex-col h-full w-full overflow-hidden relative z-20"
       style={{
         background: "var(--surface-panel)",
-        borderRight: "1px solid var(--border)",
-        boxShadow: "2px 0 8px rgba(0,0,0,0.04)",
+        borderRight: isDesktop ? "1px solid var(--border)" : "none",
+        boxShadow: isDesktop ? "2px 0 8px rgba(0,0,0,0.04)" : "none",
       }}
       aria-label="Navegación de secciones"
     >
       {/* Header: agency */}
       <div
-        className="flex items-center gap-3 px-4 py-5 flex-shrink-0 overflow-hidden"
-        style={{ borderBottom: "1px solid var(--border)", minHeight: 68 }}
+        className="flex items-center gap-3 px-4 py-4 flex-shrink-0 overflow-hidden"
+        style={{ borderBottom: "1px solid var(--border)", minHeight: 64 }}
       >
         <div
           className="flex items-center justify-center w-8 h-8 rounded-lg flex-shrink-0"
@@ -88,78 +99,65 @@ export function Sidebar({
         >
           <Layers size={15} />
         </div>
-        <AnimatePresence initial={false}>
-          {!isCollapsed && (
-            <motion.div
-              className="flex flex-col gap-0 overflow-hidden"
-              initial={{ opacity: 0, width: 0 }}
-              animate={{ opacity: 1, width: "auto" }}
-              exit={{ opacity: 0, width: 0 }}
-              transition={reduced ? { duration: 0 } : { duration: 0.2 }}
+        {showLabels && (
+          <div className="flex flex-col gap-0 min-w-0 flex-1">
+            <span
+              className="text-sm font-semibold truncate"
+              style={{ color: "var(--text-primary)" }}
             >
-              <span
-                className="text-sm font-semibold whitespace-nowrap"
-                style={{ color: "var(--text-primary)" }}
-              >
-                {agency.name}
-              </span>
-              <span
-                className="text-xs whitespace-nowrap"
-                style={{ color: "var(--text-subtle)" }}
-              >
-                {typeLabel} #{meta.number}
-              </span>
-            </motion.div>
-          )}
-        </AnimatePresence>
+              {agency.name}
+            </span>
+            <span className="text-xs truncate" style={{ color: "var(--text-subtle)" }}>
+              {typeLabel} #{meta.number}
+            </span>
+          </div>
+        )}
+        {!isDesktop && onCloseMobile && (
+          <button
+            type="button"
+            onClick={onCloseMobile}
+            className="flex items-center justify-center w-9 h-9 rounded-lg flex-shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)]"
+            style={{ color: "var(--text-muted)" }}
+            aria-label="Cerrar menú"
+          >
+            <X size={18} />
+          </button>
+        )}
       </div>
 
       {/* Client info */}
-      <AnimatePresence initial={false}>
-        {!isCollapsed && (
-          <motion.div
-            className="px-4 py-3 flex-shrink-0"
-            style={{ borderBottom: "1px solid var(--border)" }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={reduced ? { duration: 0 } : { duration: 0.2, delay: 0.05 }}
-          >
-            <div className="flex items-center justify-between gap-2">
-              <div className="flex flex-col gap-0.5 overflow-hidden">
-                <span
-                  className="text-xs font-medium truncate"
-                  style={{ color: "var(--text-muted)" }}
-                >
-                  {client.name}
-                </span>
-                <span
-                  className="text-[10px] truncate"
-                  style={{ color: "var(--text-subtle)" }}
-                >
-                  {client.industry}
-                </span>
-              </div>
-              <span
-                className="text-[10px] font-semibold px-1.5 py-0.5 rounded-full flex-shrink-0"
-                style={{
-                  background: `${statusColor}20`,
-                  color: statusColor,
-                }}
-              >
-                {statusLabel}
+      {showLabels && (
+        <div
+          className="px-4 py-3 flex-shrink-0"
+          style={{ borderBottom: "1px solid var(--border)" }}
+        >
+          <div className="flex items-center justify-between gap-2">
+            <div className="flex flex-col gap-0.5 min-w-0">
+              <span className="text-xs font-medium truncate" style={{ color: "var(--text-muted)" }}>
+                {client.name}
+              </span>
+              <span className="text-[10px] truncate" style={{ color: "var(--text-subtle)" }}>
+                {client.industry}
               </span>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            <span
+              className="text-[10px] font-semibold px-1.5 py-0.5 rounded-full flex-shrink-0"
+              style={{
+                background: `${statusColor}20`,
+                color: statusColor,
+              }}
+            >
+              {statusLabel}
+            </span>
+          </div>
+        </div>
+      )}
 
       {/* Navigation */}
-      <nav className="flex-1 flex flex-col py-3 overflow-hidden relative">
-        {/* Vertical line */}
-        {!isCollapsed && (
+      <nav className="flex-1 flex flex-col py-3 overflow-y-auto overflow-x-hidden relative min-h-0">
+        {showLabels && (
           <div
-            className="absolute left-[27px] top-5 bottom-5 w-px"
+            className="absolute left-[27px] top-5 bottom-5 w-px hidden sm:block"
             style={{ background: "var(--border)" }}
             aria-hidden="true"
           />
@@ -173,7 +171,8 @@ export function Sidebar({
             return (
               <li key={screen.id} className="relative">
                 <button
-                  onClick={() => onSelect(screen.id)}
+                  type="button"
+                  onClick={() => handleSelect(screen.id)}
                   className="w-full flex items-center gap-3 rounded-lg px-2 py-2.5 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)]"
                   style={{
                     background: isActive
@@ -182,16 +181,13 @@ export function Sidebar({
                     color: isActive ? "var(--primary)" : "var(--text-muted)",
                   }}
                   aria-current={isActive ? "page" : undefined}
-                  title={isCollapsed ? label : undefined}
+                  title={!showLabels ? label : undefined}
                 >
-                  {/* Node dot */}
                   <div className="relative flex-shrink-0 flex items-center justify-center w-7 h-7">
                     <motion.div
                       className="absolute inset-0 rounded-full"
                       animate={
-                        isActive
-                          ? { opacity: 1, scale: 1 }
-                          : { opacity: 0, scale: 0.7 }
+                        isActive ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.7 }
                       }
                       transition={{ duration: 0.2 }}
                       style={{ background: "var(--primary-glow)" }}
@@ -206,20 +202,11 @@ export function Sidebar({
                     </span>
                   </div>
 
-                  {/* Label */}
-                  <AnimatePresence initial={false}>
-                    {!isCollapsed && (
-                      <motion.span
-                        className="text-sm font-medium whitespace-nowrap overflow-hidden"
-                        initial={{ opacity: 0, width: 0 }}
-                        animate={{ opacity: 1, width: "auto" }}
-                        exit={{ opacity: 0, width: 0 }}
-                        transition={reduced ? { duration: 0 } : { duration: 0.2 }}
-                      >
-                        {label}
-                      </motion.span>
-                    )}
-                  </AnimatePresence>
+                  {showLabels && (
+                    <span className="text-sm font-medium text-left truncate min-w-0 flex-1">
+                      {label}
+                    </span>
+                  )}
                 </button>
               </li>
             );
@@ -232,37 +219,33 @@ export function Sidebar({
         className="flex-shrink-0 flex flex-col gap-2 px-3 py-3"
         style={{ borderTop: "1px solid var(--border)" }}
       >
-        <AnimatePresence initial={false}>
-          {!isCollapsed && (
-            <motion.a
-              href={agency.website}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-xs hover:underline overflow-hidden"
-              style={{ color: "var(--text-subtle)" }}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={reduced ? { duration: 0 } : { duration: 0.15 }}
-            >
-              <ExternalLink size={11} />
-              <span className="truncate">{agency.website.replace("https://", "")}</span>
-            </motion.a>
-          )}
-        </AnimatePresence>
+        {showLabels && (
+          <a
+            href={agency.website}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-xs hover:underline overflow-hidden min-w-0"
+            style={{ color: "var(--text-subtle)" }}
+          >
+            <ExternalLink size={11} className="flex-shrink-0" />
+            <span className="truncate">{agency.website.replace("https://", "")}</span>
+          </a>
+        )}
 
-        {/* Collapse toggle */}
-        <button
-          onClick={onToggleCollapse}
-          className="flex items-center justify-center w-full h-8 rounded-lg transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)]"
-          style={{
-            background: "var(--surface-elevated, #1f1f26)",
-            color: "var(--text-subtle)",
-          }}
-          aria-label={isCollapsed ? "Expandir sidebar" : "Colapsar sidebar"}
-        >
-          {isCollapsed ? <ChevronRight size={14} /> : <ChevronLeft size={14} />}
-        </button>
+        {isDesktop && (
+          <button
+            type="button"
+            onClick={onToggleCollapse}
+            className="flex items-center justify-center w-full h-8 rounded-lg transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)]"
+            style={{
+              background: "var(--surface-bg)",
+              color: "var(--text-subtle)",
+            }}
+            aria-label={isCollapsed ? "Expandir sidebar" : "Colapsar sidebar"}
+          >
+            {isCollapsed ? <ChevronRight size={14} /> : <ChevronLeft size={14} />}
+          </button>
+        )}
       </div>
     </motion.aside>
   );

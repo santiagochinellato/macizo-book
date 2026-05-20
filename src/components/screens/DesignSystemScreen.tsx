@@ -144,7 +144,7 @@ export function DesignSystemScreen({ data }: DesignSystemScreenProps) {
 
   return (
     <motion.div
-      className="p-6 sm:p-8 min-h-full"
+      className="min-h-full w-full min-w-0 px-5 sm:px-8 lg:px-14 py-6 sm:py-8"
       variants={reduced ? undefined : screenEnter}
       initial="hidden"
       animate="visible"
@@ -152,7 +152,7 @@ export function DesignSystemScreen({ data }: DesignSystemScreenProps) {
       key="design-system"
     >
       <motion.div
-        className="flex flex-col gap-6 max-w-5xl mx-auto"
+        className="flex flex-col gap-6 max-w-5xl mx-auto w-full min-w-0"
         variants={reduced ? undefined : stagger}
         initial="hidden"
         animate="visible"
@@ -179,7 +179,7 @@ export function DesignSystemScreen({ data }: DesignSystemScreenProps) {
               <span className="text-xs font-bold uppercase tracking-widest" style={{ color: "var(--text-subtle)" }}>
                 Paleta de colores
               </span>
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
                 {data.palette.map((color, i) => (
                   <motion.div key={i} variants={reduced ? undefined : fadeUp}>
                     <ColorSwatch color={color} />
