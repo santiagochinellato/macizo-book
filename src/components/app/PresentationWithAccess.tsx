@@ -17,9 +17,22 @@ export async function PresentationWithAccess({ slug }: PresentationWithAccessPro
     notFound();
   }
 
-  const registryEntry = await getRegistryEntry(slug);
+  let registryEntry = null;
+  try {
+    registryEntry = await getRegistryEntry(slug);
+  } catch {
+    registryEntry = null;
+  }
+
   const needsAccess = registryEntry !== null;
-  const hasAccess = needsAccess ? await hasPresentationAccess(slug) : true;
+  let hasAccess = !needsAccess;
+  if (needsAccess) {
+    try {
+      hasAccess = await hasPresentationAccess(slug);
+    } catch {
+      hasAccess = false;
+    }
+  }
 
   if (needsAccess && !hasAccess) {
     return (

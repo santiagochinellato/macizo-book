@@ -12,6 +12,7 @@ import {
   createPresentationAccess,
   hasPresentationAccess,
   isAdminAuthenticated,
+  isSessionConfigured,
 } from "@/lib/session";
 import { checkRateLimit, resetRateLimit } from "@/lib/rate-limit";
 
@@ -58,8 +59,20 @@ export async function verifyPresentationCode(
   }
 
   resetRateLimit(rateKey);
-  await createPresentationAccess(slug);
-  return { success: true };
+
+  if (!isSessionConfigured()) {
+    return {
+      success: false,
+      error: "SESSION_SECRET no configurado en el servidor. Contactá a MacizoDigital.",
+    };
+  }
+
+  try {
+    await createPresentationAccess(slug);
+    return { success: true };
+  } catch {
+    return { success: false, error: "No se pudo iniciar la sesión. Intentá de nuevo." };
+  }
 }
 
 export async function publishPresentation(

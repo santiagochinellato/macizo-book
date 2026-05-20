@@ -4,12 +4,20 @@ import { cookies } from "next/headers";
 const ADMIN_COOKIE = "md_admin_session";
 const ACCESS_COOKIE_PREFIX = "md_access_";
 
-function getSecret(): Uint8Array {
+function getSecretBytes(): Uint8Array | null {
   const secret = process.env.SESSION_SECRET;
   if (!secret || secret.length < 16) {
-    throw new Error("SESSION_SECRET debe estar definido (mínimo 16 caracteres)");
+    return null;
   }
   return new TextEncoder().encode(secret);
+}
+
+function getSecret(): Uint8Array {
+  const secret = getSecretBytes();
+  if (!secret) {
+    throw new Error("SESSION_SECRET debe estar definido (mínimo 16 caracteres)");
+  }
+  return secret;
 }
 
 export async function createAdminSession(): Promise<void> {
@@ -35,12 +43,15 @@ export async function clearAdminSession(): Promise<void> {
 }
 
 export async function isAdminAuthenticated(): Promise<boolean> {
+  const secret = getSecretBytes();
+  if (!secret) return false;
+
   const cookieStore = await cookies();
   const token = cookieStore.get(ADMIN_COOKIE)?.value;
   if (!token) return false;
 
   try {
-    const { payload } = await jwtVerify(token, getSecret());
+    const { payload } = await jwtVerify(token, secret);
     return payload.role === "admin";
   } catch {
     return false;
@@ -65,14 +76,21 @@ export async function createPresentationAccess(slug: string): Promise<void> {
 }
 
 export async function hasPresentationAccess(slug: string): Promise<boolean> {
+  const secret = getSecretBytes();
+  if (!secret) return false;
+
   const cookieStore = await cookies();
   const token = cookieStore.get(`${ACCESS_COOKIE_PREFIX}${slug}`)?.value;
   if (!token) return false;
 
   try {
-    const { payload } = await jwtVerify(token, getSecret());
+    const { payload } = await jwtVerify(token, secret);
     return payload.slug === slug;
   } catch {
     return false;
   }
+}
+
+export function isSessionConfigured(): boolean {
+  return getSecretBytes() !== null;
 }

@@ -46,9 +46,11 @@ async function readRegistry(): Promise<PresentationRegistry> {
 
   try {
     const blobHead = await head(REGISTRY_PATH);
-    const res = await fetch(blobHead.url);
+    const res = await fetch(blobHead.url, { cache: "no-store" });
     if (!res.ok) return { presentations: [] };
-    return (await res.json()) as PresentationRegistry;
+    const data = (await res.json()) as PresentationRegistry;
+    if (!Array.isArray(data.presentations)) return { presentations: [] };
+    return data;
   } catch {
     return { presentations: [] };
   }
@@ -67,11 +69,16 @@ export async function getPresentation(slug: string): Promise<PresentationConfig 
   if (useBlob()) {
     try {
       const blobHead = await head(presentationBlobPath(slug));
-      const res = await fetch(blobHead.url);
-      if (!res.ok) return null;
-      return (await res.json()) as PresentationConfig;
+      const res = await fetch(blobHead.url, { cache: "no-store" });
+      if (!res.ok) {
+        return loadLocalPresentation(slug);
+      }
+      const data = (await res.json()) as PresentationConfig;
+      if (data?.slug && Array.isArray(data.screens)) {
+        return data;
+      }
     } catch {
-      // fallback to local in dev
+      // fallback to archivo local empaquetado en el deploy
     }
   }
 
