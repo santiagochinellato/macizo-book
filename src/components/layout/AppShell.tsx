@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { Menu } from "lucide-react";
 
@@ -8,6 +8,7 @@ interface AppShellProps {
   sidebar: React.ReactNode;
   children: React.ReactNode;
   sectionTitle?: string;
+  activeSectionId?: string;
   mobileNavOpen: boolean;
   onMobileNavOpen: () => void;
   onMobileNavClose: () => void;
@@ -17,11 +18,13 @@ export function AppShell({
   sidebar,
   children,
   sectionTitle,
+  activeSectionId,
   mobileNavOpen,
   onMobileNavOpen,
   onMobileNavClose,
 }: AppShellProps) {
   const reduced = useReducedMotion();
+  const mainRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     if (mobileNavOpen) {
@@ -44,15 +47,20 @@ export function AppShell({
     return () => window.removeEventListener("resize", onResize);
   }, [onMobileNavClose]);
 
+  useEffect(() => {
+    if (!activeSectionId) return;
+    const main = mainRef.current;
+    if (!main) return;
+    main.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, [activeSectionId]);
+
   return (
     <div
       className="flex h-[100dvh] w-full overflow-hidden"
       style={{ background: "var(--surface-bg)" }}
     >
-      {/* Sidebar escritorio */}
       <div className="hidden lg:flex flex-shrink-0 h-full">{sidebar}</div>
 
-      {/* Drawer móvil / tablet */}
       <AnimatePresence>
         {mobileNavOpen && (
           <>
@@ -87,7 +95,6 @@ export function AppShell({
         )}
       </AnimatePresence>
 
-      {/* Contenido principal */}
       <div className="flex flex-col flex-1 min-w-0 w-full h-full">
         <header
           className="lg:hidden flex-shrink-0 flex items-center gap-3 px-4 py-3 min-h-[56px]"
@@ -124,7 +131,10 @@ export function AppShell({
           </div>
         </header>
 
-        <main className="flex-1 overflow-y-auto overflow-x-hidden min-w-0 w-full">
+        <main
+          ref={mainRef}
+          className="flex-1 overflow-y-auto overflow-x-hidden min-w-0 w-full overscroll-contain"
+        >
           {children}
         </main>
       </div>

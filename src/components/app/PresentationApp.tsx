@@ -134,6 +134,7 @@ export function PresentationApp({ config }: PresentationAppProps) {
   return (
     <AppShell
       sectionTitle={sectionTitle}
+      activeSectionId={activeId}
       mobileNavOpen={mobileNavOpen}
       onMobileNavOpen={openMobileNav}
       onMobileNavClose={closeMobileNav}
@@ -152,7 +153,9 @@ export function PresentationApp({ config }: PresentationAppProps) {
       }
     >
       <AnimatePresence mode="wait">
-        {activeScreen ? renderScreen(activeScreen, config) : null}
+        {activeScreen ? (
+          <div key={activeId}>{renderScreen(activeScreen, config)}</div>
+        ) : null}
       </AnimatePresence>
     </AppShell>
   );
