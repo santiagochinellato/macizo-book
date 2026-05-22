@@ -75,14 +75,6 @@
               "description": "El portal de resultados y el formulario reducen la carga operativa del personal de atencion."
             },
             {
-              "type": "image",
-              "span": "2x1",
-              "src": "/labac/imagen1.png",
-              "alt": "LABAC Laboratorio Clínico — propuesta de sitio institucional",
-              "badge": "Propuesta visual",
-              "caption": "Nueva presencia digital alineada al manual de marca LABAC"
-            },
-            {
               "type": "text",
               "span": "3x1",
               "eyebrow": "Propuesta de valor",
@@ -248,118 +240,52 @@
               "body": "El proyecto incluye el diseño UX/UI y desarrollo front-end de todas las páginas, con componentes reutilizables, animaciones sutiles y total coherencia visual. Cada página resuelve una necesidad concreta del paciente o del laboratorio."
             },
             {
-              "type": "image",
-              "span": "half",
-              "src": "/labac/home.png",
-              "alt": "Página de inicio — LABAC Laboratorio Clínico",
-              "badge": "Inicio",
-              "caption": "Landing principal con portal de resultados y sucursales",
-              "detail": {
-                "title": "Inicio — Primera impresión clínica",
-                "description": "Hero con propuesta de valor, estadísticas institucionales, servicios destacados, acceso rápido al portal de resultados y vista de sucursales.",
-                "bullets": [
-                  "Hero con mensaje institucional y CTA a turnos",
-                  "Estadísticas de trayectoria y volumen",
-                  "Acceso directo al portal de resultados",
-                  "Vista previa de la red de sucursales"
-                ],
-                "stack": ["Next.js 16", "Tailwind CSS 4", "Framer Motion"]
-              }
+              "type": "metric",
+              "span": "1x1",
+              "icon": "LayoutDashboard",
+              "value": "Home",
+              "label": "Hero, estadísticas, servicios destacados, portal de resultados rápido y sucursales",
+              "description": "Primera impresión que convierte visitas en turnos."
             },
             {
-              "type": "image",
-              "span": "half",
-              "src": "/labac/servicios.png",
-              "alt": "Página de servicios y estudios — LABAC",
-              "badge": "Servicios",
-              "caption": "Catálogo de determinaciones clínicas",
-              "detail": {
-                "title": "Servicios — Catálogo clínico consultable",
-                "description": "Más de 1.500 determinaciones organizadas por área, con fichas de preparación, requisitos y búsqueda filtrable.",
-                "bullets": [
-                  "Filtro por área y tipo de estudio",
-                  "Preparación del paciente visible en cada ficha",
-                  "SEO por especialidad y estudio",
-                  "Enlace a turnos desde cada servicio"
-                ],
-                "stack": ["Next.js 16", "Tailwind CSS 4"]
-              }
+              "type": "metric",
+              "span": "1x1",
+              "icon": "Search",
+              "value": "Servicios",
+              "label": "Catálogo filtrable por área, fichas de estudios con preparación y requisitos",
+              "description": "Más de 1.500 determinaciones clínicas organizadas y consultables."
             },
             {
-              "type": "image",
-              "span": "half",
-              "src": "/labac/resultados.png",
-              "alt": "Portal de resultados — LABAC",
-              "badge": "Resultados",
-              "caption": "Acceso seguro a informes clínicos",
-              "detail": {
-                "title": "Resultados — Portal seguro 24/7",
-                "description": "Ingreso con DNI y código de protocolo. Descarga de informes PDF con validez legal y firma digital.",
-                "bullets": [
-                  "Validación de credenciales del paciente",
-                  "Descarga de PDF con trazabilidad",
-                  "Instrucciones claras para reducir llamadas al mostrador",
-                  "Mensajes de error y ayuda contextual"
-                ],
-                "stack": ["Next.js 16", "API de resultados LABAC"]
-              }
+              "type": "metric",
+              "span": "1x1",
+              "icon": "ShieldCheck",
+              "value": "Resultados",
+              "label": "Portal seguro con acceso por DNI + código de protocolo",
+              "description": "Descarga de informes PDF con firma digital y validez legal."
             },
             {
-              "type": "image",
-              "span": "half",
-              "src": "/labac/sedes.png",
-              "alt": "Mapa de sucursales — LABAC",
-              "badge": "Sucursales",
-              "caption": "Red de sedes con mapa interactivo",
-              "detail": {
-                "title": "Sucursales — Red territorial completa",
-                "description": "Mapa interactivo con filtro por región, horarios, teléfonos y botón Sacar Turno por sede.",
-                "bullets": [
-                  "12 sedes operativas con datos actualizados",
-                  "Filtro por zona geográfica",
-                  "Horarios y contacto por sucursal",
-                  "CTA de turno contextual por sede"
-                ],
-                "stack": ["Next.js 16", "Google Maps"]
-              }
+              "type": "metric",
+              "span": "1x1",
+              "icon": "MapPin",
+              "value": "Sucursales",
+              "label": "Mapa interactivo con filtro por región, horarios y botón Sacar Turno por sede",
+              "description": "Red de 12 sedes operativas con toda la información actualizada."
             },
             {
-              "type": "image",
-              "span": "half",
-              "src": "/labac/sosotros.png",
-              "alt": "Página Nosotros — LABAC Laboratorio Clínico",
-              "badge": "Nosotros",
-              "caption": "Historia e identidad institucional",
-              "detail": {
-                "title": "Nosotros — 30 años de excelencia clínica",
-                "description": "Línea de tiempo, misión y visión, equipo profesional, certificaciones e infraestructura de alta complejidad.",
-                "bullets": [
-                  "Historia fundacional y hitos",
-                  "Certificaciones ISO y equipamiento",
-                  "Equipo profesional y autoridades",
-                  "Galería de infraestructura y tecnología"
-                ],
-                "stack": ["Next.js 16", "Tailwind CSS 4"]
-              }
+              "type": "metric",
+              "span": "1x1",
+              "icon": "Users",
+              "value": "Nosotros",
+              "label": "Historia, línea de tiempo, misión/visión, equipo profesional e infraestructura",
+              "description": "Narrativa institucional que genera confianza y diferenciación."
             },
             {
-              "type": "image",
-              "span": "half",
-              "src": "/labac/contacto.png",
-              "alt": "Página de contacto — LABAC",
-              "badge": "Contacto",
-              "caption": "Formulario y canales de atención",
-              "detail": {
-                "title": "Contacto — Conversión y atención",
-                "description": "Formulario de consulta, datos de atención telefónica, WhatsApp y mapa de la sede central.",
-                "bullets": [
-                  "Formulario con validación y envío",
-                  "Horarios de atención visibles",
-                  "Mapa embebido de sede central",
-                  "Enlaces a redes y WhatsApp"
-                ],
-                "stack": ["Next.js 16", "Tailwind CSS 4"]
-              }
+              "type": "metric",
+              "span": "1x1",
+              "icon": "Mail",
+              "value": "Contacto",
+              "label": "Formulario de consulta, datos de atención telefónica y mapa de sede central",
+              "description": "Canal directo con el laboratorio, disponible las 24 horas."
             }
           ]
         }
