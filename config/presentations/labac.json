@@ -1,453 +1,546 @@
 {
-    "slug": "labac-laboratorio-clinico",
-    "version": 2,
-    "theme": {
-      "accentColor": "#1a51a2"
-    },
-    "agency": {
-      "name": "MacizoDigital",
-      "tagline": "Diseño web de impacto",
-      "website": "https://macizo.digital",
-      "email": "hola@macizo.digital",
-      "phone": "+54 9 11 3088-3000",
-      "social": {
-        "whatsapp": "https://wa.me/5491130883000",
-        "instagram": "https://instagram.com/macizo.digital"
+  "slug": "labac",
+  "version": 2,
+  "theme": {
+    "accentColor": "#1a51a2"
+  },
+  "agency": {
+    "name": "MacizoDigital",
+    "tagline": "Diseño web de impacto",
+    "website": "https://macizo.digital",
+    "email": "hola@macizo.digital",
+    "phone": "+54 9 11 3088-3000",
+    "social": {
+      "whatsapp": "https://wa.me/5491130883000",
+      "instagram": "https://instagram.com/macizo.digital"
+    }
+  },
+  "client": {
+    "name": "LABAC Laboratorio Clínico",
+    "industry": "Salud / Diagnóstico Clínico de Alta Complejidad",
+    "contact": {
+      "name": "Equipo LABAC",
+      "role": "Dirección General"
+    }
+  },
+  "meta": {
+    "type": "propuesta",
+    "number": "2026-041",
+    "title": "Sitio Web Institucional — LABAC",
+    "subtitle": "Plataforma digital clínica con portal de resultados y gestión de turnos",
+    "date": "2026-05-20",
+    "validUntil": "2026-06-20",
+    "status": "enviado",
+    "currency": "USD",
+    "language": "es"
+  },
+  "screens": [
+    {
+      "id": "presentacion",
+      "type": "book-section",
+      "label": "Presentacion",
+      "data": {
+        "title": "Presentacion",
+        "subtitle": "Propuesta digital para LABAC Laboratorio Clinico",
+        "cards": [
+          {
+            "type": "text",
+            "span": "2x1",
+            "accent": true,
+            "eyebrow": "Propuesta 2026-041",
+            "heading": "LABAC tiene 30 años de excelencia clinica. Su web no lo refleja.",
+            "body": "El sitio actual de labac.com.ar fue construido con una estetica de 2015: fondos azules con opacidad sobre fotos, sliders genericos, tipografia inconsistente y una estructura que no prioriza lo que el paciente necesita. Proponemos un rediseno completo que ponga la tecnologia diagnostica de LABAC al frente, con una interfaz clinica moderna, veloz y confiable.",
+            "bullets": [
+              "Identidad visual alineada al manual de marca LABAC",
+              "Arquitectura de informacion centrada en el paciente",
+              "Portal de resultados seguro con acceso por DNI y codigo de protocolo",
+              "Gestion de turnos online por sede, disponible 24/7",
+              "Velocidad y SEO: de invisible a encontrable en Google"
+            ]
+          },
+          {
+            "type": "metric",
+            "span": "1x1",
+            "icon": "TrendingUp",
+            "value": "77%",
+            "label": "de los pacientes busca su laboratorio en Google antes de ir",
+            "description": "Un sitio lento o anticuado descarta pacientes antes de que lleguen al mostrador."
+          },
+          {
+            "type": "metric",
+            "span": "1x1",
+            "icon": "Clock",
+            "value": "3x",
+            "label": "mas consultas via web vs. telefonica en laboratorios digitalizados",
+            "description": "El portal de resultados y el formulario reducen la carga operativa del personal de atencion."
+          },
+          {
+            "type": "image",
+            "span": "2x1",
+            "src": "/labac/imagen1.png",
+            "alt": "LABAC Laboratorio Clínico — propuesta de sitio institucional",
+            "badge": "Propuesta visual",
+            "caption": "Nueva presencia digital alineada al manual de marca LABAC"
+          },
+          {
+            "type": "text",
+            "span": "3x1",
+            "eyebrow": "Propuesta de valor",
+            "heading": "Un sitio que trabaja por LABAC las 24 horas.",
+            "body": "Disenamos y desarrollamos 6 paginas completas con sistema de diseno clinico propio, mapa interactivo de sedes, formulario funcional y portal de resultados. Todo en Next.js 16, optimizado para velocidad y posicionamiento organico."
+          }
+        ]
       }
     },
-    "client": {
-      "name": "LABAC Laboratorio Clínico",
-      "industry": "Salud / Diagnóstico Clínico de Alta Complejidad",
-      "contact": {
-        "name": "Equipo LABAC",
-        "role": "Dirección General"
+    {
+      "id": "diagnostico",
+      "type": "book-section",
+      "label": "Diagnostico del Sitio Actual",
+      "data": {
+        "title": "Diagnostico del Sitio Actual",
+        "subtitle": "Lo que el sitio de hoy comunica y lo que deberia comunicar",
+        "cards": [
+          {
+            "type": "text",
+            "span": "3x1",
+            "eyebrow": "Analisis del sitio labac.com.ar",
+            "heading": "Seis problemas criticos que el rediseno resuelve.",
+            "body": "Relevamos el sitio actual en detalle. Los problemas no son cosmeticos: afectan directamente la confianza del paciente, la conversion a turnos y la percepcion institucional de LABAC frente a competidores que ya actualizaron su presencia digital."
+          },
+          {
+            "type": "metric",
+            "span": "1x1",
+            "icon": "Target",
+            "value": "01",
+            "label": "Identidad visual inconsistente",
+            "description": "El sitio mezcla distintos azules sin sistema. Los overlays ocultan el equipamiento y el equipo humano, que son los activos mas valiosos de LABAC."
+          },
+          {
+            "type": "metric",
+            "span": "1x1",
+            "icon": "Zap",
+            "value": "02",
+            "label": "Sin jerarquia de informacion",
+            "description": "El home muestra sliders genericos antes de explicar que hace LABAC, donde esta y como sacar un turno. El paciente tiene que buscar lo que necesita."
+          },
+          {
+            "type": "metric",
+            "span": "1x1",
+            "icon": "Search",
+            "value": "03",
+            "label": "Portal de resultados sin pagina dedicada",
+            "description": "No hay instrucciones claras sobre que necesita el paciente para ingresar, generando llamados innecesarios al mostrador."
+          },
+          {
+            "type": "metric",
+            "span": "1x1",
+            "icon": "MapPin",
+            "value": "04",
+            "label": "Sedes: lista de texto sin mapa",
+            "description": "Las 7+ sucursales se listan como bloques de texto plano al final del home. Sin mapa, sin filtro por zona, sin boton para sacar turno por sede."
+          },
+          {
+            "type": "metric",
+            "span": "1x1",
+            "icon": "Smartphone",
+            "value": "05",
+            "label": "Experiencia mobile deficiente",
+            "description": "Sliders, tipografia pequena y bloques de contacto no optimizados para celular. El 68% de los pacientes accede desde el telefono."
+          },
+          {
+            "type": "metric",
+            "span": "1x1",
+            "icon": "Globe",
+            "value": "06",
+            "label": "SEO inexistente",
+            "description": "Sin meta tags ni estructura semantica correcta. LABAC no aparece en busquedas de laboratorio clinico en Salta, donde van los pacientes nuevos."
+          },
+          {
+            "type": "text",
+            "span": "3x1",
+            "eyebrow": "Conclusion del diagnostico",
+            "heading": "El sitio actual comunica menos de lo que LABAC vale.",
+            "body": "Con 30 años de trayectoria, certificaciones ISO, equipamiento Siemens/Roche y mas de 500.000 pacientes atendidos, LABAC merece una plataforma digital que este a la altura. El rediseno no es un cambio estetico: es una inversion estrategica en como el laboratorio se presenta al mundo."
+          }
+        ]
       }
     },
-    "meta": {
-      "type": "propuesta",
-      "number": "2026-041",
-      "title": "Sitio Web Institucional — LABAC",
-      "subtitle": "Plataforma digital clínica con portal de resultados y gestión de turnos",
-      "date": "2026-05-20",
-      "validUntil": "2026-06-20",
-      "status": "enviado",
-      "currency": "USD",
-      "language": "es"
+    {
+      "id": "investigacion-diseno",
+      "type": "design-system",
+      "label": "Investigación y Diseño",
+      "data": {
+        "title": "Sistema Visual",
+        "subtitle": "Identidad clínica de alta precisión",
+        "description": "El diseño sigue el manual de marca de LABAC y el sistema 'Clinical Precision': UI plana, sin sombras, bordes de 1px, radio de 2px y una paleta restringida que transmite autoridad médica, confianza y modernidad. La tipografía Plus Jakarta Sans garantiza legibilidad en contextos clínicos densos.",
+        "palette": [
+          {
+            "name": "Azul Médico",
+            "hex": "#1A51A2",
+            "role": "Primario · CTA · Navegación activa · Botones",
+            "textLight": true
+          },
+          {
+            "name": "Azul Oscuro",
+            "hex": "#003A80",
+            "role": "Titulares · Marca · Alta jerarquía tipográfica",
+            "textLight": true
+          },
+          {
+            "name": "Blanco Clínico",
+            "hex": "#FFFFFF",
+            "role": "Fondos · 90% del UI · Entorno estéril y premium",
+            "textLight": false
+          },
+          {
+            "name": "Gris Estructural",
+            "hex": "#E8E8E8",
+            "role": "Bordes 1px · Separadores · Grilla arquitectónica",
+            "textLight": false
+          }
+        ],
+        "typography": [
+          {
+            "name": "Plus Jakarta Sans",
+            "role": "Títulos, headlines y cuerpo de texto",
+            "sample": "Alta complejidad. Cerca tuyo.",
+            "weights": "Regular · SemiBold · Bold · ExtraBold",
+            "category": "sans-serif"
+          }
+        ],
+        "principles": [
+          {
+            "icon": "ShieldCheck",
+            "title": "Confianza clínica",
+            "description": "Cada elemento visual refuerza la credibilidad institucional: sin adornos, sin ambigüedad, sin ruido visual."
+          },
+          {
+            "icon": "Smartphone",
+            "title": "Mobile-first",
+            "description": "El 68% de los pacientes accede desde celular. El sitio funciona perfectamente desde 320px de ancho."
+          },
+          {
+            "icon": "Zap",
+            "title": "Velocidad diagnóstica",
+            "description": "Carga en menos de 2 segundos. La información crítica —resultados, turnos, contacto— siempre a un tap."
+          },
+          {
+            "icon": "Accessibility",
+            "title": "Accesibilidad",
+            "description": "Contraste WCAG AA, tamaños de fuente accesibles y navegación clara para pacientes de todas las edades."
+          }
+        ]
+      }
     },
-    "screens": [
-      {
-        "id": "presentacion",
-        "type": "book-section",
-        "label": "Presentacion",
-        "data": {
-          "title": "Presentacion",
-          "subtitle": "Propuesta digital para LABAC Laboratorio Clinico",
-          "cards": [
-            {
-              "type": "text",
-              "span": "2x1",
-              "accent": true,
-              "eyebrow": "Propuesta 2026-041",
-              "heading": "LABAC tiene 30 años de excelencia clinica. Su web no lo refleja.",
-              "body": "El sitio actual de labac.com.ar fue construido con una estetica de 2015: fondos azules con opacidad sobre fotos, sliders genericos, tipografia inconsistente y una estructura que no prioriza lo que el paciente necesita. Proponemos un rediseno completo que ponga la tecnologia diagnostica de LABAC al frente, con una interfaz clinica moderna, veloz y confiable.",
+    {
+      "id": "solucion",
+      "type": "book-section",
+      "label": "La Solución",
+      "data": {
+        "title": "La Solución",
+        "subtitle": "6 páginas, un sistema cohesivo",
+        "cards": [
+          {
+            "type": "text",
+            "span": "3x1",
+            "eyebrow": "Alcance completo",
+            "heading": "Seis páginas diseñadas y desarrolladas desde cero.",
+            "body": "El proyecto incluye el diseño UX/UI y desarrollo front-end de todas las páginas, con componentes reutilizables, animaciones sutiles y total coherencia visual. Cada página resuelve una necesidad concreta del paciente o del laboratorio."
+          },
+          {
+            "type": "image",
+            "span": "half",
+            "src": "/labac/home.png",
+            "alt": "Página de inicio — LABAC Laboratorio Clínico",
+            "badge": "Inicio",
+            "caption": "Landing principal con portal de resultados y sucursales",
+            "detail": {
+              "title": "Inicio — Primera impresión clínica",
+              "description": "Hero con propuesta de valor, estadísticas institucionales, servicios destacados, acceso rápido al portal de resultados y vista de sucursales.",
               "bullets": [
-                "Identidad visual alineada al manual de marca LABAC",
-                "Arquitectura de informacion centrada en el paciente",
-                "Portal de resultados seguro con acceso por DNI y codigo de protocolo",
-                "Gestion de turnos online por sede, disponible 24/7",
-                "Velocidad y SEO: de invisible a encontrable en Google"
-              ]
-            },
-            {
-              "type": "metric",
-              "span": "1x1",
-              "icon": "TrendingUp",
-              "value": "77%",
-              "label": "de los pacientes busca su laboratorio en Google antes de ir",
-              "description": "Un sitio lento o anticuado descarta pacientes antes de que lleguen al mostrador."
-            },
-            {
-              "type": "metric",
-              "span": "1x1",
-              "icon": "Clock",
-              "value": "3x",
-              "label": "mas consultas via web vs. telefonica en laboratorios digitalizados",
-              "description": "El portal de resultados y el formulario reducen la carga operativa del personal de atencion."
-            },
-            {
-              "type": "text",
-              "span": "3x1",
-              "eyebrow": "Propuesta de valor",
-              "heading": "Un sitio que trabaja por LABAC las 24 horas.",
-              "body": "Disenamos y desarrollamos 6 paginas completas con sistema de diseno clinico propio, mapa interactivo de sedes, formulario funcional y portal de resultados. Todo en Next.js 16, optimizado para velocidad y posicionamiento organico."
-            }
-          ]
-        }
-      },
-      {
-        "id": "diagnostico",
-        "type": "book-section",
-        "label": "Diagnostico del Sitio Actual",
-        "data": {
-          "title": "Diagnostico del Sitio Actual",
-          "subtitle": "Lo que el sitio de hoy comunica y lo que deberia comunicar",
-          "cards": [
-            {
-              "type": "text",
-              "span": "3x1",
-              "eyebrow": "Analisis del sitio labac.com.ar",
-              "heading": "Seis problemas criticos que el rediseno resuelve.",
-              "body": "Relevamos el sitio actual en detalle. Los problemas no son cosmeticos: afectan directamente la confianza del paciente, la conversion a turnos y la percepcion institucional de LABAC frente a competidores que ya actualizaron su presencia digital."
-            },
-            {
-              "type": "metric",
-              "span": "1x1",
-              "icon": "Target",
-              "value": "01",
-              "label": "Identidad visual inconsistente",
-              "description": "El sitio mezcla distintos azules sin sistema. Los overlays ocultan el equipamiento y el equipo humano, que son los activos mas valiosos de LABAC."
-            },
-            {
-              "type": "metric",
-              "span": "1x1",
-              "icon": "Zap",
-              "value": "02",
-              "label": "Sin jerarquia de informacion",
-              "description": "El home muestra sliders genericos antes de explicar que hace LABAC, donde esta y como sacar un turno. El paciente tiene que buscar lo que necesita."
-            },
-            {
-              "type": "metric",
-              "span": "1x1",
-              "icon": "Search",
-              "value": "03",
-              "label": "Portal de resultados sin pagina dedicada",
-              "description": "No hay instrucciones claras sobre que necesita el paciente para ingresar, generando llamados innecesarios al mostrador."
-            },
-            {
-              "type": "metric",
-              "span": "1x1",
-              "icon": "MapPin",
-              "value": "04",
-              "label": "Sedes: lista de texto sin mapa",
-              "description": "Las 7+ sucursales se listan como bloques de texto plano al final del home. Sin mapa, sin filtro por zona, sin boton para sacar turno por sede."
-            },
-            {
-              "type": "metric",
-              "span": "1x1",
-              "icon": "Smartphone",
-              "value": "05",
-              "label": "Experiencia mobile deficiente",
-              "description": "Sliders, tipografia pequena y bloques de contacto no optimizados para celular. El 68% de los pacientes accede desde el telefono."
-            },
-            {
-              "type": "metric",
-              "span": "1x1",
-              "icon": "Globe",
-              "value": "06",
-              "label": "SEO inexistente",
-              "description": "Sin meta tags ni estructura semantica correcta. LABAC no aparece en busquedas de laboratorio clinico en Salta, donde van los pacientes nuevos."
-            },
-            {
-              "type": "text",
-              "span": "3x1",
-              "eyebrow": "Conclusion del diagnostico",
-              "heading": "El sitio actual comunica menos de lo que LABAC vale.",
-              "body": "Con 30 años de trayectoria, certificaciones ISO, equipamiento Siemens/Roche y mas de 500.000 pacientes atendidos, LABAC merece una plataforma digital que este a la altura. El rediseno no es un cambio estetico: es una inversion estrategica en como el laboratorio se presenta al mundo."
-            }
-          ]
-        }
-      },
-      {
-        "id": "investigacion-diseno",
-        "type": "design-system",
-        "label": "Investigación y Diseño",
-        "data": {
-          "title": "Sistema Visual",
-          "subtitle": "Identidad clínica de alta precisión",
-          "description": "El diseño sigue el manual de marca de LABAC y el sistema 'Clinical Precision': UI plana, sin sombras, bordes de 1px, radio de 2px y una paleta restringida que transmite autoridad médica, confianza y modernidad. La tipografía Plus Jakarta Sans garantiza legibilidad en contextos clínicos densos.",
-          "palette": [
-            {
-              "name": "Azul Médico",
-              "hex": "#1A51A2",
-              "role": "Primario · CTA · Navegación activa · Botones",
-              "textLight": true
-            },
-            {
-              "name": "Azul Oscuro",
-              "hex": "#003A80",
-              "role": "Titulares · Marca · Alta jerarquía tipográfica",
-              "textLight": true
-            },
-            {
-              "name": "Blanco Clínico",
-              "hex": "#FFFFFF",
-              "role": "Fondos · 90% del UI · Entorno estéril y premium",
-              "textLight": false
-            },
-            {
-              "name": "Gris Estructural",
-              "hex": "#E8E8E8",
-              "role": "Bordes 1px · Separadores · Grilla arquitectónica",
-              "textLight": false
-            }
-          ],
-          "typography": [
-            {
-              "name": "Plus Jakarta Sans",
-              "role": "Títulos, headlines y cuerpo de texto",
-              "sample": "Alta complejidad. Cerca tuyo.",
-              "weights": "Regular · SemiBold · Bold · ExtraBold",
-              "category": "sans-serif"
-            }
-          ],
-          "principles": [
-            {
-              "icon": "ShieldCheck",
-              "title": "Confianza clínica",
-              "description": "Cada elemento visual refuerza la credibilidad institucional: sin adornos, sin ambigüedad, sin ruido visual."
-            },
-            {
-              "icon": "Smartphone",
-              "title": "Mobile-first",
-              "description": "El 68% de los pacientes accede desde celular. El sitio funciona perfectamente desde 320px de ancho."
-            },
-            {
-              "icon": "Zap",
-              "title": "Velocidad diagnóstica",
-              "description": "Carga en menos de 2 segundos. La información crítica —resultados, turnos, contacto— siempre a un tap."
-            },
-            {
-              "icon": "Accessibility",
-              "title": "Accesibilidad",
-              "description": "Contraste WCAG AA, tamaños de fuente accesibles y navegación clara para pacientes de todas las edades."
-            }
-          ]
-        }
-      },
-      {
-        "id": "solucion",
-        "type": "book-section",
-        "label": "La Solución",
-        "data": {
-          "title": "La Solución",
-          "subtitle": "6 páginas, un sistema cohesivo",
-          "cards": [
-            {
-              "type": "text",
-              "span": "3x1",
-              "eyebrow": "Alcance completo",
-              "heading": "Seis páginas diseñadas y desarrolladas desde cero.",
-              "body": "El proyecto incluye el diseño UX/UI y desarrollo front-end de todas las páginas, con componentes reutilizables, animaciones sutiles y total coherencia visual. Cada página resuelve una necesidad concreta del paciente o del laboratorio."
-            },
-            {
-              "type": "metric",
-              "span": "1x1",
-              "icon": "LayoutDashboard",
-              "value": "Home",
-              "label": "Hero, estadísticas, servicios destacados, portal de resultados rápido y sucursales",
-              "description": "Primera impresión que convierte visitas en turnos."
-            },
-            {
-              "type": "metric",
-              "span": "1x1",
-              "icon": "Search",
-              "value": "Servicios",
-              "label": "Catálogo filtrable por área, fichas de estudios con preparación y requisitos",
-              "description": "Más de 1.500 determinaciones clínicas organizadas y consultables."
-            },
-            {
-              "type": "metric",
-              "span": "1x1",
-              "icon": "ShieldCheck",
-              "value": "Resultados",
-              "label": "Portal seguro con acceso por DNI + código de protocolo",
-              "description": "Descarga de informes PDF con firma digital y validez legal."
-            },
-            {
-              "type": "metric",
-              "span": "1x1",
-              "icon": "MapPin",
-              "value": "Sucursales",
-              "label": "Mapa interactivo con filtro por región, horarios y botón Sacar Turno por sede",
-              "description": "Red de 12 sedes operativas con toda la información actualizada."
-            },
-            {
-              "type": "metric",
-              "span": "1x1",
-              "icon": "Users",
-              "value": "Nosotros",
-              "label": "Historia, línea de tiempo, misión/visión, equipo profesional e infraestructura",
-              "description": "Narrativa institucional que genera confianza y diferenciación."
-            },
-            {
-              "type": "metric",
-              "span": "1x1",
-              "icon": "Mail",
-              "value": "Contacto",
-              "label": "Formulario de consulta, datos de atención telefónica y mapa de sede central",
-              "description": "Canal directo con el laboratorio, disponible las 24 horas."
-            }
-          ]
-        }
-      },
-      {
-        "id": "roadmap",
-        "type": "roadmap",
-        "label": "Plan de Trabajo",
-        "data": {
-          "phases": [
-            {
-              "id": "fase-1",
-              "number": 1,
-              "title": "Diseño UX/UI",
-              "duration": "1 sem",
-              "tasks": [
-                "Revisión y validación del manual de marca LABAC",
-                "Definición del sistema de diseño (tokens, componentes base)",
-                "Wireframes de las 6 páginas",
-                "Diseño visual de alta fidelidad (desktop y mobile)",
-                "Revisión con el cliente y ajustes"
-              ]
-            },
-            {
-              "id": "fase-2",
-              "number": 2,
-              "title": "Desarrollo Front-End",
-              "duration": "2 sem",
-              "tasks": [
-                "Setup del proyecto Next.js 16 + Tailwind CSS 4 + TypeScript",
-                "Desarrollo de componentes reutilizables (navbar, footer, cards, formularios)",
-                "Implementación de las 6 páginas con contenido real",
-                "Portal de Resultados con validación de DNI y código",
-                "Mapa interactivo de sucursales con filtro por región",
-                "Formulario de contacto funcional",
-                "Optimización de imágenes (WebP/AVIF via Sharp)",
-                "Animaciones con Framer Motion"
-              ]
-            },
-            {
-              "id": "fase-3",
-              "number": 3,
-              "title": "Revisión, QA y Deploy",
-              "duration": "1 sem",
-              "tasks": [
-                "Testing cross-browser y cross-device",
-                "Revisión final con el cliente (hasta 2 rondas de ajustes)",
-                "Optimización SEO on-page (meta tags, Open Graph, sitemap)",
-                "Deploy en Vercel con dominio del cliente",
-                "Entrega de código fuente y documentación básica"
+                "Hero con mensaje institucional y CTA a turnos",
+                "Estadísticas de trayectoria y volumen",
+                "Acceso directo al portal de resultados",
+                "Vista previa de la red de sucursales"
+              ],
+              "stack": [
+                "Next.js 16",
+                "Tailwind CSS 4",
+                "Framer Motion"
               ]
             }
-          ],
-          "technologies": [
-            {
-              "name": "Next.js 16",
-              "description": "Framework web React con SSR/SSG"
-            },
-            {
-              "name": "Tailwind CSS 4",
-              "description": "Estilos utility-first responsive"
-            },
-            {
-              "name": "TypeScript 5",
-              "description": "Tipado estático para mayor robustez"
-            },
-            {
-              "name": "Framer Motion 12",
-              "description": "Animaciones fluidas y micro-interacciones"
-            },
-            {
-              "name": "Lucide React",
-              "description": "Iconografía clínica lineal consistente"
-            },
-            {
-              "name": "Sharp",
-              "description": "Optimización automática de imágenes WebP"
-            },
-            {
-              "name": "Vercel",
-              "description": "Hosting con CDN global y deploy continuo"
+          },
+          {
+            "type": "image",
+            "span": "half",
+            "src": "/labac/servicios.png",
+            "alt": "Página de servicios y estudios — LABAC",
+            "badge": "Servicios",
+            "caption": "Catálogo de determinaciones clínicas",
+            "detail": {
+              "title": "Servicios — Catálogo clínico consultable",
+              "description": "Más de 1.500 determinaciones organizadas por área, con fichas de preparación, requisitos y búsqueda filtrable.",
+              "bullets": [
+                "Filtro por área y tipo de estudio",
+                "Preparación del paciente visible en cada ficha",
+                "SEO por especialidad y estudio",
+                "Enlace a turnos desde cada servicio"
+              ],
+              "stack": [
+                "Next.js 16",
+                "Tailwind CSS 4"
+              ]
             }
-          ],
-          "clientRequirements": [
-            "Logo LABAC en formato SVG o PNG alta resolución",
-            "Textos finales aprobados para cada página",
-            "Fotografías de sedes, equipo profesional e infraestructura",
-            "Lista definitiva de sucursales con dirección, horarios y teléfonos",
-            "Catálogo de servicios con preparaciones (puede enviarse como planilla)",
-            "Credenciales del dominio y hosting actual (para el deploy)"
-          ]
-        }
-      },
-      {
-        "id": "inversion",
-        "type": "pricing",
-        "label": "Inversión",
-        "data": {
-          "items": [
-            {
-              "id": "diseno",
-              "category": "Diseño",
-              "name": "Investigación y Diseño UX/UI",
-              "description": "Sistema de diseño clínico, wireframes y mockups de alta fidelidad (6 páginas, desktop + mobile). Hasta 2 rondas de revisión.",
-              "total": 150
-            },
-            {
-              "id": "desarrollo",
-              "category": "Desarrollo",
-              "name": "Desarrollo Front-End — 6 páginas",
-              "description": "Home, Servicios, Resultados, Sucursales, Nosotros y Contacto. Componentes reutilizables, animaciones, formulario funcional y portal de resultados.",
-              "total": 250,
-              "highlight": true
-            },
-            {
-              "id": "deploy",
-              "category": "Infraestructura",
-              "name": "Deploy, SEO on-page y entrega",
-              "description": "Puesta en producción en Vercel, configuración de dominio, optimización SEO básica, sitemap y entrega de código fuente documentado.",
-              "total": 50
+          },
+          {
+            "type": "image",
+            "span": "half",
+            "src": "/labac/resultados.png",
+            "alt": "Portal de resultados — LABAC",
+            "badge": "Resultados",
+            "caption": "Acceso seguro a informes clínicos",
+            "detail": {
+              "title": "Resultados — Portal seguro 24/7",
+              "description": "Ingreso con DNI y código de protocolo. Descarga de informes PDF con validez legal y firma digital.",
+              "bullets": [
+                "Validación de credenciales del paciente",
+                "Descarga de PDF con trazabilidad",
+                "Instrucciones claras para reducir llamadas al mostrador",
+                "Mensajes de error y ayuda contextual"
+              ],
+              "stack": [
+                "Next.js 16",
+                "API de resultados LABAC"
+              ]
             }
-          ],
-          "subtotal": 450,
-          "total": 450,
-          "paymentPlans": [
-            {
-              "title": "Pago en 2 cuotas",
-              "amount": "2 × $225 USD",
-              "detail": "50% al confirmar el proyecto. 50% al aprobar los diseños antes del deploy.",
-              "featured": true
-            },
-            {
-              "title": "Pago único",
-              "amount": "$450 USD",
-              "detail": "100% al confirmar. Sin recargo adicional.",
-              "featured": false
+          },
+          {
+            "type": "image",
+            "span": "half",
+            "src": "/labac/sedes.png",
+            "alt": "Mapa de sucursales — LABAC",
+            "badge": "Sucursales",
+            "caption": "Red de sedes con mapa interactivo",
+            "detail": {
+              "title": "Sucursales — Red territorial completa",
+              "description": "Mapa interactivo con filtro por región, horarios, teléfonos y botón Sacar Turno por sede.",
+              "bullets": [
+                "12 sedes operativas con datos actualizados",
+                "Filtro por zona geográfica",
+                "Horarios y contacto por sucursal",
+                "CTA de turno contextual por sede"
+              ],
+              "stack": [
+                "Next.js 16",
+                "Google Maps"
+              ]
             }
-          ],
-          "paymentMethods": [
-            "Transferencia bancaria internacional (USD)",
-            "USDT / USDC (red TRC-20 o ERC-20)",
-            "Transferencia en ARS al tipo de cambio del día",
-            "Mercado Pago (ARS)"
-          ],
-          "terms": [
-            "Propuesta válida hasta el 20 de junio de 2026.",
-            "Incluye hasta 2 rondas de revisiones en diseño y 1 en desarrollo.",
-            "El plazo total estimado es de 4 semanas desde la confirmación y entrega de materiales.",
-            "Cambios de alcance fuera del scope acordado se cotizan por separado.",
-            "El código fuente queda en propiedad del cliente al completar el pago."
-          ],
-          "note": "Presupuesto N° 2026-041 | LABAC Laboratorio Clínico"
-        }
-      },
-      {
-        "id": "cierre",
-        "type": "closing",
-        "label": "Cierre",
-        "data": {
-          "ctaHeading": "¿Empezamos?",
-          "ctaBody": "LABAC lleva más de 30 años siendo referente en diagnóstico clínico. Su sitio web debería estar a la misma altura. En 4 semanas entregamos una plataforma digital que trabaja por el laboratorio las 24 horas, reduce la carga operativa del mostrador y proyecta la autoridad clínica que LABAC ya tiene. Estamos listos cuando ustedes lo sean."
-        }
+          },
+          {
+            "type": "image",
+            "span": "half",
+            "src": "/labac/sosotros.png",
+            "alt": "Página Nosotros — LABAC Laboratorio Clínico",
+            "badge": "Nosotros",
+            "caption": "Historia e identidad institucional",
+            "detail": {
+              "title": "Nosotros — 30 años de excelencia clínica",
+              "description": "Línea de tiempo, misión y visión, equipo profesional, certificaciones e infraestructura de alta complejidad.",
+              "bullets": [
+                "Historia fundacional y hitos",
+                "Certificaciones ISO y equipamiento",
+                "Equipo profesional y autoridades",
+                "Galería de infraestructura y tecnología"
+              ],
+              "stack": [
+                "Next.js 16",
+                "Tailwind CSS 4"
+              ]
+            }
+          },
+          {
+            "type": "image",
+            "span": "half",
+            "src": "/labac/contacto.png",
+            "alt": "Página de contacto — LABAC",
+            "badge": "Contacto",
+            "caption": "Formulario y canales de atención",
+            "detail": {
+              "title": "Contacto — Conversión y atención",
+              "description": "Formulario de consulta, datos de atención telefónica, WhatsApp y mapa de la sede central.",
+              "bullets": [
+                "Formulario con validación y envío",
+                "Horarios de atención visibles",
+                "Mapa embebido de sede central",
+                "Enlaces a redes y WhatsApp"
+              ],
+              "stack": [
+                "Next.js 16",
+                "Tailwind CSS 4"
+              ]
+            }
+          }
+        ]
       }
-    ]
-  }
+    },
+    {
+      "id": "roadmap",
+      "type": "roadmap",
+      "label": "Plan de Trabajo",
+      "data": {
+        "phases": [
+          {
+            "id": "fase-1",
+            "number": 1,
+            "title": "Diseño UX/UI",
+            "duration": "1 sem",
+            "tasks": [
+              "Revisión y validación del manual de marca LABAC",
+              "Definición del sistema de diseño (tokens, componentes base)",
+              "Wireframes de las 6 páginas",
+              "Diseño visual de alta fidelidad (desktop y mobile)",
+              "Revisión con el cliente y ajustes"
+            ]
+          },
+          {
+            "id": "fase-2",
+            "number": 2,
+            "title": "Desarrollo Front-End",
+            "duration": "2 sem",
+            "tasks": [
+              "Setup del proyecto Next.js 16 + Tailwind CSS 4 + TypeScript",
+              "Desarrollo de componentes reutilizables (navbar, footer, cards, formularios)",
+              "Implementación de las 6 páginas con contenido real",
+              "Portal de Resultados con validación de DNI y código",
+              "Mapa interactivo de sucursales con filtro por región",
+              "Formulario de contacto funcional",
+              "Optimización de imágenes (WebP/AVIF via Sharp)",
+              "Animaciones con Framer Motion"
+            ]
+          },
+          {
+            "id": "fase-3",
+            "number": 3,
+            "title": "Revisión, QA y Deploy",
+            "duration": "1 sem",
+            "tasks": [
+              "Testing cross-browser y cross-device",
+              "Revisión final con el cliente (hasta 2 rondas de ajustes)",
+              "Optimización SEO on-page (meta tags, Open Graph, sitemap)",
+              "Deploy en Vercel con dominio del cliente",
+              "Entrega de código fuente y documentación básica"
+            ]
+          }
+        ],
+        "technologies": [
+          {
+            "name": "Next.js 16",
+            "description": "Framework web React con SSR/SSG"
+          },
+          {
+            "name": "Tailwind CSS 4",
+            "description": "Estilos utility-first responsive"
+          },
+          {
+            "name": "TypeScript 5",
+            "description": "Tipado estático para mayor robustez"
+          },
+          {
+            "name": "Framer Motion 12",
+            "description": "Animaciones fluidas y micro-interacciones"
+          },
+          {
+            "name": "Lucide React",
+            "description": "Iconografía clínica lineal consistente"
+          },
+          {
+            "name": "Sharp",
+            "description": "Optimización automática de imágenes WebP"
+          },
+          {
+            "name": "Vercel",
+            "description": "Hosting con CDN global y deploy continuo"
+          }
+        ],
+        "clientRequirements": [
+          "Logo LABAC en formato SVG o PNG alta resolución",
+          "Textos finales aprobados para cada página",
+          "Fotografías de sedes, equipo profesional e infraestructura",
+          "Lista definitiva de sucursales con dirección, horarios y teléfonos",
+          "Catálogo de servicios con preparaciones (puede enviarse como planilla)",
+          "Credenciales del dominio y hosting actual (para el deploy)"
+        ]
+      }
+    },
+    {
+      "id": "inversion",
+      "type": "pricing",
+      "label": "Inversión",
+      "data": {
+        "items": [
+          {
+            "id": "diseno",
+            "category": "Diseño",
+            "name": "Investigación y Diseño UX/UI",
+            "description": "Sistema de diseño clínico, wireframes y mockups de alta fidelidad (6 páginas, desktop + mobile). Hasta 2 rondas de revisión.",
+            "total": 150
+          },
+          {
+            "id": "desarrollo",
+            "category": "Desarrollo",
+            "name": "Desarrollo Front-End — 6 páginas",
+            "description": "Home, Servicios, Resultados, Sucursales, Nosotros y Contacto. Componentes reutilizables, animaciones, formulario funcional y portal de resultados.",
+            "total": 250,
+            "highlight": true
+          },
+          {
+            "id": "deploy",
+            "category": "Infraestructura",
+            "name": "Deploy, SEO on-page y entrega",
+            "description": "Puesta en producción en Vercel, configuración de dominio, optimización SEO básica, sitemap y entrega de código fuente documentado.",
+            "total": 50
+          }
+        ],
+        "subtotal": 450,
+        "total": 450,
+        "paymentPlans": [
+          {
+            "title": "Pago en 2 cuotas",
+            "amount": "2 × $225 USD",
+            "detail": "50% al confirmar el proyecto. 50% al aprobar los diseños antes del deploy.",
+            "featured": true
+          },
+          {
+            "title": "Pago único",
+            "amount": "$450 USD",
+            "detail": "100% al confirmar. Sin recargo adicional.",
+            "featured": false
+          }
+        ],
+        "paymentMethods": [
+          "Transferencia bancaria internacional (USD)",
+          "USDT / USDC (red TRC-20 o ERC-20)",
+          "Transferencia en ARS al tipo de cambio del día",
+          "Mercado Pago (ARS)"
+        ],
+        "terms": [
+          "Propuesta válida hasta el 20 de junio de 2026.",
+          "Incluye hasta 2 rondas de revisiones en diseño y 1 en desarrollo.",
+          "El plazo total estimado es de 4 semanas desde la confirmación y entrega de materiales.",
+          "Cambios de alcance fuera del scope acordado se cotizan por separado.",
+          "El código fuente queda en propiedad del cliente al completar el pago."
+        ],
+        "note": "Presupuesto N° 2026-041 | LABAC Laboratorio Clínico"
+      }
+    },
+    {
+      "id": "cierre",
+      "type": "closing",
+      "label": "Cierre",
+      "data": {
+        "ctaHeading": "¿Empezamos?",
+        "ctaBody": "LABAC lleva más de 30 años siendo referente en diagnóstico clínico. Su sitio web debería estar a la misma altura. En 4 semanas entregamos una plataforma digital que trabaja por el laboratorio las 24 horas, reduce la carga operativa del mostrador y proyecta la autoridad clínica que LABAC ya tiene. Estamos listos cuando ustedes lo sean."
+      }
+    }
+  ]
+}
