@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "migrate:blob": "npx tsx scripts/migrate-to-blob.ts"
+    "migrate:blob": "npx tsx scripts/migrate-to-blob.ts",
+    "publish": "npx tsx scripts/publish-presentation.ts"
   },
   "dependencies": {
     "@vercel/blob": "^2.4.0",

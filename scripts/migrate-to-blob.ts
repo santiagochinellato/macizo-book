@@ -7,25 +7,11 @@
  * Requiere variables de entorno cargadas (.env.local o export manual).
  */
 
-import { existsSync, readFileSync, promises as fs } from "fs";
+import { promises as fs } from "fs";
 import path from "path";
+import { loadEnvFiles } from "./lib/load-env";
 
-function loadEnvFile(filePath: string): void {
-  if (!existsSync(filePath)) return;
-  const content = readFileSync(filePath, "utf-8");
-  for (const line of content.split("\n")) {
-    const trimmed = line.trim();
-    if (!trimmed || trimmed.startsWith("#")) continue;
-    const eq = trimmed.indexOf("=");
-    if (eq === -1) continue;
-    const key = trimmed.slice(0, eq).trim();
-    const val = trimmed.slice(eq + 1).trim().replace(/^["']|["']$/g, "");
-    if (!process.env[key]) process.env[key] = val;
-  }
-}
-
-loadEnvFile(".env.local");
-loadEnvFile(".env");
+loadEnvFiles();
 
 async function main() {
   if (!process.env.BLOB_READ_WRITE_TOKEN) {
