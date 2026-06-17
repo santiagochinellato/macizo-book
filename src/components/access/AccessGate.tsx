@@ -17,6 +17,9 @@ export function AccessGate({ slug, clientName }: AccessGateProps) {
   const [error, setError] = useState<string | null>(null);
   const [isPending, startTransition] = useTransition();
 
+  const titleParts = clientName.split(" · ").map((part) => part.trim());
+  const hasSplitTitle = titleParts.length === 2 && titleParts.every(Boolean);
+
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setError(null);
@@ -69,12 +72,31 @@ export function AccessGate({ slug, clientName }: AccessGateProps) {
           />
         </div>
 
-        <h1
-          className="text-xl sm:text-2xl font-semibold leading-snug mb-2 max-w-sm"
-          style={{ color: "var(--text-primary)" }}
-        >
-          {clientName}
-        </h1>
+        <div className="flex flex-col items-center gap-1 mb-2 max-w-sm">
+          {hasSplitTitle ? (
+            <>
+              <h1
+                className="text-xl sm:text-2xl font-semibold leading-snug text-center"
+                style={{ color: "var(--text-primary)" }}
+              >
+                {titleParts[0]}
+              </h1>
+              <p
+                className="text-base sm:text-lg font-medium leading-snug text-center"
+                style={{ color: "var(--text-secondary)" }}
+              >
+                {titleParts[1]}
+              </p>
+            </>
+          ) : (
+            <h1
+              className="text-xl sm:text-2xl font-semibold leading-snug text-center"
+              style={{ color: "var(--text-primary)" }}
+            >
+              {clientName}
+            </h1>
+          )}
+        </div>
         <p className="text-sm leading-relaxed mb-8 max-w-xs" style={{ color: "var(--text-muted)" }}>
           Ingresá el código de acceso que recibiste para ver esta presentación.
         </p>
