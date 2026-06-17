@@ -54,18 +54,18 @@ export function RoadmapScreen({ data }: RoadmapScreenProps) {
             className="text-[10px] font-semibold uppercase tracking-widest"
             style={{ color: "var(--primary)" }}
           >
-            Modelo de trabajo
+            Forma de trabajo
           </span>
           <h1
             className="font-bold"
             style={{ fontSize: "clamp(20px, 3vw, 32px)", color: "var(--text-primary)" }}
           >
-            El modelo Build &amp; Run
+            Cómo trabajamos juntos
           </h1>
         </motion.div>
 
         <BentoGrid>
-          {/* ── Build & Run: dos procesos ── */}
+          {/* ── Dos etapas: construcción y mantenimiento ── */}
           <BentoCard colSpan={12}>
             <motion.div
               className="flex flex-col gap-5"
@@ -243,7 +243,7 @@ export function RoadmapScreen({ data }: RoadmapScreenProps) {
                     className="text-xs font-bold uppercase tracking-widest"
                     style={{ color: "var(--text-subtle)" }}
                   >
-                    Stack tecnológico
+                    Herramientas del servicio
                   </span>
                 </div>
                 <div className="flex flex-wrap gap-2">

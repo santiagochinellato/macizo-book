@@ -499,7 +499,7 @@ function PriceSummaryPanel({ summary }: { summary: ClosingSummary }) {
         groupAmount={pricing.buildAmount}
         groupCaption="Abono mensual del grupo"
         perCompany={pricing.buildPerCompany ?? "≈ USD 500/mes"}
-        perCompanyCaption="Cada negocio · fase BUILD"
+        perCompanyCaption="Cada negocio · construcción activa"
         featured
         icon={Hammer}
       />
@@ -509,7 +509,7 @@ function PriceSummaryPanel({ summary }: { summary: ClosingSummary }) {
         groupAmount={pricing.runAmount}
         groupCaption="Abono mensual del grupo"
         perCompany={pricing.runPerCompany ?? "≈ USD 120/mes"}
-        perCompanyCaption="Cada negocio · fase RUN"
+        perCompanyCaption="Cada negocio · mantenimiento"
         icon={Wrench}
       />
     </div>
@@ -709,7 +709,7 @@ function SummaryView({
           {summary.buildRunNote ? (
             <BuildRunNote note={summary.buildRunNote} />
           ) : (
-            <BuildRunNote note={{ heading: "Build & Run", body: summary.methodNote! }} />
+            <BuildRunNote note={{ heading: "Cómo evoluciona la inversión", body: summary.methodNote! }} />
           )}
         </motion.div>
       )}

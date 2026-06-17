@@ -191,9 +191,9 @@ function WireframeCardContent({ card }: { card: WireframeBookCard }) {
 function tierGroupLabel(tier: TextBookCardTier): string | null {
   switch (tier) {
     case "offering":
-      return "Qué ofrecemos · ciclo BUILD";
+      return "Qué ofrecemos · incluido en el abono";
     case "future":
-      return "Lo que el modelo habilita después";
+      return "Próximas mejoras";
     default:
       return null;
   }
