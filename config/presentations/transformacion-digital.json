@@ -5,7 +5,7 @@
     "type": "propuesta",
     "number": "2026-GRP1",
     "title": "Transformación Digital y Automatización",
-    "subtitle": "Consultoría y desarrollo dedicado para LABAC, Dinatec, LABTEC y Ciudad Oeste",
+    "subtitle": "Un consultor dedicado para LABAC, Dinatec, LABTEC y Ciudad Oeste",
     "date": "2026-06-17",
     "validUntil": "2026-07-15",
     "status": "enviado",
@@ -38,77 +38,60 @@
     {
       "id": "presentacion",
       "type": "book-section",
-      "label": "Consultoría y Desarrollo Dedicado",
+      "label": "La Propuesta",
       "data": {
-        "title": "Consultoría y Desarrollo Dedicado",
-        "subtitle": "La puerta de entrada: cómo aporto valor y qué vas a ver en esta propuesta",
+        "title": "La Propuesta",
+        "subtitle": "Qué se construye, cómo funciona y qué gana cada empresa del grupo",
         "cards": [
           {
             "type": "text",
             "span": "3x1",
             "accent": true,
-            "eyebrow": "Propuesta 2026-GRP1 · El concepto",
-            "heading": "Consultoría y desarrollo dedicado al grupo, con un abono mensual y prioridades que ustedes definen.",
-            "body": "Un abono mensual previsible. Cada ciclo, Gerencia y RRHH priorizan y yo construyo sobre un plan que se ajusta al negocio. Ustedes mantienen el control; yo ejecuto con un único referente técnico para las cinco empresas.",
+            "eyebrow": "Propuesta 2026-GRP1",
+            "heading": "Cinco negocios, un presupuesto compartido, resultados concretos en cada uno.",
+            "body": "El grupo tiene cuatro empresas con desafíos tecnológicos distintos pero con una misma oportunidad: automatizar lo que hoy depende de personas, papeles o llamadas telefónicas. Esta propuesta concentra ese trabajo en un único consultor — con rol, agenda y presupuesto definidos — que avanza ciclo a ciclo sobre las prioridades que Gerencia y RRHH decidan.",
             "bullets": [
-              "Un único referente técnico para LABAC, Dinatec, LABTEC y Ciudad Oeste",
-              "Abono mensual previsible: prioridades que se redefinen ciclo a ciclo sin cambiar el costo",
-              "Tres frentes en paralelo: imagen digital, cliente/paciente y automatización interna",
-              "Una base única pensada para escalar a las cinco empresas del grupo"
+              "Un único interlocutor técnico para las cuatro empresas del grupo",
+              "Presupuesto mensual fijo: las prioridades cambian, el costo no",
+              "Tres proyectos concretos por empresa en la etapa de construcción",
+              "Base tecnológica compartida: lo que se construye en una empresa beneficia al resto"
             ]
           },
           {
-            "type": "text",
+            "type": "metric",
             "span": "1x1",
-            "eyebrow": "Pilar 1 · La cara de la empresa",
-            "heading": "La imagen digital que capta",
-            "body": "Sitios web, portales corporativos y rebranding. Construyo la cara digital profesional que proyecta seriedad 24/7 y convierte visitas en clientes y pacientes. Resuelve la falta de presencia y la imagen desactualizada que hoy frenan la captación."
+            "icon": "Clock",
+            "value": "24/7",
+            "label": "atención sin sumar personal",
+            "description": "Los sistemas que vamos a construir atienden, agendan y responden fuera del horario de oficina, sin costo operativo adicional."
+          },
+          {
+            "type": "metric",
+            "span": "1x1",
+            "icon": "Boxes",
+            "value": "5",
+            "label": "empresas, una sola base",
+            "description": "Lo que se construye para Ciudad Oeste se reutiliza en LABAC. Lo de LABAC escala a LABTEC. Así funciona el modelo."
+          },
+          {
+            "type": "metric",
+            "span": "1x1",
+            "icon": "Gauge",
+            "value": "≈ USD 500",
+            "label": "por empresa al mes",
+            "description": "El abono total del grupo (USD 2.500/mes) dividido entre cinco negocios. Es lo que cuesta tener desarrollo activo en cada uno."
           },
           {
             "type": "text",
-            "span": "1x1",
-            "eyebrow": "Pilar 2 · Cliente y paciente",
-            "heading": "Sistemas que sacan fricción",
-            "body": "Turnos, asistente por WhatsApp, historia clínica interactiva y portales B2B. El cliente y el paciente resuelven solos lo que hoy depende del mostrador y del horario. Menos espera, mejor experiencia y más fidelización."
-          },
-          {
-            "type": "text",
-            "span": "1x1",
-            "eyebrow": "Pilar 3 · Eficiencia interna",
-            "heading": "Procesos que se automatizan",
-            "body": "Audito, mido y automatizo las tareas repetitivas que hoy consumen horas y generan errores de carga. Libero al equipo para lo que realmente exige criterio humano y vuelvo medible lo que antes era intuición."
-          },
-          {
-            "type": "diagram",
             "span": "3x1",
-            "title": "Tecnología que las personas realmente adoptan",
-            "subtitle": "Seis disciplinas en una persona. No reemplazo a RRHH: trabajo a su lado, in situ, y lo potencio.",
-            "layers": [
-              {
-                "title": "Asesor, consultor y desarrollador",
-                "role": "RRHH · UX/UI · Programación · Salud · Capacitación · IA",
-                "items": [
-                  { "label": "Asesor", "icon": "Search", "description": "Detecta junto a RRHH el cuello de botella real" },
-                  { "label": "Consultor", "icon": "Brain", "description": "Diseña la solución con criterio de salud y UX" },
-                  { "label": "Desarrollador", "icon": "Code", "description": "La construye con IA y la deja funcionando" }
-                ]
-              },
-              {
-                "title": "De la mano de RRHH",
-                "role": "In situ · lo potencia, no lo reemplaza",
-                "items": [
-                  { "label": "Trabajo codo a codo", "icon": "Handshake", "description": "RRHH conoce a la gente; yo aporto la tecnología" },
-                  { "label": "Gestión del cambio", "icon": "RefreshCw", "description": "El equipo participa del cambio, no lo sufre" }
-                ]
-              },
-              {
-                "title": "El resultado",
-                "role": "Adopción real, no una herramienta en el cajón",
-                "items": [
-                  { "label": "Se usa de verdad", "icon": "CheckCircle", "description": "La solución nace entendible para quien la opera" },
-                  { "label": "Menos capacitación", "icon": "Sparkles", "description": "Curva de adopción más corta y económica" }
-                ]
-              }
+            "eyebrow": "Por qué funciona como consultor y no como proveedor puntual",
+            "heading": "Un proveedor externo cotiza y entrega. Un consultor dedicado entiende el proceso antes de construir.",
+            "body": "La diferencia no es solo semántica. Un desarrollo que no responde al proceso real del negocio termina en el cajón. Por eso, antes de escribir una sola línea de código, auditamos junto a RRHH qué tarea consume más tiempo, dónde se generan errores y qué necesita el equipo para adoptarlo sin fricción. Eso es lo que construimos.",
+            "bullets": [
+              "Investigación del proceso real antes de cada desarrollo",
+              "RRHH participa del diseño: la solución nace entendible para quien la opera",
+              "Gestión del cambio incluida: el equipo no sufre la tecnología, la adopta",
+              "Curva de adopción más corta y menor necesidad de capacitación"
             ]
           }
         ]
@@ -120,57 +103,57 @@
       "label": "LABAC",
       "data": {
         "title": "LABAC — Laboratorio Bioquímico de Alta Complejidad",
-        "subtitle": "Menos fricción en recepción, automatización clínica y mejor experiencia del paciente",
+        "subtitle": "Que el paciente resuelva por WhatsApp lo que hoy resuelve en el mostrador",
         "accentColor": "#1a5c38",
         "cards": [
           {
             "type": "text",
             "span": "3x1",
             "tier": "focus",
-            "eyebrow": "Enfoque",
-            "heading": "Que el paciente resuelva por WhatsApp lo que hoy resuelve en el mostrador",
-            "body": "El objetivo es liberar tiempo de recepción y reducir errores: que la orden médica, las indicaciones de preparación y el turno se gestionen de forma automática, dejando al equipo humano para lo que realmente requiere criterio."
+            "eyebrow": "El desafío",
+            "heading": "La recepción de LABAC absorbe consultas que podrían resolverse solas.",
+            "body": "Hoy el paciente llama para saber cómo prepararse para un estudio, para pedir turno, para preguntar si ya están sus resultados. Cada una de esas llamadas ocupa tiempo del personal que podría estar en tareas que realmente requieren criterio humano. El objetivo es liberar esa carga, no reemplazar personas: que el sistema resuelva lo rutinario y el equipo se enfoque en lo que importa."
           },
           {
             "type": "text",
             "span": "1x1",
             "tier": "offering",
             "offeringIndex": 1,
-            "eyebrow": "Incluido en el abono",
-            "heading": "Sitio web responsive",
-            "body": "Presencia profesional que comunica la complejidad del laboratorio y capta pacientes y empresas las 24 horas."
+            "eyebrow": "Proyecto 1",
+            "heading": "Sitio web profesional",
+            "body": "Presencia digital que comunica la complejidad del laboratorio, sus sedes y servicios. Diseñado para captar pacientes nuevos y empresas clientes las 24 horas."
           },
           {
             "type": "text",
             "span": "1x1",
             "tier": "offering",
             "offeringIndex": 2,
-            "eyebrow": "Incluido en el abono",
-            "heading": "Implementación de Macizo Chat",
-            "body": "Asistente por WhatsApp que responde, agenda y deriva, integrado a la operación de recepción."
+            "eyebrow": "Proyecto 2",
+            "heading": "Asistente por WhatsApp",
+            "body": "Un agente con inteligencia artificial que responde consultas, indica preparaciones, agenda turnos y deriva a una persona solo cuando hace falta. Integrado a la operación de recepción."
           },
           {
             "type": "text",
             "span": "1x1",
             "tier": "offering",
             "offeringIndex": 3,
-            "eyebrow": "Incluido en el abono",
-            "heading": "Historia clínica bioquímica interactiva",
-            "body": "Portal donde el paciente ve la evolución de sus marcadores de laboratorio, mejorando el seguimiento y la fidelización."
+            "eyebrow": "Proyecto 3",
+            "heading": "Historia clínica interactiva",
+            "body": "Portal donde el paciente ve la evolución de sus marcadores de laboratorio a lo largo del tiempo. Mejora el seguimiento, genera fidelización y diferencia a LABAC de la competencia."
           },
           {
             "type": "text",
             "span": "3x1",
             "tier": "future",
-            "eyebrow": "Próximas mejoras",
-            "heading": "Lo que se puede sumar después",
-            "body": "Una vez resuelto lo principal, el abono sigue produciendo: estos módulos entran según prioridad, sin rehacer nada.",
+            "eyebrow": "Lo que se suma después, sin empezar de cero",
+            "heading": "Más funciones cuando el equipo esté listo.",
+            "body": "Una vez que los tres proyectos principales están funcionando, el presupuesto sigue produciendo. Estos son los desarrollos que se incorporan según prioridad del grupo.",
             "bullets": [
-              "Sistema de turnos centralizado — agenda integrada al chat y a la web",
-              "Onboarding interno para RRHH — capacita rápido al personal de recepción",
+              "Sistema de turnos centralizado — agenda integrada al chat y al sitio web",
+              "Onboarding interno para RRHH — capacita rápido al personal de recepción nuevo",
               "Portal B2B de medicina laboral — métricas agregadas para clientes corporativos",
               "Trazabilidad de muestras domiciliarias — cadena de custodia del domicilio a la sede",
-              "Motor OCR + triage de órdenes — lee recetas y devuelve indicaciones y turno"
+              "Lectura automática de órdenes médicas — el sistema lee la receta y devuelve indicaciones y turno"
             ]
           }
         ]
@@ -182,57 +165,57 @@
       "label": "Dinatec",
       "data": {
         "title": "Dinatec — Logística y Servicios Mineros",
-        "subtitle": "Imagen profesional, cumplimiento normativo B2B y operación productiva en la Puna",
+        "subtitle": "Operar en la Puna sin depender de la conexión ni de la memoria de nadie",
         "accentColor": "#b45309",
         "cards": [
           {
             "type": "text",
             "span": "3x1",
             "tier": "focus",
-            "eyebrow": "Enfoque",
-            "heading": "Operar en la Puna sin depender de la conexión ni de la memoria de nadie",
-            "body": "La prioridad es proyectar seriedad ante las mineras, darles la trazabilidad documental que exigen para contratar y mantener al personal productivo aunque no haya señal."
+            "eyebrow": "El desafío",
+            "heading": "Las mineras piden trazabilidad documental. Hoy Dinatec no puede dársela de forma ágil.",
+            "body": "Para ganar y mantener contratos con clientes mineros, hay que demostrar cumplimiento: VTV al día, seguros vigentes, habilitaciones actualizadas de cada vehículo y módulo. Hoy esa información está dispersa en planillas y correos. El objetivo es centralizarla en un portal que las mineras puedan auditar en tiempo real y que el equipo interno pueda actualizar desde el campo, incluso sin señal."
           },
           {
             "type": "text",
             "span": "1x1",
             "tier": "offering",
             "offeringIndex": 1,
-            "eyebrow": "Incluido en el abono",
-            "heading": "Sitio web responsive",
-            "body": "Presencia que transmite seriedad y capacidad operativa ante mineras y clientes corporativos."
+            "eyebrow": "Proyecto 1",
+            "heading": "Sitio web corporativo",
+            "body": "Presencia digital que transmite seriedad y capacidad operativa ante mineras y clientes corporativos que evalúan proveedores."
           },
           {
             "type": "text",
             "span": "1x1",
             "tier": "offering",
             "offeringIndex": 2,
-            "eyebrow": "Incluido en el abono",
-            "heading": "Implementación de Macizo Chat",
-            "body": "Canal único para consultas, pedidos y soporte, disponible 24/7 y escalable al resto del grupo."
+            "eyebrow": "Proyecto 2",
+            "heading": "Asistente por WhatsApp",
+            "body": "Canal único para consultas de clientes, pedidos internos y soporte operativo. El mismo sistema que se construye para el grupo, adaptado al contexto de logística minera."
           },
           {
             "type": "text",
             "span": "1x1",
             "tier": "offering",
             "offeringIndex": 3,
-            "eyebrow": "Incluido en el abono",
+            "eyebrow": "Proyecto 3",
             "heading": "Portal de compliance documental",
-            "body": "Las mineras auditan en tiempo real los vencimientos de VTV, seguros y habilitaciones de la flota y los módulos alquilados."
+            "body": "Las mineras acceden y auditan en tiempo real los vencimientos de VTV, seguros y habilitaciones de la flota y los módulos alquilados. Dinatec deja de perder contratos por documentación vencida."
           },
           {
             "type": "text",
             "span": "3x1",
             "tier": "future",
-            "eyebrow": "Próximas mejoras",
-            "heading": "Lo que se puede sumar después",
-            "body": "Módulos que suman eficiencia operativa y se incorporan según la prioridad de cada ciclo.",
+            "eyebrow": "Lo que se suma después, sin empezar de cero",
+            "heading": "Más funciones cuando el equipo esté listo.",
+            "body": "Una vez que los tres proyectos principales están funcionando, el presupuesto sigue produciendo.",
             "bullets": [
-              "IoT de mantenimiento predictivo — órdenes de trabajo automáticas desde la telemetría",
-              "App móvil offline para choferes — check-lists y manifiestos sin señal, con sincronización",
-              "Agente de soporte técnico (IA) — asistencia en locación con los manuales de los equipos",
-              "Alertas automatizadas de RRHH — avisos de vencimientos de licencias y permisos",
-              "Trazabilidad de módulos y activos alquilados — estado y ubicación de cada activo"
+              "Mantenimiento predictivo por IoT — alertas automáticas desde la telemetría de los equipos",
+              "App offline para choferes — checklists y manifiestos sin señal, que sincronizan al conectarse",
+              "Asistente técnico con IA — consulta los manuales de los equipos desde la locación",
+              "Alertas automáticas de RRHH — avisos de vencimiento de licencias y permisos del personal",
+              "Trazabilidad de activos — estado y ubicación de cada módulo y vehículo alquilado"
             ]
           }
         ]
@@ -244,57 +227,57 @@
       "label": "LABTEC",
       "data": {
         "title": "LABTEC — Medicina Laboral y Medioambiente",
-        "subtitle": "Imagen corporativa, agendas multidisciplinarias y legajos digitales impecables",
+        "subtitle": "Coordinar varios especialistas en una sola visita y entregar un legajo impecable",
         "accentColor": "#0e7490",
         "cards": [
           {
             "type": "text",
             "span": "3x1",
             "tier": "focus",
-            "eyebrow": "Enfoque",
-            "heading": "Coordinar varios especialistas en una sola visita y entregar un legajo impecable",
-            "body": "El desafío es logístico: armar agendas que crucen a clínico, fonoaudiólogo y psicólogo optimizando el tiempo del empleado, y luego consolidar todo en un dossier digital listo para el cliente corporativo."
+            "eyebrow": "El desafío",
+            "heading": "El examen preocupacional de LABTEC involucra tres especialistas. Coordinarlo es un trabajo en sí mismo.",
+            "body": "Cada empleado que pasa por LABTEC necesita ver al clínico, al fonoaudiólogo y al psicólogo, idealmente el mismo día para no perder tiempo productivo. Armar esas agendas es un proceso manual que consume horas de administración. El objetivo es automatizar esa coordinación y que el resultado final — el legajo del empleado — llegue al cliente corporativo en formato digital, sin retrabajo."
           },
           {
             "type": "text",
             "span": "1x1",
             "tier": "offering",
             "offeringIndex": 1,
-            "eyebrow": "Incluido en el abono",
-            "heading": "Sitio web responsive",
-            "body": "Identidad digital que comunica el alcance multidisciplinario y las sedes a las empresas clientes."
+            "eyebrow": "Proyecto 1",
+            "heading": "Sitio web corporativo",
+            "body": "Identidad digital que comunica el alcance multidisciplinario, las sedes y los servicios a las empresas clientes que necesitan proveedores de salud laboral."
           },
           {
             "type": "text",
             "span": "1x1",
             "tier": "offering",
             "offeringIndex": 2,
-            "eyebrow": "Incluido en el abono",
-            "heading": "Implementación de Macizo Chat",
-            "body": "Recepción virtual que orienta, agenda y responde por WhatsApp, integrada al circuito de atención."
+            "eyebrow": "Proyecto 2",
+            "heading": "Asistente por WhatsApp",
+            "body": "Recepción virtual que orienta, agenda y responde automáticamente, integrada al circuito de atención. El mismo núcleo que se construye para el grupo, configurado para medicina laboral."
           },
           {
             "type": "text",
             "span": "1x1",
             "tier": "offering",
             "offeringIndex": 3,
-            "eyebrow": "Incluido en el abono",
-            "heading": "Orquestación de agendas multidisciplinarias",
-            "body": "Un algoritmo que programa los exámenes preocupacionales con múltiples especialistas, optimizando el tiempo del empleado en el centro."
+            "eyebrow": "Proyecto 3",
+            "heading": "Coordinador de agendas multidisciplinarias",
+            "body": "Un algoritmo que arma automáticamente los turnos con clínico, fonoaudiólogo y psicólogo para cada empleado, optimizando el tiempo en el centro y eliminando el trabajo manual de administración."
           },
           {
             "type": "text",
             "span": "3x1",
             "tier": "future",
-            "eyebrow": "Próximas mejoras",
-            "heading": "Lo que se puede sumar después",
-            "body": "Desarrollos que elevan la calidad del servicio corporativo, sumados según prioridad.",
+            "eyebrow": "Lo que se suma después, sin empezar de cero",
+            "heading": "Más funciones cuando el equipo esté listo.",
+            "body": "Una vez que los tres proyectos principales están funcionando, el presupuesto sigue produciendo.",
             "bullets": [
-              "Generador de dossier \"Apto Médico\" — consolida los informes de cada profesional en un legajo único",
-              "Cuestionarios anamnésicos digitales — formularios por WhatsApp antes del turno",
+              "Generador de legajo 'Apto Médico' — consolida los informes de cada profesional en un documento único",
+              "Anamnesis digital por WhatsApp — formularios de historia clínica antes del turno, sin papel",
               "Auditoría de ausentismo — certificados, visitas domiciliarias y justificación centralizada",
-              "Bot de orientación logística — indica sucursal y circuito de atención",
-              "Portal corporativo de legajos digitales — acceso seguro de las empresas a los aptos de su personal"
+              "Bot de orientación logística — indica al empleado qué sede ir y qué circuito de atención seguir",
+              "Portal corporativo de legajos — acceso seguro de las empresas clientes a los aptos de su personal"
             ]
           }
         ]
@@ -306,66 +289,66 @@
       "label": "Ciudad Oeste",
       "data": {
         "title": "Ciudad Oeste — Centro Médico",
-        "subtitle": "El proyecto piloto del ecosistema, ya en marcha",
+        "subtitle": "El primer caso real donde se prueba y valida todo el modelo del grupo",
         "accentColor": "#4f46e5",
         "cards": [
           {
             "type": "text",
             "span": "3x1",
             "tier": "focus",
-            "eyebrow": "En desarrollo",
-            "heading": "El primer caso real donde se prueba la plataforma común del grupo",
-            "body": "Ciudad Oeste es el punto de partida: el sistema de turnos, Macizo Chat y la capacitación de profesionales se construyen primero acá. Lo que validamos en este centro se reutiliza después en LABAC, Dinatec y LABTEC sin volver a empezar de cero."
+            "eyebrow": "Por qué empezamos acá",
+            "heading": "Ciudad Oeste es el piloto. Lo que funcione acá, escala al resto del grupo sin rehacerse.",
+            "body": "Arrancar por un centro médico tiene lógica: el volumen de interacciones es alto, los procesos son representativos y el impacto se mide rápido. El sistema de turnos, el asistente por WhatsApp y la historia clínica interactiva que desarrollamos acá van a ser exactamente los mismos componentes que después heredan LABAC, LABTEC y cualquier otra empresa del grupo. Construimos una sola vez y reutilizamos."
           },
           {
             "type": "text",
             "span": "half",
             "tier": "offering",
             "offeringIndex": 1,
-            "eyebrow": "En desarrollo",
+            "eyebrow": "Proyecto 1 · En desarrollo",
             "heading": "Sistema de turnos",
-            "body": "Gestión de reservas y agenda de profesionales, integrada al flujo de atención y al chat. Es la primera pieza que se está construyendo."
+            "body": "Gestión de reservas y agenda de profesionales, integrada al flujo de atención y al asistente por WhatsApp. Es la primera pieza que se está construyendo."
           },
           {
             "type": "text",
             "span": "half",
             "tier": "offering",
             "offeringIndex": 2,
-            "eyebrow": "En desarrollo",
-            "heading": "Onboarding y capacitación para profesionales",
-            "body": "Plataforma para sumar y formar profesionales con rapidez, reduciendo la curva de adopción del nuevo sistema."
+            "eyebrow": "Proyecto 2 · En desarrollo",
+            "heading": "Onboarding y capacitación de profesionales",
+            "body": "Plataforma para incorporar y formar médicos nuevos con rapidez, reduciendo la curva de adopción del sistema de turnos y los protocolos del centro."
           },
           {
             "type": "text",
             "span": "half",
             "tier": "offering",
             "offeringIndex": 3,
-            "eyebrow": "En desarrollo",
-            "heading": "Implementación de Macizo Chat",
-            "body": "El asistente omnicanal que estrena la plataforma del grupo acá y luego escala al resto sin rehacerse."
+            "eyebrow": "Proyecto 3 · En desarrollo",
+            "heading": "Asistente por WhatsApp",
+            "body": "El asistente omnicanal que estrena la arquitectura compartida del grupo y después escala al resto de las empresas sin necesidad de reconstruirse."
           },
           {
             "type": "text",
             "span": "half",
             "tier": "offering",
             "offeringIndex": 4,
-            "eyebrow": "En desarrollo",
-            "heading": "Historia clínica bioquímica interactiva",
-            "body": "Portal donde el paciente sigue la evolución de sus marcadores; el primer caso real que después heredan los laboratorios del grupo."
+            "eyebrow": "Proyecto 4 · En desarrollo",
+            "heading": "Historia clínica interactiva",
+            "body": "Portal donde el paciente sigue la evolución de sus marcadores. El primer caso real de esta funcionalidad, que después heredan los laboratorios del grupo."
           },
           {
             "type": "text",
             "span": "3x1",
             "tier": "future",
-            "eyebrow": "Próximas mejoras",
-            "heading": "Lo que se puede sumar después",
-            "body": "El piloto abre la puerta a módulos que después heredan las demás empresas.",
+            "eyebrow": "Lo que se suma después, sin empezar de cero",
+            "heading": "Más funciones cuando el equipo esté listo.",
+            "body": "Una vez que los cuatro proyectos principales están funcionando, el presupuesto sigue produciendo.",
             "bullets": [
-              "Sitio web y rebranding — identidad digital del centro, base del resto del grupo",
+              "Sitio web y rebranding — identidad digital del centro, base visual del resto del grupo",
               "Portal del paciente — turnos, resultados e indicaciones en un solo lugar",
-              "Recordatorios automatizados de turnos — confirmación y reprogramación para bajar el ausentismo",
-              "Tablero de métricas de atención — demanda, ocupación y tiempos para la gestión",
-              "Telemedicina y seguimiento remoto — consultas y controles sin que el paciente viaje al centro"
+              "Recordatorios automáticos — confirmación y reprogramación de turnos para reducir ausentismo",
+              "Tablero de métricas — demanda, ocupación y tiempos de atención para la gestión del centro",
+              "Telemedicina y seguimiento remoto — consultas y controles sin que el paciente viaje"
             ]
           }
         ]
@@ -374,58 +357,61 @@
     {
       "id": "metodologia",
       "type": "roadmap",
-      "label": "Cómo trabajamos",
+      "label": "Cómo Trabajamos",
       "data": {
         "phases": [
           {
             "id": "build",
             "number": 1,
-            "title": "Construcción — lo que priorizan Gerencia y RRHH",
-            "duration": "Etapa activa",
+            "title": "Etapa de Construcción",
+            "duration": "Activa hasta completar el roadmap",
             "tasks": [
-              "20 horas semanales dedicadas a las prioridades que ustedes definen cada mes",
-              "Ustedes auditan y priorizan; yo investigo el proceso real y ejecuto",
-              "Cada desarrollo arranca entendiendo cómo funciona la operación, no suponiéndolo",
-              "Si cambia la prioridad del grupo, el esfuerzo se redirige sin alterar el abono",
-              "Cada entrega libera horas del equipo, reduce errores y mejora la experiencia",
-              "El foco es rentabilidad y productividad, no acumular funciones innecesarias"
+              "Bloque dedicado de 20 horas semanales al servicio de las prioridades del grupo",
+              "Antes de construir, investigamos: auditamos el proceso real junto a RRHH para entender la fricción",
+              "Gerencia y RRHH priorizan qué se construye en cada ciclo mensual",
+              "Si cambia la prioridad del negocio, el esfuerzo se redirige sin alterar el presupuesto",
+              "Cada entrega genera un retorno concreto: libera horas del equipo, reduce errores o mejora la experiencia",
+              "Un solo interlocutor técnico para las cuatro empresas: sin fragmentar la atención ni duplicar contexto"
             ]
           },
           {
             "id": "run",
             "number": 2,
-            "title": "Mantenimiento — cuando el ecosistema ya está en marcha",
-            "duration": "Operación continua",
+            "title": "Etapa de Mantenimiento",
+            "duration": "Continua una vez completado el roadmap",
             "tasks": [
-              "Cuando el plan acordado está completo, el abono baja de forma significativa a USD 600/mes",
-              "Monitoreo de los sistemas, bases de datos e integraciones",
-              "Mejora continua del asistente y ajustes de IA",
-              "Soporte, resolución de incidencias y continuidad del servicio",
-              "El ecosistema sigue evolucionando con mejoras menores según necesidad"
+              "Cuando todos los desarrollos están completos, el presupuesto baja significativamente a USD 600/mes para el grupo",
+              "Monitoreo de infraestructura, bases de datos y servicios activos",
+              "Soporte y resolución de incidencias con respuesta rápida",
+              "Mejora continua del asistente de inteligencia artificial según el uso real",
+              "El ecosistema no se congela: la investigación continua genera nuevas oportunidades de automatización"
             ]
           }
         ],
         "technologies": [
-          { "name": "Sitios y portales", "description": "Presencia digital y portales para clientes y pacientes" },
-          { "name": "Automatización e IA", "description": "Asistentes, flujos y procesos que reducen carga manual" },
-          { "name": "Integraciones", "description": "Conexión con sistemas existentes del grupo" }
+          { "name": "Next.js", "description": "Portales y sitios web de alta velocidad" },
+          { "name": "TypeScript", "description": "Código robusto y mantenible a largo plazo" },
+          { "name": "n8n", "description": "Orquestación de flujos y automatizaciones" },
+          { "name": "WhatsApp Business API", "description": "Canal de atención y gestión" },
+          { "name": "Inteligencia Artificial", "description": "Agentes de chat, triage y soporte automático" },
+          { "name": "OCR", "description": "Lectura automática de órdenes y documentos" }
         ],
         "clientRequirements": [
-          "Auditan los procesos y detectan junto a mí las fricciones a resolver",
-          "Priorizan qué se construye en cada ciclo mensual",
-          "Designan un referente interno por empresa para validar requerimientos",
-          "Habilitan accesos a sistemas, bases de datos y herramientas existentes",
-          "Aportan los materiales de marca para el rebranding (logos, manual)",
-          "Participan de revisiones cortas con feedback iterativo"
+          "Gerencia y RRHH auditan los procesos e identifican junto a nosotros las fricciones a resolver",
+          "Priorizan qué se construye en cada ciclo mensual según el impacto para el negocio",
+          "Designan un referente por empresa para validar requerimientos y dar feedback iterativo",
+          "Habilitan accesos a los sistemas, bases de datos y herramientas existentes cuando sea necesario",
+          "Aportan materiales de marca para el desarrollo de sitios web (logos, manual de identidad)",
+          "Participan de revisiones cortas al cierre de cada ciclo para validar lo entregado"
         ]
       }
     },
     {
-      "id": "arquitectura",
+      "id": "asistente",
       "type": "book-section",
-      "label": "Macizo Chat",
+      "label": "¿Qué es Macizo Chat?",
       "data": {
-        "title": "Macizo Chat — la plataforma común del grupo",
+        "title": "¿Qué es Macizo Chat?",
         "subtitle": "Un asistente que atiende por WhatsApp, web y teléfono — la misma base para las cinco empresas",
         "cards": [
           {
@@ -548,64 +534,64 @@
     {
       "id": "inversion",
       "type": "book-section",
-      "label": "Inversión y Compromiso",
+      "label": "Inversión",
       "data": {
-        "title": "Estructura de Inversión y Compromiso",
-        "subtitle": "Un abono del grupo repartido entre 5 negocios — el costo por empresa es el dato clave",
+        "title": "Estructura de Inversión",
+        "subtitle": "Un abono del grupo repartido entre cinco negocios — el costo por empresa es el dato clave",
         "layout": "investment",
         "accentColor": "#1a5c38",
         "investment": {
-          "heroEyebrow": "Inversión en construcción · lo que paga cada negocio",
+          "heroEyebrow": "Inversión en la etapa de construcción · lo que paga cada negocio",
           "heroAmount": "≈ USD 500",
-          "heroBody": "Durante la etapa de construcción, cada una de las 5 empresas del grupo invierte alrededor de USD 500 al mes. Por ese valor recibe desarrollo dedicado sobre sus prioridades: sitio, Macizo Chat, sistemas a medida y un plan compartido con un solo referente técnico.",
+          "heroBody": "Durante la etapa activa de construcción, cada una de las cinco empresas del grupo invierte alrededor de USD 500 por mes. Por ese valor recibe desarrollo dedicado sobre sus prioridades: sitio web, asistente con IA, sistemas a medida y un roadmap definido y revisado en conjunto.",
           "heroFormula": "USD 2.500/mes (abono del grupo) ÷ 5 negocios = ≈ USD 500/mes por empresa",
           "businessesCount": 5,
           "phases": [
             {
               "id": "build",
-              "title": "Construcción activa",
-              "duration": "Etapa de desarrollo",
+              "title": "Etapa de Construcción",
+              "duration": "Activa hasta completar el roadmap",
               "groupAmount": "USD 2.500",
-              "groupDetail": "Abono mensual del grupo · 20 hs/semana de desarrollo",
+              "groupDetail": "Abono mensual del grupo · 20 horas semanales de desarrollo",
               "perCompanyAmount": "≈ USD 500",
-              "perCompanyDetail": "3 proyectos principales + plan compartido",
+              "perCompanyDetail": "3 proyectos principales + roadmap",
               "includes": [
-                "20 hs/semana orientadas por las prioridades del grupo",
-                "RRHH, UX/UI, desarrollo, salud, capacitación e IA incluidos",
-                "Entregas ciclo a ciclo · prioridades cambian, el abono no",
-                "Un solo referente técnico para las 5 empresas"
+                "20 horas semanales orientadas por las prioridades del grupo",
+                "Investigación del proceso real antes de cada desarrollo",
+                "RRHH y Gerencia co-definen el roadmap ciclo a ciclo",
+                "Un solo interlocutor técnico para las cinco empresas"
               ]
             },
             {
               "id": "run",
-              "title": "Mantenimiento",
-              "duration": "Operación continua",
+              "title": "Etapa de Mantenimiento",
+              "duration": "Continua tras completar el roadmap",
               "groupAmount": "USD 600",
-              "groupDetail": "Abono mensual del grupo · tras completar el plan acordado",
+              "groupDetail": "Abono mensual del grupo · mantenimiento y soporte",
               "perCompanyAmount": "≈ USD 120",
               "perCompanyDetail": "mantenimiento, soporte e IA",
               "includes": [
-                "Monitoreo de infraestructura y uptime",
-                "Soporte, incidencias y evolución con IA",
-                "El ecosistema no se congela: mejoras continuas según necesidad",
-                "Inversión de mantenimiento, no de construcción intensiva"
+                "Monitoreo de infraestructura y disponibilidad de los servicios",
+                "Soporte y resolución de incidencias",
+                "Mejora continua del asistente con IA según el uso real",
+                "El ecosistema sigue evolucionando con la investigación continua"
               ]
             }
           ],
-          "contextHeading": "Inversión con fecha de caducidad, no un gasto permanente",
-          "contextBody": "El abono de construcción es la etapa intensiva: avanza según el plan acordado con Gerencia y RRHH. Cuando todos los requerimientos están completos, el grupo pasa a mantenimiento — un costo significativamente menor. Ustedes auditan y priorizan; yo investigo el proceso real y ejecuto.",
+          "contextHeading": "Un presupuesto con fecha de vencimiento, no un gasto permanente",
+          "contextBody": "La etapa de construcción es intensiva y tiene un fin: cuando todos los desarrollos acordados están completos, el grupo pasa a mantenimiento — un costo significativamente menor. No es un contrato indefinido al mismo precio; es una inversión concentrada que termina cuando el trabajo termina.",
           "contextPoints": [
-            "Co-definido con Gerencia y RRHH: ustedes priorizan, yo investigo y construyo",
-            "La investigación del proceso real es condición de cada desarrollo",
-            "El abono no sube si cambian las prioridades: se redirige el esfuerzo",
-            "Al completar el plan acordado, termina la construcción intensiva y entra el mantenimiento"
+            "Gerencia y RRHH deciden qué se construye en cada ciclo, no el consultor",
+            "La investigación del proceso real es condición de cada desarrollo, no un extra",
+            "Si cambian las prioridades, el esfuerzo se redirige sin cambiar el presupuesto",
+            "Al completar el roadmap, la etapa de construcción termina y entra mantenimiento automáticamente"
           ],
           "deliverablesHeading": "Qué recibe cada negocio por ≈ USD 500/mes",
-          "deliverablesBody": "No es un ítem suelto: son tres proyectos principales por empresa, más un pipeline de mejoras que entran según prioridad — todo sobre la misma plataforma del grupo.",
+          "deliverablesBody": "No es un ítem suelto: son tres proyectos principales por empresa, más un pipeline de desarrollos que se incorporan según prioridad — todo sobre la misma base tecnológica del grupo.",
           "deliverablesStats": [
             { "value": "5", "label": "negocios" },
-            { "value": "15+", "label": "proyectos en construcción" },
-            { "value": "1", "label": "referente técnico" }
+            { "value": "15+", "label": "proyectos" },
+            { "value": "1", "label": "consultor" }
           ]
         },
         "cards": [
@@ -613,8 +599,8 @@
             "type": "chart",
             "chartType": "area",
             "span": "2x1",
-            "title": "Evolución del abono mensual",
-            "subtitle": "Construcción → Mantenimiento: el abono baja cuando el plan está completo.",
+            "title": "Evolución del presupuesto mensual",
+            "subtitle": "Construcción → Mantenimiento: el costo baja cuando el roadmap está completo.",
             "unit": "USD/mes",
             "data": [
               { "label": "Construcción", "value": 2500 },
@@ -625,12 +611,12 @@
             "type": "chart",
             "chartType": "donut",
             "span": "1x1",
-            "title": "Foco de la construcción",
-            "subtitle": "Distribución estimada del esfuerzo.",
+            "title": "Dónde va el esfuerzo",
+            "subtitle": "Distribución estimada del trabajo en la etapa de construcción.",
             "unit": "%",
             "data": [
-              { "label": "Macizo Chat e IA", "value": 35 },
-              { "label": "Sitios y rebranding", "value": 25 },
+              { "label": "Asistente con IA", "value": 35 },
+              { "label": "Sitios web y marca", "value": 25 },
               { "label": "Sistema de turnos", "value": 25 },
               { "label": "Integraciones", "value": 15 }
             ]
@@ -643,55 +629,55 @@
       "type": "closing",
       "label": "Cierre",
       "data": {
-        "ctaHeading": "Definamos la primera prioridad",
-        "ctaBody": "La inversión sigue las necesidades que elijan — escribime y arrancamos el primer ciclo.",
+        "ctaHeading": "Definamos la primera prioridad.",
+        "ctaBody": "No hay una fecha de arranque fija: hay una primera conversación donde Gerencia y RRHH deciden qué se construye primero. Eso define el ciclo inicial. Desde ahí, el trabajo avanza semana a semana sobre lo que el grupo necesita.",
         "summary": {
-          "intro": "Abono único del grupo, repartido entre 5 negocios. Total del grupo vs. costo por empresa, y qué se construye en cada una.",
+          "intro": "Abono único del grupo repartido entre cinco negocios. Esto es lo que se construye en cada empresa y lo que cuesta por negocio.",
           "buildRunNote": {
-            "heading": "Cómo evoluciona la inversión",
-            "body": "La inversión y el desarrollo están ligados a las necesidades que Gerencia y RRHH priorizan en cada ciclo. La construcción activa implementa lo acordado; el mantenimiento sostiene y evoluciona cuando el plan está completo — sin pagar de más por lo que no se usa."
+            "heading": "Construcción y mantenimiento · dos etapas con costos distintos",
+            "body": "Durante la etapa activa, el trabajo es intensivo y el presupuesto es el más alto. Cuando el roadmap está completo, el grupo pasa a una etapa de mantenimiento con un costo significativamente menor. Gerencia y RRHH definen las prioridades; el consultor investiga el proceso real y ejecuta."
           },
           "companies": [
             {
               "name": "LABAC",
               "tagline": "Laboratorio bioquímico",
-              "main": ["Sitio web responsive", "Macizo Chat", "Historia clínica interactiva"],
-              "future": ["Turnos", "Onboarding RRHH", "Portal B2B", "Trazabilidad de muestras", "OCR + triage"]
+              "main": ["Sitio web profesional", "Asistente por WhatsApp", "Historia clínica interactiva"],
+              "future": ["Turnos centralizados", "Onboarding RRHH", "Portal B2B", "Trazabilidad de muestras", "Lectura de órdenes médicas"]
             },
             {
               "name": "Dinatec",
               "tagline": "Logística minera",
-              "main": ["Sitio web responsive", "Macizo Chat", "Compliance documental"],
-              "future": ["IoT predictivo", "App offline choferes", "Soporte técnico IA", "Alertas RRHH", "Trazabilidad de activos"]
+              "main": ["Sitio web corporativo", "Asistente por WhatsApp", "Portal de compliance documental"],
+              "future": ["Mantenimiento predictivo IoT", "App offline para choferes", "Asistente técnico con IA", "Alertas RRHH", "Trazabilidad de activos"]
             },
             {
               "name": "LABTEC",
               "tagline": "Medicina laboral",
-              "main": ["Sitio web responsive", "Macizo Chat", "Agendas multidisciplinarias"],
-              "future": ["Dossier Apto Médico", "Anamnesis digital", "Auditoría de ausentismo", "Bot de orientación", "Portal de legajos"]
+              "main": ["Sitio web corporativo", "Asistente por WhatsApp", "Coordinador de agendas multidisciplinarias"],
+              "future": ["Legajo Apto Médico", "Anamnesis digital", "Auditoría de ausentismo", "Bot de orientación", "Portal de legajos corporativos"]
             },
             {
               "name": "Ciudad Oeste",
-              "tagline": "Centro médico · piloto",
-              "main": ["Sistema de turnos", "Onboarding profesionales", "Macizo Chat", "Historia clínica interactiva"],
-              "future": ["Sitio web & rebranding", "Portal del paciente", "Recordatorios de turnos", "Métricas de atención", "Telemedicina"]
+              "tagline": "Centro médico · piloto activo",
+              "main": ["Sistema de turnos", "Onboarding de profesionales", "Asistente por WhatsApp", "Historia clínica interactiva"],
+              "future": ["Sitio web y rebranding", "Portal del paciente", "Recordatorios automáticos", "Tablero de métricas", "Telemedicina"]
             },
             {
               "name": "5.ª empresa",
-              "tagline": "Del grupo · a definir",
-              "main": ["Alcance a relevar junto al directorio"],
-              "future": ["Sitio web responsive", "Macizo Chat", "Automatización a medida"]
+              "tagline": "Del grupo · a relevar",
+              "main": ["Alcance a definir con el directorio"],
+              "future": ["Sitio web", "Asistente por WhatsApp", "Automatización a medida del negocio"]
             }
           ],
           "pricing": {
-            "buildLabel": "Construcción activa",
+            "buildLabel": "Construcción",
             "buildAmount": "USD 2.500/mes",
             "buildPerCompany": "≈ USD 500/mes",
-            "buildDetail": "20 hs/semana dedicadas al grupo",
+            "buildDetail": "20 horas semanales dedicadas al grupo",
             "runLabel": "Mantenimiento",
             "runAmount": "USD 600/mes",
             "runPerCompany": "≈ USD 120/mes",
-            "runDetail": "Soporte · evolución · IA"
+            "runDetail": "Soporte · monitoreo · IA"
           }
         }
       }
