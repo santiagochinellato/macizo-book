@@ -603,13 +603,11 @@ function ClosingCta({
   body,
   whatsapp,
   email,
-  phone,
 }: {
   heading: string;
   body: string;
   whatsapp?: string;
   email: string;
-  phone?: string;
 }) {
   return (
     <div
@@ -632,28 +630,20 @@ function ClosingCta({
             href={whatsapp}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col gap-0.5 px-5 py-3 rounded-xl transition-opacity hover:opacity-90 min-w-[160px]"
+            className="flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-bold transition-opacity hover:opacity-90"
             style={{ background: "#25d366", color: "#fff" }}
           >
-            <span className="flex items-center gap-2 text-sm font-bold">
-              <MessageCircle size={16} aria-hidden="true" />
-              WhatsApp
-            </span>
-            {phone && (
-              <span className="text-xs font-medium opacity-90 pl-6">{phone}</span>
-            )}
+            <MessageCircle size={16} aria-hidden="true" />
+            Escribir por WhatsApp
           </a>
         )}
         <a
           href={`mailto:${email}`}
-          className="flex flex-col gap-0.5 px-5 py-3 rounded-xl transition-opacity hover:opacity-90 min-w-[160px]"
+          className="flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-bold transition-opacity hover:opacity-90"
           style={{ background: "rgba(255,255,255,0.14)", color: "#fff", border: "1px solid rgba(255,255,255,0.28)" }}
         >
-          <span className="flex items-center gap-2 text-sm font-bold">
-            <Mail size={16} aria-hidden="true" />
-            Email
-          </span>
-          <span className="text-xs font-medium opacity-90 pl-6 break-all">{email}</span>
+          <Mail size={16} aria-hidden="true" />
+          Enviar un email
         </a>
       </div>
     </div>
@@ -666,7 +656,6 @@ function SummaryView({
   ctaBody,
   whatsapp,
   email,
-  phone,
   agencyName,
   website,
   reduced,
@@ -676,7 +665,6 @@ function SummaryView({
   ctaBody: string;
   whatsapp?: string;
   email: string;
-  phone?: string;
   agencyName: string;
   website: string;
   reduced: boolean | null;
@@ -733,7 +721,6 @@ function SummaryView({
           body={ctaBody}
           whatsapp={whatsapp}
           email={email}
-          phone={phone}
         />
       </motion.div>
 
@@ -797,7 +784,6 @@ export function ClosingScreen({ config }: ClosingScreenProps) {
           ctaBody={ctaBody}
           whatsapp={agency.social?.whatsapp}
           email={agency.email}
-          phone={agency.phone}
           agencyName={agency.name}
           website={agency.website}
           reduced={reduced}

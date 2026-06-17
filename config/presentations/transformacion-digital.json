@@ -124,7 +124,7 @@
             "id": "build",
             "number": 1,
             "title": "BUILD — Construcción del ecosistema",
-            "duration": "6 a 9 meses",
+            "duration": "Construcción activa",
             "tasks": [
               "Bloque dedicado de 20 hs/semana (~80 hs/mes) puesto al servicio de las prioridades del grupo",
               "Roadmap co-definido con Gerencia y RRHH: ustedes auditan y priorizan, yo investigo y ejecuto",
@@ -567,7 +567,7 @@
             {
               "id": "build",
               "title": "Fase BUILD",
-              "duration": "6 a 9 meses",
+              "duration": "Construcción activa",
               "groupAmount": "USD 2.500",
               "groupDetail": "Abono mensual del grupo · 20 hs/semana de desarrollo",
               "perCompanyAmount": "≈ USD 500",
@@ -596,7 +596,7 @@
             }
           ],
           "contextHeading": "Inversión con fecha de caducidad, no un gasto permanente",
-          "contextBody": "El abono BUILD es la etapa de construcción intensiva: dura lo que tarde el roadmap (6 a 9 meses). Cuando todos los requerimientos están completos, el grupo pasa a RUN — un mantenimiento significativamente menor. Gerencia y RRHH auditan y priorizan; yo investigo el proceso real y ejecuto.",
+          "contextBody": "El abono BUILD es la etapa de construcción intensiva: avanza según el roadmap acordado con Gerencia y RRHH. Cuando todos los requerimientos están completos, el grupo pasa a RUN — un mantenimiento significativamente menor. Ustedes auditan y priorizan; yo investigo el proceso real y ejecuto.",
           "contextPoints": [
             "Co-definido con Gerencia y RRHH: ustedes priorizan, yo investigo y construyo",
             "La investigación del proceso real es condición de cada desarrollo",
@@ -617,13 +617,11 @@
             "chartType": "area",
             "span": "2x1",
             "title": "Evolución del abono mensual",
-            "subtitle": "BUILD 6–9 meses → RUN continuo.",
+            "subtitle": "BUILD → RUN: el abono baja cuando el roadmap está completo.",
             "unit": "USD/mes",
             "data": [
-              { "label": "BUILD m1-3", "value": 2500 },
-              { "label": "m4-6", "value": 2500 },
-              { "label": "m7-9", "value": 2500 },
-              { "label": "RUN", "value": 600 }
+              { "label": "Fase BUILD", "value": 2500 },
+              { "label": "Fase RUN", "value": 600 }
             ]
           },
           {
@@ -649,7 +647,7 @@
       "label": "Cierre",
       "data": {
         "ctaHeading": "Definamos la primera prioridad",
-        "ctaBody": "En el primer mes hay software funcionando. La inversión sigue las necesidades que elijan — escribime y arrancamos el primer ciclo.",
+        "ctaBody": "La inversión sigue las necesidades que elijan — escribime y arrancamos el primer ciclo.",
         "summary": {
           "intro": "Abono único del grupo, repartido entre 5 negocios. Total del grupo vs. costo por empresa, y qué se construye en cada una.",
           "buildRunNote": {
@@ -692,7 +690,7 @@
             "buildLabel": "BUILD",
             "buildAmount": "USD 2.500/mes",
             "buildPerCompany": "≈ USD 500/mes",
-            "buildDetail": "20 hs/semana · 6 a 9 meses",
+            "buildDetail": "20 hs/semana dedicadas al grupo",
             "runLabel": "RUN",
             "runAmount": "USD 600/mes",
             "runPerCompany": "≈ USD 120/mes",
