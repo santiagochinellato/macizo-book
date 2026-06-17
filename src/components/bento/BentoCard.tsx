@@ -66,6 +66,9 @@ interface BentoCardProps {
   colSpanMd?: ColSpan;
   className?: string;
   highlight?: boolean;
+  highlightColor?: string;
+  highlightEdge?: "left" | "top";
+  backgroundTint?: string;
   noPadding?: boolean;
   onClick?: () => void;
 }
@@ -78,10 +81,24 @@ export function BentoCard({
   colSpanMd,
   className,
   highlight = false,
+  highlightColor,
+  highlightEdge = "left",
+  backgroundTint,
   noPadding = false,
   onClick,
 }: BentoCardProps) {
   const reduced = useReducedMotion();
+
+  const accent = highlightColor ?? "var(--primary)";
+  const borderStyle =
+    highlight && highlightEdge === "top"
+      ? {
+          borderTop: `3px solid ${accent}`,
+          borderLeft: "1px solid var(--border)",
+        }
+      : highlight
+        ? { borderLeft: `3px solid ${accent}` }
+        : {};
 
   return (
     <motion.div
@@ -96,10 +113,12 @@ export function BentoCard({
         className
       )}
       style={{
-        background: "var(--surface-card)",
+        background: backgroundTint
+          ? `color-mix(in srgb, ${backgroundTint} 9%, var(--surface-card))`
+          : "var(--surface-card)",
         border: "1px solid var(--border)",
-        borderLeft: highlight ? "3px solid var(--primary)" : "1px solid var(--border)",
         boxShadow: "var(--shadow-card)",
+        ...borderStyle,
       }}
       whileHover={
         reduced || !onClick

@@ -68,6 +68,53 @@ Si omitís `enabled`, la pantalla se muestra.
 | `image` | `src`, `alt`; opcional: `badge`, `caption`, `detail`, `span` |
 | `metric` | `value`, `label`; opcional: `icon`, `description`, `span` |
 | `wireframe` | `src`, `alt`, `title`; opcional: `description`, `span` |
+| `chart` | `chartType`, `title`, `data[]`; opcional: `subtitle`, `unit`, `seriesLabels`, `colors`, `span` |
+| `diagram` | `title`, `layers[]`; opcional: `subtitle`, `span` |
+
+### Card `chart` (gráficos con recharts)
+
+Ideal para representar datos sin imágenes. `chartType` puede ser:
+
+- `bar` — comparación de categorías (ej. prioridad de módulos)
+- `line` — evolución en el tiempo
+- `area` — evolución con énfasis en volumen (ej. esfuerzo BUILD→RUN)
+- `donut` — distribución / participación (con leyenda automática)
+- `radial` — varios indicadores 0–100 (con leyenda automática)
+
+`data` es un array de `{ "label": string, "value": number, "value2"?: number }`. Si todos los puntos tienen `value2`, se dibuja una segunda serie comparativa (usá `seriesLabels` para las leyendas). `unit` se agrega a los valores (ej. `"%"`, `"hs"`). Los colores salen del tema por defecto; `colors` los sobrescribe.
+
+```json
+{
+  "type": "chart",
+  "chartType": "bar",
+  "span": "3x1",
+  "title": "Prioridad de implementación",
+  "subtitle": "Impacto estimado por módulo.",
+  "unit": "%",
+  "data": [
+    { "label": "OCR + Triage", "value": 100 },
+    { "label": "Trazabilidad", "value": 80 }
+  ]
+}
+```
+
+### Card `diagram` (infografía de arquitectura / flujo)
+
+Renderiza columnas conectadas con flechas (horizontal en desktop, vertical en mobile). Pensado para arquitecturas tipo EDA o flujos por etapas.
+
+`layers` es un array de `{ "title", "role"?, "items": [{ "label", "icon"?, "description"? }] }`. Los `icon` usan nombres de Lucide.
+
+```json
+{
+  "type": "diagram",
+  "span": "3x1",
+  "title": "Flujo de un mensaje",
+  "layers": [
+    { "title": "Productores", "role": "Canales", "items": [{ "label": "WhatsApp", "icon": "MessageCircle" }] },
+    { "title": "Broker", "role": "Mensajería", "items": [{ "label": "Kafka", "icon": "Network" }] }
+  ]
+}
+```
 
 ### Valores de `span` (ancho en grilla)
 
@@ -80,9 +127,11 @@ Si omitís `enabled`, la pantalla se muestra.
 
 Usá el nombre exacto del ícono en PascalCase. Ejemplos frecuentes:
 
-`Globe`, `Zap`, `Search`, `TrendingUp`, `MapPin`, `ShieldCheck`, `Smartphone`, `Target`, `Accessibility`, `LayoutDashboard`, `Check`, `Star`, `Users`, `Clock`, `Mail`, `Phone`
+`Globe`, `Zap`, `Search`, `TrendingUp`, `MapPin`, `ShieldCheck`, `Smartphone`, `Target`, `Accessibility`, `LayoutDashboard`, `Star`, `Users`, `Clock`, `CalendarCheck`, `Bot`, `ScanLine`, `Bell`, `Network`, `Database`, `Headphones`, `Send`, `MessageCircle`, `PhoneCall`, `Repeat`, `Gauge`, `Boxes`, `CalendarClock`, `PiggyBank`, `Truck`, `FlaskConical`, `Stethoscope`, `Cpu`, `Workflow`
 
-Lista completa: https://lucide.dev/icons/
+> Nota: los íconos disponibles están registrados en `src/components/ui/Icon.tsx`. Si necesitás uno nuevo, agregalo ahí primero.
+
+Lista completa de Lucide: https://lucide.dev/icons/
 
 ## Imágenes
 

@@ -87,6 +87,8 @@ const textBookCardSchema = z.object({
   body: z.string().min(1),
   span: cardSpanSchema.optional(),
   accent: z.boolean().optional(),
+  tier: z.enum(["focus", "offering", "future"]).optional(),
+  offeringIndex: z.number().int().min(1).max(4).optional(),
   bullets: z.array(z.string()).optional(),
 });
 
@@ -99,11 +101,58 @@ const metricBookCardSchema = z.object({
   span: cardSpanSchema.optional(),
 });
 
+const chartBookCardSchema = z.object({
+  type: z.literal("chart"),
+  chartType: z.enum(["bar", "line", "area", "donut", "radial"]),
+  title: z.string().min(1),
+  subtitle: z.string().optional(),
+  unit: z.string().optional(),
+  data: z
+    .array(
+      z.object({
+        label: z.string().min(1),
+        value: z.number(),
+        value2: z.number().optional(),
+      })
+    )
+    .min(1),
+  seriesLabels: z.array(z.string()).min(1).max(2).optional(),
+  colors: z.array(z.string()).optional(),
+  span: cardSpanSchema.optional(),
+});
+
+const diagramBookCardSchema = z.object({
+  type: z.literal("diagram"),
+  title: z.string().min(1),
+  subtitle: z.string().optional(),
+  layers: z
+    .array(
+      z.object({
+        title: z.string().min(1),
+        role: z.string().optional(),
+        items: z
+          .array(
+            z.object({
+              label: z.string().min(1),
+              icon: z.string().optional(),
+              description: z.string().optional(),
+            })
+          )
+          .min(1),
+      })
+    )
+    .min(2),
+  span: cardSpanSchema.optional(),
+  compact: z.boolean().optional(),
+});
+
 const bookCardSchema = z.discriminatedUnion("type", [
   imageBookCardSchema,
   wireframeBookCardSchema,
   textBookCardSchema,
   metricBookCardSchema,
+  chartBookCardSchema,
+  diagramBookCardSchema,
 ]);
 
 const overviewScreenSchema = z.object({
@@ -243,6 +292,39 @@ const mockupsScreenSchema = z.object({
   }),
 });
 
+const investmentPhaseSchema = z.object({
+  id: z.enum(["build", "run"]),
+  title: z.string().min(1),
+  duration: z.string().min(1),
+  groupAmount: z.string().min(1),
+  groupDetail: z.string().min(1),
+  perCompanyAmount: z.string().min(1),
+  perCompanyDetail: z.string().min(1),
+  includes: z.array(z.string().min(1)).min(1),
+});
+
+const investmentLayoutSchema = z.object({
+  heroEyebrow: z.string().min(1),
+  heroAmount: z.string().min(1),
+  heroBody: z.string().min(1),
+  heroFormula: z.string().min(1),
+  businessesCount: z.number().int().min(1),
+  phases: z.array(investmentPhaseSchema).min(2),
+  contextHeading: z.string().min(1),
+  contextBody: z.string().min(1),
+  contextPoints: z.array(z.string().min(1)).min(1),
+  deliverablesHeading: z.string().min(1),
+  deliverablesBody: z.string().min(1),
+  deliverablesStats: z
+    .array(
+      z.object({
+        value: z.string().min(1),
+        label: z.string().min(1),
+      })
+    )
+    .min(1),
+});
+
 const bookSectionScreenSchema = z.object({
   id: z.string().min(1),
   type: z.literal("book-section"),
@@ -251,6 +333,12 @@ const bookSectionScreenSchema = z.object({
   data: z.object({
     title: z.string().min(1),
     subtitle: z.string().optional(),
+    accentColor: z
+      .string()
+      .regex(/^#[0-9a-fA-F]{6}$/, "accentColor debe ser hex (#rrggbb)")
+      .optional(),
+    layout: z.enum(["default", "investment"]).optional(),
+    investment: investmentLayoutSchema.optional(),
     cards: z.array(bookCardSchema).min(1),
   }),
 });
@@ -306,6 +394,39 @@ const closingScreenSchema = z.object({
     .object({
       ctaHeading: z.string().optional(),
       ctaBody: z.string().optional(),
+      summary: z
+        .object({
+          intro: z.string().optional(),
+          companies: z
+            .array(
+              z.object({
+                name: z.string().min(1),
+                tagline: z.string().optional(),
+                price: z.string().optional(),
+                main: z.array(z.string().min(1)).min(1),
+                future: z.array(z.string().min(1)),
+              })
+            )
+            .min(1),
+          pricing: z.object({
+            buildLabel: z.string().min(1),
+            buildAmount: z.string().min(1),
+            buildDetail: z.string().min(1),
+            buildPerCompany: z.string().optional(),
+            runLabel: z.string().min(1),
+            runAmount: z.string().min(1),
+            runDetail: z.string().min(1),
+            runPerCompany: z.string().optional(),
+          }),
+          buildRunNote: z
+            .object({
+              heading: z.string().min(1),
+              body: z.string().min(1),
+            })
+            .optional(),
+          methodNote: z.string().optional(),
+        })
+        .optional(),
     })
     .optional(),
 });

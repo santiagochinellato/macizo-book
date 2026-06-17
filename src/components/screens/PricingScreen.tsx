@@ -18,7 +18,7 @@ export function PricingScreen({ data, meta }: PricingScreenProps) {
 
   return (
     <motion.div
-      className="min-h-full w-full min-w-0 px-5 sm:px-8 lg:px-14 py-6 sm:py-8"
+      className="min-h-full w-full min-w-0 px-5 sm:px-8 lg:px-16 py-6 sm:py-8"
       variants={reduced ? undefined : screenEnter}
       initial="hidden"
       animate="visible"
@@ -26,7 +26,7 @@ export function PricingScreen({ data, meta }: PricingScreenProps) {
       key="pricing"
     >
       <motion.div
-        className="flex flex-col gap-8 max-w-4xl mx-auto w-full min-w-0"
+        className="flex flex-col gap-8 w-full min-w-0"
         variants={reduced ? undefined : stagger}
         initial="hidden"
         animate="visible"
@@ -43,7 +43,7 @@ export function PricingScreen({ data, meta }: PricingScreenProps) {
               aria-hidden="true"
             />
             <span
-              className="text-[9px] font-bold uppercase tracking-widest"
+              className="text-[10px] font-bold uppercase tracking-widest"
               style={{ color: "var(--primary)" }}
             >
               Inversión total
@@ -77,7 +77,7 @@ export function PricingScreen({ data, meta }: PricingScreenProps) {
         {paymentPlans && paymentPlans.length > 0 && (
           <motion.div variants={reduced ? undefined : fadeUp} className="flex flex-col gap-3">
             <span
-              className="text-[9px] font-bold uppercase tracking-widest"
+              className="text-[10px] font-bold uppercase tracking-widest"
               style={{ color: "var(--text-tertiary)" }}
             >
               Opciones de pago
@@ -100,7 +100,7 @@ export function PricingScreen({ data, meta }: PricingScreenProps) {
                 >
                   {plan.featured && (
                     <div
-                      className="absolute -top-3 left-5 flex items-center gap-1 px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-widest"
+                      className="absolute -top-3 left-5 flex items-center gap-1 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-widest"
                       style={{
                         background: "var(--primary)",
                         color: "#fff",
@@ -138,7 +138,7 @@ export function PricingScreen({ data, meta }: PricingScreenProps) {
         {/* ── Desglose itemizado ── */}
         <motion.div variants={reduced ? undefined : fadeUp} className="flex flex-col gap-3">
           <span
-            className="text-[9px] font-bold uppercase tracking-widest"
+            className="text-[10px] font-bold uppercase tracking-widest"
             style={{ color: "var(--text-tertiary)" }}
           >
             Desglose del presupuesto
@@ -175,7 +175,7 @@ export function PricingScreen({ data, meta }: PricingScreenProps) {
                 <div className="flex flex-col gap-0.5">
                   {item.category && (
                     <span
-                      className="text-[9px] font-bold uppercase tracking-widest"
+                      className="text-[10px] font-bold uppercase tracking-widest"
                       style={{ color: "var(--text-tertiary)" }}
                     >
                       {item.category}
@@ -240,7 +240,7 @@ export function PricingScreen({ data, meta }: PricingScreenProps) {
             <div className="flex items-center gap-2">
               <CreditCard size={13} style={{ color: "var(--text-tertiary)" }} />
               <span
-                className="text-[9px] font-bold uppercase tracking-widest"
+                className="text-[10px] font-bold uppercase tracking-widest"
                 style={{ color: "var(--text-tertiary)" }}
               >
                 Métodos de pago aceptados
@@ -270,7 +270,7 @@ export function PricingScreen({ data, meta }: PricingScreenProps) {
         {terms && terms.length > 0 && (
           <motion.div variants={reduced ? undefined : fadeUp} className="flex flex-col gap-3">
             <span
-              className="text-[9px] font-bold uppercase tracking-widest"
+              className="text-[10px] font-bold uppercase tracking-widest"
               style={{ color: "var(--text-tertiary)" }}
             >
               Condiciones del presupuesto

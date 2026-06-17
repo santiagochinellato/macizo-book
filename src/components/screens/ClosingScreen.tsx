@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { Clock, CheckCircle2, MessageCircle, Mail } from "lucide-react";
+import { Clock, CheckCircle2, MessageCircle, Mail, Hammer, Wrench, ArrowRight, ArrowDown, RefreshCw } from "lucide-react";
 import { screenEnter, stagger, fadeUp } from "@/lib/motion-variants";
 import type {
   PresentationConfig,
@@ -11,6 +11,7 @@ import type {
   PricingScreen as PricingScreenType,
   TextBookCard,
   ImageBookCard,
+  ClosingSummary,
 } from "@/types/presentation";
 
 interface ClosingScreenProps {
@@ -374,6 +375,381 @@ function FooterSection({ name, website }: { name: string; website: string }) {
   );
 }
 
+// ─── Section: Resumen por empresa (data-driven) ───────────────────────────────
+
+const COMPANY_COLORS = ["#1a5c38", "#b45309", "#0e7490", "#4f46e5", "#64748b"];
+
+function PriceDivider({ count }: { count: number }) {
+  return (
+    <div className="flex flex-col items-center justify-center gap-0.5 px-1 flex-shrink-0" aria-hidden="true">
+      <ArrowRight size={18} className="hidden sm:block" style={{ color: "var(--primary)" }} />
+      <ArrowDown size={18} className="sm:hidden" style={{ color: "var(--primary)" }} />
+      <span className="text-xs font-bold tabular-nums" style={{ color: "var(--primary)" }}>
+        ÷ {count}
+      </span>
+    </div>
+  );
+}
+
+interface PriceRowProps {
+  label: string;
+  duration: string;
+  groupAmount: string;
+  groupCaption: string;
+  perCompany: string;
+  perCompanyCaption: string;
+  featured?: boolean;
+  icon: typeof Hammer;
+}
+
+function PriceRow({
+  label,
+  duration,
+  groupAmount,
+  groupCaption,
+  perCompany,
+  perCompanyCaption,
+  featured = false,
+  icon: Icon,
+}: PriceRowProps) {
+  return (
+    <div
+      className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 p-4 rounded-[var(--radius-md)]"
+      style={{
+        background: featured ? "var(--primary-glow-strong)" : "var(--surface-card)",
+        border: featured ? "1px solid color-mix(in srgb, var(--primary) 22%, transparent)" : "1px solid var(--border)",
+      }}
+    >
+      <div className="flex items-center gap-2 sm:w-28 flex-shrink-0">
+        <Icon size={15} style={{ color: "var(--primary)" }} aria-hidden="true" />
+        <div className="flex flex-col">
+          <span className="text-xs font-bold uppercase tracking-wide" style={{ color: "var(--primary)" }}>
+            {label}
+          </span>
+          <span className="text-[10px]" style={{ color: "var(--text-subtle)" }}>
+            {duration}
+          </span>
+        </div>
+      </div>
+
+      <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 flex-1 min-w-0">
+        <div className="flex flex-col flex-1 min-w-0">
+          <span className="text-[10px] font-bold uppercase tracking-widest" style={{ color: "var(--text-subtle)" }}>
+            Total grupo
+          </span>
+          <span className="text-xl sm:text-2xl font-bold tabular-nums leading-none" style={{ fontFamily: "var(--font-display)" }}>
+            {groupAmount}
+          </span>
+          <span className="text-[11px]" style={{ color: "var(--text-muted)" }}>
+            {groupCaption}
+          </span>
+        </div>
+
+        <PriceDivider count={5} />
+
+        <div
+          className="flex flex-col flex-1 min-w-0 sm:text-right sm:items-end p-3 rounded-[var(--radius-md)]"
+          style={{
+            background: featured ? "var(--primary)" : "color-mix(in srgb, var(--primary) 10%, var(--surface-panel))",
+          }}
+        >
+          <span
+            className="text-[10px] font-bold uppercase tracking-widest"
+            style={{ color: featured ? "rgba(255,255,255,0.75)" : "var(--primary)" }}
+          >
+            Por negocio
+          </span>
+          <span
+            className="text-2xl sm:text-3xl font-bold tabular-nums leading-none"
+            style={{ color: featured ? "#fff" : "var(--primary)", fontFamily: "var(--font-display)" }}
+          >
+            {perCompany}
+          </span>
+          <span
+            className="text-[11px]"
+            style={{ color: featured ? "rgba(255,255,255,0.85)" : "var(--text-muted)" }}
+          >
+            {perCompanyCaption}
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function PriceSummaryPanel({ summary }: { summary: ClosingSummary }) {
+  const { pricing } = summary;
+  const n = summary.companies.length;
+  return (
+    <div
+      className="flex flex-col gap-3 p-5 rounded-[var(--radius-lg)]"
+      style={{ background: "var(--surface-panel)", border: "1px solid var(--border)" }}
+    >
+      <div className="flex items-center justify-between gap-2 flex-wrap">
+        <span className="text-xs font-bold uppercase tracking-widest" style={{ color: "var(--text-subtle)" }}>
+          Resumen de inversión
+        </span>
+        <span className="text-[11px] font-semibold" style={{ color: "var(--text-muted)" }}>
+          {n} negocios · abono único del grupo
+        </span>
+      </div>
+      <PriceRow
+        label={pricing.buildLabel}
+        duration={pricing.buildDetail}
+        groupAmount={pricing.buildAmount}
+        groupCaption="Abono mensual del grupo"
+        perCompany={pricing.buildPerCompany ?? "≈ USD 500/mes"}
+        perCompanyCaption="Cada negocio · fase BUILD"
+        featured
+        icon={Hammer}
+      />
+      <PriceRow
+        label={pricing.runLabel}
+        duration={pricing.runDetail}
+        groupAmount={pricing.runAmount}
+        groupCaption="Abono mensual del grupo"
+        perCompany={pricing.runPerCompany ?? "≈ USD 120/mes"}
+        perCompanyCaption="Cada negocio · fase RUN"
+        icon={Wrench}
+      />
+    </div>
+  );
+}
+
+function BuildRunNote({ note }: { note: ClosingSummary["buildRunNote"] }) {
+  if (!note) return null;
+  return (
+    <div
+      className="flex items-start gap-3 p-4 rounded-[var(--radius-lg)]"
+      style={{ background: "var(--surface-panel)", border: "1px solid var(--border)", borderLeft: "3px solid var(--primary)" }}
+    >
+      <RefreshCw size={18} className="flex-shrink-0 mt-0.5" style={{ color: "var(--primary)" }} aria-hidden="true" />
+      <div className="flex flex-col gap-1 min-w-0">
+        <span className="text-sm font-bold" style={{ color: "var(--text-primary)" }}>
+          {note.heading}
+        </span>
+        <p className="text-xs leading-relaxed" style={{ color: "var(--text-muted)" }}>
+          {note.body}
+        </p>
+      </div>
+    </div>
+  );
+}
+
+function CompanySummaryCard({
+  company,
+  color,
+}: {
+  company: ClosingSummary["companies"][number];
+  color: string;
+}) {
+  return (
+    <div
+      className="flex flex-col gap-2.5 p-4 rounded-xl h-full"
+      style={{
+        background: "var(--surface-card)",
+        border: "1px solid var(--border)",
+        borderTop: `3px solid ${color}`,
+        boxShadow: "var(--shadow-card)",
+      }}
+    >
+      <div className="flex flex-col gap-1">
+        <span className="text-sm font-bold leading-snug" style={{ color: "var(--text-primary)", fontFamily: "var(--font-display)" }}>
+          {company.name}
+        </span>
+        {company.tagline && (
+          <span className="text-[11px] leading-snug" style={{ color: "var(--text-muted)" }}>
+            {company.tagline}
+          </span>
+        )}
+      </div>
+
+      <ul className="flex flex-col gap-1">
+        {company.main.map((m, i) => (
+          <li key={i} className="flex items-start gap-1.5 text-[11px] font-semibold leading-snug" style={{ color: "var(--text-primary)" }}>
+            <CheckCircle2 size={11} className="flex-shrink-0 mt-0.5" style={{ color }} />
+            {m}
+          </li>
+        ))}
+      </ul>
+
+      {company.future.length > 0 && (
+        <div className="flex flex-col gap-1.5 pt-2 mt-auto" style={{ borderTop: "1px dashed var(--border)" }}>
+          <span className="text-[9px] font-bold uppercase tracking-widest" style={{ color: "var(--text-subtle)" }}>
+            + tentativos
+          </span>
+          <div className="flex flex-wrap gap-1">
+            {company.future.map((f, i) => (
+              <span
+                key={i}
+                className="text-[10px] font-medium px-1.5 py-0.5 rounded-full leading-snug"
+                style={{
+                  background: `color-mix(in srgb, ${color} 10%, var(--surface-panel))`,
+                  color: "var(--text-secondary)",
+                }}
+              >
+                {f}
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function ClosingCta({
+  heading,
+  body,
+  whatsapp,
+  email,
+  phone,
+}: {
+  heading: string;
+  body: string;
+  whatsapp?: string;
+  email: string;
+  phone?: string;
+}) {
+  return (
+    <div
+      className="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-5 p-6 sm:p-8 rounded-2xl"
+      style={{
+        background: "linear-gradient(135deg, var(--primary) 0%, color-mix(in srgb, var(--primary) 65%, #000) 100%)",
+      }}
+    >
+      <div className="flex flex-col gap-2 min-w-0">
+        <h2 className="text-xl sm:text-2xl font-bold leading-snug" style={{ color: "#fff", fontFamily: "var(--font-display)" }}>
+          {heading}
+        </h2>
+        <p className="text-sm leading-relaxed max-w-xl" style={{ color: "rgba(255,255,255,0.88)" }}>
+          {body}
+        </p>
+      </div>
+      <div className="flex flex-col sm:flex-row gap-2.5 flex-shrink-0">
+        {whatsapp && (
+          <a
+            href={whatsapp}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col gap-0.5 px-5 py-3 rounded-xl transition-opacity hover:opacity-90 min-w-[160px]"
+            style={{ background: "#25d366", color: "#fff" }}
+          >
+            <span className="flex items-center gap-2 text-sm font-bold">
+              <MessageCircle size={16} aria-hidden="true" />
+              WhatsApp
+            </span>
+            {phone && (
+              <span className="text-xs font-medium opacity-90 pl-6">{phone}</span>
+            )}
+          </a>
+        )}
+        <a
+          href={`mailto:${email}`}
+          className="flex flex-col gap-0.5 px-5 py-3 rounded-xl transition-opacity hover:opacity-90 min-w-[160px]"
+          style={{ background: "rgba(255,255,255,0.14)", color: "#fff", border: "1px solid rgba(255,255,255,0.28)" }}
+        >
+          <span className="flex items-center gap-2 text-sm font-bold">
+            <Mail size={16} aria-hidden="true" />
+            Email
+          </span>
+          <span className="text-xs font-medium opacity-90 pl-6 break-all">{email}</span>
+        </a>
+      </div>
+    </div>
+  );
+}
+
+function SummaryView({
+  summary,
+  ctaHeading,
+  ctaBody,
+  whatsapp,
+  email,
+  phone,
+  agencyName,
+  website,
+  reduced,
+}: {
+  summary: ClosingSummary;
+  ctaHeading: string;
+  ctaBody: string;
+  whatsapp?: string;
+  email: string;
+  phone?: string;
+  agencyName: string;
+  website: string;
+  reduced: boolean | null;
+}) {
+  const domain = website.replace(/^https?:\/\//, "");
+  return (
+    <motion.div
+      className="flex flex-col gap-5 w-full min-w-0"
+      variants={reduced ? undefined : stagger}
+      initial="hidden"
+      animate="visible"
+    >
+      {/* Header */}
+      <motion.div variants={reduced ? undefined : fadeUp} className="flex flex-col gap-1.5">
+        <span className="text-[10px] font-semibold uppercase tracking-widest" style={{ color: "var(--primary)" }}>
+          Cierre · Resumen ejecutivo
+        </span>
+        <h1 className="font-bold" style={{ fontSize: "clamp(20px, 3vw, 32px)", color: "var(--text-primary)" }}>
+          5 negocios · inversión por empresa
+        </h1>
+        {summary.intro && (
+          <p className="text-sm leading-snug max-w-3xl" style={{ color: "var(--text-muted)" }}>
+            {summary.intro}
+          </p>
+        )}
+      </motion.div>
+
+      <motion.div variants={reduced ? undefined : fadeUp}>
+        <PriceSummaryPanel summary={summary} />
+      </motion.div>
+
+      {/* Companies — proyectos por negocio (precio en panel superior) */}
+      <motion.div variants={reduced ? undefined : fadeUp} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
+        {summary.companies.map((c, i) => (
+          <CompanySummaryCard key={i} company={c} color={COMPANY_COLORS[i % COMPANY_COLORS.length]} />
+        ))}
+      </motion.div>
+
+      {/* Build & Run */}
+      {(summary.buildRunNote ?? summary.methodNote) && (
+        <motion.div variants={reduced ? undefined : fadeUp}>
+          {summary.buildRunNote ? (
+            <BuildRunNote note={summary.buildRunNote} />
+          ) : (
+            <BuildRunNote note={{ heading: "Build & Run", body: summary.methodNote! }} />
+          )}
+        </motion.div>
+      )}
+
+      {/* CTA */}
+      <motion.div variants={reduced ? undefined : fadeUp}>
+        <ClosingCta
+          heading={ctaHeading}
+          body={ctaBody}
+          whatsapp={whatsapp}
+          email={email}
+          phone={phone}
+        />
+      </motion.div>
+
+      <motion.div variants={reduced ? undefined : fadeUp} className="flex items-center justify-center gap-2 text-xs">
+        <span className="font-bold" style={{ color: "var(--text-primary)", fontFamily: "var(--font-display)" }}>
+          {agencyName}
+        </span>
+        <ArrowRight size={12} style={{ color: "var(--text-subtle)" }} />
+        <a href={website} target="_blank" rel="noopener noreferrer" className="transition-opacity hover:opacity-70" style={{ color: "var(--primary)" }}>
+          {domain}
+        </a>
+      </motion.div>
+    </motion.div>
+  );
+}
+
 // ─── Main ──────────────────────────────────────────────────────────────────────
 
 export function ClosingScreen({ config }: ClosingScreenProps) {
@@ -394,11 +770,45 @@ export function ClosingScreen({ config }: ClosingScreenProps) {
   const roadmapScreen = config.screens.find(s => s.type === "roadmap") as RoadmapScreenType | undefined;
   const pricingScreen = config.screens.find(s => s.type === "pricing") as PricingScreenType | undefined;
 
+  const closingScreen = config.screens.find(s => s.type === "closing");
+  const closingData = closingScreen && closingScreen.type === "closing" ? closingScreen.data : undefined;
+  const ctaHeading = closingData?.ctaHeading ?? "¿Empezamos?";
+  const ctaBody =
+    closingData?.ctaBody ??
+    `Estamos listos para acompañar a ${config.client.name}. Confirmá la propuesta antes del ${config.meta.validUntil ?? "vencimiento"} para reservar el cupo de trabajo.`;
+
   const { agency } = config;
+
+  const summary = closingData?.summary;
+
+  if (summary) {
+    return (
+      <motion.div
+        className="min-h-full w-full min-w-0 px-5 sm:px-8 lg:px-16 py-6 sm:py-8"
+        variants={reduced ? undefined : screenEnter}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+        key="closing"
+      >
+        <SummaryView
+          summary={summary}
+          ctaHeading={ctaHeading}
+          ctaBody={ctaBody}
+          whatsapp={agency.social?.whatsapp}
+          email={agency.email}
+          phone={agency.phone}
+          agencyName={agency.name}
+          website={agency.website}
+          reduced={reduced}
+        />
+      </motion.div>
+    );
+  }
 
   return (
     <motion.div
-      className="min-h-full w-full min-w-0 px-5 sm:px-8 lg:px-14 py-6 sm:py-8"
+      className="min-h-full w-full min-w-0 px-5 sm:px-8 lg:px-16 py-6 sm:py-8"
       variants={reduced ? undefined : screenEnter}
       initial="hidden"
       animate="visible"
@@ -406,7 +816,7 @@ export function ClosingScreen({ config }: ClosingScreenProps) {
       key="closing"
     >
       <motion.div
-        className="flex flex-col gap-6 max-w-5xl mx-auto w-full min-w-0"
+        className="flex flex-col gap-6 w-full min-w-0"
         variants={reduced ? undefined : stagger}
         initial="hidden"
         animate="visible"
@@ -459,8 +869,8 @@ export function ClosingScreen({ config }: ClosingScreenProps) {
         {/* 6 — CTA */}
         <motion.div variants={reduced ? undefined : fadeUp}>
           <CtaSection
-            heading="¿Empezamos?"
-            body={`Estamos listos para darle a ${config.client.name} la presencia digital que merece. Confirmá la propuesta antes del ${config.meta.validUntil ?? "vencimiento"} para mantener este precio.`}
+            heading={ctaHeading}
+            body={ctaBody}
             whatsapp={agency.social?.whatsapp}
             email={agency.email}
           />

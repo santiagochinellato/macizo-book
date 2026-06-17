@@ -174,7 +174,7 @@ export function MockupsScreen({ data }: MockupsScreenProps) {
   if (images.length === 0) {
     return (
       <motion.div
-        className="min-h-full w-full min-w-0 px-5 sm:px-8 lg:px-14 py-6 sm:py-8 flex items-center justify-center"
+        className="min-h-full w-full min-w-0 px-5 sm:px-8 lg:px-16 py-6 sm:py-8 flex items-center justify-center"
         variants={reduced ? undefined : screenEnter}
         initial="hidden"
         animate="visible"
@@ -191,7 +191,7 @@ export function MockupsScreen({ data }: MockupsScreenProps) {
   return (
     <>
       <motion.div
-        className="min-h-full w-full min-w-0 px-5 sm:px-8 lg:px-14 py-6 sm:py-8"
+        className="min-h-full w-full min-w-0 px-5 sm:px-8 lg:px-16 py-6 sm:py-8"
         variants={reduced ? undefined : screenEnter}
         initial="hidden"
         animate="visible"
@@ -199,7 +199,7 @@ export function MockupsScreen({ data }: MockupsScreenProps) {
         key="mockups"
       >
         <motion.div
-          className="flex flex-col gap-6 max-w-5xl mx-auto w-full min-w-0"
+          className="flex flex-col gap-6 w-full min-w-0"
           variants={reduced ? undefined : stagger}
           initial="hidden"
           animate="visible"
@@ -211,7 +211,7 @@ export function MockupsScreen({ data }: MockupsScreenProps) {
                 style={{ width: 14, height: 2, background: "var(--primary)", borderRadius: 0 }}
                 aria-hidden="true"
               />
-              <span className="text-[9px] font-bold uppercase tracking-widest" style={{ color: "var(--primary)" }}>
+              <span className="text-[10px] font-bold uppercase tracking-widest" style={{ color: "var(--primary)" }}>
                 Portfolio
               </span>
             </div>

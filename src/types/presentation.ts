@@ -166,6 +166,8 @@ export interface WireframeBookCard {
   span?: CardSpan;
 }
 
+export type TextBookCardTier = "focus" | "offering" | "future";
+
 export interface TextBookCard {
   type: "text";
   eyebrow?: string;
@@ -174,6 +176,10 @@ export interface TextBookCard {
   span?: CardSpan;
   /** Renders with navy accent border */
   accent?: boolean;
+  /** Visual tier: enfoque, oferta principal o desarrollos futuros */
+  tier?: TextBookCardTier;
+  /** Número de la oferta principal (1–4), para badge coloreado */
+  offeringIndex?: number;
   bullets?: string[];
 }
 
@@ -186,11 +192,94 @@ export interface MetricBookCard {
   span?: CardSpan;
 }
 
-export type BookCard = ImageBookCard | WireframeBookCard | TextBookCard | MetricBookCard;
+export type ChartType = "bar" | "line" | "area" | "donut" | "radial";
+
+export interface ChartDataPoint {
+  label: string;
+  value: number;
+  /** Optional second series for comparison charts (e.g. BUILD vs RUN) */
+  value2?: number;
+}
+
+export interface ChartBookCard {
+  type: "chart";
+  chartType: ChartType;
+  title: string;
+  subtitle?: string;
+  /** Unit appended to values in tooltips/labels, e.g. "hs", "%" */
+  unit?: string;
+  data: ChartDataPoint[];
+  /** Legend labels — [serie1, serie2?] */
+  seriesLabels?: [string, string?];
+  /** Override colors; defaults to theme tokens */
+  colors?: string[];
+  span?: CardSpan;
+}
+
+export interface DiagramLayerItem {
+  label: string;
+  icon?: string;
+  description?: string;
+}
+
+export interface DiagramLayer {
+  title: string;
+  role?: string;
+  items: DiagramLayerItem[];
+}
+
+export interface DiagramBookCard {
+  type: "diagram";
+  title: string;
+  subtitle?: string;
+  layers: DiagramLayer[];
+  span?: CardSpan;
+  /** Compact rendering: items as small label-only pills (hides descriptions) */
+  compact?: boolean;
+}
+
+export type BookCard =
+  | ImageBookCard
+  | WireframeBookCard
+  | TextBookCard
+  | MetricBookCard
+  | ChartBookCard
+  | DiagramBookCard;
+
+export interface InvestmentPhaseData {
+  id: "build" | "run";
+  title: string;
+  duration: string;
+  groupAmount: string;
+  groupDetail: string;
+  perCompanyAmount: string;
+  perCompanyDetail: string;
+  includes: string[];
+}
+
+export interface InvestmentLayoutData {
+  heroEyebrow: string;
+  heroAmount: string;
+  heroBody: string;
+  heroFormula: string;
+  businessesCount: number;
+  phases: InvestmentPhaseData[];
+  contextHeading: string;
+  contextBody: string;
+  contextPoints: string[];
+  deliverablesHeading: string;
+  deliverablesBody: string;
+  deliverablesStats: { value: string; label: string }[];
+}
 
 export interface BookSectionScreenData {
   title: string;
   subtitle?: string;
+  /** Color de acento de la sección (hex), p. ej. por empresa */
+  accentColor?: string;
+  /** Layout especializado; `investment` usa `investment` + charts en `cards` */
+  layout?: "default" | "investment";
+  investment?: InvestmentLayoutData;
   cards: BookCard[];
 }
 
@@ -228,9 +317,49 @@ export interface DesignSystemScreenData {
 
 // ─── Closing screen ────────────────────────────────────────────────────────────
 
+export interface ClosingCompanySummary {
+  name: string;
+  tagline?: string;
+  /** Precio asignado a la empresa (parte del abono del grupo), ej. "≈ USD 500/mes" */
+  price?: string;
+  /** Tres proyectos principales del ciclo BUILD */
+  main: string[];
+  /** Desarrollos tentativos que habilita el modelo Build & Run */
+  future: string[];
+}
+
+export interface ClosingPricing {
+  buildLabel: string;
+  buildAmount: string;
+  buildDetail: string;
+  /** Desglose por empresa, ej. "≈ USD 500/empresa" */
+  buildPerCompany?: string;
+  runLabel: string;
+  runAmount: string;
+  runDetail: string;
+  runPerCompany?: string;
+}
+
+export interface ClosingBuildRunNote {
+  heading: string;
+  body: string;
+}
+
+export interface ClosingSummary {
+  intro?: string;
+  companies: ClosingCompanySummary[];
+  pricing: ClosingPricing;
+  /** Build & Run: inversión ligada a necesidades y roadmap dinámico */
+  buildRunNote?: ClosingBuildRunNote;
+  /** @deprecated Usar buildRunNote */
+  methodNote?: string;
+}
+
 export interface ClosingScreenData {
   ctaHeading?: string;
   ctaBody?: string;
+  /** Resumen ejecutivo: listado por empresa + precio del retainer del grupo */
+  summary?: ClosingSummary;
 }
 
 // ─── Screen union ──────────────────────────────────────────────────────────────

@@ -154,7 +154,9 @@ export function PresentationApp({ config }: PresentationAppProps) {
     >
       <AnimatePresence mode="wait">
         {activeScreen ? (
-          <div key={activeId}>{renderScreen(activeScreen, config)}</div>
+          <div key={activeId} className="h-full w-full min-w-0">
+            {renderScreen(activeScreen, config)}
+          </div>
         ) : null}
       </AnimatePresence>
     </AppShell>

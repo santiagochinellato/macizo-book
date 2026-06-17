@@ -17,7 +17,7 @@ export function ProductScreen({ data }: ProductScreenProps) {
 
   return (
     <motion.div
-      className="min-h-full w-full min-w-0 px-5 sm:px-8 lg:px-14 py-6 sm:py-8"
+      className="min-h-full w-full min-w-0 px-5 sm:px-8 lg:px-16 py-6 sm:py-8"
       variants={reduced ? undefined : screenEnter}
       initial="hidden"
       animate="visible"
@@ -25,7 +25,7 @@ export function ProductScreen({ data }: ProductScreenProps) {
       key="product"
     >
       <motion.div
-        className="flex flex-col gap-6 max-w-5xl mx-auto w-full min-w-0"
+        className="flex flex-col gap-6 w-full min-w-0"
         variants={reduced ? undefined : stagger}
         initial="hidden"
         animate="visible"

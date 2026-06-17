@@ -1,62 +1,29 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, Fragment } from "react";
 import { motion, useReducedMotion } from "framer-motion";
-import {
-  Globe,
-  Expand,
-  LayoutDashboard,
-  Search,
-  TrendingUp,
-  MapPin,
-  CalendarCheck,
-  Star,
-  Users,
-  Clock,
-  CheckCircle,
-  Rocket,
-  Code,
-  Smartphone,
-  BarChart,
-  ShieldCheck,
-  Zap,
-  type LucideProps,
-} from "lucide-react";
+import { Expand, CheckCircle2, Sparkles } from "lucide-react";
 import { BentoGrid } from "@/components/bento/BentoGrid";
 import { BentoCard } from "@/components/bento/BentoCard";
 import { PageDetailModal } from "@/components/ui/PageDetailModal";
+import { DynamicIcon } from "@/components/ui/Icon";
+import { Chart } from "@/components/charts/Chart";
+import { ArchitectureDiagram } from "@/components/charts/ArchitectureDiagram";
+import { InvestmentSection } from "@/components/screens/InvestmentSection";
 import { screenEnter, stagger, fadeUp } from "@/lib/motion-variants";
 import type {
   BookSectionScreenData,
-  BookCard,
   ImageBookCard,
   WireframeBookCard,
   TextBookCard,
+  TextBookCardTier,
   MetricBookCard,
+  ChartBookCard,
+  DiagramBookCard,
   CardSpan,
 } from "@/types/presentation";
 
 type ColSpan = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
-
-const ICON_REGISTRY: Record<string, React.ComponentType<LucideProps>> = {
-  Globe,
-  Expand,
-  LayoutDashboard,
-  Search,
-  TrendingUp,
-  MapPin,
-  CalendarCheck,
-  Star,
-  Users,
-  Clock,
-  CheckCircle,
-  Rocket,
-  Code,
-  Smartphone,
-  BarChart,
-  ShieldCheck,
-  Zap,
-};
 
 function spanToCols(span: CardSpan | undefined): {
   colSpan: ColSpan;
@@ -83,12 +50,6 @@ function spanToAspect(span: CardSpan | undefined): string {
 }
 
 // ─── Sub-card components ──────────────────────────────────────────────────────
-
-function DynamicIcon({ name, size = 20 }: { name: string; size?: number }) {
-  const Icon = ICON_REGISTRY[name];
-  if (!Icon) return <Globe size={size} />;
-  return <Icon size={size} />;
-}
 
 interface ImageCardContentProps {
   card: ImageBookCard;
@@ -227,44 +188,235 @@ function WireframeCardContent({ card }: { card: WireframeBookCard }) {
   );
 }
 
-function TextCardContent({ card }: { card: TextBookCard }) {
+function tierGroupLabel(tier: TextBookCardTier): string | null {
+  switch (tier) {
+    case "offering":
+      return "Qué ofrecemos · ciclo BUILD";
+    case "future":
+      return "Lo que el modelo habilita después";
+    default:
+      return null;
+  }
+}
+
+interface TextCardContentProps {
+  card: TextBookCard;
+  sectionColor: string;
+}
+
+function FutureBullets({ bullets, color }: { bullets: string[]; color: string }) {
   return (
-    <div
-      className="flex flex-col gap-3 h-full"
-      style={
-        card.accent
-          ? { borderLeft: "3px solid var(--primary)", paddingLeft: 14 }
-          : undefined
-      }
-    >
-      {card.eyebrow && (
-        <span
-          className="text-[9px] font-bold uppercase tracking-widest"
-          style={{ color: "var(--primary)" }}
+    <ul className="grid sm:grid-cols-2 gap-2">
+      {bullets.map((b, i) => (
+        <li
+          key={i}
+          className="flex items-start gap-2 px-3 py-2.5 rounded-[var(--radius-md)]"
+          style={{
+            background: `color-mix(in srgb, ${color} 10%, var(--surface-panel))`,
+            border: `1px solid color-mix(in srgb, ${color} 20%, transparent)`,
+          }}
         >
-          {card.eyebrow}
-        </span>
-      )}
-      <h3 className="text-base sm:text-lg font-bold leading-snug" style={{ color: "var(--text-primary)" }}>
-        {card.heading}
-      </h3>
-      <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
-        {card.body}
-      </p>
-      {card.bullets && card.bullets.length > 0 && (
-        <ul className="flex flex-col gap-1.5 mt-1">
-          {card.bullets.map((b, i) => (
-            <li key={i} className="flex items-start gap-2">
-              <span
-                className="mt-[5px] w-1.5 h-1.5 rounded-full flex-shrink-0"
-                style={{ background: "var(--primary)" }}
-                aria-hidden="true"
-              />
-              <span className="text-xs leading-relaxed" style={{ color: "var(--text-muted)" }}>{b}</span>
-            </li>
-          ))}
-        </ul>
-      )}
+          <Sparkles size={14} className="flex-shrink-0 mt-px" style={{ color }} aria-hidden="true" />
+          <span className="text-[12px] font-medium leading-snug" style={{ color: "var(--text-primary)" }}>
+            {b}
+          </span>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+function AccentBullets({ bullets }: { bullets: string[] }) {
+  return (
+    <ul className="grid sm:grid-cols-2 gap-2.5">
+      {bullets.map((b, i) => (
+        <li
+          key={i}
+          className="flex items-start gap-2.5 px-3.5 py-3 rounded-[var(--radius-md)]"
+          style={{
+            background: "var(--primary-glow-strong)",
+            border: "1px solid color-mix(in srgb, var(--primary) 22%, transparent)",
+          }}
+        >
+          <CheckCircle2
+            size={16}
+            className="flex-shrink-0 mt-px"
+            style={{ color: "var(--primary)" }}
+            aria-hidden="true"
+          />
+          <span className="text-[13px] font-semibold leading-snug" style={{ color: "var(--text-primary)" }}>
+            {b}
+          </span>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+function TextCardContent({ card, sectionColor }: TextCardContentProps) {
+  const isWide = card.span === "3x1" || card.span === "2x1";
+  const hasBullets = !!card.bullets && card.bullets.length > 0;
+  const manyBullets = hasBullets && card.bullets!.length >= 4;
+
+  // ── Tier: oferta principal (BUILD) ──
+  if (card.tier === "offering") {
+    const idx = card.offeringIndex ?? 1;
+    return (
+      <div className="flex flex-col gap-2.5 h-full">
+        <div className="flex items-center gap-2">
+          <span
+            className="flex items-center justify-center w-7 h-7 rounded-md text-xs font-bold flex-shrink-0"
+            style={{ background: sectionColor, color: "#fff" }}
+            aria-hidden="true"
+          >
+            {idx}
+          </span>
+          {card.eyebrow && (
+            <span
+              className="text-[10px] font-bold uppercase tracking-widest"
+              style={{ color: sectionColor }}
+            >
+              {card.eyebrow}
+            </span>
+          )}
+        </div>
+        <h3 className="text-base font-bold leading-snug" style={{ color: "var(--text-primary)" }}>
+          {card.heading}
+        </h3>
+        <p className="text-[13px] leading-relaxed flex-1" style={{ color: "var(--text-muted)" }}>
+          {card.body}
+        </p>
+      </div>
+    );
+  }
+
+  // ── Tier: desarrollos futuros (Build & Run) ──
+  if (card.tier === "future") {
+    return (
+      <div className="grid md:grid-cols-2 gap-x-8 gap-y-3 h-full">
+        <div className="flex flex-col gap-2 min-w-0">
+          {card.eyebrow && (
+            <span
+              className="text-[10px] font-bold uppercase tracking-widest"
+              style={{ color: "var(--text-subtle)" }}
+            >
+              {card.eyebrow}
+            </span>
+          )}
+          <h3 className="text-base sm:text-lg font-bold leading-snug" style={{ color: "var(--text-primary)" }}>
+            {card.heading}
+          </h3>
+          <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
+            {card.body}
+          </p>
+        </div>
+        {hasBullets && (
+          <div className="flex flex-col gap-2 min-w-0 justify-center">
+            <FutureBullets bullets={card.bullets!} color={sectionColor} />
+          </div>
+        )}
+      </div>
+    );
+  }
+
+  // ── Tier: enfoque ──
+  if (card.tier === "focus") {
+    return (
+      <div
+        className="flex flex-col gap-2.5 h-full"
+        style={{ borderLeft: `3px solid ${sectionColor}`, paddingLeft: 16 }}
+      >
+        {card.eyebrow && (
+          <span
+            className="text-[10px] font-bold uppercase tracking-widest"
+            style={{ color: sectionColor }}
+          >
+            {card.eyebrow}
+          </span>
+        )}
+        <h3 className="text-base sm:text-lg font-bold leading-snug" style={{ color: "var(--text-primary)" }}>
+          {card.heading}
+        </h3>
+        <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
+          {card.body}
+        </p>
+      </div>
+    );
+  }
+
+  const eyebrowEl = card.eyebrow ? (
+    <span
+      className="text-[10px] font-bold uppercase tracking-widest"
+      style={{ color: "var(--primary)" }}
+    >
+      {card.eyebrow}
+    </span>
+  ) : null;
+
+  const headingEl = (
+    <h3 className="text-base sm:text-lg font-bold leading-snug" style={{ color: "var(--text-primary)" }}>
+      {card.heading}
+    </h3>
+  );
+
+  const bodyEl = card.body ? (
+    <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
+      {card.body}
+    </p>
+  ) : null;
+
+  // Accent (pitch) cards highlight their bullets as emphasized chips so the
+  // key differentiators stand out instead of reading as a plain muted list.
+  const bulletsEl = hasBullets ? (
+    card.accent ? (
+      <AccentBullets bullets={card.bullets!} />
+    ) : (
+      <ul
+        className={`gap-x-6 gap-y-1.5 ${
+          isWide && manyBullets ? "grid sm:grid-cols-2" : "flex flex-col"
+        }`}
+      >
+        {card.bullets!.map((b, i) => (
+          <li key={i} className="flex items-start gap-2">
+            <span
+              className="mt-[6px] w-1.5 h-1.5 rounded-full flex-shrink-0"
+              style={{ background: "var(--primary)" }}
+              aria-hidden="true"
+            />
+            <span className="text-[13px] leading-relaxed" style={{ color: "var(--text-muted)" }}>{b}</span>
+          </li>
+        ))}
+      </ul>
+    )
+  ) : null;
+
+  const accentStyle = card.accent
+    ? { borderLeft: "3px solid var(--primary)", paddingLeft: 16 }
+    : undefined;
+
+  // Wide cards: editorial two-column layout to shorten height and keep a
+  // comfortable line length on full-width screens.
+  if (isWide) {
+    return (
+      <div className="grid md:grid-cols-2 gap-x-10 gap-y-3 h-full" style={accentStyle}>
+        <div className="flex flex-col gap-2.5 min-w-0">
+          {eyebrowEl}
+          {headingEl}
+          {hasBullets && bodyEl}
+        </div>
+        <div className="flex flex-col gap-2.5 min-w-0 justify-center">
+          {hasBullets ? bulletsEl : bodyEl}
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="flex flex-col gap-2.5 h-full" style={accentStyle}>
+      {eyebrowEl}
+      {headingEl}
+      {bodyEl}
+      {bulletsEl}
     </div>
   );
 }
@@ -296,7 +448,7 @@ function MetricCardContent({ card }: { card: MetricBookCard }) {
         </span>
       </div>
       {card.description && (
-        <p className="text-xs leading-relaxed" style={{ color: "var(--text-muted)" }}>
+        <p className="text-[13px] leading-relaxed" style={{ color: "var(--text-muted)" }}>
           {card.description}
         </p>
       )}
@@ -311,6 +463,10 @@ interface BookSectionScreenProps {
 }
 
 export function BookSectionScreen({ data }: BookSectionScreenProps) {
+  if (data.layout === "investment" && data.investment) {
+    return <InvestmentSection data={data} />;
+  }
+
   const reduced = useReducedMotion();
   const [modalIndex, setModalIndex] = useState<number | null>(null);
 
@@ -339,17 +495,19 @@ export function BookSectionScreen({ data }: BookSectionScreenProps) {
   const closeModal = useCallback(() => setModalIndex(null), []);
   const navigateModal = useCallback((idx: number) => setModalIndex(idx), []);
 
+  const sectionColor = data.accentColor ?? "var(--primary)";
+
   return (
     <>
       <motion.div
-        className="min-h-full w-full min-w-0 px-5 sm:px-8 lg:px-14 py-6 sm:py-8"
+        className="min-h-full w-full min-w-0 px-5 sm:px-8 lg:px-16 py-6 sm:py-8"
         variants={reduced ? undefined : screenEnter}
         initial="hidden"
         animate="visible"
         exit="exit"
       >
         <motion.div
-          className="flex flex-col gap-6 max-w-5xl mx-auto w-full min-w-0"
+          className="flex flex-col gap-5 w-full min-w-0"
           variants={reduced ? undefined : stagger}
           initial="hidden"
           animate="visible"
@@ -359,12 +517,12 @@ export function BookSectionScreen({ data }: BookSectionScreenProps) {
             <div className="flex items-center gap-2">
               <span
                 className="block flex-shrink-0"
-                style={{ width: 14, height: 2, background: "var(--primary)", borderRadius: 0 }}
+                style={{ width: 14, height: 2, background: sectionColor, borderRadius: 0 }}
                 aria-hidden="true"
               />
               <span
-                className="text-[9px] font-bold uppercase tracking-widest"
-                style={{ color: "var(--primary)" }}
+                className="text-[10px] font-bold uppercase tracking-widest"
+                style={{ color: sectionColor }}
               >
                 {data.title}
               </span>
@@ -379,35 +537,71 @@ export function BookSectionScreen({ data }: BookSectionScreenProps) {
           <BentoGrid>
             {data.cards.map((card, i) => {
               const { colSpan, colSpanSm, colSpanMd } = spanToCols(card.span);
-              const isHighlight = card.type === "metric" || (card.type === "text" && card.accent);
+              const prevCard = i > 0 ? data.cards[i - 1] : undefined;
+              const prevTier =
+                prevCard?.type === "text" ? prevCard.tier : undefined;
+              const cardTier = card.type === "text" ? card.tier : undefined;
+              const groupLabel =
+                cardTier && cardTier !== prevTier ? tierGroupLabel(cardTier) : null;
+
+              const isTextAccent = card.type === "text" && card.accent;
+              const isOffering = card.type === "text" && card.tier === "offering";
+              const isFuture = card.type === "text" && card.tier === "future";
+              const isFocus = card.type === "text" && card.tier === "focus";
+              const isHighlight =
+                card.type === "metric" || isTextAccent || isOffering || isFuture || isFocus;
+
               const cardMIdx = cardModalIndex[i];
               const isClickable = card.type === "image" && cardMIdx !== -1;
 
               return (
-                <BentoCard
-                  key={i}
-                  colSpan={colSpan}
-                  colSpanSm={colSpanSm}
-                  colSpanMd={colSpanMd}
-                  highlight={isHighlight}
-                  noPadding={card.type === "image"}
-                >
-                  <motion.div
-                    variants={reduced ? undefined : fadeUp}
-                    className="h-full"
-                  >
-                    {card.type === "image" && (
-                      <ImageCardContent
-                        card={card}
-                        clickable={isClickable}
-                        onClick={isClickable ? () => openModal(cardMIdx) : undefined}
+                <Fragment key={i}>
+                  {groupLabel && (
+                    <div className="col-span-12 flex items-center gap-2 pt-1">
+                      <span
+                        className="w-1.5 h-1.5 rounded-full flex-shrink-0"
+                        style={{ background: sectionColor }}
+                        aria-hidden="true"
                       />
-                    )}
-                    {card.type === "wireframe" && <WireframeCardContent card={card} />}
-                    {card.type === "text"      && <TextCardContent      card={card} />}
-                    {card.type === "metric"    && <MetricCardContent    card={card} />}
-                  </motion.div>
-                </BentoCard>
+                      <span
+                        className="text-[10px] font-bold uppercase tracking-widest"
+                        style={{ color: sectionColor }}
+                      >
+                        {groupLabel}
+                      </span>
+                    </div>
+                  )}
+                  <BentoCard
+                    colSpan={colSpan}
+                    colSpanSm={colSpanSm}
+                    colSpanMd={colSpanMd}
+                    highlight={isHighlight}
+                    highlightColor={sectionColor}
+                    highlightEdge={isOffering ? "top" : "left"}
+                    backgroundTint={isOffering ? sectionColor : undefined}
+                    noPadding={card.type === "image"}
+                  >
+                    <motion.div
+                      variants={reduced ? undefined : fadeUp}
+                      className="h-full"
+                    >
+                      {card.type === "image" && (
+                        <ImageCardContent
+                          card={card}
+                          clickable={isClickable}
+                          onClick={isClickable ? () => openModal(cardMIdx) : undefined}
+                        />
+                      )}
+                      {card.type === "wireframe" && <WireframeCardContent card={card} />}
+                      {card.type === "text" && (
+                        <TextCardContent card={card} sectionColor={sectionColor} />
+                      )}
+                      {card.type === "metric" && <MetricCardContent card={card} />}
+                      {card.type === "chart" && <Chart card={card} />}
+                      {card.type === "diagram" && <ArchitectureDiagram card={card} />}
+                    </motion.div>
+                  </BentoCard>
+                </Fragment>
               );
             })}
           </BentoGrid>

@@ -1,0 +1,705 @@
+{
+  "slug": "transformacion-digital",
+  "version": 2,
+  "meta": {
+    "type": "propuesta",
+    "number": "2026-GRP1",
+    "title": "Transformación Digital y Automatización",
+    "subtitle": "Modelo Build & Run — un socio tecnológico para LABAC, Dinatec, LABTEC y Ciudad Oeste",
+    "date": "2026-06-17",
+    "validUntil": "2026-07-15",
+    "status": "enviado",
+    "currency": "USD",
+    "language": "es"
+  },
+  "agency": {
+    "name": "MacizoDigital",
+    "tagline": "Software y automatización a medida",
+    "website": "https://macizo.digital",
+    "email": "hola@macizodigital.com.ar",
+    "phone": "+54 9 294 227-2626",
+    "social": {
+      "whatsapp": "https://wa.me/54929422726",
+      "instagram": "https://instagram.com/macizo.digital"
+    }
+  },
+  "client": {
+    "name": "Grupo LABAC · Dinatec · LABTEC",
+    "industry": "Salud, medicina laboral y logística minera",
+    "contact": {
+      "name": "Gerencia General y RRHH",
+      "role": "Directorio del grupo"
+    }
+  },
+  "theme": {
+    "accentColor": "#1a5c38"
+  },
+  "screens": [
+    {
+      "id": "presentacion",
+      "type": "book-section",
+      "label": "El Socio Tecnológico",
+      "data": {
+        "title": "El Socio Tecnológico",
+        "subtitle": "La puerta de entrada: cómo aporto valor y qué vas a ver en esta propuesta",
+        "cards": [
+          {
+            "type": "text",
+            "span": "3x1",
+            "accent": true,
+            "eyebrow": "Propuesta 2026-GRP1 · El concepto",
+            "heading": "Un socio tecnológico para el grupo, con un abono mensual y un roadmap que priorizamos juntos.",
+            "body": "Un abono mensual previsible. Cada ciclo, Gerencia y RRHH priorizan y yo construyo, sobre un roadmap que se ajusta al negocio. Tres sistemas en paralelo: imagen digital, clientes y pacientes, y automatización interna.",
+            "bullets": [
+              "Un único interlocutor técnico para LABAC, Dinatec, LABTEC y Ciudad Oeste",
+              "Abono mensual previsible: prioridades que se redefinen ciclo a ciclo sin cambiar el costo",
+              "Tres sistemas en paralelo: imagen digital, cliente/paciente y automatización interna",
+              "Una base única pensada para escalar a las cinco empresas del grupo"
+            ]
+          },
+          {
+            "type": "text",
+            "span": "1x1",
+            "eyebrow": "Pilar 1 · La cara de la empresa",
+            "heading": "La imagen digital que capta",
+            "body": "Sitios web, portales corporativos y rebranding. Construyo la cara digital profesional que proyecta seriedad 24/7 y convierte visitas en clientes y pacientes. Resuelve la falta de presencia y la imagen desactualizada que hoy frenan la captación."
+          },
+          {
+            "type": "text",
+            "span": "1x1",
+            "eyebrow": "Pilar 2 · Cliente y paciente",
+            "heading": "Sistemas que sacan fricción",
+            "body": "Turnos, asistente por WhatsApp, historia clínica interactiva y portales B2B. El cliente y el paciente resuelven solos lo que hoy depende del mostrador y del horario. Menos espera, mejor experiencia y más fidelización."
+          },
+          {
+            "type": "text",
+            "span": "1x1",
+            "eyebrow": "Pilar 3 · Eficiencia interna",
+            "heading": "Procesos que se automatizan",
+            "body": "Audito, mido y automatizo las tareas repetitivas que hoy consumen horas y generan errores de carga. Libero al equipo para lo que realmente exige criterio humano y vuelvo medible lo que antes era intuición."
+          },
+          {
+            "type": "diagram",
+            "span": "3x1",
+            "title": "Tecnología que las personas realmente adoptan",
+            "subtitle": "Seis disciplinas en una persona. No reemplazo a RRHH: trabajo a su lado, in situ, y lo potencio.",
+            "layers": [
+              {
+                "title": "Un socio, tres roles",
+                "role": "RRHH · UX/UI · Programación · Salud · Capacitación · IA",
+                "items": [
+                  { "label": "Asesor", "icon": "Search", "description": "Detecta junto a RRHH el cuello de botella real" },
+                  { "label": "Consultor", "icon": "Brain", "description": "Diseña la solución con criterio de salud y UX" },
+                  { "label": "Desarrollador", "icon": "Code", "description": "La construye con IA y la deja funcionando" }
+                ]
+              },
+              {
+                "title": "De la mano de RRHH",
+                "role": "In situ · lo potencia, no lo reemplaza",
+                "items": [
+                  { "label": "Trabajo codo a codo", "icon": "Handshake", "description": "RRHH conoce a la gente; yo aporto la tecnología" },
+                  { "label": "Gestión del cambio", "icon": "RefreshCw", "description": "El equipo participa del cambio, no lo sufre" }
+                ]
+              },
+              {
+                "title": "El resultado",
+                "role": "Adopción real, no una herramienta en el cajón",
+                "items": [
+                  { "label": "Se usa de verdad", "icon": "CheckCircle", "description": "La solución nace entendible para quien la opera" },
+                  { "label": "Menos capacitación", "icon": "Sparkles", "description": "Curva de adopción más corta y económica" }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "metodologia",
+      "type": "roadmap",
+      "label": "Modelo Build & Run",
+      "data": {
+        "phases": [
+          {
+            "id": "build",
+            "number": 1,
+            "title": "BUILD — Construcción del ecosistema",
+            "duration": "6 a 9 meses",
+            "tasks": [
+              "Bloque dedicado de 20 hs/semana (~80 hs/mes) puesto al servicio de las prioridades del grupo",
+              "Roadmap co-definido con Gerencia y RRHH: ustedes auditan y priorizan, yo investigo y ejecuto",
+              "Investigación antes de construir: cada desarrollo arranca entendiendo el proceso real, no suponiéndolo",
+              "Roadmap dinámico: si cambia la prioridad del grupo, el esfuerzo se redirige sin alterar el abono",
+              "Cada entrega genera retorno concreto: libera horas del equipo, reduce errores y mejora la experiencia",
+              "El norte es la rentabilidad y la productividad mutua, no acumular features"
+            ]
+          },
+          {
+            "id": "run",
+            "number": 2,
+            "title": "RUN — Operación y evolución",
+            "duration": "Continuo",
+            "tasks": [
+              "Al completar todos los requerimientos, el abono baja de forma significativa a USD 600/mes",
+              "Monitoreo de infraestructura: servidores, bases de datos y APIs",
+              "Ajuste fino de los prompts de IA y mejora continua del asistente",
+              "Soporte, resolución de incidencias y uptime de los servicios",
+              "El ecosistema no se congela: con investigación continua siguen apareciendo nuevos desarrollos"
+            ]
+          }
+        ],
+        "technologies": [
+          { "name": "Next.js", "description": "Frontend y portales de alta performance" },
+          { "name": "TypeScript", "description": "Código robusto y mantenible" },
+          { "name": "n8n", "description": "Orquestación de flujos y automatizaciones" },
+          { "name": "RabbitMQ / Kafka", "description": "Broker de eventos asíncrono" },
+          { "name": "LLMs / IA", "description": "Agentes de chat, triage y soporte" },
+          { "name": "OCR", "description": "Lectura de órdenes médicas y documentos" }
+        ],
+        "clientRequirements": [
+          "Auditan los procesos y detectan junto a mí las fricciones a resolver",
+          "Priorizan qué se construye en cada ciclo mensual",
+          "Designan un referente interno por empresa para validar requerimientos",
+          "Habilitan accesos a sistemas, bases de datos y herramientas existentes",
+          "Aportan los materiales de marca para el rebranding (logos, manual)",
+          "Participan de revisiones cortas con feedback iterativo"
+        ]
+      }
+    },
+    {
+      "id": "arquitectura",
+      "type": "book-section",
+      "label": "Arquitectura Macizo Chat",
+      "data": {
+        "title": "Arquitectura de Macizo Chat",
+        "subtitle": "El asistente omnicanal del grupo, sobre una arquitectura basada en eventos (EDA)",
+        "cards": [
+          {
+            "type": "text",
+            "span": "3x1",
+            "accent": true,
+            "eyebrow": "Qué es y qué resuelve",
+            "heading": "Un asistente que atiende, agenda y deriva — en todos los canales, 24/7",
+            "body": "El asistente con IA del grupo: recibe consultas por WhatsApp, web o teléfono, responde, agenda turnos, lee la orden médica por OCR y solo deriva a una persona cuando hace falta criterio humano. Por debajo corre sobre una Arquitectura Basada en Eventos (EDA): cada interacción es un evento que un broker central enruta de forma asíncrona al microservicio que corresponde (ver el flujo abajo).",
+            "bullets": [
+              "Descomprime la recepción y reduce errores de carga",
+              "Atiende fuera de horario sin sumar personal",
+              "Si un servicio se cae, el resto sigue y los mensajes no se pierden",
+              "La misma base escala a las cinco empresas del grupo"
+            ]
+          },
+          {
+            "type": "diagram",
+            "span": "3x1",
+            "title": "Flujo de un mensaje en Macizo Chat",
+            "compact": true,
+            "subtitle": "De la entrada del paciente a la respuesta final, paso a paso.",
+            "layers": [
+              {
+                "title": "Productores de eventos",
+                "role": "Canales de interacción",
+                "items": [
+                  { "label": "WhatsApp", "icon": "MessageCircle", "description": "Mensajes entrantes del paciente" },
+                  { "label": "Widget web", "icon": "Globe", "description": "Solicitudes desde el sitio" },
+                  { "label": "IVR / Telefonía", "icon": "PhoneCall", "description": "Derivaciones telefónicas" }
+                ]
+              },
+              {
+                "title": "Broker central",
+                "role": "Núcleo de mensajería",
+                "items": [
+                  { "label": "Kafka / RabbitMQ", "icon": "Network", "description": "Recibe y enruta cada evento" },
+                  { "label": "Eventos", "icon": "Repeat", "description": "Mensaje recibido · Turno · Pedido subido" }
+                ]
+              },
+              {
+                "title": "Consumidores (microservicios)",
+                "role": "Tareas especializadas",
+                "items": [
+                  { "label": "Lógica de chat IA", "icon": "Bot", "description": "PNL, triage y enrutamiento" },
+                  { "label": "Turnos", "icon": "CalendarCheck", "description": "Reservas y agenda" },
+                  { "label": "OCR", "icon": "ScanLine", "description": "Lectura de órdenes médicas" },
+                  { "label": "Notificaciones", "icon": "Bell", "description": "Recordatorios y confirmaciones" }
+                ]
+              },
+              {
+                "title": "Integraciones y salidas",
+                "role": "Herramientas operativas",
+                "items": [
+                  { "label": "CRM (Chatwoot)", "icon": "Headphones", "description": "Agentes humanos" },
+                  { "label": "Bases médicas / EMR", "icon": "Database", "description": "Historia clínica" },
+                  { "label": "Respuesta al paciente", "icon": "Send", "description": "Vuelta al canal original" }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "metric",
+            "span": "1x1",
+            "icon": "Clock",
+            "value": "24/7",
+            "label": "atención automatizada",
+            "description": "Responde y agenda fuera del horario de atención, sin sumar carga al personal."
+          },
+          {
+            "type": "metric",
+            "span": "1x1",
+            "icon": "Gauge",
+            "value": "< 2s",
+            "label": "respuesta del agente IA",
+            "description": "Procesamiento asíncrono que mantiene la conversación fluida en cada canal."
+          },
+          {
+            "type": "metric",
+            "span": "1x1",
+            "icon": "Boxes",
+            "value": "5",
+            "label": "empresas, una sola base",
+            "description": "La misma orquestación da servicio a todo el grupo sin rehacer la arquitectura."
+          },
+          {
+            "type": "text",
+            "span": "half",
+            "eyebrow": "Qué vas a poder medir",
+            "heading": "Métricas que deja Macizo Chat",
+            "body": "Cada interacción genera datos. Eso permite tomar decisiones con números, no por intuición.",
+            "bullets": [
+              "% de consultas resueltas sin intervención humana (tasa de automatización)",
+              "Tiempo medio de respuesta y de resolución por canal",
+              "Turnos auto-agendados y tasa de confirmación vs. ausentismo",
+              "Órdenes médicas leídas por OCR sin recarga manual",
+              "Horarios y picos de demanda para dimensionar la recepción",
+              "Volumen, motivos de consulta y derivaciones por empresa",
+              "Temas más preguntados, para detectar qué automatizar después"
+            ]
+          },
+          {
+            "type": "text",
+            "span": "half",
+            "eyebrow": "Hacia dónde escala",
+            "heading": "Futuras implementaciones",
+            "body": "Ideas coherentes con la base EDA que se pueden sumar a medida que madura el ecosistema.",
+            "bullets": [
+              "Triage clínico inteligente — prioriza urgencias por síntomas antes de asignar turno",
+              "Reprogramación automática — confirma y reagenda turnos para bajar el ausentismo",
+              "Analítica conversacional en vivo — tablero de consultas, canales y resolución",
+              "Validación de cobertura — chequea obra social y requisitos en el momento",
+              "Entrega de resultados por el canal — el paciente pide y recibe sus informes sin pasar por sede",
+              "Campañas y recordatorios proactivos — chequeos preventivos y controles segmentados por perfil"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "labac",
+      "type": "book-section",
+      "label": "LABAC",
+      "data": {
+        "title": "LABAC — Laboratorio Bioquímico de Alta Complejidad",
+        "subtitle": "Menos fricción en recepción, automatización clínica y mejor experiencia del paciente",
+        "accentColor": "#1a5c38",
+        "cards": [
+          {
+            "type": "text",
+            "span": "3x1",
+            "tier": "focus",
+            "eyebrow": "Enfoque",
+            "heading": "Que el paciente resuelva por WhatsApp lo que hoy resuelve en el mostrador",
+            "body": "El objetivo es liberar tiempo de recepción y reducir errores: que la orden médica, las indicaciones de preparación y el turno se gestionen de forma automática, dejando al equipo humano para lo que realmente requiere criterio."
+          },
+          {
+            "type": "text",
+            "span": "1x1",
+            "tier": "offering",
+            "offeringIndex": 1,
+            "eyebrow": "Ciclo BUILD",
+            "heading": "Sitio web responsive",
+            "body": "Presencia profesional que comunica la complejidad del laboratorio y capta pacientes y empresas las 24 horas."
+          },
+          {
+            "type": "text",
+            "span": "1x1",
+            "tier": "offering",
+            "offeringIndex": 2,
+            "eyebrow": "Ciclo BUILD",
+            "heading": "Implementación de Macizo Chat",
+            "body": "Asistente por WhatsApp que responde, agenda y deriva, integrado a la operación de recepción."
+          },
+          {
+            "type": "text",
+            "span": "1x1",
+            "tier": "offering",
+            "offeringIndex": 3,
+            "eyebrow": "Ciclo BUILD",
+            "heading": "Historia clínica bioquímica interactiva",
+            "body": "Portal donde el paciente ve la evolución de sus marcadores de laboratorio, mejorando el seguimiento y la fidelización."
+          },
+          {
+            "type": "text",
+            "span": "3x1",
+            "tier": "future",
+            "eyebrow": "Build & Run · desarrollos tentativos",
+            "heading": "Lo que el modelo habilita después",
+            "body": "Una vez resuelto lo principal, el abono sigue produciendo: estos módulos entran según prioridad, sin rehacer nada.",
+            "bullets": [
+              "Sistema de turnos centralizado — agenda integrada al chat y a la web",
+              "Onboarding interno para RRHH — capacita rápido al personal de recepción",
+              "Portal B2B de medicina laboral — métricas agregadas para clientes corporativos",
+              "Trazabilidad de muestras domiciliarias — cadena de custodia del domicilio a la sede",
+              "Motor OCR + triage de órdenes — lee recetas y devuelve indicaciones y turno"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "dinatec",
+      "type": "book-section",
+      "label": "Dinatec",
+      "data": {
+        "title": "Dinatec — Logística y Servicios Mineros",
+        "subtitle": "Imagen profesional, cumplimiento normativo B2B y operación productiva en la Puna",
+        "accentColor": "#b45309",
+        "cards": [
+          {
+            "type": "text",
+            "span": "3x1",
+            "tier": "focus",
+            "eyebrow": "Enfoque",
+            "heading": "Operar en la Puna sin depender de la conexión ni de la memoria de nadie",
+            "body": "La prioridad es proyectar seriedad ante las mineras, darles la trazabilidad documental que exigen para contratar y mantener al personal productivo aunque no haya señal."
+          },
+          {
+            "type": "text",
+            "span": "1x1",
+            "tier": "offering",
+            "offeringIndex": 1,
+            "eyebrow": "Ciclo BUILD",
+            "heading": "Sitio web responsive",
+            "body": "Presencia que transmite seriedad y capacidad operativa ante mineras y clientes corporativos."
+          },
+          {
+            "type": "text",
+            "span": "1x1",
+            "tier": "offering",
+            "offeringIndex": 2,
+            "eyebrow": "Ciclo BUILD",
+            "heading": "Implementación de Macizo Chat",
+            "body": "Canal único para consultas, pedidos y soporte, disponible 24/7 y escalable al resto del grupo."
+          },
+          {
+            "type": "text",
+            "span": "1x1",
+            "tier": "offering",
+            "offeringIndex": 3,
+            "eyebrow": "Ciclo BUILD",
+            "heading": "Portal de compliance documental",
+            "body": "Las mineras auditan en tiempo real los vencimientos de VTV, seguros y habilitaciones de la flota y los módulos alquilados."
+          },
+          {
+            "type": "text",
+            "span": "3x1",
+            "tier": "future",
+            "eyebrow": "Build & Run · desarrollos tentativos",
+            "heading": "Lo que el modelo habilita después",
+            "body": "Módulos que suman eficiencia operativa y se incorporan según la prioridad de cada ciclo.",
+            "bullets": [
+              "IoT de mantenimiento predictivo — órdenes de trabajo automáticas desde la telemetría",
+              "App móvil offline para choferes — check-lists y manifiestos sin señal, con sincronización",
+              "Agente de soporte técnico (IA) — asistencia en locación con los manuales de los equipos",
+              "Alertas automatizadas de RRHH — avisos de vencimientos de licencias y permisos",
+              "Trazabilidad de módulos y activos alquilados — estado y ubicación de cada activo"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "labtec",
+      "type": "book-section",
+      "label": "LABTEC",
+      "data": {
+        "title": "LABTEC — Medicina Laboral y Medioambiente",
+        "subtitle": "Imagen corporativa, agendas multidisciplinarias y legajos digitales impecables",
+        "accentColor": "#0e7490",
+        "cards": [
+          {
+            "type": "text",
+            "span": "3x1",
+            "tier": "focus",
+            "eyebrow": "Enfoque",
+            "heading": "Coordinar varios especialistas en una sola visita y entregar un legajo impecable",
+            "body": "El desafío es logístico: armar agendas que crucen a clínico, fonoaudiólogo y psicólogo optimizando el tiempo del empleado, y luego consolidar todo en un dossier digital listo para el cliente corporativo."
+          },
+          {
+            "type": "text",
+            "span": "1x1",
+            "tier": "offering",
+            "offeringIndex": 1,
+            "eyebrow": "Ciclo BUILD",
+            "heading": "Sitio web responsive",
+            "body": "Identidad digital que comunica el alcance multidisciplinario y las sedes a las empresas clientes."
+          },
+          {
+            "type": "text",
+            "span": "1x1",
+            "tier": "offering",
+            "offeringIndex": 2,
+            "eyebrow": "Ciclo BUILD",
+            "heading": "Implementación de Macizo Chat",
+            "body": "Recepción virtual que orienta, agenda y responde por WhatsApp, integrada al circuito de atención."
+          },
+          {
+            "type": "text",
+            "span": "1x1",
+            "tier": "offering",
+            "offeringIndex": 3,
+            "eyebrow": "Ciclo BUILD",
+            "heading": "Orquestación de agendas multidisciplinarias",
+            "body": "Un algoritmo que programa los exámenes preocupacionales con múltiples especialistas, optimizando el tiempo del empleado en el centro."
+          },
+          {
+            "type": "text",
+            "span": "3x1",
+            "tier": "future",
+            "eyebrow": "Build & Run · desarrollos tentativos",
+            "heading": "Lo que el modelo habilita después",
+            "body": "Desarrollos que elevan la calidad del servicio corporativo, sumados según prioridad.",
+            "bullets": [
+              "Generador de dossier \"Apto Médico\" — consolida los informes de cada profesional en un legajo único",
+              "Cuestionarios anamnésicos digitales — formularios por WhatsApp antes del turno",
+              "Auditoría de ausentismo — certificados, visitas domiciliarias y justificación centralizada",
+              "Bot de orientación logística — indica sucursal y circuito de atención",
+              "Portal corporativo de legajos digitales — acceso seguro de las empresas a los aptos de su personal"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "ciudad-oeste",
+      "type": "book-section",
+      "label": "Ciudad Oeste",
+      "data": {
+        "title": "Ciudad Oeste — Centro Médico",
+        "subtitle": "El proyecto piloto del ecosistema, ya en marcha",
+        "accentColor": "#4f46e5",
+        "cards": [
+          {
+            "type": "text",
+            "span": "3x1",
+            "tier": "focus",
+            "eyebrow": "En desarrollo",
+            "heading": "El primer caso real donde se prueba toda la arquitectura del grupo",
+            "body": "Ciudad Oeste es el punto de partida: el sistema de turnos, Macizo Chat y la capacitación de profesionales se construyen primero acá. Lo que validamos en este centro se reutiliza después en LABAC, Dinatec y LABTEC sin volver a empezar de cero."
+          },
+          {
+            "type": "text",
+            "span": "half",
+            "tier": "offering",
+            "offeringIndex": 1,
+            "eyebrow": "En desarrollo",
+            "heading": "Sistema de turnos",
+            "body": "Gestión de reservas y agenda de profesionales, integrada al flujo de atención y al chat. Es la primera pieza que se está construyendo."
+          },
+          {
+            "type": "text",
+            "span": "half",
+            "tier": "offering",
+            "offeringIndex": 2,
+            "eyebrow": "En desarrollo",
+            "heading": "Onboarding y capacitación para profesionales",
+            "body": "Plataforma para sumar y formar profesionales con rapidez, reduciendo la curva de adopción del nuevo sistema."
+          },
+          {
+            "type": "text",
+            "span": "half",
+            "tier": "offering",
+            "offeringIndex": 3,
+            "eyebrow": "En desarrollo",
+            "heading": "Implementación de Macizo Chat",
+            "body": "El asistente omnicanal que estrena la arquitectura EDA acá y luego escala al resto del grupo sin rehacerse."
+          },
+          {
+            "type": "text",
+            "span": "half",
+            "tier": "offering",
+            "offeringIndex": 4,
+            "eyebrow": "En desarrollo",
+            "heading": "Historia clínica bioquímica interactiva",
+            "body": "Portal donde el paciente sigue la evolución de sus marcadores; el primer caso real que después heredan los laboratorios del grupo."
+          },
+          {
+            "type": "text",
+            "span": "3x1",
+            "tier": "future",
+            "eyebrow": "Build & Run · desarrollos tentativos",
+            "heading": "Lo que el modelo habilita después",
+            "body": "El piloto abre la puerta a módulos que después heredan las demás empresas.",
+            "bullets": [
+              "Sitio web y rebranding — identidad digital del centro, base del resto del grupo",
+              "Portal del paciente — turnos, resultados e indicaciones en un solo lugar",
+              "Recordatorios automatizados de turnos — confirmación y reprogramación para bajar el ausentismo",
+              "Tablero de métricas de atención — demanda, ocupación y tiempos para la gestión",
+              "Telemedicina y seguimiento remoto — consultas y controles sin que el paciente viaje al centro"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "inversion",
+      "type": "book-section",
+      "label": "Inversión y Compromiso",
+      "data": {
+        "title": "Estructura de Inversión y Compromiso",
+        "subtitle": "Un abono del grupo repartido entre 5 negocios — el costo por empresa es el dato clave",
+        "layout": "investment",
+        "accentColor": "#1a5c38",
+        "investment": {
+          "heroEyebrow": "Inversión BUILD · lo que paga cada negocio",
+          "heroAmount": "≈ USD 500",
+          "heroBody": "Durante la fase BUILD, cada una de las 5 empresas del grupo invierte alrededor de USD 500 al mes. Por ese valor recibe desarrollo dedicado sobre sus prioridades: sitio, Macizo Chat, sistemas a medida y roadmap compartido con un solo socio técnico.",
+          "heroFormula": "USD 2.500/mes (abono del grupo) ÷ 5 negocios = ≈ USD 500/mes por empresa",
+          "businessesCount": 5,
+          "phases": [
+            {
+              "id": "build",
+              "title": "Fase BUILD",
+              "duration": "6 a 9 meses",
+              "groupAmount": "USD 2.500",
+              "groupDetail": "Abono mensual del grupo · 20 hs/semana de desarrollo",
+              "perCompanyAmount": "≈ USD 500",
+              "perCompanyDetail": "3 proyectos principales + roadmap",
+              "includes": [
+                "20 hs/semana orientadas por las prioridades del grupo",
+                "RRHH, UX/UI, desarrollo, salud, capacitación e IA incluidos",
+                "Entregas ciclo a ciclo · prioridades cambian, el abono no",
+                "Un solo interlocutor técnico para las 5 empresas"
+              ]
+            },
+            {
+              "id": "run",
+              "title": "Fase RUN",
+              "duration": "Continuo",
+              "groupAmount": "USD 600",
+              "groupDetail": "Abono mensual del grupo · tras completar el roadmap",
+              "perCompanyAmount": "≈ USD 120",
+              "perCompanyDetail": "mantenimiento, soporte e IA",
+              "includes": [
+                "Monitoreo de infraestructura y uptime",
+                "Soporte, incidencias y evolución con IA",
+                "El ecosistema no se congela: investigación continua",
+                "Inversión de mantenimiento, no de construcción intensiva"
+              ]
+            }
+          ],
+          "contextHeading": "Inversión con fecha de caducidad, no un gasto permanente",
+          "contextBody": "El abono BUILD es la etapa de construcción intensiva: dura lo que tarde el roadmap (6 a 9 meses). Cuando todos los requerimientos están completos, el grupo pasa a RUN — un mantenimiento significativamente menor. Gerencia y RRHH auditan y priorizan; yo investigo el proceso real y ejecuto.",
+          "contextPoints": [
+            "Co-definido con Gerencia y RRHH: ustedes priorizan, yo investigo y construyo",
+            "La investigación del proceso real es condición de cada desarrollo",
+            "El abono no sube si cambian las prioridades: se redirige el esfuerzo",
+            "Al completar el roadmap, BUILD termina y entra RUN automáticamente"
+          ],
+          "deliverablesHeading": "Qué recibe cada negocio por ≈ USD 500/mes",
+          "deliverablesBody": "No es un ítem suelto: son tres proyectos principales por empresa, más un pipeline de desarrollos tentativos que entran según prioridad — todo sobre la misma base tecnológica del grupo.",
+          "deliverablesStats": [
+            { "value": "5", "label": "negocios" },
+            { "value": "15+", "label": "proyectos BUILD" },
+            { "value": "1", "label": "socio técnico" }
+          ]
+        },
+        "cards": [
+          {
+            "type": "chart",
+            "chartType": "area",
+            "span": "2x1",
+            "title": "Evolución del abono mensual",
+            "subtitle": "BUILD 6–9 meses → RUN continuo.",
+            "unit": "USD/mes",
+            "data": [
+              { "label": "BUILD m1-3", "value": 2500 },
+              { "label": "m4-6", "value": 2500 },
+              { "label": "m7-9", "value": 2500 },
+              { "label": "RUN", "value": 600 }
+            ]
+          },
+          {
+            "type": "chart",
+            "chartType": "donut",
+            "span": "1x1",
+            "title": "Foco del BUILD",
+            "subtitle": "Distribución estimada del esfuerzo.",
+            "unit": "%",
+            "data": [
+              { "label": "Orquestación IA / Macizo Chat", "value": 35 },
+              { "label": "Frontend & rebranding", "value": 25 },
+              { "label": "Sistema de turnos", "value": 25 },
+              { "label": "Integraciones", "value": 15 }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cierre",
+      "type": "closing",
+      "label": "Cierre",
+      "data": {
+        "ctaHeading": "Definamos la primera prioridad",
+        "ctaBody": "En el primer mes hay software funcionando. La inversión sigue las necesidades que elijan — escribime y arrancamos el primer ciclo.",
+        "summary": {
+          "intro": "Abono único del grupo, repartido entre 5 negocios. Total del grupo vs. costo por empresa, y qué se construye en cada una.",
+          "buildRunNote": {
+            "heading": "Build & Run · roadmap dinámico",
+            "body": "La inversión y el desarrollo están ligados a las necesidades que Gerencia y RRHH priorizan en cada ciclo. BUILD construye lo acordado; RUN mantiene y evoluciona cuando el roadmap está completo — sin pagar de más por lo que no se usa."
+          },
+          "companies": [
+            {
+              "name": "LABAC",
+              "tagline": "Laboratorio bioquímico",
+              "main": ["Sitio web responsive", "Macizo Chat", "Historia clínica interactiva"],
+              "future": ["Turnos", "Onboarding RRHH", "Portal B2B", "Trazabilidad de muestras", "OCR + triage"]
+            },
+            {
+              "name": "Dinatec",
+              "tagline": "Logística minera",
+              "main": ["Sitio web responsive", "Macizo Chat", "Compliance documental"],
+              "future": ["IoT predictivo", "App offline choferes", "Soporte técnico IA", "Alertas RRHH", "Trazabilidad de activos"]
+            },
+            {
+              "name": "LABTEC",
+              "tagline": "Medicina laboral",
+              "main": ["Sitio web responsive", "Macizo Chat", "Agendas multidisciplinarias"],
+              "future": ["Dossier Apto Médico", "Anamnesis digital", "Auditoría de ausentismo", "Bot de orientación", "Portal de legajos"]
+            },
+            {
+              "name": "Ciudad Oeste",
+              "tagline": "Centro médico · piloto",
+              "main": ["Sistema de turnos", "Onboarding profesionales", "Macizo Chat", "Historia clínica interactiva"],
+              "future": ["Sitio web & rebranding", "Portal del paciente", "Recordatorios de turnos", "Métricas de atención", "Telemedicina"]
+            },
+            {
+              "name": "5.ª empresa",
+              "tagline": "Del grupo · a definir",
+              "main": ["Alcance a relevar junto al directorio"],
+              "future": ["Sitio web responsive", "Macizo Chat", "Automatización a medida"]
+            }
+          ],
+          "pricing": {
+            "buildLabel": "BUILD",
+            "buildAmount": "USD 2.500/mes",
+            "buildPerCompany": "≈ USD 500/mes",
+            "buildDetail": "20 hs/semana · 6 a 9 meses",
+            "runLabel": "RUN",
+            "runAmount": "USD 600/mes",
+            "runPerCompany": "≈ USD 120/mes",
+            "runDetail": "Mantenimiento · soporte · IA"
+          }
+        }
+      }
+    }
+  ]
+}
