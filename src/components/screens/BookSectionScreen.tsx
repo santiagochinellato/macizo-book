@@ -191,7 +191,7 @@ function WireframeCardContent({ card }: { card: WireframeBookCard }) {
 function tierGroupLabel(tier: TextBookCardTier): string | null {
   switch (tier) {
     case "offering":
-      return "Qué ofrecemos · incluido en el abono";
+      return "Proyectos prioritarios · implementación";
     case "future":
       return "Oportunidades que ya intuimos";
     default:

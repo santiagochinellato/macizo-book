@@ -5,7 +5,7 @@
     "type": "propuesta",
     "number": "2026-GRP1",
     "title": "Transformación Digital y Eficiencia Operativa",
-    "subtitle": "Un socio tecnológico dedicado para LABAC, Dinatec, LABTEC y Ciudad Oeste",
+    "subtitle": "Consultoría y desarrollo dedicado para LABAC, Dinatec, LABTEC y Ciudad Oeste",
     "date": "2026-06-19",
     "validUntil": "2026-07-19",
     "status": "enviado",
@@ -41,7 +41,7 @@
       "label": "La Propuesta",
       "data": {
         "title": "La Propuesta",
-        "subtitle": "Cómo automatizar cinco empresas con un único presupuesto compartido.",
+        "subtitle": "Capacidad operativa dedicada para cinco negocios con un solo abono.",
         "cards": [
           {
             "type": "text",
@@ -49,9 +49,9 @@
             "accent": true,
             "eyebrow": "El Modelo de Trabajo",
             "heading": "No compran un sistema cerrado. Contratan la resolución continua de problemas.",
-            "body": "El grupo tiene cuatro empresas con el mismo cuello de botella: procesos que hoy dependen de recepcionistas, carga manual de datos o llamadas repetitivas. Esta propuesta plantea asignar una Capacidad Operativa Dedicada al grupo. En lugar de cotizar cinco sistemas por separado, ustedes pagan un único abono mensual. Gerencia y RRHH deciden qué problema de qué empresa es prioritario resolver cada mes. Si las urgencias del grupo cambian, el foco del trabajo cambia sin renegociar contratos.",
+            "body": "El grupo tiene cinco negocios con el mismo cuello de botella: procesos que hoy dependen de recepcionistas, carga manual de datos o llamadas repetitivas. Esta propuesta plantea asignar una Capacidad Operativa Dedicada al grupo. En lugar de cotizar cinco sistemas por separado, ustedes pagan un único abono mensual. Gerencia y RRHH deciden qué problema de qué empresa es prioritario resolver cada mes. Si las urgencias del grupo cambian, el foco del trabajo cambia sin renegociar contratos.",
             "bullets": [
-              "Una misma base tecnológica que se adapta a las cuatro empresas: construimos una vez, implementamos cinco.",
+              "Una base común que se adapta a cada negocio sin pagar cinco desarrollos aislados.",
               "El abono garantiza prioridad absoluta y resolución de problemas, no un producto empaquetado.",
               "Gerencia y RRHH dirigen el esfuerzo mensual hacia donde el impacto económico sea mayor."
             ]
@@ -61,9 +61,9 @@
             "span": "3x1",
             "eyebrow": "Cómo funciona el proceso",
             "heading": "Dos etapas: Igual que construir una clínica y luego administrarla.",
-            "body": "Para entender cómo se invierte el presupuesto, pensemos en la apertura de un centro médico. Primero está la etapa de Construcción y Equipamiento: requiere arquitectos, planos y mucha inversión inicial. Una vez que la clínica se inaugura, pasamos a la etapa de Operación: el volumen de obra baja, y nos enfocamos en que las máquinas funcionen, el personal atienda bien y todo fluya. Con el software sucede exactamente lo mismo.",
+            "body": "Para entender cómo se invierte el presupuesto, conviene pensar en la apertura de un centro médico. Primero está la etapa de construcción y equipamiento: arquitectos, planos y mucha inversión inicial. Una vez inaugurada la clínica, el foco pasa a la operación: el volumen de obra baja y la prioridad es que las máquinas funcionen, el personal atienda bien y todo fluya. Con el software sucede lo mismo.",
             "bullets": [
-              "Fase 1: Implementación (6 a 9 meses). Diseñamos y construimos la infraestructura que hoy no existe. Es intenso y el abono refleja ese volumen de trabajo.",
+              "Fase 1: Implementación (6 a 9 meses). Se diseña y construye la infraestructura que hoy no existe. Es intenso y el abono refleja ese volumen de trabajo.",
               "Fase 2: Operación y Mantenimiento (continuo). El sistema ya opera. El abono baja y cubre disponibilidad, soporte y ajustes menores — no el desarrollo de módulos nuevos, que se estima y aprueba aparte.",
               "El pasaje de la Fase 1 a la Fase 2 es automático una vez que los sistemas base están operativos."
             ]
@@ -82,15 +82,129 @@
             "icon": "Boxes",
             "value": "5",
             "label": "Empresas beneficiadas",
-            "description": "La inteligencia artificial que atiende en Ciudad Oeste es la misma base que coordina la logística en Dinatec."
+            "description": "El trabajo ya está en marcha en Ciudad Oeste (centro en apertura). La misma base escalará a LABAC, LABTEC y Dinatec."
           },
           {
             "type": "metric",
             "span": "1x1",
             "icon": "TrendingUp",
-            "value": "ROI",
-            "label": "Retorno de Inversión",
-            "description": "El costo del abono se recupera reduciendo turnos ausentes y recuperando horas del personal administrativo."
+            "value": "−40%",
+            "label": "Ausentismo objetivo",
+            "description": "Recordatorios automáticos y confirmación previa al turno: menos consultorios vacíos y menos tiempo perdido en recepción."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ciudad-oeste",
+      "type": "book-section",
+      "label": "Ciudad Oeste",
+      "data": {
+        "title": "Ciudad Oeste — Centro Médico",
+        "subtitle": "Centro en apertura: junto a RRHH y Gerencia, la tecnología libera la atención humana desde el día uno.",
+        "accentColor": "#4f46e5",
+        "cards": [
+          {
+            "type": "text",
+            "span": "3x1",
+            "tier": "focus",
+            "eyebrow": "Centro en apertura",
+            "heading": "El estándar de calidad del grupo se define antes de abrir las puertas.",
+            "body": "Ciudad Oeste todavía no atiende pacientes, pero ya concentra el trabajo conjunto con RRHH y Gerencia para definir un estándar de calidad antes de la apertura. Desde el primer día el foco está en optimizar la atención humana y operativa. Lo que se diseña y estabiliza aquí puede replicarse en el resto del grupo."
+          },
+          {
+            "type": "text",
+            "span": "3x1",
+            "eyebrow": "Atención humana primero",
+            "heading": "Tecnología al servicio de la calidez, no en su reemplazo.",
+            "body": "Un recepcionista menos atado al teléfono, al WhatsApp y al mail. Procesos como la impresión de órdenes y recetas optimizados para que el equipo mire a la persona, no a la pantalla. Desde el primer día se establece un estándar de trabajo: la tecnología como herramienta, con métricas y oportunidades de mejora de forma continua.",
+            "bullets": [
+              "Canales digitales absorben lo rutinario; recepción enfocada en la atención presencial y casos complejos.",
+              "Flujos de impresión y documentación ágiles para no hacer esperar al paciente en el mostrador.",
+              "Métricas desde la apertura: tiempos de espera, ocupación y fricciones detectadas en tiempo real."
+            ]
+          },
+          {
+            "type": "metric",
+            "span": "1x1",
+            "icon": "Globe",
+            "value": "Listo",
+            "label": "Sitio web · diseño",
+            "description": "Arquitectura y diseño definidos. En curso: integración de imágenes pendientes de definición con el directorio."
+          },
+          {
+            "type": "metric",
+            "span": "1x1",
+            "icon": "CalendarClock",
+            "value": "80%",
+            "label": "Sistema de turnos web",
+            "description": "Interfaz operativa lista. Base del flujo de recepción para el día de apertura."
+          },
+          {
+            "type": "image",
+            "span": "1x1",
+            "src": "/logos/ciudad-oeste/Gemini_Generated_Image_riv51lriv51lriv5.png",
+            "alt": "Ciudad Oeste Centro Médico — render exterior",
+            "badge": "En construcción",
+            "caption": "Centro médico — apertura próxima"
+          },
+          {
+            "type": "text",
+            "span": "half",
+            "tier": "offering",
+            "offeringIndex": 1,
+            "eyebrow": "En curso",
+            "heading": "Sitio web",
+            "body": "Diseño y arquitectura listos. Pendiente la definición de imágenes con el directorio para cerrar la pieza digital de cara a la apertura."
+          },
+          {
+            "type": "text",
+            "span": "half",
+            "tier": "offering",
+            "offeringIndex": 2,
+            "eyebrow": "En curso · ~80%",
+            "heading": "Sistema de turnos web",
+            "body": "La interfaz del sistema de turnos web está operativa y lista para recepción. Es la columna vertebral del día a día del centro desde la primera consulta."
+          },
+          {
+            "type": "text",
+            "span": "half",
+            "tier": "offering",
+            "offeringIndex": 3,
+            "eyebrow": "Planificado",
+            "heading": "Onboarding de profesionales",
+            "body": "Incorporar a cada médico al estándar del centro antes de la apertura: protocolos, uso del sistema y forma de trabajar acordada con RRHH."
+          },
+          {
+            "type": "text",
+            "span": "half",
+            "tier": "offering",
+            "offeringIndex": 4,
+            "eyebrow": "Planificado",
+            "heading": "Asistente inteligente",
+            "body": "Canal 24/7 para agendar, responder preguntas frecuentes y derivar emergencias. Libera a recepción para la atención presencial."
+          },
+          {
+            "type": "text",
+            "span": "half",
+            "tier": "offering",
+            "offeringIndex": 5,
+            "eyebrow": "Planificado",
+            "heading": "Historia clínica",
+            "body": "Registro seguro desde el primer paciente. Se valida con los profesionales que el estándar tecnológico acompaña la consulta, no la interrumpe."
+          },
+          {
+            "type": "text",
+            "span": "3x1",
+            "tier": "future",
+            "eyebrow": "Sin relevamiento profundo",
+            "heading": "Después de lo crítico, estas mejoras están en el radar",
+            "body": "Antes de la apertura y más allá de sitio web y turnos, ya se intuyen retención de pacientes, métricas para gerencia y evolución de la experiencia. Pueden extender el plan de construcción o evaluarse después. No forman parte del abono de mantenimiento: si se encaran en Fase 2, se presupuestan por horas de trabajo.",
+            "bullets": [
+              "Recordatorios automáticos — confirmación previa al turno para reducir ausentismo desde el primer mes.",
+              "Tablero de métricas directivas — ocupación de consultorios, tiempos de espera y proyección operativa.",
+              "Telemedicina y canales de seguimiento — ampliar la atención sin saturar recepción."
+            ]
           }
         ]
       }
@@ -137,7 +251,7 @@
             "offeringIndex": 3,
             "eyebrow": "Proyecto 3",
             "heading": "Portal del Paciente",
-            "body": "Un espacio donde el paciente puede ver el histórico de sus laboratorios. Un servicio de alto valor percibido que fideliza al paciente y diferencia a LABAC en Bariloche."
+            "body": "Un espacio donde el paciente puede ver el histórico de sus laboratorios. Un servicio de alto valor percibido que fideliza al paciente y diferencia a LABAC en Salta."
           },
           {
             "type": "text",
@@ -145,7 +259,7 @@
             "tier": "future",
             "eyebrow": "Sin relevamiento profundo",
             "heading": "Después de lo crítico, estas mejoras están en el radar",
-            "body": "Una vez resueltos el asistente y el portal, estas son oportunidades que ya vemos en LABAC sin auditar cada puesto. El directorio puede sumarlas al plan de construcción — extendiendo la Fase 1 — o dejarlas para más adelante. No entran en el abono de mantenimiento: si se necesitan en Fase 2, se cotizan por horas de desarrollo.",
+            "body": "Una vez resuelto el asistente y el portal, estas son oportunidades que ya se ven en LABAC sin auditar cada puesto. El directorio puede sumarlas al plan de construcción — extendiendo la Fase 1 — o dejarlas para más adelante. No entran en el abono de mantenimiento: si se necesitan en Fase 2, se cotizan por horas de desarrollo.",
             "bullets": [
               "Trazabilidad de muestras a domicilio — control de la cadena de frío desde la casa a la sede.",
               "Onboarding digital para RRHH — capacitación automática para el nuevo personal de recepción.",
@@ -170,7 +284,7 @@
             "tier": "focus",
             "eyebrow": "El cuello de botella",
             "heading": "Perder un contrato minero por un documento vencido es un riesgo inaceptable.",
-            "body": "Las operadoras mineras exigen trazabilidad absoluta: VTV, seguros y habilitaciones de cada módulo y vehículo al día. Hoy, gestionar eso por correo y planillas es lento y riesgoso. El impacto financiero de esta implementación es directo: un portal donde el cliente corporativo audita el compliance de Dinatec en tiempo real, garantizando la continuidad de los contratos comerciales."
+            "body": "Las operadoras mineras exigen trazabilidad absoluta: VTV, seguros y habilitaciones de cada módulo y vehículo al día. Hoy, gestionar eso por correo y planillas es lento y riesgoso. El impacto financiero de esta implementación es directo: un portal donde el cliente corporativo audita el cumplimiento normativo de Dinatec en tiempo real, garantizando la continuidad de los contratos comerciales."
           },
           {
             "type": "text",
@@ -207,7 +321,7 @@
             "heading": "Después de lo crítico, estas mejoras están en el radar",
             "body": "Más allá del sitio, el asistente y el portal de compliance, estos procesos ya se intuirían en Dinatec. Pueden incorporarse al plan de construcción si el directorio las prioriza, o quedar en espera. No son parte del abono de mantenimiento: un desarrollo de esta envergadura se estima por horas aparte.",
             "bullets": [
-              "App Offline para Choferes — checklists de seguridad y manifiestos que funcionan sin señal en la Puna y sincronizan al encontrar red.",
+              "App offline para choferes — checklists de seguridad y manifiestos que funcionan sin señal en la Puna y sincronizan al encontrar red.",
               "Asistente Técnico con IA — los operarios le preguntan a WhatsApp sobre manuales de mantenimiento de los módulos.",
               "Alertas de RRHH — notificaciones predictivas de vencimientos de licencias de conducir y permisos del personal."
             ]
@@ -276,75 +390,6 @@
       }
     },
     {
-      "id": "ciudad-oeste",
-      "type": "book-section",
-      "label": "Ciudad Oeste",
-      "data": {
-        "title": "Ciudad Oeste — Centro Médico",
-        "subtitle": "El caso de éxito que define el estándar de atención del grupo",
-        "accentColor": "#4f46e5",
-        "cards": [
-          {
-            "type": "text",
-            "span": "3x1",
-            "tier": "focus",
-            "eyebrow": "El Piloto del Grupo",
-            "heading": "Si funciona en Ciudad Oeste, el grupo entero capitaliza la inversión.",
-            "body": "Empezar la implementación aquí es estratégico: el volumen de pacientes es alto y los procesos son representativos. El sistema de turnos, el WhatsApp IA y la historia clínica que logremos estabilizar aquí, serán el 'cerebro' que heredarán LABAC y LABTEC semanas después. Este es el campo de pruebas donde construimos el motor del grupo."
-          },
-          {
-            "type": "text",
-            "span": "half",
-            "tier": "offering",
-            "offeringIndex": 1,
-            "eyebrow": "Proyecto 1 · Fase Activa",
-            "heading": "Sistema Central de Turnos",
-            "body": "El núcleo de la clínica. Gestión de agendas de médicos, bloqueo de feriados y vacaciones, e interfaz de uso intuitivo para el equipo de recepción."
-          },
-          {
-            "type": "text",
-            "span": "half",
-            "tier": "offering",
-            "offeringIndex": 2,
-            "eyebrow": "Proyecto 2 · Fase Activa",
-            "heading": "Onboarding de Profesionales",
-            "body": "Cómo incorporar a un médico nuevo al sistema en 10 minutos, asegurando que sepa usar el software y siga los protocolos del centro."
-          },
-          {
-            "type": "text",
-            "span": "half",
-            "tier": "offering",
-            "offeringIndex": 3,
-            "eyebrow": "Proyecto 3 · Fase Activa",
-            "heading": "Asistente Inteligente",
-            "body": "El primer despliegue real de Macizo Chat: la IA atendiendo pacientes, agendando y derivando emergencias a humanos."
-          },
-          {
-            "type": "text",
-            "span": "half",
-            "tier": "offering",
-            "offeringIndex": 4,
-            "eyebrow": "Proyecto 4 · Fase Activa",
-            "heading": "Historia Clínica",
-            "body": "Registro seguro e integral de la atención del paciente. El primer módulo que validará la usabilidad por parte de los profesionales médicos."
-          },
-          {
-            "type": "text",
-            "span": "3x1",
-            "tier": "future",
-            "eyebrow": "Sin relevamiento profundo",
-            "heading": "Después de lo crítico, estas mejoras están en el radar",
-            "body": "Con turnos, onboarding, asistente e historia clínica cubiertos, estas mejoras ya se intuirían en Ciudad Oeste: retención, métricas y experiencia del paciente. Pueden sumarse al plan de build o quedar para decidir más adelante. No forman parte del abono de mantenimiento: si se encaran en Fase 2, se presupuestan por horas de trabajo.",
-            "bullets": [
-              "Recordatorios automáticos — confirmación obligatoria 24hs antes para desplomar la tasa de ausentismo médico.",
-              "Tablero de métricas directivas — ocupación de consultorios, tiempos de espera y facturación proyectada.",
-              "Rebranding e identidad — actualización visual del centro basada en la nueva dinámica de atención digital."
-            ]
-          }
-        ]
-      }
-    },
-    {
       "id": "metodologia",
       "type": "roadmap",
       "label": "Cómo Trabajamos",
@@ -357,8 +402,9 @@
             "duration": "Equivale a construir y equipar la infraestructura.",
             "tasks": [
               "Capacidad operativa dedicada en exclusiva a construir la base tecnológica de las empresas del grupo.",
-              "Auditoría Directiva: No construimos a ciegas. Me siento con RRHH y Gerencia a auditar el proceso real antes de proponer el sistema.",
-              "El Directorio manda: Ustedes deciden mes a mes qué empresa o proceso es la urgencia. Mi trabajo se adapta a la prioridad del negocio.",
+              "Trabajo activo en Ciudad Oeste: junto a RRHH y Gerencia se define el estándar operativo del centro antes de la apertura.",
+              "Auditoría directiva: no se construye a ciegas. El equipo audita con RRHH y Gerencia el proceso real antes de proponer el sistema.",
+              "El Directorio manda: ustedes deciden mes a mes qué empresa o proceso es la urgencia. El trabajo se adapta a la prioridad del negocio.",
               "Regla de Flujo Continuo: Cero tiempos muertos. Si LABAC demora en entregar información, el esfuerzo salta automáticamente a avanzar con Dinatec. El presupuesto que pagan jamás queda ocioso."
             ]
           },
@@ -376,13 +422,13 @@
           }
         ],
         "technologies": [
-          { "name": "Resolución vs Alcance Fijo", "description": "Si durante el proceso descubrimos que una empresa necesita algo distinto a lo planeado, giramos hacia allá. Evaluamos el problema real, no un pliego de requerimientos rígido." },
+          { "name": "Resolución vs Alcance Fijo", "description": "Si durante el proceso surge que una empresa necesita algo distinto a lo planeado, el foco se redirige. Se evalúa el problema real, no un pliego de requerimientos rígido." },
           { "name": "Next.js & TypeScript", "description": "Tecnología de grado corporativo, la misma que usan las plataformas financieras, para garantizar velocidad extrema y cero caídas de servicio." },
           { "name": "IA & Automatización", "description": "Motores de IA integrados por API (Macizo Chat) para eliminar tareas repetitivas." }
         ],
         "clientRequirements": [
           "Definir un interlocutor del directorio para marcar la prioridad mes a mes.",
-          "Abrir las puertas a la auditoría: dejarme ver cómo trabajan hoy los recepcionistas y administrativos para entender la fricción.",
+          "Abrir las puertas a la auditoría: permitir observar cómo trabajan hoy los recepcionistas y administrativos para entender la fricción.",
           "No detener la marcha: agilidad interna para validar las etapas y no frenar la implementación global."
         ]
       }
@@ -401,9 +447,9 @@
             "accent": true,
             "eyebrow": "Reglas Claras",
             "heading": "El Abono paga el trabajo intelectual y operativo. No paga los insumos tecnológicos.",
-            "body": "Es vital separar la mano de obra de los materiales. Mi abono mensual (ya sea de Implementación o de Operación) cubre todo mi tiempo, mi experiencia y mi desarrollo de código. Los servicios externos que esos sistemas necesitan para estar en internet o enviar mensajes de WhatsApp son el equivalente a 'pagar la luz y el agua' de una clínica. Esos consumos se pagan directamente a los proveedores externos según el volumen de pacientes que tengan.",
+            "body": "Es vital separar la mano de obra de los materiales. El abono mensual (ya sea de implementación o de mantenimiento) cubre el tiempo, la experiencia y el desarrollo de código acordados. Los servicios externos que esos sistemas necesitan para estar en internet o enviar mensajes de WhatsApp son el equivalente a pagar la luz y el agua de una clínica. Esos consumos se abonan directamente a los proveedores externos según el volumen de pacientes.",
             "bullets": [
-              "Transparencia: Yo no revendo servidores ni cobro un recargo sobre WhatsApp. Ustedes son dueños de sus propias cuentas corporativas.",
+              "Transparencia: no se revenden servidores ni se cobra recargo sobre WhatsApp. El grupo es dueño de sus propias cuentas corporativas.",
               "Pago por consumo: Pagan a proveedores externos (como Meta o servidores en la nube) exactamente por la cantidad de datos que usen ese mes.",
               "Nada se activa sin aviso: Antes de integrar cualquier herramienta externa que tenga costo, se cotiza, se aprueba con el directorio y recién ahí se implementa."
             ]
@@ -412,7 +458,7 @@
             "type": "text",
             "span": "half",
             "eyebrow": "SÍ ESTÁ INCLUIDO EN EL ABONO",
-            "heading": "Mi trabajo profesional",
+            "heading": "Trabajo profesional incluido",
             "body": "En Fase 1: construcción de los proyectos prioritarios. En Fase 2: operar, sostener y ajustar lo ya construido.",
             "bullets": [
               "Auditoría y reuniones estratégicas con RRHH y Directorio.",
@@ -440,9 +486,9 @@
             "accent": true,
             "eyebrow": "Mantenimiento vs desarrollo nuevo",
             "heading": "En Fase 2 el abono mantiene el sistema; un módulo grande se cotiza por horas",
-            "body": "Es la diferencia entre hacer que lo construido siga funcionando y encarar una funcionalidad nueva desde cero. Las oportunidades que listamos en cada empresa — OCR, app offline, tablero de métricas — pueden extender la construcción o quedar para después; si se piden ya en mantenimiento, no entran en el abono reducido: se estiman horas de trabajo y el directorio aprueba antes de empezar.",
+            "body": "Es la diferencia entre hacer que lo construido siga funcionando y encarar una funcionalidad nueva desde cero. Las oportunidades descritas en cada empresa — OCR, app offline, tablero de métricas — pueden extender la construcción o quedar para después; si se piden ya en mantenimiento, no entran en el abono reducido: se estiman horas de trabajo y el directorio aprueba antes de empezar.",
             "bullets": [
-              "Mantenimiento (incluido en Fase 2): el turnero deja de enviar SMS → lo corregimos; el asistente responde mal una pregunta frecuente → reentrenamos; cae el servidor un martes → lo levantamos.",
+              "Mantenimiento (incluido en Fase 2): el turnero deja de enviar SMS → se corrige; el asistente responde mal una pregunta frecuente → se reentrena; cae el servidor un martes → se restablece el servicio.",
               "Desarrollo nuevo (cotización aparte): app offline para choferes de Dinatec; lectura OCR de recetas en LABAC; portal B2B de legajos en LABTEC; tablero de métricas para gerencia en Ciudad Oeste.",
               "Regla práctica: si hay que diseñar y programar algo que hoy no existe, es desarrollo. Si es hacer que lo existente opere bien, es mantenimiento.",
               "Siempre con aviso: ningún desarrollo grande arranca sin estimación de horas y OK del directorio."
@@ -463,7 +509,7 @@
         "investment": {
           "heroEyebrow": "Retorno de Inversión vs. Costo Operativo",
           "heroAmount": "≈ USD 500",
-          "heroBody": "Pensemos en el costo oculto de la ineficiencia: ¿Cuánto dinero pierde Ciudad Oeste por pacientes que reservan y no asisten? ¿Cuántas horas extra paga LABTEC por personal administrativo cruzando agendas manuales? ¿Cuánto cuesta un contrato minero perdido en Dinatec por un papel vencido? La Fase de Implementación (USD 2.500 al mes para todo el grupo) es una fracción de ese dinero perdido. Al dividirlo, cada empresa invierte apenas USD 500 mensuales en construir una infraestructura que recuperará miles de dólares en horas operativas.",
+          "heroBody": "Conviene pensar en el costo oculto de la ineficiencia: ¿cuánto perderá Ciudad Oeste cuando abra si los pacientes reservan y no asisten? ¿Cuántas horas extra paga LABTEC por personal administrativo cruzando agendas manuales? ¿Cuánto cuesta un contrato minero perdido en Dinatec por un papel vencido? La fase de implementación (USD 2.500 al mes para todo el grupo) es una fracción de ese riesgo. Al dividirlo, cada empresa invierte apenas USD 500 mensuales en construir una infraestructura que recuperará miles de dólares en horas operativas.",
           "heroFormula": "USD 2.500/mes (abono de implementación) ÷ 5 negocios = ≈ USD 500/mes por empresa",
           "businessesCount": 5,
           "phases": [
@@ -478,7 +524,7 @@
               "includes": [
                 "Capacidad operativa dedicada para desarrollar la base del grupo de forma acelerada.",
                 "Auditoría profunda de procesos junto a RRHH antes de programar.",
-                "Cero riesgo de horas perdidas: si un negocio se frena, avanzamos con el siguiente.",
+                "Cero riesgo de horas perdidas: si un negocio se frena, el esfuerzo continúa con el siguiente.",
                 "Reunión de ciclo directiva para alinear el software con los objetivos de rentabilidad."
               ]
             },
@@ -498,12 +544,12 @@
               ]
             }
           ],
-          "contextHeading": "El Abono acompaña la curva de esfuerzo, no los ata financieramente",
-          "contextBody": "A diferencia de contratar una consultora tradicional que infla los costos a largo plazo, este modelo es honesto financieramente: requiere mayor inversión mientras levantamos los cimientos (Fase 1). Una vez que la maquinaria está trabajando sola y generando ahorro operativo para ustedes, mi esfuerzo se vuelve de control y soporte, y por ende, sus costos caen un 60% (Fase 2).",
+          "contextHeading": "El abono acompaña la curva de esfuerzo, no ahoga financieramente",
+          "contextBody": "A diferencia de contratar una consultora tradicional que infla los costos a largo plazo, este modelo es honesto financieramente: requiere mayor inversión mientras se levantan los cimientos (Fase 1). Una vez que la maquinaria opera sola y genera ahorro operativo, el esfuerzo pasa a control y soporte, y los costos caen un 60% (Fase 2).",
           "contextPoints": [
-            "Justificación del cambio de fase: Nadie paga eternamente por una obra que ya terminó.",
-            "Dirección Financiera: Ustedes deciden en qué empresa se vuelcan esos USD 2.500 este mes.",
-            "Escalabilidad Real: Un sistema que construimos para Ciudad Oeste, se hereda en LABAC. No pagan dos veces por la misma tecnología."
+            "Justificación del cambio de fase: nadie paga eternamente por una obra que ya terminó.",
+            "Dirección financiera: el directorio decide en qué empresa se vuelcan esos USD 2.500 cada mes.",
+            "Escalabilidad real: lo que se construye para Ciudad Oeste en su apertura se hereda en LABAC y LABTEC. No se paga dos veces por la misma tecnología."
           ],
           "deliverablesHeading": "El Impacto en el Negocio",
           "deliverablesBody": "Por la inversión indicada, las cinco empresas dejarán atrás el papel, Excel y el cruce manual de datos, escalando hacia operaciones predecibles y auditables.",
@@ -519,7 +565,7 @@
             "chartType": "area",
             "span": "2x1",
             "title": "Proyección Financiera del Abono",
-            "subtitle": "La caída del 60% en el abono ocurre al pasar a la Fase Operativa.",
+            "subtitle": "La caída del 60% en el abono ocurre al pasar a la fase de Mantenimiento.",
             "unit": "USD/mes",
             "data": [
               { "label": "Implementación (6-9m)", "value": 2500 },
@@ -548,15 +594,21 @@
       "type": "closing",
       "label": "Cierre",
       "data": {
-        "ctaHeading": "El primer paso: Definir dónde frenamos la ineficiencia.",
-        "ctaBody": "El proceso no empieza con un contrato técnico, empieza con una conversación de negocios. Nos sentamos con el Directorio y RRHH, miramos el mapa de las cinco empresas y decidimos: ¿Dónde estamos perdiendo más horas u oportunidades hoy? Ese será el objetivo del primer mes de Implementación.",
+        "ctaHeading": "El primer paso: acordar el primer objetivo con Directorio y RRHH.",
+        "ctaBody": "El proceso no empieza con un contrato técnico, sino con una conversación de negocios. Directorio y RRHH revisan el mapa de las cinco empresas y definen la prioridad: ¿dónde se pierden más horas u oportunidades hoy? Ese será el objetivo del primer mes de implementación.",
         "summary": {
-          "intro": "Cinco negocios, una plataforma común. Proyectos prioritarios para la implementación y, debajo, oportunidades que intuimos — pueden extender la construcción o evaluarse después; en mantenimiento no se incluyen automáticamente.",
+          "intro": "Cinco negocios, una plataforma común. Proyectos prioritarios para la implementación y, debajo, oportunidades identificadas en cada negocio — pueden extender la construcción o evaluarse después; en mantenimiento no se incluyen automáticamente.",
           "buildRunNote": {
             "heading": "Implementación y Operación: El pago se ajusta al ritmo del negocio",
             "body": "Fase 1 (Implementación): Inversión intensiva de USD 2.500 mensuales (entre 6 y 9 meses) para construir la arquitectura base. Fase 2 (Mantenimiento): Inversión de USD 1.000 mensuales para proteger el sistema, sostener la IA y resolver incidentes — no para construir módulos nuevos, que se estiman por horas. Los insumos externos (servidores, APIs) son costos de infraestructura a cargo de la empresa, independientes a este abono."
           },
           "companies": [
+            {
+              "name": "Ciudad Oeste",
+              "tagline": "Centro en apertura",
+              "main": ["Sitio web (diseño listo, en curso)", "Sistema de turnos web (~80%)", "Onboarding de profesionales", "Asistente inteligente", "Historia clínica"],
+              "future": ["Recordatorios anti-ausentismo", "Tablero de métricas", "Telemedicina"]
+            },
             {
               "name": "LABAC",
               "tagline": "Laboratorio bioquímico",
@@ -574,12 +626,6 @@
               "tagline": "Medicina laboral",
               "main": ["Sitio web B2B", "Asistente Corporativo", "Motor de Turnos Múltiples"],
               "future": ["Apto Médico Digital", "Anamnesis pre-turno", "Auditoría ausentismo", "Portal corporativo"]
-            },
-            {
-              "name": "Ciudad Oeste",
-              "tagline": "Piloto de estandarización",
-              "main": ["Sistema Central de Turnos", "Onboarding de médicos", "Asistente IA", "Historia clínica"],
-              "future": ["Recordatorios anti-ausentismo", "Tablero de métricas", "Rebranding", "Telemedicina"]
             },
             {
               "name": "5.ª empresa",
