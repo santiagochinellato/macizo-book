@@ -69,6 +69,18 @@
             ]
           },
           {
+            "type": "text",
+            "span": "3x1",
+            "eyebrow": "Gestión del trabajo",
+            "heading": "Ciclos mensuales cerrados: el directorio asigna la capacidad, no cuenta proyectos.",
+            "body": "En lugar de atar el alcance a un pliego rígido, el modelo usa capacidad operativa por ciclos mensuales (marco ágil tipo Scrum). A principio de mes, Directorio y el equipo revisan el backlog — la lista de necesidades de todo el grupo. Si el mes representa un tanque al 100% de capacidad y el sistema de turnos de Ciudad Oeste consume el 70%, el directorio decide en qué empresa invertir el 30% restante. Una vez acordado, el ciclo se cierra y el desarrollo avanza sin distracciones.",
+            "bullets": [
+              "Reunión de priorización mensual: el directorio tiene visibilidad y control total del esfuerzo.",
+              "Blindaje contra interrupciones: si a mitad de mes surge una idea nueva, no frena el trabajo actual; se anota en el backlog para el mes siguiente.",
+              "Esto protege la inversión: el presupuesto rinde en entregas funcionales y no se diluye en un goteo de tareas sueltas."
+            ]
+          },
+          {
             "type": "metric",
             "span": "1x1",
             "icon": "Clock",
@@ -90,7 +102,7 @@
             "icon": "TrendingUp",
             "value": "−40%",
             "label": "Ausentismo objetivo",
-            "description": "Recordatorios automáticos y confirmación previa al turno: menos consultorios vacíos y menos tiempo perdido en recepción."
+            "description": "Incluido en la implementación de Ciudad Oeste: recordatorios y confirmación previa al turno antes de la apertura."
           }
         ]
       }
@@ -128,9 +140,9 @@
             "type": "metric",
             "span": "1x1",
             "icon": "Globe",
-            "value": "Listo",
+            "value": "90%",
             "label": "Sitio web · diseño",
-            "description": "Arquitectura y diseño definidos. En curso: integración de imágenes pendientes de definición con el directorio."
+            "description": "Arquitectura y diseño definidos. Falta cerrar imágenes con el directorio para publicar."
           },
           {
             "type": "metric",
@@ -153,9 +165,9 @@
             "span": "half",
             "tier": "offering",
             "offeringIndex": 1,
-            "eyebrow": "En curso",
+            "eyebrow": "En curso · ~90%",
             "heading": "Sitio web",
-            "body": "Diseño y arquitectura listos. Pendiente la definición de imágenes con el directorio para cerrar la pieza digital de cara a la apertura."
+            "body": "Diseño y arquitectura definidos. Pendiente la definición de imágenes con el directorio para publicar la pieza digital de cara a la apertura."
           },
           {
             "type": "text",
@@ -195,13 +207,21 @@
           },
           {
             "type": "text",
+            "span": "half",
+            "tier": "offering",
+            "offeringIndex": 6,
+            "eyebrow": "Planificado · Fase 1",
+            "heading": "Recordatorios automáticos",
+            "body": "Confirmación previa al turno por WhatsApp o SMS antes de la apertura. Es la base del objetivo de reducir ausentismo y está incluida en la implementación del centro, no como desarrollo aparte."
+          },
+          {
+            "type": "text",
             "span": "3x1",
             "tier": "future",
             "eyebrow": "Sin relevamiento profundo",
             "heading": "Después de lo crítico, estas mejoras están en el radar",
-            "body": "Antes de la apertura y más allá de sitio web y turnos, ya se intuyen retención de pacientes, métricas para gerencia y evolución de la experiencia. Pueden extender el plan de construcción o evaluarse después. No forman parte del abono de mantenimiento: si se encaran en Fase 2, se presupuestan por horas de trabajo.",
+            "body": "Más allá del paquete de apertura, ya se intuyen evoluciones de experiencia y gestión. Pueden extender el plan de construcción o evaluarse después. No forman parte del abono de mantenimiento: si se encaran en Fase 2, se presupuestan por horas de trabajo.",
             "bullets": [
-              "Recordatorios automáticos — confirmación previa al turno para reducir ausentismo desde el primer mes.",
               "Tablero de métricas directivas — ocupación de consultorios, tiempos de espera y proyección operativa.",
               "Telemedicina y canales de seguimiento — ampliar la atención sin saturar recepción."
             ]
@@ -405,7 +425,8 @@
               "Trabajo activo en Ciudad Oeste: junto a RRHH y Gerencia se define el estándar operativo del centro antes de la apertura.",
               "Auditoría directiva: no se construye a ciegas. El equipo audita con RRHH y Gerencia el proceso real antes de proponer el sistema.",
               "El Directorio manda: ustedes deciden mes a mes qué empresa o proceso es la urgencia. El trabajo se adapta a la prioridad del negocio.",
-              "Regla de Flujo Continuo: Cero tiempos muertos. Si LABAC demora en entregar información, el esfuerzo salta automáticamente a avanzar con Dinatec. El presupuesto que pagan jamás queda ocioso."
+              "Capacidad de Ciclo: en la reunión mensual se asigna el 100% de la capacidad desde el backlog; lo acordado cierra el ciclo. Lo que surja después se agenda para el mes siguiente, no interrumpe lo en curso.",
+              "Regla de Flujo Continuo: Cero tiempos muertos. Si LABAC se frena por falta de definiciones internas, se levanta la mano y, con el OK del directorio, se redirigen las horas de esa semana a Dinatec. El presupuesto abonado jamás queda ocioso."
             ]
           },
           {
@@ -427,9 +448,10 @@
           { "name": "IA & Automatización", "description": "Motores de IA integrados por API (Macizo Chat) para eliminar tareas repetitivas." }
         ],
         "clientRequirements": [
-          "Definir un interlocutor del directorio para marcar la prioridad mes a mes.",
+          "Participar de la reunión mensual de planificación para definir cómo se invierte el 100% de la capacidad operativa del mes.",
+          "Respetar el ciclo cerrado: las nuevas ideas o cambios que surjan durante el mes se envían al backlog para evaluarse en el ciclo siguiente.",
           "Abrir las puertas a la auditoría: permitir observar cómo trabajan hoy los recepcionistas y administrativos para entender la fricción.",
-          "No detener la marcha: agilidad interna para validar las etapas y no frenar la implementación global."
+          "Designar un interlocutor para agilizar validaciones y no frenar la implementación de lo acordado en el mes."
         ]
       }
     },
@@ -524,7 +546,7 @@
               "includes": [
                 "Capacidad operativa dedicada para desarrollar la base del grupo de forma acelerada.",
                 "Auditoría profunda de procesos junto a RRHH antes de programar.",
-                "Cero riesgo de horas perdidas: si un negocio se frena, el esfuerzo continúa con el siguiente.",
+                "Cero riesgo de horas perdidas: si un negocio se frena, se propone al directorio redirigir el esfuerzo al siguiente.",
                 "Reunión de ciclo directiva para alinear el software con los objetivos de rentabilidad."
               ]
             },
@@ -594,8 +616,8 @@
       "type": "closing",
       "label": "Cierre",
       "data": {
-        "ctaHeading": "El primer paso: acordar el primer objetivo con Directorio y RRHH.",
-        "ctaBody": "El proceso no empieza con un contrato técnico, sino con una conversación de negocios. Directorio y RRHH revisan el mapa de las cinco empresas y definen la prioridad: ¿dónde se pierden más horas u oportunidades hoy? Ese será el objetivo del primer mes de implementación.",
+        "ctaHeading": "El primer paso: armar el primer backlog del mes con Directorio y RRHH.",
+        "ctaBody": "El proceso no empieza con un contrato técnico, sino con una reunión de negocios. Directorio y RRHH revisan el mapa de las cinco empresas y arman junto al equipo el primer backlog: ¿dónde se pierden más horas u oportunidades hoy? Se asigna peso a esos problemas, se llena el 100% de la capacidad del primer mes y comienza la implementación.",
         "summary": {
           "intro": "Cinco negocios, una plataforma común. Proyectos prioritarios para la implementación y, debajo, oportunidades identificadas en cada negocio — pueden extender la construcción o evaluarse después; en mantenimiento no se incluyen automáticamente.",
           "buildRunNote": {
@@ -606,8 +628,8 @@
             {
               "name": "Ciudad Oeste",
               "tagline": "Centro en apertura",
-              "main": ["Sitio web (diseño listo, en curso)", "Sistema de turnos web (~80%)", "Onboarding de profesionales", "Asistente inteligente", "Historia clínica"],
-              "future": ["Recordatorios anti-ausentismo", "Tablero de métricas", "Telemedicina"]
+              "main": ["Sitio web (~90%, en curso)", "Sistema de turnos web (~80%)", "Recordatorios automáticos (Fase 1)", "Onboarding de profesionales", "Asistente inteligente", "Historia clínica"],
+              "future": ["Tablero de métricas", "Telemedicina"]
             },
             {
               "name": "LABAC",

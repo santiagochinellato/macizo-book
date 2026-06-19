@@ -88,7 +88,7 @@ const textBookCardSchema = z.object({
   span: cardSpanSchema.optional(),
   accent: z.boolean().optional(),
   tier: z.enum(["focus", "offering", "future"]).optional(),
-  offeringIndex: z.number().int().min(1).max(5).optional(),
+  offeringIndex: z.number().int().min(1).max(6).optional(),
   bullets: z.array(z.string()).optional(),
 });
 
