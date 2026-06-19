@@ -193,7 +193,7 @@ function tierGroupLabel(tier: TextBookCardTier): string | null {
     case "offering":
       return "Qué ofrecemos · incluido en el abono";
     case "future":
-      return "Próximas mejoras";
+      return "Oportunidades que ya intuimos";
     default:
       return null;
   }
@@ -290,7 +290,7 @@ function TextCardContent({ card, sectionColor }: TextCardContentProps) {
     );
   }
 
-  // ── Tier: desarrollos futuros (Build & Run) ──
+  // ── Tier: oportunidades intuídas (parte del mapa de build, no RUN) ──
   if (card.tier === "future") {
     return (
       <div className="grid md:grid-cols-2 gap-x-8 gap-y-3 h-full">
@@ -298,7 +298,7 @@ function TextCardContent({ card, sectionColor }: TextCardContentProps) {
           {card.eyebrow && (
             <span
               className="text-[10px] font-bold uppercase tracking-widest"
-              style={{ color: "var(--text-subtle)" }}
+              style={{ color: sectionColor }}
             >
               {card.eyebrow}
             </span>

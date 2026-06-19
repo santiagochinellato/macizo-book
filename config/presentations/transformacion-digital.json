@@ -1,6 +1,6 @@
 {
   "slug": "transformacion-digital",
-  "version": 3,
+  "version": 2,
   "meta": {
     "type": "propuesta",
     "number": "2026-GRP1",
@@ -64,7 +64,7 @@
             "body": "Para entender cómo se invierte el presupuesto, pensemos en la apertura de un centro médico. Primero está la etapa de Construcción y Equipamiento: requiere arquitectos, planos y mucha inversión inicial. Una vez que la clínica se inaugura, pasamos a la etapa de Operación: el volumen de obra baja, y nos enfocamos en que las máquinas funcionen, el personal atienda bien y todo fluya. Con el software sucede exactamente lo mismo.",
             "bullets": [
               "Fase 1: Implementación (6 a 9 meses). Diseñamos y construimos la infraestructura que hoy no existe. Es intenso y el abono refleja ese volumen de trabajo.",
-              "Fase 2: Operación y Evolución (Continuo). El sistema ya atiende pacientes y gestiona logística. El costo baja, y el trabajo se enfoca en mantener todo en línea, seguro y sumando mejoras ágiles.",
+              "Fase 2: Operación y Mantenimiento (continuo). El sistema ya opera. El abono baja y cubre disponibilidad, soporte y ajustes menores — no el desarrollo de módulos nuevos, que se estima y aprueba aparte.",
               "El pasaje de la Fase 1 a la Fase 2 es automático una vez que los sistemas base están operativos."
             ]
           },
@@ -143,9 +143,9 @@
             "type": "text",
             "span": "3x1",
             "tier": "future",
-            "eyebrow": "Fase 2: Operación y Evolución",
-            "heading": "Qué se incorpora una vez que el sistema ya funciona",
-            "body": "Cuando el asistente y el portal estén operando, LABAC entra en la fase de Mantenimiento. El costo baja, pero la innovación continúa sumando herramientas según su necesidad:",
+            "eyebrow": "Sin relevamiento profundo",
+            "heading": "Después de lo crítico, estas mejoras están en el radar",
+            "body": "Una vez resueltos el asistente y el portal, estas son oportunidades que ya vemos en LABAC sin auditar cada puesto. El directorio puede sumarlas al plan de construcción — extendiendo la Fase 1 — o dejarlas para más adelante. No entran en el abono de mantenimiento: si se necesitan en Fase 2, se cotizan por horas de desarrollo.",
             "bullets": [
               "Trazabilidad de muestras a domicilio — control de la cadena de frío desde la casa a la sede.",
               "Onboarding digital para RRHH — capacitación automática para el nuevo personal de recepción.",
@@ -203,9 +203,9 @@
             "type": "text",
             "span": "3x1",
             "tier": "future",
-            "eyebrow": "Fase 2: Operación y Evolución",
-            "heading": "Qué se incorpora una vez que el sistema ya funciona",
-            "body": "Superada la implementación base, Dinatec pasará a la etapa operativa, habilitando el desarrollo de mejoras orientadas al trabajo en campo:",
+            "eyebrow": "Sin relevamiento profundo",
+            "heading": "Después de lo crítico, estas mejoras están en el radar",
+            "body": "Más allá del sitio, el asistente y el portal de compliance, estos procesos ya se intuirían en Dinatec. Pueden incorporarse al plan de construcción si el directorio las prioriza, o quedar en espera. No son parte del abono de mantenimiento: un desarrollo de esta envergadura se estima por horas aparte.",
             "bullets": [
               "App Offline para Choferes — checklists de seguridad y manifiestos que funcionan sin señal en la Puna y sincronizan al encontrar red.",
               "Asistente Técnico con IA — los operarios le preguntan a WhatsApp sobre manuales de mantenimiento de los módulos.",
@@ -263,9 +263,9 @@
             "type": "text",
             "span": "3x1",
             "tier": "future",
-            "eyebrow": "Fase 2: Operación y Evolución",
-            "heading": "Qué se incorpora una vez que el sistema ya funciona",
-            "body": "Con las agendas funcionando solas, LABTEC entra en la fase operativa de bajo costo, permitiendo sumar valor agregado para sus clientes B2B:",
+            "eyebrow": "Sin relevamiento profundo",
+            "heading": "Después de lo crítico, estas mejoras están en el radar",
+            "body": "Cuando el motor de turnos múltiples esté resuelto, estas necesidades ya se ven en LABTEC: legajos corporativos, preparación del paciente y reportes unificados. Pueden extender la fase de construcción o evaluarse después. En mantenimiento no se incluyen automáticamente: requieren cotización por horas si el directorio las activa.",
             "bullets": [
               "Generador de 'Apto Médico' — consolida los reportes aislados de cada especialista en un único PDF corporativo.",
               "Anamnesis Digital — el paciente completa sus antecedentes por WhatsApp el día antes del turno, agilizando la atención.",
@@ -332,9 +332,9 @@
             "type": "text",
             "span": "3x1",
             "tier": "future",
-            "eyebrow": "Fase 2: Operación y Evolución",
-            "heading": "Qué se incorpora una vez que el sistema ya funciona",
-            "body": "Cuando el centro médico esté funcionando sobre esta tecnología, entra en su fase de mantenimiento, reduciendo el presupuesto pero sumando funcionalidades de retención:",
+            "eyebrow": "Sin relevamiento profundo",
+            "heading": "Después de lo crítico, estas mejoras están en el radar",
+            "body": "Con turnos, onboarding, asistente e historia clínica cubiertos, estas mejoras ya se intuirían en Ciudad Oeste: retención, métricas y experiencia del paciente. Pueden sumarse al plan de build o quedar para decidir más adelante. No forman parte del abono de mantenimiento: si se encaran en Fase 2, se presupuestan por horas de trabajo.",
             "bullets": [
               "Recordatorios automáticos — confirmación obligatoria 24hs antes para desplomar la tasa de ausentismo médico.",
               "Tablero de métricas directivas — ocupación de consultorios, tiempos de espera y facturación proyectada.",
@@ -365,13 +365,13 @@
           {
             "id": "run",
             "number": 2,
-            "title": "Fase 2: Operación y Evolución (Continuo)",
+            "title": "Fase 2: Operación y Mantenimiento (Continuo)",
             "duration": "Equivale a administrar la infraestructura en el día a día.",
             "tasks": [
               "Por qué se paga esta etapa: Un sistema de salud no puede depender de un software sin respaldo. Esta fase es el 'seguro de vida' tecnológico del grupo.",
               "Monitoreo crítico: Garantizar que los servidores, la base de datos de pacientes y el sistema de turnos estén en línea las 24 horas.",
               "Ajuste de IA: Analizar qué preguntan los pacientes y entrenar al asistente de WhatsApp para que responda cada vez mejor.",
-              "Soporte y mejoras: Resolución inmediata si algo falla, y desarrollo de pequeños ajustes operativos que pida recepción o RRHH."
+              "Soporte y ajustes menores: Resolver incidentes y cambios chicos (textos, permisos, configuración). Los desarrollos grandes se estiman y aprueban por separado."
             ]
           }
         ],
@@ -393,7 +393,7 @@
       "label": "Alcance del Abono",
       "data": {
         "title": "Claridad Financiera",
-        "subtitle": "Qué incluye mi abono profesional y qué pagan ustedes por fuera",
+        "subtitle": "Qué incluye el abono, qué pagan por fuera y cómo se separa mantenimiento de desarrollo nuevo",
         "cards": [
           {
             "type": "text",
@@ -413,12 +413,12 @@
             "span": "half",
             "eyebrow": "SÍ ESTÁ INCLUIDO EN EL ABONO",
             "heading": "Mi trabajo profesional",
-            "body": "Todo lo que sale de mi cerebro y mis manos está cubierto al 100%.",
+            "body": "En Fase 1: construcción de los proyectos prioritarios. En Fase 2: operar, sostener y ajustar lo ya construido.",
             "bullets": [
               "Auditoría y reuniones estratégicas con RRHH y Directorio.",
-              "Arquitectura y programación de todos los sistemas y sitios web.",
+              "Arquitectura y programación de los sistemas acordados en implementación.",
               "Configuración y entrenamiento de la Inteligencia Artificial.",
-              "Soporte técnico, mantenimiento y resolución de caídas."
+              "Mantenimiento: monitoreo, soporte, corrección de fallas y ajustes menores (textos, permisos, configuración)."
             ]
           },
           {
@@ -432,6 +432,20 @@
               "Consumo de WhatsApp Business API (Meta cobra centavos por cada mensaje enviado/recibido).",
               "Consumo de los motores de Inteligencia Artificial (por tokens procesados).",
               "Sistemas de validación de identidad o pasarelas de pago (si deciden cobrar turnos online)."
+            ]
+          },
+          {
+            "type": "text",
+            "span": "3x1",
+            "accent": true,
+            "eyebrow": "Mantenimiento vs desarrollo nuevo",
+            "heading": "En Fase 2 el abono mantiene el sistema; un módulo grande se cotiza por horas",
+            "body": "Es la diferencia entre hacer que lo construido siga funcionando y encarar una funcionalidad nueva desde cero. Las oportunidades que listamos en cada empresa — OCR, app offline, tablero de métricas — pueden extender la construcción o quedar para después; si se piden ya en mantenimiento, no entran en el abono reducido: se estiman horas de trabajo y el directorio aprueba antes de empezar.",
+            "bullets": [
+              "Mantenimiento (incluido en Fase 2): el turnero deja de enviar SMS → lo corregimos; el asistente responde mal una pregunta frecuente → reentrenamos; cae el servidor un martes → lo levantamos.",
+              "Desarrollo nuevo (cotización aparte): app offline para choferes de Dinatec; lectura OCR de recetas en LABAC; portal B2B de legajos en LABTEC; tablero de métricas para gerencia en Ciudad Oeste.",
+              "Regla práctica: si hay que diseñar y programar algo que hoy no existe, es desarrollo. Si es hacer que lo existente opere bien, es mantenimiento.",
+              "Siempre con aviso: ningún desarrollo grande arranca sin estimación de horas y OK del directorio."
             ]
           }
         ]
@@ -470,17 +484,17 @@
             },
             {
               "id": "run",
-              "title": "Fase 2: Operación y Evolución",
+              "title": "Fase 2: Operación y Mantenimiento",
               "duration": "El 'Seguro de Vida' del sistema (Continuo)",
               "groupAmount": "USD 1.000",
               "groupDetail": "Abono mensual del grupo una vez superada la implementación base",
               "perCompanyAmount": "≈ USD 200",
-              "perCompanyDetail": "El costo de mantener todo seguro, en línea y mejorando",
+              "perCompanyDetail": "El costo de mantener todo seguro, en línea y operativo",
               "includes": [
-                "Por qué pagar el Run: Las clínicas y logísticas no pueden tener caídas de sistema.",
+                "Por qué pagar el mantenimiento: Las clínicas y logísticas no pueden tener caídas de sistema.",
                 "Monitoreo 24/7 de la base de datos y la nube corporativa.",
-                "Evolución y entrenamiento mensual del asistente de Inteligencia Artificial.",
-                "Atención prioritaria y desarrollo de mejoras ágiles en el día a día."
+                "Entrenamiento y ajuste del asistente de Inteligencia Artificial sobre lo ya desplegado.",
+                "Soporte y correcciones menores. Desarrollos nuevos grandes se cotizan por horas aparte."
               ]
             }
           ],
@@ -537,10 +551,10 @@
         "ctaHeading": "El primer paso: Definir dónde frenamos la ineficiencia.",
         "ctaBody": "El proceso no empieza con un contrato técnico, empieza con una conversación de negocios. Nos sentamos con el Directorio y RRHH, miramos el mapa de las cinco empresas y decidimos: ¿Dónde estamos perdiendo más horas u oportunidades hoy? Ese será el objetivo del primer mes de Implementación.",
         "summary": {
-          "intro": "Un modelo financiero transparente: Ustedes financian la Capacidad Operativa, nosotros diseñamos la automatización, y el grupo recupera rentabilidad. Así se estructura el acuerdo:",
+          "intro": "Cinco negocios, una plataforma común. Proyectos prioritarios para la implementación y, debajo, oportunidades que intuimos — pueden extender la construcción o evaluarse después; en mantenimiento no se incluyen automáticamente.",
           "buildRunNote": {
             "heading": "Implementación y Operación: El pago se ajusta al ritmo del negocio",
-            "body": "Fase 1 (Implementación): Inversión intensiva de USD 2.500 mensuales (entre 6 y 9 meses) para construir la arquitectura base. Fase 2 (Operación): Inversión de USD 1.000 mensuales, enfocada en proteger el sistema de caídas, entrenar a la IA y dar soporte técnico al personal. Los insumos externos (servidores, APIs) son costos de infraestructura a cargo de la empresa, independientes a este abono."
+            "body": "Fase 1 (Implementación): Inversión intensiva de USD 2.500 mensuales (entre 6 y 9 meses) para construir la arquitectura base. Fase 2 (Mantenimiento): Inversión de USD 1.000 mensuales para proteger el sistema, sostener la IA y resolver incidentes — no para construir módulos nuevos, que se estiman por horas. Los insumos externos (servidores, APIs) son costos de infraestructura a cargo de la empresa, independientes a este abono."
           },
           "companies": [
             {
@@ -579,10 +593,10 @@
             "buildAmount": "USD 2.500/mes",
             "buildPerCompany": "≈ USD 500/mes",
             "buildDetail": "Esfuerzo intensivo estimado en 6 a 9 meses.",
-            "runLabel": "Fase 2: Operación y Evolución",
+            "runLabel": "Fase 2: Operación y Mantenimiento",
             "runAmount": "USD 1.000/mes",
             "runPerCompany": "≈ USD 200/mes",
-            "runDetail": "El seguro de vida del sistema: Soporte, seguridad e IA."
+            "runDetail": "Seguro de vida del sistema: soporte, seguridad e IA. Desarrollos grandes aparte."
           }
         }
       }

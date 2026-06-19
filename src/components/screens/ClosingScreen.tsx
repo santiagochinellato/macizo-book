@@ -576,7 +576,7 @@ function CompanySummaryCard({
       {company.future.length > 0 && (
         <div className="flex flex-col gap-1.5 pt-2 mt-auto" style={{ borderTop: "1px dashed var(--border)" }}>
           <span className="text-[9px] font-bold uppercase tracking-widest" style={{ color: "var(--text-subtle)" }}>
-            + tentativos
+            + oportunidades intuídas
           </span>
           <div className="flex flex-wrap gap-1">
             {company.future.map((f, i) => (
