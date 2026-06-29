@@ -1,0 +1,750 @@
+{
+  "slug": "grupo-tec",
+  "version": 2,
+  "meta": {
+    "type": "presupuesto",
+    "number": "2026-GTEC1",
+    "title": "Transformación Operativa Digital",
+    "subtitle": "Ciudad Oeste y LABAC · Dedicación exclusiva enfocada en procesos",
+    "date": "2026-06-29",
+    "validUntil": "2026-07-29",
+    "status": "enviado",
+    "currency": "USD",
+    "language": "es"
+  },
+  "agency": {
+    "name": "MacizoDigital",
+    "tagline": "Software y automatización a medida",
+    "website": "https://macizo.digital",
+    "email": "hola@macizodigital.com.ar",
+    "phone": "+54 9 294 227-2626",
+    "social": {
+      "whatsapp": "https://wa.me/5492942272626",
+      "instagram": "https://instagram.com/macizo.digital"
+    }
+  },
+  "client": {
+    "name": "Grupo TEC · Ciudad Oeste & LABAC",
+    "industry": "Salud · Centro médico y laboratorio clínico",
+    "contact": {
+      "name": "Carla · Karen · Gerencia",
+      "role": "RRHH y Dirección Operativa"
+    }
+  },
+  "theme": {
+    "accentColor": "#1a5c38"
+  },
+  "screens": [
+    {
+      "id": "dolores",
+      "type": "book-section",
+      "label": "Diagnóstico",
+      "data": {
+        "title": "Qué falla hoy y qué resolvemos",
+        "subtitle": "Procesos concretos que hoy generan fricción — y cómo los cubren nuestros sistemas",
+        "cards": [
+          {
+            "type": "text",
+            "span": "3x1",
+            "accent": true,
+            "eyebrow": "Modelo de dedicación exclusiva",
+            "heading": "No venimos a instalar software. Venimos a resolver operación.",
+            "body": "Cada dolor listado abajo fue identificado en reuniones con RRHH y gerencia. Los sistemas que proponemos — sitio web, turnos, resultados y chat con IA — no son productos aislados: son la capa digital que estandariza procesos, libera recepción y deja métricas para decidir.",
+            "bullets": [
+              "Cobertura actual: lo que ya está en desarrollo o listo para implementar",
+              "Cobertura próxima: lo que este presupuesto activa en los próximos 4 meses",
+              "Fuera de alcance inmediato: iteraciones que requieren relevamiento adicional"
+            ]
+          },
+          {
+            "type": "diagram",
+            "span": "3x1",
+            "title": "Mapa de cobertura por sistema",
+            "subtitle": "Verde = lo que resolvemos con esta propuesta · Gris = iteración futura",
+            "layers": [
+              {
+                "title": "Ciudad Oeste",
+                "role": "Centro médico",
+                "items": [
+                  { "label": "Sitio web", "icon": "Globe", "description": "Presencia digital antes de la apertura" },
+                  { "label": "Turnos web", "icon": "CalendarClock", "description": "Agenda, recordatorios y migración" },
+                  { "label": "Macizo Chat", "icon": "Bot", "description": "WhatsApp 24/7 integrado a turnos" },
+                  { "label": "Integración LABAC", "icon": "Workflow", "description": "Paciente CO → laboratorio sin re-carga" }
+                ]
+              },
+              {
+                "title": "LABAC",
+                "role": "Laboratorio clínico",
+                "items": [
+                  { "label": "Web + resultados", "icon": "Globe", "description": "Portal dedicado, turnos fuera del sitio" },
+                  { "label": "Portal resultados", "icon": "ScanLine", "description": "Autoconsulta segura por DNI" },
+                  { "label": "Macizo Chat", "icon": "Bot", "description": "Preparación, turnos y entrega de resultados" },
+                  { "label": "Métricas derivación", "icon": "TrendingUp", "description": "Qué médico deriva al laboratorio" }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "span": "half",
+            "eyebrow": "Ciudad Oeste · Hoy falla",
+            "heading": "Recepción saturada antes de abrir las puertas",
+            "body": "El centro está por inaugurar pero los procesos digitales aún no están unificados. Sin turnos web confiables, sin recordatorios propios y sin chat automatizado, recepción absorberá llamadas, WhatsApp y mails repetitivos desde el día uno.",
+            "bullets": [
+              "Sin sitio web publicado: pacientes no encuentran especialidades ni profesionales",
+              "Agenda actual sin migrar: riesgo de perder historial al cambiar de sistema",
+              "Ausentismo sin control: sin recordatorios automáticos por WhatsApp o email",
+              "Recepcionistas sin tiempo para atención presencial de calidad",
+              "Pacientes de Ciudad Oeste no llegan automáticamente al circuito LABAC",
+              "Órdenes médicas ilegibles: sin impresión estandarizada desde el sistema"
+            ]
+          },
+          {
+            "type": "text",
+            "span": "half",
+            "eyebrow": "Ciudad Oeste · Lo resolvemos",
+            "heading": "Tres sistemas, un estándar operativo",
+            "body": "Sitio web + turnos + Macizo Chat liberan recepción, reducen ausentismo y conectan al paciente con LABAC sin fricción.",
+            "bullets": [
+              "Web: captación, credibilidad y acceso a turnos 24/7",
+              "Turnos: interfaz simple para pacientes mayores, migración completa de agenda, recordatorios integrados",
+              "Chat IA: responde FAQs, agenda y deriva; la recepcionista atiende en persona",
+              "Métricas: ocupación de consultorios, tiempos de espera, confirmaciones de turno",
+              "Integración: paciente atendido en CO pasa al laboratorio sin recargar datos"
+            ]
+          },
+          {
+            "type": "text",
+            "span": "half",
+            "eyebrow": "LABAC · Hoy falla",
+            "heading": "El mostrador hace de call center",
+            "body": "La web mezcla turnos con resultados. Recepción atiende llamadas por preparación de estudios, estado de análisis y turnos. No hay métrica clara de qué médicos derivan pacientes — condición clave del modelo de consultorios sin alquiler.",
+            "bullets": [
+              "Portal de resultados sin página dedicada ni instrucciones claras",
+              "Turnos embebidos en la web: confunden al paciente que solo busca resultados",
+              "Recordatorios dependientes de servicios externos (riesgo de bloqueo WhatsApp)",
+              "Sin reportes: qué paciente atendió cada profesional, obras sociales, estado de caja",
+              "Recetas manuscritas ilegibles en recepción",
+              "Sin sistema para contratistas mineros ni conciliaciones bancarias"
+            ]
+          },
+          {
+            "type": "text",
+            "span": "half",
+            "eyebrow": "LABAC · Lo resolvemos",
+            "heading": "Web de resultados + chat que trabaja de noche",
+            "body": "Separamos portales, profesionalizamos la entrega de resultados y medimos derivación médica.",
+            "bullets": [
+              "Web dedicada a resultados e información institucional (turnos fuera del sitio)",
+              "Portal seguro: DNI + protocolo, menos llamadas al mostrador",
+              "Macizo Chat: preparación pre-quirúrgica, turnos y aviso de resultados listos",
+              "Órdenes impresas desde el sistema: el paciente retira en recepción y queda captado",
+              "Métricas de derivación: qué médico envía análisis al laboratorio",
+              "Base para certificación ISO: procesos automatizados y trazables"
+            ]
+          },
+          {
+            "type": "chart",
+            "chartType": "bar",
+            "span": "2x1",
+            "title": "Impacto estimado por dolor resuelto",
+            "subtitle": "Reducción de carga operativa en los primeros 90 días",
+            "unit": "%",
+            "data": [
+              { "label": "Llamadas a recepción", "value": 55 },
+              { "label": "Ausentismo a turnos", "value": 40 },
+              { "label": "Re-carga de datos paciente", "value": 70 },
+              { "label": "Tiempo en FAQs repetitivas", "value": 65 }
+            ]
+          },
+          {
+            "type": "metric",
+            "span": "1x1",
+            "icon": "Clock",
+            "value": "4 meses",
+            "label": "Implementación estimada",
+            "description": "Dedicación exclusiva para tener los tres sistemas operativos en ambos negocios."
+          }
+        ]
+      }
+    },
+    {
+      "id": "productos",
+      "type": "product",
+      "label": "Los Sistemas",
+      "data": {
+        "architectureTitle": "Cuatro piezas, una operación coordinada",
+        "architectureDescription": "Cada producto resuelve un cuello de botella distinto pero comparten la misma lógica: menos fricción para el paciente, más control para gerencia y recepción. El sitio web captura y orienta; turnos y resultados ejecutan el día a día; Macizo Chat absorbe lo repetitivo las 24 horas.",
+        "features": [
+          {
+            "id": "web",
+            "title": "Sitio web corporativo",
+            "description": "Ciudad Oeste: presencia digital de cara a la apertura con especialidades, profesionales y CTA a turnos. LABAC: web institucional enfocada en resultados — se retira el turnero del sitio para que el paciente encuentre lo que necesita sin confusión. Ambos optimizados para Google, mobile-first y pacientes de 60–65 años.",
+            "image": "/logos/ciudad-oeste/Gemini_Generated_Image_riv51lriv51lriv5.png",
+            "imageAlt": "Presencia digital Ciudad Oeste y LABAC"
+          },
+          {
+            "id": "turnos",
+            "title": "Sistema de turnos · Ciudad Oeste",
+            "description": "Agenda web intuitiva, migración completa de la información actual, recordatorios automáticos por WhatsApp y email desde infraestructura propia (sin servicios externos que disparen bloqueos). Recepción ve ocupación en tiempo real; gerencia accede a métricas de confirmación y ausentismo. Diseñado para que un paciente mayor complete el flujo sin ayuda.",
+            "image": "/logos/ciudad-oeste/Gemini_Generated_Image_cb01cpcb01cpcb01.png",
+            "imageAlt": "Sistema de turnos Ciudad Oeste"
+          },
+          {
+            "id": "resultados",
+            "title": "Sistema de resultados · LABAC",
+            "description": "Portal dedicado con acceso por DNI y código de protocolo. Instrucciones claras antes del ingreso. Impresión de órdenes y recetas desde el sistema para eliminar letra ilegible. Integración con Ciudad Oeste: un paciente atendido en el consultorio aparece en el circuito del laboratorio sin volver a cargar datos. Métricas de derivación médica para auditar el acuerdo comercial con los profesionales.",
+            "image": "/labac/imagen1.png",
+            "imageAlt": "Portal de resultados LABAC"
+          },
+          {
+            "id": "chat",
+            "title": "Macizo Chat · IA integrada",
+            "description": "Asistente de WhatsApp conectado a turnos, resultados y base de conocimiento del negocio. Responde preparación de estudios, agenda turnos, avisa cuando hay resultados y deriva casos complejos a un humano. Investigación previa de preguntas frecuentes, catálogo de imágenes de recetas médicas y entrenamiento continuo. La recepcionista deja de ser un bot humano y vuelve a sonreír en el mostrador.",
+            "image": "/logos/MacizoDigitalWhite.svg",
+            "imageAlt": "Macizo Chat asistente inteligente"
+          }
+        ]
+      }
+    },
+    {
+      "id": "metodologia",
+      "type": "book-section",
+      "label": "Metodología",
+      "data": {
+        "title": "Cómo trabajamos",
+        "subtitle": "Recursos humanos primero. Tecnología después. Sin apagar incendios.",
+        "cards": [
+          {
+            "type": "text",
+            "span": "3x1",
+            "accent": true,
+            "eyebrow": "Nuestro diferencial",
+            "heading": "No instalamos software: resolvemos problemas operativos.",
+            "body": "Encaramos el desarrollo tecnológico directamente desde los recursos humanos hacia todo lo demás. Si la empresa no funciona organizada por dentro y se la pasan apagando incendios, es imposible que el servicio brille hacia afuera. Usamos la programación y el diseño de estos sistemas como la oportunidad perfecta para detectar dolores en los procesos diarios, estandarizarlos y solucionarlos de raíz.",
+            "bullets": [
+              "Auditoría de puestos reales (recepcionista, administración, médicos)",
+              "Estandarización alineada a requerimientos ISO",
+              "Reducción de fricción para paciente y personal administrativo"
+            ]
+          },
+          {
+            "type": "text",
+            "span": "1x1",
+            "tier": "offering",
+            "offeringIndex": 1,
+            "eyebrow": "El enfoque",
+            "heading": "UX aplicado a Recursos Humanos",
+            "body": "El análisis del rol de la recepcionista es diseño de experiencia de usuario. Revisamos el proceso operativo, detectamos la fricción y aplicamos un sistema digital que la elimina."
+          },
+          {
+            "type": "text",
+            "span": "1x1",
+            "tier": "offering",
+            "offeringIndex": 2,
+            "eyebrow": "El enfoque",
+            "heading": "Estandarización y cumplimiento",
+            "body": "La tecnología fuerza el orden interno. Automatizamos no solo para agilizar, sino para cumplir exigencias formales — como las de certificación ISO — con procesos trazables y repetibles."
+          },
+          {
+            "type": "text",
+            "span": "1x1",
+            "tier": "offering",
+            "offeringIndex": 3,
+            "eyebrow": "El enfoque",
+            "heading": "Reducción de fricción",
+            "body": "Desde la interfaz de turnos hasta la atención por WhatsApp: autoconsulta para el paciente, automatización y métricas de derivación para el equipo administrativo."
+          },
+          {
+            "type": "diagram",
+            "span": "3x1",
+            "title": "La sinergia: detección → traducción → decisión",
+            "subtitle": "RRHH detecta, desarrollo traduce, gerencia valida",
+            "layers": [
+              {
+                "title": "Detección",
+                "role": "Carla · RRHH",
+                "items": [
+                  { "label": "Caos organizativo", "icon": "Users", "description": "Organigrama, vacaciones en el aire" },
+                  { "label": "Atención al cliente", "icon": "Headphones", "description": "Recepción saturada y poco resolutiva" },
+                  { "label": "Requerimientos gerencia", "icon": "Target", "description": "ISO, métricas, reportes" }
+                ]
+              },
+              {
+                "title": "Traducción",
+                "role": "MacizoDigital",
+                "items": [
+                  { "label": "Sistema de turnos", "icon": "CalendarClock", "description": "Libera tiempo en recepción" },
+                  { "label": "Macizo Chat", "icon": "Bot", "description": "Responde lo repetitivo 24/7" },
+                  { "label": "Métricas y reportes", "icon": "Gauge", "description": "Datos para decidir" }
+                ]
+              },
+              {
+                "title": "Puente gerencia",
+                "role": "Carla → Sabrina & Luciana",
+                "items": [
+                  { "label": "Valor de negocio", "icon": "TrendingUp", "description": "Técnico traducido a ROI" },
+                  { "label": "Priorización", "icon": "Layers", "description": "Qué se resuelve primero" },
+                  { "label": "Aprobación", "icon": "ShieldCheck", "description": "Inversión justificada" }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "span": "half",
+            "eyebrow": "Ejemplo concreto",
+            "heading": "Recepcionista saturada → solución integral",
+            "body": "Si el problema es que la recepcionista atiende mal por saturación, no se resuelve con un cartel de 'sonreír'. Se automatiza la agenda y las respuestas frecuentes con IA para que ella tenga tiempo de dar atención de calidad en persona."
+          },
+          {
+            "type": "text",
+            "span": "half",
+            "eyebrow": "Compromiso del cliente",
+            "heading": "Qué necesitamos de ustedes",
+            "body": "Para que la dedicación exclusiva rinda, el grupo participa activamente del relevamiento y la validación.",
+            "bullets": [
+              "Acceso a observar procesos reales en recepción y administración",
+              "Migración de datos de agenda y catálogo de estudios",
+              "Catálogo de recetas e imágenes médicas para entrenar el chat",
+              "Interlocutor único para validar avances semanales",
+              "Definición de imágenes y textos para las webs"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "presupuesto-ciudad-oeste",
+      "type": "pricing",
+      "label": "Ciudad Oeste",
+      "data": {
+        "scopeLabel": "Ciudad Oeste · Sitio web + Turnos + Macizo Chat",
+        "items": [
+          {
+            "id": "co-web-diseno",
+            "category": "Sitio web",
+            "name": "Investigación y diseño UX/UI",
+            "description": "Arquitectura de información, wireframes, sistema visual y mockups responsive. Definición de especialidades, profesionales y CTAs de conversión.",
+            "total": 350
+          },
+          {
+            "id": "co-web-dev",
+            "category": "Sitio web",
+            "name": "Desarrollo e integración",
+            "description": "5+ páginas en Next.js, SEO base, formularios, panel de contenidos y vinculación con turnos y chat.",
+            "total": 500,
+            "highlight": true
+          },
+          {
+            "id": "co-web-impl",
+            "category": "Sitio web",
+            "name": "Implementación y publicación",
+            "description": "Deploy en producción, dominio, SSL, capacitación básica al equipo y handover documentado.",
+            "total": 200
+          },
+          {
+            "id": "co-turnos-inv",
+            "category": "Sistema de turnos",
+            "name": "Investigación operativa y migración",
+            "description": "Relevamiento con recepción y médicos. Migración completa de la agenda actual. Definición de reglas de negocio y horarios por profesional.",
+            "total": 300
+          },
+          {
+            "id": "co-turnos-diseno",
+            "category": "Sistema de turnos",
+            "name": "Diseño de flujos",
+            "description": "UX para paciente (incl. adultos mayores), vista recepción y panel médico. Prototipos validados antes de desarrollar.",
+            "total": 350
+          },
+          {
+            "id": "co-turnos-dev",
+            "category": "Sistema de turnos",
+            "name": "Desarrollo del módulo",
+            "description": "Agenda web, confirmaciones, recordatorios automáticos por WhatsApp y email desde infraestructura propia, integración con pacientes LABAC.",
+            "total": 700,
+            "highlight": true
+          },
+          {
+            "id": "co-turnos-cap",
+            "category": "Sistema de turnos",
+            "name": "Capacitación e implementación",
+            "description": "Entrenamiento presencial a recepción y médicos. Acompañamiento en las primeras dos semanas de uso real.",
+            "total": 300
+          },
+          {
+            "id": "co-chat-inv",
+            "category": "Macizo Chat",
+            "name": "Investigación y base de conocimiento",
+            "description": "Relevamiento de preguntas frecuentes, obtención de datos operativos, catálogo de imágenes de recetas médicas y protocolos de respuesta.",
+            "total": 250
+          },
+          {
+            "id": "co-chat-diseno",
+            "category": "Macizo Chat",
+            "name": "Diseño conversacional",
+            "description": "Flujos de agendamiento, derivación a humano, tono institucional y pruebas con casos reales de recepción.",
+            "total": 300
+          },
+          {
+            "id": "co-chat-dev",
+            "category": "Macizo Chat",
+            "name": "Desarrollo e integración IA",
+            "description": "Agente WhatsApp conectado a turnos y web. Métricas de conversaciones y derivaciones.",
+            "total": 600,
+            "highlight": true
+          },
+          {
+            "id": "co-chat-cap",
+            "category": "Macizo Chat",
+            "name": "Capacitación e implementación",
+            "description": "Entrenamiento del equipo, ajuste de respuestas según primeras semanas y documentación operativa.",
+            "total": 200
+          }
+        ],
+        "subtotal": 4050,
+        "total": 4050,
+        "paymentPlans": [
+          {
+            "title": "Cuota mensual (4 meses)",
+            "amount": "USD 1.012,50 / mes",
+            "detail": "4 pagos iguales durante la implementación estimada. Incluye dedicación exclusiva al proyecto.",
+            "featured": true
+          },
+          {
+            "title": "Por sistema entregado",
+            "amount": "USD 1.350 c/u",
+            "detail": "3 hitos: web publicada · turnos operativos · chat en producción. Ideal si prefieren pagar al ver resultados."
+          }
+        ],
+        "terms": [
+          "Alcance: sitio web, sistema de turnos y Macizo Chat para Ciudad Oeste.",
+          "Incluye migración de agenda actual y recordatorios integrados (sin servicios externos de spam).",
+          "Investigación de recetas médicas y FAQs incluida en el módulo de chat.",
+          "Hosting, dominio y consumo de WhatsApp Business API son costos de infraestructura a cargo del cliente.",
+          "Iteraciones futuras (vacaciones, conciliaciones, app móvil) se cotizan por separado."
+        ],
+        "note": "Qué mejora: −40% ausentismo objetivo · recepción liberada de llamadas rutinarias · paciente CO integrado a LABAC · métricas de ocupación desde el día uno."
+      }
+    },
+    {
+      "id": "presupuesto-labac",
+      "type": "pricing",
+      "label": "LABAC",
+      "data": {
+        "scopeLabel": "LABAC · Web de resultados + Portal + Macizo Chat",
+        "items": [
+          {
+            "id": "lb-web-diseno",
+            "category": "Sitio web",
+            "name": "Investigación y rediseño",
+            "description": "Separación de portales: web dedicada a resultados e información institucional. Turnos fuera del sitio principal. Arquitectura centrada en el paciente.",
+            "total": 300
+          },
+          {
+            "id": "lb-web-dev",
+            "category": "Sitio web",
+            "name": "Diseño y desarrollo web",
+            "description": "6 páginas, mapa de sedes, identidad clínica moderna, SEO y performance optimizado para mobile.",
+            "total": 500,
+            "highlight": true
+          },
+          {
+            "id": "lb-web-impl",
+            "category": "Sitio web",
+            "name": "Implementación",
+            "description": "Publicación, redirecciones, capacitación al equipo de marketing/comunicación y documentación.",
+            "total": 200
+          },
+          {
+            "id": "lb-res-inv",
+            "category": "Sistema de resultados",
+            "name": "Investigación y relevamiento",
+            "description": "Flujos actuales de entrega, requerimientos ISO, integración con pacientes de Ciudad Oeste y obtención de datos de protocolos.",
+            "total": 300
+          },
+          {
+            "id": "lb-res-datos",
+            "category": "Sistema de resultados",
+            "name": "Base de imágenes y recetas médicas",
+            "description": "Catalogación de órdenes, formatos de recetas e imágenes de referencia para impresión estandarizada y entrenamiento del chat.",
+            "total": 150
+          },
+          {
+            "id": "lb-res-diseno",
+            "category": "Sistema de resultados",
+            "name": "Diseño del portal",
+            "description": "UX de autoconsulta (DNI + protocolo), pantallas de instrucciones y flujo de retiro de orden impresa en recepción.",
+            "total": 350
+          },
+          {
+            "id": "lb-res-dev",
+            "category": "Sistema de resultados",
+            "name": "Desarrollo e integración",
+            "description": "Portal seguro, impresión de órdenes desde el sistema, métricas de derivación médica y reportes administrativos básicos.",
+            "total": 700,
+            "highlight": true
+          },
+          {
+            "id": "lb-res-cap",
+            "category": "Sistema de resultados",
+            "name": "Capacitación e implementación",
+            "description": "Entrenamiento a recepción y administración. Período de acompañamiento post-lanzamiento.",
+            "total": 200
+          },
+          {
+            "id": "lb-chat-inv",
+            "category": "Macizo Chat",
+            "name": "Investigación y base de conocimiento",
+            "description": "Indicaciones pre-quirúrgicas, preparación de estudios, FAQs de resultados y catálogo de respuestas validadas por el laboratorio.",
+            "total": 250
+          },
+          {
+            "id": "lb-chat-diseno",
+            "category": "Macizo Chat",
+            "name": "Diseño conversacional",
+            "description": "Flujos de turnos, aviso de resultados listos, derivación a humano y tono institucional LABAC.",
+            "total": 300
+          },
+          {
+            "id": "lb-chat-dev",
+            "category": "Macizo Chat",
+            "name": "Desarrollo e integración IA",
+            "description": "WhatsApp integrado a portal de resultados y sistemas internos. Métricas de derivación y resolución automática.",
+            "total": 600,
+            "highlight": true
+          },
+          {
+            "id": "lb-chat-cap",
+            "category": "Macizo Chat",
+            "name": "Capacitación e implementación",
+            "description": "Entrenamiento del equipo, monitoreo de conversaciones y ajuste continuo del agente.",
+            "total": 200
+          }
+        ],
+        "subtotal": 4050,
+        "total": 4050,
+        "paymentPlans": [
+          {
+            "title": "Cuota mensual (4 meses)",
+            "amount": "USD 1.012,50 / mes",
+            "detail": "4 pagos iguales durante la implementación estimada. Dedicación exclusiva al laboratorio.",
+            "featured": true
+          },
+          {
+            "title": "Por sistema entregado",
+            "amount": "USD 1.350 c/u",
+            "detail": "3 hitos: web publicada · portal de resultados · chat en producción."
+          }
+        ],
+        "terms": [
+          "Alcance: web de resultados, portal seguro y Macizo Chat para LABAC.",
+          "Incluye separación del turnero del sitio web institucional.",
+          "Métricas de derivación médica incluidas en el módulo de resultados.",
+          "Base de imágenes de recetas y órdenes médicas incluida en la investigación.",
+          "Conciliaciones bancarias, sistema de vacaciones y portal minero se cotizan como iteraciones futuras."
+        ],
+        "note": "Qué mejora: −55% llamadas por resultados · trazabilidad de derivación médica · órdenes legibles impresas · base ISO automatizada · reportes de caja y obras sociales."
+      }
+    },
+    {
+      "id": "roadmap-futuro",
+      "type": "book-section",
+      "label": "Próximos pasos",
+      "data": {
+        "title": "Iteraciones y desarrollos futuros",
+        "subtitle": "Lo que viene después de estabilizar la operación digital base",
+        "cards": [
+          {
+            "type": "text",
+            "span": "half",
+            "tier": "offering",
+            "offeringIndex": 1,
+            "eyebrow": "Iteraciones próximas necesarias",
+            "heading": "Prioridad operativa identificada en reuniones",
+            "body": "Requieren relevamiento adicional pero el dolor ya está documentado. Se estiman y aprueban una vez operativos los sistemas base.",
+            "bullets": [
+              "Sistema de conciliaciones bancarias (LABAC) — toda la facturación pasa por allí",
+              "Sistema de vacaciones — solicitudes hoy quedan 'en el aire' hasta aviso por WhatsApp",
+              "Portal para derivantes y contratistas mineros — análisis en sitio para empresas",
+              "Reportes administrativos avanzados — pacientes por profesional, obras sociales, caja",
+              "Historia clínica integrada Ciudad Oeste",
+              "Onboarding digital de profesionales y personal nuevo"
+            ]
+          },
+          {
+            "type": "text",
+            "span": "half",
+            "tier": "future",
+            "eyebrow": "Desarrollos a futuro",
+            "heading": "Evolución del ecosistema digital del grupo",
+            "body": "Oportunidades que fortalecen la posición competitiva una vez consolidada la base.",
+            "bullets": [
+              "App móvil corporativa propia — imagen unificada Ciudad Oeste + LABAC + clínicas",
+              "Lectura OCR de recetas fotografiadas por el paciente",
+              "Telemedicina y seguimiento remoto desde Ciudad Oeste",
+              "Portal B2B para empresas mineras y medicina laboral",
+              "Tablero ejecutivo unificado — métricas de todo el grupo en un solo lugar",
+              "Integración con obras sociales y facturación electrónica",
+              "Trazabilidad de muestras a domicilio con cadena de frío",
+              "Certificación ISO asistida — documentación automática de procesos"
+            ]
+          },
+          {
+            "type": "chart",
+            "chartType": "donut",
+            "span": "2x1",
+            "title": "Prioridad sugerida post-implementación",
+            "subtitle": "Según impacto operativo reportado por RRHH",
+            "unit": "%",
+            "data": [
+              { "label": "Conciliaciones bancarias", "value": 30 },
+              { "label": "Vacaciones y RRHH", "value": 25 },
+              { "label": "Contratistas mineros", "value": 25 },
+              { "label": "App corporativa", "value": 20 }
+            ]
+          },
+          {
+            "type": "metric",
+            "span": "1x1",
+            "icon": "Smartphone",
+            "value": "App",
+            "label": "Siguiente gran salto",
+            "description": "Competir con corporaciones grandes con presencia móvil unificada del grupo."
+          }
+        ]
+      }
+    },
+    {
+      "id": "inversion-total",
+      "type": "pricing",
+      "label": "Inversión Total",
+      "data": {
+        "scopeLabel": "Ciudad Oeste + LABAC · Presupuesto unificado del grupo",
+        "items": [
+          {
+            "id": "co-total",
+            "category": "Ciudad Oeste",
+            "name": "Sitio web + Turnos + Macizo Chat",
+            "description": "Implementación completa en 4 meses. Migración de agenda, recordatorios propios, integración con LABAC y chat 24/7.",
+            "total": 4050,
+            "highlight": true
+          },
+          {
+            "id": "lb-total",
+            "category": "LABAC",
+            "name": "Web de resultados + Portal + Macizo Chat",
+            "description": "Portal dedicado, métricas de derivación, separación de portales, base de recetas e impresión de órdenes.",
+            "total": 4050,
+            "highlight": true
+          },
+          {
+            "id": "dedicacion",
+            "category": "Modelo",
+            "name": "Dedicación exclusiva · 4 meses",
+            "description": "Capacidad de desarrollo enfocada en estos dos negocios sin dispersión en otros proyectos. Reuniones semanales de avance y validación con RRHH.",
+            "total": 0
+          }
+        ],
+        "subtotal": 8100,
+        "total": 8100,
+        "paymentPlans": [
+          {
+            "title": "Plan recomendado · 4 cuotas mensuales",
+            "amount": "USD 2.025 / mes",
+            "detail": "4 pagos de USD 2.025 durante los 4 meses estimados de implementación. Cubre ambos negocios en paralelo con dedicación exclusiva.",
+            "featured": true
+          },
+          {
+            "title": "Por negocio · 4 cuotas c/u",
+            "amount": "USD 1.012,50 / mes × 2",
+            "detail": "Facturación separada: USD 1.012,50 mensuales por Ciudad Oeste y USD 1.012,50 por LABAC, durante 4 meses."
+          },
+          {
+            "title": "Por hito de entrega",
+            "amount": "USD 2.700 × 3 hitos",
+            "detail": "Mes 1: webs publicadas · Mes 2-3: turnos y resultados · Mes 4: chat operativo en ambos. USD 2.700 por hito validado."
+          }
+        ],
+        "paymentMethods": [
+          "Transferencia bancaria (ARS o USD)",
+          "USDT / USDC",
+          "Wise / PayPal (USD internacional)",
+          "Mercado Pago (ARS)"
+        ],
+        "terms": [
+          "Presupuesto válido hasta el 29 de julio de 2026.",
+          "Implementación estimada en 4 meses con inicio dentro de las 48 hs de confirmada la señal.",
+          "Primera cuota al confirmar; siguientes al inicio de cada mes de trabajo.",
+          "Incluye hasta 2 rondas de revisión en diseño por módulo.",
+          "Infraestructura externa (hosting, dominio, WhatsApp API, tokens IA) a cargo del cliente — sin recargo MacizoDigital.",
+          "Iteraciones futuras (conciliaciones, vacaciones, mineros, app) se cotizan por separado tras estabilizar la base.",
+          "Precios en dólares estadounidenses (USD)."
+        ],
+        "note": "Inversión total USD 8.100 · ROI esperado en reducción de horas administrativas, ausentismo y captación de derivaciones médicas. El costo de no actuar: recepción saturada desde el día uno de apertura y pérdida de trazabilidad con los médicos derivantes."
+      }
+    },
+    {
+      "id": "cierre",
+      "type": "closing",
+      "label": "Cierre",
+      "data": {
+        "ctaHeading": "El primer paso: validar este presupuesto y abrir el relevamiento operativo.",
+        "ctaBody": "No empezamos con código. Empezamos sentándonos con recepción, viendo cómo trabajan hoy y confirmando qué datos necesitamos migrar. En 4 meses, Ciudad Oeste abre con operación digital y LABAC deja de ser un call center en el mostrador.",
+        "summary": {
+          "intro": "Dos negocios, seis sistemas, una lógica: procesos primero, tecnología después.",
+          "buildRunNote": {
+            "heading": "Implementación en 4 meses · Dedicación exclusiva",
+            "body": "USD 8.100 totales en 4 cuotas de USD 2.025. Cada negocio incluye web, su sistema operativo central (turnos o resultados) y Macizo Chat. Infraestructura externa aparte."
+          },
+          "companies": [
+            {
+              "name": "Ciudad Oeste",
+              "tagline": "Centro médico en apertura",
+              "price": "USD 4.050",
+              "main": [
+                "Sitio web institucional",
+                "Sistema de turnos con migración",
+                "Recordatorios WhatsApp/email propios",
+                "Macizo Chat integrado",
+                "Conexión paciente → LABAC"
+              ],
+              "future": [
+                "Historia clínica",
+                "Tablero de métricas",
+                "Telemedicina"
+              ]
+            },
+            {
+              "name": "LABAC",
+              "tagline": "Laboratorio clínico",
+              "price": "USD 4.050",
+              "main": [
+                "Web dedicada a resultados",
+                "Portal seguro DNI + protocolo",
+                "Impresión de órdenes médicas",
+                "Métricas de derivación",
+                "Macizo Chat 24/7"
+              ],
+              "future": [
+                "Conciliaciones bancarias",
+                "Portal contratistas mineros",
+                "App corporativa"
+              ]
+            }
+          ],
+          "pricing": {
+            "buildLabel": "Inversión total · 4 meses",
+            "buildAmount": "USD 8.100",
+            "buildPerCompany": "USD 4.050 c/u",
+            "buildDetail": "4 cuotas de USD 2.025 mensuales. Dedicación exclusiva.",
+            "runLabel": "Forma de pago",
+            "runAmount": "USD 2.025 / mes",
+            "runPerCompany": "USD 1.012,50 por negocio",
+            "runDetail": "Primera cuota al confirmar. Iteraciones futuras se cotizan aparte."
+          }
+        }
+      }
+    }
+  ]
+}

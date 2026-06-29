@@ -259,6 +259,7 @@ const pricingScreenSchema = z.object({
     subtotal: z.number(),
     discount: z.number().optional(),
     total: z.number(),
+    scopeLabel: z.string().optional(),
     paymentPlans: z
       .array(
         z.object({

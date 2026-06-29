@@ -14,7 +14,7 @@ interface PricingScreenProps {
 
 export function PricingScreen({ data, meta }: PricingScreenProps) {
   const reduced = useReducedMotion();
-  const { items, subtotal, discount, total, paymentPlans, paymentMethods, terms, note } = data;
+  const { items, subtotal, discount, total, scopeLabel, paymentPlans, paymentMethods, terms, note } = data;
 
   return (
     <motion.div
@@ -60,12 +60,14 @@ export function PricingScreen({ data, meta }: PricingScreenProps) {
             >
               <AnimatedNumber value={total} currency={meta.currency} />
             </span>
-            <span
-              className="text-base font-medium mb-2"
-              style={{ color: "var(--text-secondary)" }}
-            >
-              Sitio web profesional · Ciudad Oeste Centro Médico
-            </span>
+            {scopeLabel ? (
+              <span
+                className="text-base font-medium mb-2"
+                style={{ color: "var(--text-secondary)" }}
+              >
+                {scopeLabel}
+              </span>
+            ) : null}
           </div>
           <div
             className="mt-1"
