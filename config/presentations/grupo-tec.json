@@ -1,0 +1,530 @@
+{
+  "slug": "grupo-tec",
+  "version": 2,
+  "meta": {
+    "type": "propuesta",
+    "number": "2026-GRUPO-02",
+    "title": "Presupuestos individuales y propuesta grupal",
+    "subtitle": "Cuatro empresas. Una sola decisión. Para clientes que ya leyeron la propuesta de transformación digital del grupo.",
+    "date": "2026-06-27",
+    "validUntil": "2026-07-27",
+    "status": "borrador",
+    "currency": "USD",
+    "language": "es"
+  },
+  "agency": {
+    "name": "MacizoDigital",
+    "tagline": "Software y automatización a medida",
+    "website": "https://macizo.digital",
+    "email": "hola@macizodigital.com.ar",
+    "phone": "+54 9 294 227-2626",
+    "social": {
+      "whatsapp": "https://wa.me/54929422726",
+      "instagram": "https://instagram.com/macizo.digital"
+    }
+  },
+  "client": {
+    "name": "GRUPO LABAC · Directorio",
+    "industry": "Salud, medicina laboral y logística minera",
+    "contact": {
+      "name": "Gerencia General y RRHH",
+      "role": "Directorio del grupo"
+    }
+  },
+  "theme": {
+    "accentColor": "#1a5c38"
+  },
+  "screens": [
+    {
+      "id": "intro",
+      "type": "book-section",
+      "label": "Introducción",
+      "data": {
+        "title": "Cada empresa, su presupuesto",
+        "subtitle": "Antes de mostrar por qué recomendamos avanzar como grupo, acá está lo que le corresponde a cada empresa por separado.",
+        "cards": [
+          {
+            "type": "text",
+            "span": "3x1",
+            "accent": true,
+            "eyebrow": "Cuatro empresas · mismo esquema",
+            "heading": "Los precios son iguales para las cuatro: tres productos, una sola forma de pago.",
+            "body": "Cada empresa puede contratar de forma independiente. En las siguientes pantallas está el detalle de productos, forma de pago y mantenimiento; luego el desglose por negocio y la propuesta grupal recomendada."
+          },
+          {
+            "type": "metric",
+            "span": "1x1",
+            "icon": "Boxes",
+            "value": "3",
+            "label": "Productos por empresa",
+            "description": "Sitio web + sistema de turnos + asistente WhatsApp. Mismo alcance, foco según el negocio."
+          },
+          {
+            "type": "metric",
+            "span": "1x1",
+            "icon": "CircleDollarSign",
+            "value": "USD 4.950",
+            "label": "Total por empresa",
+            "description": "USD 450 + USD 2.000 + USD 2.500. Precio por proyecto en tres cuotas."
+          },
+          {
+            "type": "metric",
+            "span": "1x1",
+            "icon": "Wrench",
+            "value": "USD 250",
+            "label": "Mantenimiento mensual",
+            "description": "Después del proyecto: soporte, monitoreo, ajustes menores y reentrenamiento IA."
+          }
+        ]
+      }
+    },
+    {
+      "id": "productos",
+      "type": "book-section",
+      "label": "Los Productos",
+      "data": {
+        "title": "Los tres productos",
+        "subtitle": "Mismo alcance para las cuatro empresas. Lo que cambia es el foco según el negocio de cada una.",
+        "cards": [
+          {
+            "type": "text",
+            "span": "1x1",
+            "tier": "offering",
+            "offeringIndex": 1,
+            "eyebrow": "USD 450",
+            "heading": "Sitio Web",
+            "body": "Presencia digital profesional adaptada a cada negocio.",
+            "bullets": [
+              "Diseño UX/UI personalizado",
+              "Desarrollo e implementación en servidor",
+              "Versión mobile y escritorio",
+              "SEO básico",
+              "Capacitación para gestión de contenidos",
+              "1 ronda de revisiones post-entrega"
+            ]
+          },
+          {
+            "type": "text",
+            "span": "1x1",
+            "tier": "offering",
+            "offeringIndex": 2,
+            "eyebrow": "USD 2.000",
+            "heading": "Sistema de Turnos",
+            "body": "Motor de agenda y operación adaptado a la lógica de cada empresa.",
+            "bullets": [
+              "Investigación y auditoría de flujos operativos",
+              "Desarrollo del sistema a medida",
+              "Implementación y configuración completa",
+              "Capacitación del equipo",
+              "Recordatorios automáticos y panel de métricas"
+            ]
+          },
+          {
+            "type": "text",
+            "span": "1x1",
+            "tier": "offering",
+            "offeringIndex": 3,
+            "eyebrow": "USD 2.500",
+            "heading": "Asistente WhatsApp",
+            "body": "Canal automatizado 24/7 con intervención humana para casos complejos.",
+            "bullets": [
+              "Investigación de flujos de atención y consultas frecuentes",
+              "Desarrollo del asistente conversacional a medida",
+              "Implementación de WhatsApp Business API",
+              "Capacitación del equipo de recepción y administración",
+              "Intervención humana selectiva para casos complejos"
+            ]
+          },
+          {
+            "type": "metric",
+            "span": "3x1",
+            "icon": "CircleDollarSign",
+            "value": "USD 4.950",
+            "label": "Total por empresa",
+            "description": "Los tres productos. Misma inversión inicial para Ciudad Oeste, LABAC, LABTEC y Dinatec."
+          }
+        ]
+      }
+    },
+    {
+      "id": "forma-de-pago",
+      "type": "book-section",
+      "label": "Forma de Pago",
+      "data": {
+        "title": "Forma de pago — precio por proyecto",
+        "subtitle": "El desarrollo se financia en tres cuotas durante la ejecución del proyecto.",
+        "cards": [
+          {
+            "type": "text",
+            "span": "3x1",
+            "accent": true,
+            "eyebrow": "Tres cuotas",
+            "heading": "50% al inicio · 25% al mes siguiente · 25% al finalizar",
+            "body": "La primera cuota habilita el arranque inmediato del trabajo. La segunda cubre el desarrollo activo. La tercera se abona contra entrega y capacitación completada.",
+            "bullets": [
+              "Cuota 1 (50%): al inicio del proyecto — habilita el arranque inmediato.",
+              "Cuota 2 (25%): al mes siguiente del inicio — durante el desarrollo activo.",
+              "Cuota 3 (25%): al finalizar el proyecto — contra entrega y capacitación completada."
+            ]
+          },
+          {
+            "type": "metric",
+            "span": "1x1",
+            "icon": "CircleDollarSign",
+            "value": "USD 2.475",
+            "label": "Cuota 1 · 50%",
+            "description": "Sobre USD 4.950 por empresa."
+          },
+          {
+            "type": "metric",
+            "span": "1x1",
+            "icon": "CircleDollarSign",
+            "value": "USD 1.238",
+            "label": "Cuota 2 · 25%",
+            "description": "Al mes siguiente del inicio."
+          },
+          {
+            "type": "metric",
+            "span": "1x1",
+            "icon": "CircleDollarSign",
+            "value": "USD 1.237",
+            "label": "Cuota 3 · 25%",
+            "description": "Contra entrega y capacitación."
+          },
+          {
+            "type": "text",
+            "span": "3x1",
+            "eyebrow": "Mantenimiento — después del proyecto",
+            "heading": "USD 250/mes por empresa una vez finalizado el desarrollo.",
+            "body": "El abono mensual cubre soporte, monitoreo, ajustes menores y reentrenamiento del asistente IA según el uso real. Comienza una vez finalizado el proyecto y la capacitación."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ciudad-oeste",
+      "type": "book-section",
+      "label": "Ciudad Oeste",
+      "data": {
+        "title": "Ciudad Oeste",
+        "subtitle": "Centro médico en apertura",
+        "accentColor": "#4f46e5",
+        "cards": [
+          {
+            "type": "text",
+            "span": "3x1",
+            "tier": "focus",
+            "eyebrow": "Diferenciador",
+            "heading": "Está en apertura: la tecnología se define desde cero, sin vicios operativos.",
+            "body": "Lo que se construye aquí es el estándar del grupo."
+          },
+          {
+            "type": "metric",
+            "span": "1x1",
+            "icon": "Hammer",
+            "value": "USD 4.950",
+            "label": "Proyecto completo",
+            "description": "Sitio + turnos + asistente WhatsApp."
+          },
+          {
+            "type": "metric",
+            "span": "1x1",
+            "icon": "Wrench",
+            "value": "USD 250",
+            "label": "Mantenimiento / mes",
+            "description": "Después de finalizado el proyecto."
+          },
+          {
+            "type": "metric",
+            "span": "1x1",
+            "icon": "CalendarCheck",
+            "value": "USD 7.950",
+            "label": "Total a 12 meses",
+            "description": "USD 4.950 proyecto + USD 250/mes × 12."
+          }
+        ]
+      }
+    },
+    {
+      "id": "labac",
+      "type": "book-section",
+      "label": "LABAC",
+      "data": {
+        "title": "LABAC",
+        "subtitle": "Laboratorio bioquímico",
+        "accentColor": "#1a5c38",
+        "cards": [
+          {
+            "type": "text",
+            "span": "3x1",
+            "tier": "focus",
+            "eyebrow": "Diferenciador",
+            "heading": "Asistente con OCR para órdenes médicas e integración Interpracsys.",
+            "body": "Reduce la carga administrativa del equipo de recepción."
+          },
+          {
+            "type": "metric",
+            "span": "1x1",
+            "icon": "Hammer",
+            "value": "USD 4.950",
+            "label": "Proyecto completo",
+            "description": "Sitio + turnos + asistente WhatsApp."
+          },
+          {
+            "type": "metric",
+            "span": "1x1",
+            "icon": "Wrench",
+            "value": "USD 250",
+            "label": "Mantenimiento / mes",
+            "description": "Después de finalizado el proyecto."
+          },
+          {
+            "type": "metric",
+            "span": "1x1",
+            "icon": "CalendarCheck",
+            "value": "USD 7.950",
+            "label": "Total a 12 meses",
+            "description": "USD 4.950 proyecto + USD 250/mes × 12."
+          }
+        ]
+      }
+    },
+    {
+      "id": "labtec",
+      "type": "book-section",
+      "label": "LABTEC",
+      "data": {
+        "title": "LABTEC",
+        "subtitle": "Medicina laboral",
+        "accentColor": "#1a5c38",
+        "cards": [
+          {
+            "type": "text",
+            "span": "3x1",
+            "tier": "focus",
+            "eyebrow": "Diferenciador",
+            "heading": "Motor de turnos B2B: múltiples empresas, trabajadores y estudios por visita.",
+            "body": "Lógica corporativa desde el día 1."
+          },
+          {
+            "type": "metric",
+            "span": "1x1",
+            "icon": "Hammer",
+            "value": "USD 4.950",
+            "label": "Proyecto completo",
+            "description": "Sitio + turnos + asistente WhatsApp."
+          },
+          {
+            "type": "metric",
+            "span": "1x1",
+            "icon": "Wrench",
+            "value": "USD 250",
+            "label": "Mantenimiento / mes",
+            "description": "Después de finalizado el proyecto."
+          },
+          {
+            "type": "metric",
+            "span": "1x1",
+            "icon": "CalendarCheck",
+            "value": "USD 7.950",
+            "label": "Total a 12 meses",
+            "description": "USD 4.950 proyecto + USD 250/mes × 12."
+          }
+        ]
+      }
+    },
+    {
+      "id": "dinatec",
+      "type": "book-section",
+      "label": "Dinatec",
+      "data": {
+        "title": "Dinatec",
+        "subtitle": "Logística minera",
+        "accentColor": "#b45309",
+        "cards": [
+          {
+            "type": "text",
+            "span": "3x1",
+            "tier": "focus",
+            "eyebrow": "Diferenciador",
+            "heading": "Sistema de turnos con módulo de compliance para contratos mineros.",
+            "body": "Documentación auditable que protege las cuentas clave."
+          },
+          {
+            "type": "metric",
+            "span": "1x1",
+            "icon": "Hammer",
+            "value": "USD 4.950",
+            "label": "Proyecto completo",
+            "description": "Sitio + turnos + asistente WhatsApp."
+          },
+          {
+            "type": "metric",
+            "span": "1x1",
+            "icon": "Wrench",
+            "value": "USD 250",
+            "label": "Mantenimiento / mes",
+            "description": "Después de finalizado el proyecto."
+          },
+          {
+            "type": "metric",
+            "span": "1x1",
+            "icon": "CalendarCheck",
+            "value": "USD 7.950",
+            "label": "Total a 12 meses",
+            "description": "USD 4.950 proyecto + USD 250/mes × 12."
+          }
+        ]
+      }
+    },
+    {
+      "id": "propuesta-grupal",
+      "type": "book-section",
+      "label": "Propuesta Grupal",
+      "data": {
+        "title": "Por qué recomendamos avanzar como grupo",
+        "subtitle": "Un solo equipo dedicado, infraestructura compartida, y replicación sin empezar de cero.",
+        "cards": [
+          {
+            "type": "text",
+            "span": "3x1",
+            "accent": true,
+            "eyebrow": "Proyecto grupal recomendado",
+            "heading": "No es un descuento cosmético. Es un modelo de trabajo distinto.",
+            "body": "Un solo equipo dedicado, infraestructura compartida, y la posibilidad de que lo que funciona en una empresa se replique en las otras sin empezar de cero."
+          },
+          {
+            "type": "metric",
+            "span": "1x1",
+            "icon": "Hammer",
+            "value": "USD 17.000",
+            "label": "Proyecto grupal",
+            "description": "4 empresas en paralelo — precio especial grupo. USD 2.800 menos que 4 proyectos separados (USD 19.800)."
+          },
+          {
+            "type": "metric",
+            "span": "1x1",
+            "icon": "Wrench",
+            "value": "USD 800",
+            "label": "Mantenimiento grupal / mes",
+            "description": "USD 200/mes por empresa — en lugar de USD 250 individuales."
+          },
+          {
+            "type": "metric",
+            "span": "1x1",
+            "icon": "PiggyBank",
+            "value": "USD 5.200",
+            "label": "Ahorro a 12 meses",
+            "description": "USD 26.600 grupal vs USD 31.800 en 4 proyectos individuales."
+          },
+          {
+            "type": "text",
+            "span": "half",
+            "eyebrow": "Razón 1",
+            "heading": "Una sola implementación, cuatro empresas beneficiadas",
+            "body": "Lo que se construye para Ciudad Oeste (turnos, recordatorios, flujos de recepción) se adapta a LABAC y LABTEC sin partir de cero. La auditoría de procesos se hace una vez y se aplica a todo el grupo."
+          },
+          {
+            "type": "text",
+            "span": "half",
+            "eyebrow": "Razón 2",
+            "heading": "Infraestructura compartida, costo dividido",
+            "body": "Servidor, base de datos e instancias de WhatsApp Business API: en el modelo grupal la infraestructura se comparte donde tiene sentido. Menos costos operativos, más capacidad para invertir en funcionalidad."
+          },
+          {
+            "type": "text",
+            "span": "half",
+            "eyebrow": "Razón 3",
+            "heading": "Un equipo que conoce el grupo, no cuatro proyectos aislados",
+            "body": "Un solo interlocutor técnico que entiende cómo funcionan las cuatro empresas. No hay que explicar el contexto desde cero en cada proyecto ni en cada revisión."
+          },
+          {
+            "type": "text",
+            "span": "half",
+            "eyebrow": "Razón 4",
+            "heading": "Integraciones cruzadas que solo son posibles en grupo",
+            "body": "Apto médico en LABTEC → notifica automáticamente a LABAC si hay derivación. Compliance de Dinatec → choferes examinados en LABTEC con flujo automatizado. Esto no es posible si cada empresa avanza sola."
+          },
+          {
+            "type": "text",
+            "span": "3x1",
+            "accent": true,
+            "eyebrow": "Comparativa a 12 meses",
+            "heading": "Proyecto grupal vs. cuatro proyectos individuales",
+            "body": "Inversión inicial, mantenimiento y total consolidado para las cuatro empresas.",
+            "bullets": [
+              "4 proyectos individuales — inversión: USD 19.800 · mantenimiento: USD 1.000/mes (4 × USD 250) · total 12 meses: USD 31.800",
+              "Proyecto grupal (recomendado) — inversión: USD 17.000 · mantenimiento: USD 800/mes (4 × USD 200) · total 12 meses: USD 26.600",
+              "Ahorro grupo vs. individual — inversión: USD 2.800 · mantenimiento: USD 200/mes · total 12 meses: USD 5.200"
+            ]
+          },
+          {
+            "type": "chart",
+            "chartType": "bar",
+            "span": "3x1",
+            "title": "Total a 12 meses · individual vs. grupal",
+            "subtitle": "Cuatro empresas.",
+            "unit": "USD",
+            "colors": ["#94a3b8", "#1a5c38"],
+            "data": [
+              { "label": "4 proyectos individuales", "value": 31800 },
+              { "label": "Proyecto grupal", "value": 26600 }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "cierre",
+      "type": "closing",
+      "label": "Cierre",
+      "data": {
+        "ctaHeading": "¿Avanzamos con una reunión para definir el orden de prioridades del grupo?",
+        "ctaBody": "Cada empresa puede avanzar sola — y tiene sentido si el timing o el presupuesto lo requieren. Pero si hay posibilidad de coordinar, el proyecto grupal entrega el mismo resultado en menos tiempo y con menos inversión total.",
+        "summary": {
+          "intro": "Cuatro empresas. Tres productos. Una forma de pago — o un proyecto grupal recomendado.",
+          "buildRunNote": {
+            "heading": "Notas importantes",
+            "body": "Los costos de infraestructura (servidor, dominio, WhatsApp Business API) son independientes y a cargo de cada empresa. MacizoDigital asesora la contratación de infraestructura sin markup adicional. El mantenimiento mensual comienza una vez finalizado el proyecto y la capacitación. Presupuesto válido hasta el 27 de julio de 2026."
+          },
+          "companies": [
+            {
+              "name": "Ciudad Oeste",
+              "tagline": "Centro médico en apertura",
+              "main": ["Proyecto USD 4.950", "Mantenimiento USD 250/mes"],
+              "future": ["Total 12 meses: USD 7.950"]
+            },
+            {
+              "name": "LABAC",
+              "tagline": "Laboratorio bioquímico",
+              "main": ["Proyecto USD 4.950", "Mantenimiento USD 250/mes"],
+              "future": ["Total 12 meses: USD 7.950"]
+            },
+            {
+              "name": "LABTEC",
+              "tagline": "Medicina laboral",
+              "main": ["Proyecto USD 4.950", "Mantenimiento USD 250/mes"],
+              "future": ["Total 12 meses: USD 7.950"]
+            },
+            {
+              "name": "Dinatec",
+              "tagline": "Logística minera",
+              "main": ["Proyecto USD 4.950", "Mantenimiento USD 250/mes"],
+              "future": ["Total 12 meses: USD 7.950"]
+            }
+          ],
+          "pricing": {
+            "buildLabel": "Proyecto grupal",
+            "buildAmount": "USD 17.000",
+            "buildDetail": "4 empresas en paralelo — precio especial grupo.",
+            "buildPerCompany": "USD 2.800 menos que 4 proyectos separados",
+            "runLabel": "Mantenimiento grupal",
+            "runAmount": "USD 800/mes",
+            "runDetail": "USD 200/mes por empresa.",
+            "runPerCompany": "Total 12 meses: USD 26.600 · ahorro USD 5.200"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -61,6 +61,7 @@ const imageBookCardSchema = z.object({
   caption: z.string().optional(),
   badge: z.string().optional(),
   span: cardSpanSchema.optional(),
+  fit: z.enum(["cover", "contain"]).optional(),
   detail: z
     .object({
       title: z.string(),
@@ -90,6 +91,132 @@ const textBookCardSchema = z.object({
   tier: z.enum(["focus", "offering", "future"]).optional(),
   offeringIndex: z.number().int().min(1).max(6).optional(),
   bullets: z.array(z.string()).optional(),
+  allocationExample: z
+    .object({
+      months: z
+        .array(
+          z.object({
+            label: z.string().min(1),
+            bars: z
+              .array(
+                z.object({
+                  company: z.string().min(1),
+                  pct: z.number().min(0).max(100),
+                  color: z.string().regex(/^#[0-9a-fA-F]{6}$/),
+                })
+              )
+              .min(1),
+          })
+        )
+        .min(1),
+      footer: z.string().optional(),
+    })
+    .optional(),
+});
+
+const comparisonSideSchema = z.object({
+  label: z.string().min(1),
+  icon: z.string().optional(),
+  steps: z.array(z.string().min(1)).min(1),
+});
+
+const comparisonBookCardSchema = z.object({
+  type: z.literal("comparison"),
+  eyebrow: z.string().optional(),
+  heading: z.string().min(1),
+  left: comparisonSideSchema,
+  right: comparisonSideSchema,
+  span: cardSpanSchema.optional(),
+});
+
+const orgChartBookCardSchema = z.object({
+  type: z.literal("orgchart"),
+  eyebrow: z.string().optional(),
+  heading: z.string().min(1),
+  root: z.object({
+    label: z.string().min(1),
+    sublabel: z.string().optional(),
+  }),
+  children: z
+    .array(
+      z.object({
+        label: z.string().min(1),
+        sublabel: z.string().optional(),
+      })
+    )
+    .min(1),
+  footer: z.string().optional(),
+  span: cardSpanSchema.optional(),
+});
+
+const comparisonTableBookCardSchema = z.object({
+  type: z.literal("comparison-table"),
+  eyebrow: z.string().optional(),
+  heading: z.string().min(1),
+  rows: z
+    .array(
+      z.object({
+        individual: z.string().min(1),
+        grupal: z.string().min(1),
+      })
+    )
+    .min(1),
+  footer: z.string().optional(),
+  span: cardSpanSchema.optional(),
+});
+
+const priceComparisonBookCardSchema = z.object({
+  type: z.literal("price-comparison"),
+  eyebrow: z.string().optional(),
+  heading: z.string().min(1),
+  individual: z.object({
+    label: z.string().min(1),
+    tagline: z.string().optional(),
+    items: z
+      .array(
+        z.object({
+          company: z.string().min(1),
+          amount: z.number(),
+        })
+      )
+      .optional(),
+    total: z.number(),
+    totalLabel: z.string().min(1),
+    detail: z.string().optional(),
+    recommended: z.boolean().optional(),
+  }),
+  grupal: z.object({
+    label: z.string().min(1),
+    tagline: z.string().optional(),
+    items: z
+      .array(
+        z.object({
+          company: z.string().min(1),
+          amount: z.number(),
+        })
+      )
+      .optional(),
+    total: z.number(),
+    totalLabel: z.string().min(1),
+    detail: z.string().optional(),
+    recommended: z.boolean().optional(),
+  }),
+  savings: z
+    .object({
+      amount: z.number(),
+      label: z.string().min(1),
+      detail: z.string().optional(),
+    })
+    .optional(),
+  span: cardSpanSchema.optional(),
+});
+
+const checklistBookCardSchema = z.object({
+  type: z.literal("checklist"),
+  eyebrow: z.string().optional(),
+  heading: z.string().min(1),
+  items: z.array(z.string().min(1)).min(1),
+  span: cardSpanSchema.optional(),
 });
 
 const metricBookCardSchema = z.object({
@@ -153,6 +280,11 @@ const bookCardSchema = z.discriminatedUnion("type", [
   metricBookCardSchema,
   chartBookCardSchema,
   diagramBookCardSchema,
+  comparisonBookCardSchema,
+  orgChartBookCardSchema,
+  comparisonTableBookCardSchema,
+  priceComparisonBookCardSchema,
+  checklistBookCardSchema,
 ]);
 
 const overviewScreenSchema = z.object({

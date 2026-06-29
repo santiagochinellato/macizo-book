@@ -10,6 +10,14 @@ import { DynamicIcon } from "@/components/ui/Icon";
 import { Chart } from "@/components/charts/Chart";
 import { ArchitectureDiagram } from "@/components/charts/ArchitectureDiagram";
 import { InvestmentSection } from "@/components/screens/InvestmentSection";
+import {
+  AllocationExampleBlock,
+  ChecklistCardContent,
+  ComparisonCardContent,
+  ComparisonTableCardContent,
+  OrgChartCardContent,
+  PriceComparisonCardContent,
+} from "@/components/bento/BookSectionCards";
 import { screenEnter, stagger, fadeUp } from "@/lib/motion-variants";
 import type {
   BookSectionScreenData,
@@ -58,7 +66,9 @@ interface ImageCardContentProps {
 }
 
 function ImageCardContent({ card, clickable, onClick }: ImageCardContentProps) {
-  const aspectClass = spanToAspect(card.span);
+  const isContain = card.fit === "contain";
+  const aspectClass = isContain ? "" : spanToAspect(card.span);
+
   return (
     <div
       className={`relative w-full overflow-hidden ${aspectClass} ${clickable ? "cursor-pointer group" : ""}`}
@@ -74,17 +84,26 @@ function ImageCardContent({ card, clickable, onClick }: ImageCardContentProps) {
         alt={card.alt}
         loading="lazy"
         decoding="async"
-        style={{
-          position: "absolute",
-          inset: 0,
-          width: "100%",
-          height: "100%",
-          objectFit: "cover",
-          objectPosition: "top",
-          display: "block",
-          transition: "transform 0.4s ease",
-        }}
-        className={clickable ? "group-hover:scale-[1.03]" : ""}
+        style={
+          isContain
+            ? {
+                width: "100%",
+                height: "auto",
+                display: "block",
+                objectFit: "contain",
+              }
+            : {
+                position: "absolute",
+                inset: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "top",
+                display: "block",
+                transition: "transform 0.4s ease",
+              }
+        }
+        className={clickable && !isContain ? "group-hover:scale-[1.03]" : ""}
       />
 
       {/* Expand hint on hover */}
@@ -398,15 +417,20 @@ function TextCardContent({ card, sectionColor }: TextCardContentProps) {
   // comfortable line length on full-width screens.
   if (isWide) {
     return (
-      <div className="grid md:grid-cols-2 gap-x-10 gap-y-3 h-full" style={accentStyle}>
-        <div className="flex flex-col gap-2.5 min-w-0">
-          {eyebrowEl}
-          {headingEl}
-          {hasBullets && bodyEl}
+      <div className="flex flex-col gap-4 h-full" style={accentStyle}>
+        <div className="grid md:grid-cols-2 gap-x-10 gap-y-3">
+          <div className="flex flex-col gap-2.5 min-w-0">
+            {eyebrowEl}
+            {headingEl}
+            {hasBullets && bodyEl}
+          </div>
+          <div className="flex flex-col gap-2.5 min-w-0 justify-center">
+            {hasBullets ? bulletsEl : bodyEl}
+          </div>
         </div>
-        <div className="flex flex-col gap-2.5 min-w-0 justify-center">
-          {hasBullets ? bulletsEl : bodyEl}
-        </div>
+        {card.allocationExample && (
+          <AllocationExampleBlock data={card.allocationExample} color={sectionColor} />
+        )}
       </div>
     );
   }
@@ -417,6 +441,9 @@ function TextCardContent({ card, sectionColor }: TextCardContentProps) {
       {headingEl}
       {bodyEl}
       {bulletsEl}
+      {card.allocationExample && (
+        <AllocationExampleBlock data={card.allocationExample} color={sectionColor} />
+      )}
     </div>
   );
 }
@@ -548,8 +575,19 @@ export function BookSectionScreen({ data }: BookSectionScreenProps) {
               const isOffering = card.type === "text" && card.tier === "offering";
               const isFuture = card.type === "text" && card.tier === "future";
               const isFocus = card.type === "text" && card.tier === "focus";
+              const isVisualCard =
+                card.type === "comparison" ||
+                card.type === "orgchart" ||
+                card.type === "comparison-table" ||
+                card.type === "price-comparison" ||
+                card.type === "checklist";
               const isHighlight =
-                card.type === "metric" || isTextAccent || isOffering || isFuture || isFocus;
+                card.type === "metric" ||
+                isTextAccent ||
+                isOffering ||
+                isFuture ||
+                isFocus ||
+                isVisualCard;
 
               const cardMIdx = cardModalIndex[i];
               const isClickable = card.type === "image" && cardMIdx !== -1;
@@ -599,6 +637,21 @@ export function BookSectionScreen({ data }: BookSectionScreenProps) {
                       {card.type === "metric" && <MetricCardContent card={card} />}
                       {card.type === "chart" && <Chart card={card} />}
                       {card.type === "diagram" && <ArchitectureDiagram card={card} />}
+                      {card.type === "comparison" && (
+                        <ComparisonCardContent card={card} sectionColor={sectionColor} />
+                      )}
+                      {card.type === "orgchart" && (
+                        <OrgChartCardContent card={card} sectionColor={sectionColor} />
+                      )}
+                      {card.type === "comparison-table" && (
+                        <ComparisonTableCardContent card={card} sectionColor={sectionColor} />
+                      )}
+                      {card.type === "price-comparison" && (
+                        <PriceComparisonCardContent card={card} sectionColor={sectionColor} />
+                      )}
+                      {card.type === "checklist" && (
+                        <ChecklistCardContent card={card} sectionColor={sectionColor} />
+                      )}
                     </motion.div>
                   </BentoCard>
                 </Fragment>

@@ -148,6 +148,8 @@ export interface ImageBookCard {
   /** Short badge shown over the image, e.g. "Sitio actual" or "Render fotorrealista" */
   badge?: string;
   span?: CardSpan;
+  /** cover = recorte en aspect ratio fijo · contain = altura natural, sin recorte (infografías) */
+  fit?: "cover" | "contain";
   /** When present, card becomes clickable and opens a PageDetailModal */
   detail?: {
     title: string;
@@ -168,6 +170,22 @@ export interface WireframeBookCard {
 
 export type TextBookCardTier = "focus" | "offering" | "future";
 
+export interface AllocationBar {
+  company: string;
+  pct: number;
+  color: string;
+}
+
+export interface AllocationMonth {
+  label: string;
+  bars: AllocationBar[];
+}
+
+export interface AllocationExample {
+  months: AllocationMonth[];
+  footer?: string;
+}
+
 export interface TextBookCard {
   type: "text";
   eyebrow?: string;
@@ -181,6 +199,89 @@ export interface TextBookCard {
   /** Número de la oferta principal (1–4), para badge coloreado */
   offeringIndex?: number;
   bullets?: string[];
+  /** Barras de distribución mensual de capacidad por empresa */
+  allocationExample?: AllocationExample;
+}
+
+export interface ComparisonSide {
+  label: string;
+  icon?: string;
+  steps: string[];
+}
+
+export interface ComparisonBookCard {
+  type: "comparison";
+  eyebrow?: string;
+  heading: string;
+  left: ComparisonSide;
+  right: ComparisonSide;
+  span?: CardSpan;
+}
+
+export interface OrgChartNode {
+  label: string;
+  sublabel?: string;
+}
+
+export interface OrgChartBookCard {
+  type: "orgchart";
+  eyebrow?: string;
+  heading: string;
+  root: OrgChartNode;
+  children: OrgChartNode[];
+  footer?: string;
+  span?: CardSpan;
+}
+
+export interface ComparisonTableRow {
+  individual: string;
+  grupal: string;
+}
+
+export interface ComparisonTableBookCard {
+  type: "comparison-table";
+  eyebrow?: string;
+  heading: string;
+  rows: ComparisonTableRow[];
+  footer?: string;
+  span?: CardSpan;
+}
+
+export interface PriceComparisonItem {
+  company: string;
+  amount: number;
+}
+
+export interface PriceComparisonSide {
+  label: string;
+  tagline?: string;
+  items?: PriceComparisonItem[];
+  total: number;
+  totalLabel: string;
+  detail?: string;
+  recommended?: boolean;
+}
+
+export interface PriceComparisonBookCard {
+  type: "price-comparison";
+  eyebrow?: string;
+  heading: string;
+  individual: PriceComparisonSide;
+  grupal: PriceComparisonSide;
+  savings?: {
+    amount: number;
+    label: string;
+    detail?: string;
+  };
+  span?: CardSpan;
+}
+
+export interface ChecklistBookCard {
+  type: "checklist";
+  eyebrow?: string;
+  heading: string;
+  items: string[];
+  span?: CardSpan;
 }
 
 export interface MetricBookCard {
@@ -244,7 +345,12 @@ export type BookCard =
   | TextBookCard
   | MetricBookCard
   | ChartBookCard
-  | DiagramBookCard;
+  | DiagramBookCard
+  | ComparisonBookCard
+  | OrgChartBookCard
+  | ComparisonTableBookCard
+  | PriceComparisonBookCard
+  | ChecklistBookCard;
 
 export interface InvestmentPhaseData {
   id: "build" | "run";
