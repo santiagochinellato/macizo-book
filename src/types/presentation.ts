@@ -118,6 +118,8 @@ export interface PricingScreenData {
   subtotal: number;
   discount?: number;
   total: number;
+  /** Etiqueta bajo el monto total, ej. "Ciudad Oeste · 3 sistemas" */
+  scopeLabel?: string;
   paymentPlans?: PaymentPlan[];
   paymentMethods?: string[];
   terms?: string[];
