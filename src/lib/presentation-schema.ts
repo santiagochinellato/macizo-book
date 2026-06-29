@@ -563,6 +563,164 @@ const closingScreenSchema = z.object({
     .optional(),
 });
 
+const heroScreenSchema = z.object({
+  id: z.string().min(1),
+  type: z.literal("hero"),
+  enabled: z.boolean().optional().default(true),
+  label: z.string().optional(),
+  data: z.object({
+    title: z.string().min(1),
+    subtitle: z.string().min(1),
+    dateLabel: z.string().optional(),
+    clientLabel: z.string().optional(),
+    ctaLabel: z.string().optional(),
+  }),
+});
+
+const necesidadesScreenSchema = z.object({
+  id: z.string().min(1),
+  type: z.literal("necesidades"),
+  enabled: z.boolean().optional().default(true),
+  label: z.string().optional(),
+  data: z.object({
+    title: z.string().min(1),
+    description: z.string().optional(),
+    empresas: z.record(
+      z.string(),
+      z.object({
+        titulo: z.string().min(1),
+        items: z
+          .array(
+            z.object({
+              area: z.string().min(1),
+              estado: z.enum(["oportunidad", "en_progreso"]),
+              descripcion: z.string().min(1),
+            })
+          )
+          .min(1),
+      })
+    ),
+  }),
+});
+
+const metodologiaScreenSchema = z.object({
+  id: z.string().min(1),
+  type: z.literal("metodologia"),
+  enabled: z.boolean().optional().default(true),
+  label: z.string().optional(),
+  data: z.object({
+    title: z.string().min(1),
+    bajada: z.string().min(1),
+    bloques: z
+      .array(
+        z.object({
+          id: z.string().min(1),
+          titulo: z.string().min(1),
+          descripcion: z.string().min(1),
+          icono: z.enum(["people", "ux", "standard", "synergy"]),
+          roles: z
+            .array(
+              z.object({
+                nombre: z.string().min(1),
+                rol: z.string().min(1),
+              })
+            )
+            .optional(),
+        })
+      )
+      .min(1),
+  }),
+});
+
+const productosScrollScreenSchema = z.object({
+  id: z.string().min(1),
+  type: z.literal("productos"),
+  enabled: z.boolean().optional().default(true),
+  label: z.string().optional(),
+  data: z.object({
+    title: z.string().min(1),
+    bajada: z.string().min(1),
+    productos: z
+      .array(
+        z.object({
+          id: z.string().min(1),
+          nombre: z.string().min(1),
+          tagline: z.string().min(1),
+          precio_usd: z.number(),
+          moneda: z.string().min(1),
+          estado: z.string().min(1),
+          descripcion: z.string().min(1),
+          funciones_destacadas: z.array(z.string().min(1)).min(1),
+          proximos_desarrollos: z.array(z.string().min(1)).min(1),
+          roles_del_sistema: z.array(z.string().min(1)).optional(),
+        })
+      )
+      .min(1),
+  }),
+});
+
+const metricasScreenSchema = z.object({
+  id: z.string().min(1),
+  type: z.literal("metricas"),
+  enabled: z.boolean().optional().default(true),
+  label: z.string().optional(),
+  data: z.object({
+    title: z.string().min(1),
+    bajada: z.string().optional(),
+    metricas: z
+      .array(
+        z.object({
+          indicador: z.string().min(1),
+          antes: z.string().min(1),
+          despues: z.string().min(1),
+          impacto: z.string().min(1),
+        })
+      )
+      .min(1),
+  }),
+});
+
+const inversionCierreScreenSchema = z.object({
+  id: z.string().min(1),
+  type: z.literal("inversion-cierre"),
+  enabled: z.boolean().optional().default(true),
+  label: z.string().optional(),
+  data: z.object({
+    title: z.string().min(1),
+    bajada: z.string().min(1),
+    inversion: z.object({
+      precio_por_empresa_usd: z.number(),
+      precio_unificado_usd: z.number(),
+      nota_precio: z.string().min(1),
+      modalidad_pago: z.object({
+        cuotas: z.number().int().min(1),
+        monto_por_cuota_usd: z.number(),
+        descripcion: z.string().min(1),
+      }),
+      mantenimiento_mensual: z.object({
+        descripcion: z.string().min(1),
+        nota: z.string().min(1),
+      }),
+    }),
+    proximos_pasos: z
+      .array(
+        z.object({
+          paso: z.number().int().min(1),
+          accion: z.string().min(1),
+          descripcion: z.string().min(1),
+          timing: z.string().min(1),
+          destacado: z.boolean().optional(),
+        })
+      )
+      .min(1),
+    cta: z.object({
+      texto: z.string().min(1),
+      whatsapp: z.boolean().optional(),
+      email: z.boolean().optional(),
+    }),
+  }),
+});
+
 const screenSchema = z.discriminatedUnion("type", [
   overviewScreenSchema,
   roadmapScreenSchema,
@@ -572,12 +730,19 @@ const screenSchema = z.discriminatedUnion("type", [
   bookSectionScreenSchema,
   designSystemScreenSchema,
   closingScreenSchema,
+  heroScreenSchema,
+  necesidadesScreenSchema,
+  metodologiaScreenSchema,
+  productosScrollScreenSchema,
+  metricasScreenSchema,
+  inversionCierreScreenSchema,
 ]);
 
 export const presentationConfigSchema = z
   .object({
     slug: slugSchema,
     version: z.literal(2),
+    layoutMode: z.enum(["slides", "scroll-deck"]).optional(),
     theme: z.object({
       accentColor: z
         .string()

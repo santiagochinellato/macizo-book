@@ -468,9 +468,142 @@ export interface ClosingScreenData {
   summary?: ClosingSummary;
 }
 
+// ─── Scroll-deck section types (labac-co v2) ───────────────────────────────────
+
+export interface HeroScreenData {
+  title: string;
+  subtitle: string;
+  dateLabel?: string;
+  clientLabel?: string;
+  ctaLabel?: string;
+}
+
+export interface NecesidadItem {
+  area: string;
+  estado: "oportunidad" | "en_progreso";
+  descripcion: string;
+}
+
+export interface NecesidadEmpresa {
+  titulo: string;
+  items: NecesidadItem[];
+}
+
+export interface NecesidadesScreenData {
+  title: string;
+  description?: string;
+  empresas: Record<string, NecesidadEmpresa>;
+}
+
+export interface MetodologiaRole {
+  nombre: string;
+  rol: string;
+}
+
+export type MetodologiaIcono = "people" | "ux" | "standard" | "synergy";
+
+export interface MetodologiaBloque {
+  id: string;
+  titulo: string;
+  descripcion: string;
+  icono: MetodologiaIcono;
+  roles?: MetodologiaRole[];
+}
+
+export interface MetodologiaScreenData {
+  title: string;
+  bajada: string;
+  bloques: MetodologiaBloque[];
+}
+
+export interface ProductoScrollData {
+  id: string;
+  nombre: string;
+  tagline: string;
+  precio_usd: number;
+  moneda: string;
+  estado: string;
+  descripcion: string;
+  funciones_destacadas: string[];
+  proximos_desarrollos: string[];
+  roles_del_sistema?: string[];
+}
+
+export interface ProductosScreenData {
+  title: string;
+  bajada: string;
+  productos: ProductoScrollData[];
+}
+
+export interface MetricaSimulada {
+  indicador: string;
+  antes: string;
+  despues: string;
+  impacto: string;
+}
+
+export interface MetricasScreenData {
+  title: string;
+  bajada?: string;
+  metricas: MetricaSimulada[];
+}
+
+export interface InversionModalidadPago {
+  cuotas: number;
+  monto_por_cuota_usd: number;
+  descripcion: string;
+}
+
+export interface InversionData {
+  precio_por_empresa_usd: number;
+  precio_unificado_usd: number;
+  nota_precio: string;
+  modalidad_pago: InversionModalidadPago;
+  mantenimiento_mensual: {
+    descripcion: string;
+    nota: string;
+  };
+}
+
+export interface ProximoPaso {
+  paso: number;
+  accion: string;
+  descripcion: string;
+  timing: string;
+  destacado?: boolean;
+}
+
+export interface InversionCierreScreenData {
+  title: string;
+  bajada: string;
+  inversion: InversionData;
+  proximos_pasos: ProximoPaso[];
+  cta: {
+    texto: string;
+    whatsapp?: boolean;
+    email?: boolean;
+  };
+}
+
 // ─── Screen union ──────────────────────────────────────────────────────────────
 
-export type ScreenType = "overview" | "roadmap" | "product" | "pricing" | "mockups" | "book-section" | "design-system" | "closing";
+export type ScreenType =
+  | "overview"
+  | "roadmap"
+  | "product"
+  | "pricing"
+  | "mockups"
+  | "book-section"
+  | "design-system"
+  | "closing"
+  | "hero"
+  | "necesidades"
+  | "metodologia"
+  | "productos"
+  | "metricas"
+  | "inversion-cierre";
+
+export type LayoutMode = "slides" | "scroll-deck";
 
 export interface OverviewScreen {
   id: string;
@@ -536,6 +669,62 @@ export interface ClosingScreen {
   data?: ClosingScreenData;
 }
 
+export interface HeroScreen {
+  id: string;
+  type: "hero";
+  enabled?: boolean;
+  label?: string;
+  data: HeroScreenData;
+}
+
+export interface NecesidadesScreen {
+  id: string;
+  type: "necesidades";
+  enabled?: boolean;
+  label?: string;
+  data: NecesidadesScreenData;
+}
+
+export interface MetodologiaScreen {
+  id: string;
+  type: "metodologia";
+  enabled?: boolean;
+  label?: string;
+  data: MetodologiaScreenData;
+}
+
+export interface ProductosScrollScreen {
+  id: string;
+  type: "productos";
+  enabled?: boolean;
+  label?: string;
+  data: ProductosScreenData;
+}
+
+export interface MetricasScreen {
+  id: string;
+  type: "metricas";
+  enabled?: boolean;
+  label?: string;
+  data: MetricasScreenData;
+}
+
+export interface InversionCierreScreen {
+  id: string;
+  type: "inversion-cierre";
+  enabled?: boolean;
+  label?: string;
+  data: InversionCierreScreenData;
+}
+
+export type ScrollDeckScreen =
+  | HeroScreen
+  | NecesidadesScreen
+  | MetodologiaScreen
+  | ProductosScrollScreen
+  | MetricasScreen
+  | InversionCierreScreen;
+
 export type Screen =
   | OverviewScreen
   | RoadmapScreen
@@ -544,13 +733,15 @@ export type Screen =
   | MockupsScreen
   | BookSectionScreen
   | DesignSystemScreen
-  | ClosingScreen;
+  | ClosingScreen
+  | ScrollDeckScreen;
 
 // ─── Root config ───────────────────────────────────────────────────────────────
 
 export interface PresentationConfig {
   slug: string;
   version: 2;
+  layoutMode?: LayoutMode;
   theme: ThemeConfig;
   agency: AgencyConfig;
   client: ClientConfig;

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, type RefObject } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { Menu } from "lucide-react";
 
@@ -12,6 +12,8 @@ interface AppShellProps {
   mobileNavOpen: boolean;
   onMobileNavOpen: () => void;
   onMobileNavClose: () => void;
+  scrollMode?: boolean;
+  mainRef?: RefObject<HTMLElement | null>;
 }
 
 export function AppShell({
@@ -22,9 +24,12 @@ export function AppShell({
   mobileNavOpen,
   onMobileNavOpen,
   onMobileNavClose,
+  scrollMode = false,
+  mainRef: mainRefProp,
 }: AppShellProps) {
   const reduced = useReducedMotion();
-  const mainRef = useRef<HTMLElement>(null);
+  const internalMainRef = useRef<HTMLElement>(null);
+  const mainRef = mainRefProp ?? internalMainRef;
 
   useEffect(() => {
     if (mobileNavOpen) {
@@ -48,11 +53,11 @@ export function AppShell({
   }, [onMobileNavClose]);
 
   useEffect(() => {
-    if (!activeSectionId) return;
+    if (scrollMode || !activeSectionId) return;
     const main = mainRef.current;
     if (!main) return;
     main.scrollTo({ top: 0, left: 0, behavior: "auto" });
-  }, [activeSectionId]);
+  }, [activeSectionId, scrollMode, mainRef]);
 
   return (
     <div

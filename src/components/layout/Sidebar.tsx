@@ -14,6 +14,11 @@ import {
   ChevronRight,
   ExternalLink,
   X,
+  Sparkles,
+  Target,
+  Workflow,
+  Package,
+  TrendingUp,
 } from "lucide-react";
 import type { Screen, AgencyConfig, ClientConfig, DocumentMeta } from "@/types/presentation";
 import { DOC_TYPE_LABELS, STATUS_LABELS, STATUS_COLORS } from "@/lib/utils";
@@ -28,6 +33,12 @@ const SCREEN_ICONS: Record<Screen["type"], React.ReactNode> = {
   "book-section": <BookOpen size={17} />,
   "design-system": <Palette size={17} />,
   closing: <Handshake size={17} />,
+  hero: <Sparkles size={17} />,
+  necesidades: <Target size={17} />,
+  metodologia: <Workflow size={17} />,
+  productos: <Package size={17} />,
+  metricas: <TrendingUp size={17} />,
+  "inversion-cierre": <CreditCard size={17} />,
 };
 
 const SCREEN_DEFAULT_LABELS: Record<Screen["type"], string> = {
@@ -39,6 +50,12 @@ const SCREEN_DEFAULT_LABELS: Record<Screen["type"], string> = {
   "book-section": "Sección",
   "design-system": "Diseño",
   closing: "Cierre",
+  hero: "Portada",
+  necesidades: "Hoy",
+  metodologia: "Método",
+  productos: "Productos",
+  metricas: "Impacto",
+  "inversion-cierre": "Inversión",
 };
 
 interface SidebarProps {
@@ -51,6 +68,7 @@ interface SidebarProps {
   client: ClientConfig;
   meta: DocumentMeta;
   onCloseMobile?: () => void;
+  scrollMode?: boolean;
 }
 
 export function Sidebar({
@@ -63,6 +81,7 @@ export function Sidebar({
   client,
   meta,
   onCloseMobile,
+  scrollMode = false,
 }: SidebarProps) {
   const reduced = useReducedMotion();
   const isDesktop = useIsDesktopNav();
@@ -155,7 +174,7 @@ export function Sidebar({
 
       {/* Navigation */}
       <nav className="flex-1 flex flex-col py-3 overflow-y-auto overflow-x-hidden relative min-h-0">
-        {showLabels && (
+        {showLabels && !scrollMode && (
           <div
             className="absolute left-[27px] top-5 bottom-5 w-px hidden sm:block"
             style={{ background: "var(--border)" }}
@@ -163,7 +182,10 @@ export function Sidebar({
           />
         )}
 
-        <ul className="flex flex-col gap-0.5 px-2" role="list">
+        <ul
+          className={`flex flex-col gap-0.5 px-2 ${scrollMode && isDesktop && isCollapsed ? "items-center" : ""}`}
+          role="list"
+        >
           {screens.map((screen) => {
             const isActive = screen.id === activeId;
             const label = screen.label ?? SCREEN_DEFAULT_LABELS[screen.type];
@@ -173,36 +195,51 @@ export function Sidebar({
                 <button
                   type="button"
                   onClick={() => handleSelect(screen.id)}
-                  className="w-full flex items-center gap-3 rounded-lg px-2 py-2.5 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)]"
+                  className={`w-full flex items-center gap-3 rounded-lg px-2 py-2.5 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)] ${
+                    scrollMode && isDesktop && isCollapsed ? "justify-center px-0" : ""
+                  }`}
                   style={{
                     background: isActive
                       ? "color-mix(in srgb, var(--primary) 8%, transparent)"
                       : "transparent",
                     color: isActive ? "var(--primary)" : "var(--text-muted)",
                   }}
-                  aria-current={isActive ? "page" : undefined}
-                  title={!showLabels ? label : undefined}
+                  aria-current={isActive ? "true" : undefined}
+                  title={!showLabels || (scrollMode && isCollapsed) ? label : undefined}
                 >
                   <div className="relative flex-shrink-0 flex items-center justify-center w-7 h-7">
-                    <motion.div
-                      className="absolute inset-0 rounded-full"
-                      animate={
-                        isActive ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.7 }
-                      }
-                      transition={{ duration: 0.2 }}
-                      style={{ background: "var(--primary-glow)" }}
-                    />
-                    <span
-                      className="relative z-10 flex items-center justify-center"
-                      style={{
-                        color: isActive ? "var(--primary)" : "var(--text-subtle)",
-                      }}
-                    >
-                      {SCREEN_ICONS[screen.type]}
-                    </span>
+                    {scrollMode && isDesktop && isCollapsed ? (
+                      <span
+                        className="w-2.5 h-2.5 rounded-full transition-transform"
+                        style={{
+                          background: isActive ? "var(--primary)" : "var(--text-subtle)",
+                          transform: isActive ? "scale(1.2)" : "scale(1)",
+                        }}
+                        aria-hidden
+                      />
+                    ) : (
+                      <>
+                        <motion.div
+                          className="absolute inset-0 rounded-full"
+                          animate={
+                            isActive ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.7 }
+                          }
+                          transition={{ duration: 0.2 }}
+                          style={{ background: "var(--primary-glow)" }}
+                        />
+                        <span
+                          className="relative z-10 flex items-center justify-center"
+                          style={{
+                            color: isActive ? "var(--primary)" : "var(--text-subtle)",
+                          }}
+                        >
+                          {SCREEN_ICONS[screen.type]}
+                        </span>
+                      </>
+                    )}
                   </div>
 
-                  {showLabels && (
+                  {showLabels && !(scrollMode && isCollapsed) && (
                     <span className="text-sm font-medium text-left truncate min-w-0 flex-1">
                       {label}
                     </span>

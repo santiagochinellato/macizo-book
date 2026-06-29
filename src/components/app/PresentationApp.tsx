@@ -33,6 +33,12 @@ const SCREEN_DEFAULT_LABELS: Record<Screen["type"], string> = {
   "book-section": "Sección",
   "design-system": "Diseño",
   closing: "Cierre",
+  hero: "Portada",
+  necesidades: "Hoy",
+  metodologia: "Método",
+  productos: "Productos",
+  metricas: "Impacto",
+  "inversion-cierre": "Inversión",
 };
 
 interface PresentationAppProps {
@@ -101,6 +107,13 @@ function renderScreen(screen: Screen, config: PresentationConfig) {
           config={config}
         />
       );
+    case "hero":
+    case "necesidades":
+    case "metodologia":
+    case "productos":
+    case "metricas":
+    case "inversion-cierre":
+      return null;
     default: {
       const _exhaustive: never = screen;
       return null;

@@ -1,11 +1,12 @@
 {
   "slug": "labac-co",
   "version": 2,
+  "layoutMode": "scroll-deck",
   "meta": {
     "type": "propuesta",
     "number": "2026-LBAC-CO",
-    "title": "Ciudad Oeste + LABAC — Presupuesto y metodología",
-    "subtitle": "Cuatro productos digitales. Dos clínicas. Un modelo de trabajo orientado a procesos.",
+    "title": "Una inversión que organiza, automatiza y hace crecer tu clínica",
+    "subtitle": "Sistema integral de presencia digital, atención por IA y gestión de turnos para LABAC y CO",
     "date": "2026-06-27",
     "validUntil": "2026-07-27",
     "status": "borrador",
@@ -32,634 +33,304 @@
     }
   },
   "theme": {
-    "accentColor": "#1a5c38"
+    "accentColor": "#1a3a4a"
   },
   "screens": [
     {
-      "id": "necesidades",
-      "type": "book-section",
-      "label": "Necesidades",
+      "id": "hero",
+      "type": "hero",
+      "label": "Portada",
       "data": {
-        "title": "Necesidades a cubrir",
-        "subtitle": "Dolores operativos identificados en Ciudad Oeste y LABAC — mapeados a web, turnos/resultados y chat con IA.",
-        "cards": [
-          {
-            "type": "text",
-            "span": "half",
-            "accent": true,
-            "eyebrow": "RRHH · administración · organización",
-            "heading": "Por dentro no hay mapa. Por fuera, el paciente lo siente.",
-            "body": "Los problemas internos se traducen en fricción visible: recepción saturada, procesos sin trazabilidad y gerencia sin datos para decidir.",
-            "bullets": [
-              "Sin organigrama claro: RRHH reacciona en lugar de planificar.",
-              "Vacaciones en el aire hasta el aviso manual por WhatsApp.",
-              "Recepción sin protocolo uniforme de atención.",
-              "Conciliaciones bancarias manuales en LABAC — obligatorio resolver.",
-              "Sin métricas de derivación médica: no se sostiene el modelo consultorio sin alquiler a cambio de derivación.",
-              "ISO bloqueada sin procesos automatizados y auditables.",
-              "Gerencia sin reportes consolidados: profesional, obra social y caja."
-            ]
-          },
-          {
-            "type": "text",
-            "span": "half",
-            "accent": true,
-            "eyebrow": "Paciente · sistemas · integración",
-            "heading": "El paciente ya eligió digital. El sistema todavía no.",
-            "body": "Cada llamada que responde recepción por algo que un sistema podría resolver es una consulta presencial que no ocurre.",
-            "bullets": [
-              "Recordatorios propios por WhatsApp y email, sin riesgo de bloqueo por spam.",
-              "Agenda actual de Ciudad Oeste debe migrar sin pérdida de datos.",
-              "Interfaz simple para pacientes de 60 a 65 años.",
-              "Órdenes ilegibles: impresión digital en recepción y captura para LABAC.",
-              "LABAC: web institucional separada del portal de resultados; turnos fuera del sitio.",
-              "Paciente de Ciudad Oeste que no cruza a LABAC automáticamente = derivación perdida."
-            ]
-          },
-          {
-            "type": "comparison-table",
-            "span": "3x1",
-            "eyebrow": "Mapeo dolor → solución",
-            "heading": "Lo que falla hoy y qué cubre este presupuesto",
-            "rows": [
+        "title": "Una inversión que organiza, automatiza y hace crecer tu clínica",
+        "subtitle": "Sistema integral de presencia digital, atención por IA y gestión de turnos para LABAC y CO",
+        "clientLabel": "LABAC + Ciudad Oeste",
+        "dateLabel": "Junio 2026",
+        "ctaLabel": "Ver propuesta ↓"
+      }
+    },
+    {
+      "id": "necesidades",
+      "type": "necesidades",
+      "label": "Hoy",
+      "data": {
+        "title": "Dónde estamos hoy — y hacia dónde vamos",
+        "description": "El punto de partida antes de presentar las soluciones",
+        "empresas": {
+          "LABAC": {
+            "titulo": "LABAC hoy",
+            "items": [
               {
-                "individual": "Recepción saturada en llamadas y WhatsApp manual",
-                "grupal": "Web de captación + agenda/resultados + chat 24/7 para lo rutinario"
+                "area": "Presencia digital",
+                "estado": "oportunidad",
+                "descripcion": "Sin sitio web activo, los pacientes buscan información por WhatsApp o llamando directamente. Cada consulta que llega por ese canal es tiempo del equipo administrativo que podría estar dedicado a la atención presencial."
               },
               {
-                "individual": "Paciente mayor sin autonomía para reservar o consultar",
-                "grupal": "Turnos web intuitivos + portal de resultados + asistente conversacional"
+                "area": "Atención y consultas frecuentes",
+                "estado": "oportunidad",
+                "descripcion": "Sin un canal automatizado, las mismas preguntas se responden manualmente decenas de veces por semana: horarios, preparación de estudios, cobertura de obras sociales, resultados."
               },
               {
-                "individual": "Resultados de laboratorio consultados por teléfono",
-                "grupal": "Portal dedicado con entrega por token y estados de publicación"
-              },
-              {
-                "individual": "Derivación médica sin medir ni registrar origen",
-                "grupal": "Registro de pedidos + OCR de órdenes + carga en Interpracsys"
-              },
-              {
-                "individual": "Recetas y órdenes con letra ilegible",
-                "grupal": "Órdenes digitales firmadas e impresión legible en recepción"
-              },
-              {
-                "individual": "Procesos sin rastro para certificación ISO",
-                "grupal": "Flujos documentados y trazabilidad auditable desde el día uno"
+                "area": "Gestión de pacientes, derivantes y contratistas",
+                "estado": "oportunidad",
+                "descripcion": "Sin un sistema centralizado, la coordinación entre pacientes, médicos derivantes y prestadores externos depende de procesos manuales que generan pérdidas de información y demoras."
               }
-            ],
-            "footer": "No vendemos tres sistemas. Resolvemos dolores operativos ya identificados — con entregables medibles en 4 meses."
+            ]
+          },
+          "CO": {
+            "titulo": "CO hoy",
+            "items": [
+              {
+                "area": "Atención digital automatizada",
+                "estado": "oportunidad",
+                "descripcion": "El sitio web avanzó significativamente (90% completado). El paso que resta es conectarlo a un canal de atención inteligente que responda consultas, capture leads y derive correctamente sin intervención humana."
+              },
+              {
+                "area": "Gestión de turnos",
+                "estado": "oportunidad",
+                "descripcion": "Sin un sistema de turnos online, la agenda se administra manualmente. Esto limita la capacidad de escalar la cantidad de pacientes atendidos y genera fricción tanto para el equipo como para quien quiere reservar."
+              },
+              {
+                "area": "Presencia digital unificada",
+                "estado": "en_progreso",
+                "descripcion": "Sitio web en etapa avanzada. Se integra ahora con el sistema de turnos y el chatbot para convertirse en el canal central de captación y atención."
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "metodologia",
+      "type": "metodologia",
+      "label": "Método",
+      "data": {
+        "title": "Cómo trabajamos — El método que hace que esto funcione de verdad",
+        "bajada": "No venimos a instalar un software y retirarnos. Venimos a entender cómo funciona tu organización por dentro y construir tecnología que la haga mejor.",
+        "bloques": [
+          {
+            "id": "enfoque",
+            "titulo": "El punto de partida: las personas",
+            "descripcion": "El desarrollo tecnológico empieza desde los recursos humanos, no al revés. Si el equipo administrativo trabaja con procesos caóticos o ambiguos, ningún sistema va a rendir al máximo. Por eso, antes de escribir una línea de código, mapeamos los roles, las tareas y los puntos de fricción diarios.",
+            "icono": "people"
+          },
+          {
+            "id": "ux_rrhh",
+            "titulo": "UX aplicado al trabajo real",
+            "descripcion": "Diseñar la experiencia de un recepcionista o de un médico derivante es exactamente el mismo proceso que diseñar la interfaz de una app: detectar el problema, entender el flujo de trabajo, eliminar la fricción. Cuando la persona detrás del sistema trabaja bien, el paciente lo percibe afuera.",
+            "icono": "ux"
+          },
+          {
+            "id": "estandarizacion",
+            "titulo": "La tecnología como herramienta de orden",
+            "descripcion": "Cada sistema que construimos también estandariza procesos. Esto no solo agiliza el trabajo diario: cumple con requerimientos formales de calidad, trazabilidad y documentación que muchas estructuras de salud necesitan o van a necesitar (Normas ISO, auditorías, reportes de gestión).",
+            "icono": "standard"
+          },
+          {
+            "id": "sinergia",
+            "titulo": "La sinergia que nos diferencia",
+            "descripcion": "Trabajamos con Carla, referente interna de RRHH de la organización, como puente entre la lógica operativa y la ejecución tecnológica. Ella conoce el caos interno, identifica las fricciones de atención y traduce las necesidades de la gerencia. Nosotros tomamos esas fricciones y las convertimos en sistemas digitales que las resuelven. Juntos, cerramos el ciclo completo: detección → diseño → solución → implementación.",
+            "icono": "synergy",
+            "roles": [
+              {
+                "nombre": "Carla (RRHH interno)",
+                "rol": "Detecta los dolores operativos, valida que la solución tenga sentido para el equipo, y comunica el valor a la gerencia."
+              },
+              {
+                "nombre": "Macizo (Dev + UX + Consultoría)",
+                "rol": "Traduce los dolores operativos en sistemas digitales a medida que reducen la fricción para el paciente y el personal."
+              }
+            ]
           }
         ]
       }
     },
     {
       "id": "productos",
-      "type": "book-section",
+      "type": "productos",
       "label": "Productos",
       "data": {
-        "title": "Los tres productos",
-        "subtitle": "Mismo esquema de inversión. Enfoque distinto según el negocio: turnos en Ciudad Oeste, resultados en LABAC.",
-        "cards": [
+        "title": "Qué incluye esta inversión",
+        "bajada": "Tres productos integrados que trabajan juntos como un solo sistema.",
+        "productos": [
           {
-            "type": "text",
-            "span": "1x1",
-            "tier": "offering",
-            "offeringIndex": 1,
-            "eyebrow": "USD 450",
-            "heading": "Sitio Web",
-            "body": "Presencia digital profesional adaptada a cada negocio.",
-            "bullets": [
-              "Ciudad Oeste: captación y confianza antes de la apertura; info clara para pacientes mayores.",
-              "LABAC: web institucional sin turnos — sedes, servicios y jerarquía del laboratorio.",
-              "Separación de portales: resultados fuera de labac.com.ar.",
-              "Diseño UX/UI mobile-first, SEO básico y CMS para contenidos."
+            "id": "web",
+            "nombre": "Sitio Web Profesional",
+            "tagline": "La cara digital de la clínica, disponible las 24 horas",
+            "precio_usd": 450,
+            "moneda": "USD",
+            "estado": "disponible",
+            "descripcion": "Un sitio web moderno, rápido y optimizado para convertir visitas en pacientes. Diseñado para funcionar como el centro de toda la presencia digital de la clínica.",
+            "funciones_destacadas": [
+              "Diseño responsive (celular, tablet, escritorio)",
+              "Sección de servicios y especialidades clara y navegable",
+              "Formulario de contacto conectado al sistema de turnos",
+              "Integración con WhatsApp Business",
+              "SEO local optimizado para búsquedas en la zona",
+              "Página de resultados o portal de pacientes (según requerimiento)",
+              "Sección para médicos derivantes con acceso diferenciado",
+              "Blog o sección de novedades para posicionamiento orgánico",
+              "Carga ultrarápida y hosting administrado incluido"
+            ],
+            "proximos_desarrollos": [
+              "Portal de contratistas y prestadores externos",
+              "Integración con sistema de resultados digitales",
+              "Módulo de noticias y campañas de salud"
             ]
           },
           {
-            "type": "text",
-            "span": "1x1",
-            "tier": "offering",
-            "offeringIndex": 2,
-            "eyebrow": "USD 2.000",
-            "heading": "Turnos (CO) · Resultados (LABAC)",
-            "body": "El motor operativo de cada clínica — distinto por negocio, misma inversión.",
-            "bullets": [
-              "CO: reserva pública, agenda staff, migración completa de la agenda actual.",
-              "CO: recordatorios WhatsApp + email nativos; órdenes impresas en recepción.",
-              "CO: reportes por profesional, obra social y estado de caja.",
-              "LABAC: portal /resultados/[token] con estados validado → publicado → visto.",
-              "LABAC: base para métricas de derivación médica por profesional."
+            "id": "chatbot",
+            "nombre": "Chatbot con IA",
+            "tagline": "Atención inmediata por WhatsApp e Instagram, sin intervención humana",
+            "precio_usd": 1500,
+            "moneda": "USD",
+            "estado": "disponible",
+            "descripcion": "Un agente conversacional entrenado con la información específica de la clínica. Responde al instante, califica consultas, genera turnos y escala al equipo humano solo cuando es necesario.",
+            "funciones_destacadas": [
+              "Respuesta automática 24/7 por WhatsApp Business e Instagram",
+              "Respuestas a preguntas frecuentes: horarios, coberturas, preparación de estudios, precios",
+              "Derivación inteligente: detecta el tipo de consulta y la direcciona al área correcta",
+              "Generación y confirmación de turnos desde el chat",
+              "Recordatorios automáticos de turnos por WhatsApp",
+              "Detección de urgencias y protocolo de derivación rápida",
+              "Panel de métricas: consultas atendidas, temas frecuentes, tiempos de respuesta",
+              "Escalado a agente humano con historial completo de la conversación",
+              "Captura de datos de pacientes nuevos de forma automática"
+            ],
+            "proximos_desarrollos": [
+              "Integración con historia clínica electrónica",
+              "Flujos de seguimiento post-consulta",
+              "Encuestas de satisfacción automatizadas",
+              "Campaña de reactivación de pacientes inactivos",
+              "Multicanal: Telegram, email, web widget"
             ]
           },
           {
-            "type": "text",
-            "span": "1x1",
-            "tier": "offering",
-            "offeringIndex": 3,
-            "eyebrow": "USD 2.500",
-            "heading": "Chat integrado con IA",
-            "body": "Canal 24/7 con escalado humano para casos complejos.",
-            "bullets": [
-              "LABAC — DI BIO Chat: OCR de órdenes, carga Interpracsys, corpus de recetas.",
-              "CO — Asistente WhatsApp: agendamiento, recordatorios y FAQs pre-consulta.",
-              "Lenguaje natural, no menú de opciones.",
-              "Libera recepción para protocolo de atención presencial."
+            "id": "turnos",
+            "nombre": "Sistema de Turnos con IA",
+            "tagline": "Agenda inteligente para pacientes, derivantes y equipo interno",
+            "precio_usd": 2000,
+            "moneda": "USD",
+            "estado": "disponible",
+            "descripcion": "Un sistema completo de gestión de turnos que automatiza la agenda, organiza los roles y genera reportes para la toma de decisiones. Diseñado para adaptarse al flujo real de una clínica.",
+            "roles_del_sistema": [
+              "Paciente — reserva, modifica y cancela su turno online",
+              "Recepcionista — gestiona la agenda general y atiende casos especiales",
+              "Profesional de salud — visualiza su agenda personal y notas de cada turno",
+              "Médico derivante — accede a un portal propio para seguimiento de pacientes derivados",
+              "Administrador — gestiona usuarios, horarios y configuración general",
+              "Gerencia — visualiza reportes y métricas de rendimiento"
+            ],
+            "funciones_destacadas": [
+              "Reserva online disponible las 24 horas desde web y WhatsApp",
+              "Agenda visual por profesional, área o servicio",
+              "Confirmación y recordatorio automático de turnos (24hs antes y 2hs antes)",
+              "Lista de espera inteligente: se completan los huecos automáticamente",
+              "Gestión de sobreturno y excepciones por parte del equipo",
+              "Historial completo de turnos por paciente",
+              "Notificaciones internas para el equipo cuando se agenda un turno prioritario",
+              "Reportes de ocupación de agenda, ausentismo y demanda por servicio",
+              "Panel para médicos derivantes con historial de pacientes enviados",
+              "Integración total con el chatbot para agendar desde la conversación",
+              "Control de horarios por profesional y por sede"
+            ],
+            "proximos_desarrollos": [
+              "IA predictiva de ausentismo: anticipa quién probablemente no vendrá",
+              "Sistema de calificación del turno post-atención",
+              "Integración con facturación y obras sociales",
+              "App móvil nativa para el equipo de salud",
+              "Módulo de telemedicina con videollamada integrada"
             ]
-          },
-          {
-            "type": "diagram",
-            "span": "3x1",
-            "title": "Flujo DI BIO Chat — LABAC",
-            "subtitle": "Del mensaje del paciente a la carga del pedido, con humano en el loop.",
-            "layers": [
-              {
-                "title": "Paciente",
-                "role": "Canal",
-                "items": [
-                  { "label": "WhatsApp", "icon": "MessageCircle", "description": "Consulta en lenguaje natural" },
-                  { "label": "Foto de receta", "icon": "ScanLine", "description": "OCR de orden médica" }
-                ]
-              },
-              {
-                "title": "DI BIO Chat",
-                "role": "IA + reglas",
-                "items": [
-                  { "label": "Triage automático", "icon": "Bot", "description": "FAQs, cobertura, pre-análisis" },
-                  { "label": "Auditoría OCR", "icon": "ShieldCheck", "description": "Trazabilidad para ISO" }
-                ]
-              },
-              {
-                "title": "Operación",
-                "role": "Integración",
-                "items": [
-                  { "label": "Interpracsys", "icon": "Database", "description": "Carga del pedido" },
-                  { "label": "Chatwoot", "icon": "Headphones", "description": "Escalado humano con contexto" }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "comparison",
-            "span": "3x1",
-            "eyebrow": "Diferencial competitivo",
-            "heading": "Menú de opciones vs. asistente que entiende, lee la receta y carga el pedido",
-            "left": {
-              "label": "Chatbot de menú",
-              "icon": "List",
-              "steps": [
-                "Presione 1 para turnos",
-                "Presione 2 para resultados",
-                "El paciente se pierde en opciones",
-                "La receta se carga manual en mostrador",
-                "Sin trazabilidad del origen del pedido"
-              ]
-            },
-            "right": {
-              "label": "DI BIO Chat",
-              "icon": "Bot",
-              "steps": [
-                "Conversación en lenguaje natural",
-                "OCR lee la foto de la receta",
-                "Carga automática en Interpracsys",
-                "Resultados clínicos → siempre humano",
-                "Recepción enfocada en contención presencial"
-              ]
-            }
-          },
-          {
-            "type": "metric",
-            "span": "3x1",
-            "icon": "CircleDollarSign",
-            "value": "USD 4.950",
-            "label": "Total por empresa",
-            "description": "USD 450 web + USD 2.000 turnos o resultados + USD 2.500 chat IA."
           }
         ]
       }
     },
     {
-      "id": "metodologia",
-      "type": "book-section",
-      "label": "Metodología",
+      "id": "metricas",
+      "type": "metricas",
+      "label": "Impacto",
       "data": {
-        "title": "Metodología de trabajo",
-        "subtitle": "RRHH primero, UX aplicado a operaciones, tecnología como consecuencia — no al revés.",
-        "cards": [
+        "title": "Lo que cambia cuando esto está activo",
+        "bajada": "Proyección de impacto operativo basada en implementaciones similares en el sector salud.",
+        "metricas": [
           {
-            "type": "text",
-            "span": "3x1",
-            "accent": true,
-            "eyebrow": "Nuestro diferencial",
-            "heading": "No instalamos software: resolvemos problemas operativos.",
-            "body": "Si la empresa funciona apagando incendios por dentro, el servicio no puede brillar hacia afuera. Encaramos el desarrollo con RRHH y operaciones como pilares del diseño, no como tarea secundaria.",
-            "bullets": [
-              "Auditoría de procesos antes de escribir código.",
-              "El puesto de recepcionista se traduce en flujos digitales que liberan tiempo para lo humano.",
-              "Automatizar deja rastro auditable — requisito para certificación ISO.",
-              "Paciente mayor autónomo + recepción con métricas y reportes para gerencia."
-            ]
+            "indicador": "Tiempo promedio de respuesta a consultas",
+            "antes": "4-8 horas (respuesta manual)",
+            "despues": "Menos de 30 segundos (chatbot IA)",
+            "impacto": "Reducción del 98% en el tiempo de primera respuesta"
           },
           {
-            "type": "text",
-            "span": "half",
-            "eyebrow": "Paso 1",
-            "heading": "Detección interna",
-            "body": "RRHH y operaciones identifican el caos: vacaciones en el aire, recepción sin protocolo, conciliaciones manuales, derivación sin medir."
+            "indicador": "Horas semanales del equipo en atención telefónica",
+            "antes": "~15 horas / semana",
+            "despues": "~3 horas / semana",
+            "impacto": "80% del tiempo liberado para atención de calidad en persona"
           },
           {
-            "type": "text",
-            "span": "half",
-            "eyebrow": "Paso 2",
-            "heading": "Traducción técnica",
-            "body": "MacizoDigital convierte cada dolor en flujo, pantalla y métrica. Sin promesas genéricas: entregables concretos por producto."
+            "indicador": "Tasa de ausentismo a turnos",
+            "antes": "25-35% (sin recordatorio)",
+            "despues": "8-12% (con recordatorios automáticos)",
+            "impacto": "Hasta 3x más turnos efectivamente cumplidos"
           },
           {
-            "type": "text",
-            "span": "half",
-            "eyebrow": "Paso 3",
-            "heading": "Validación con gerencia",
-            "body": "Cada hito se aprueba con quien opera el negocio. El proyecto no queda en un cajón: se capacita, se migra y se mide."
+            "indicador": "Pacientes nuevos captados por canales digitales",
+            "antes": "Casi ninguno (sin web ni automatización)",
+            "despues": "Estimado 15-30 nuevos pacientes / mes en los primeros 90 días",
+            "impacto": "Canal de captación pasiva activo las 24 horas"
           },
           {
-            "type": "text",
-            "span": "half",
-            "eyebrow": "Sinergia CO ↔ LABAC",
-            "heading": "Mismo paciente, dos puntos de contacto",
-            "body": "Consultorio y laboratorio comparten profesionales y pacientes. Coordinar el proyecto acelera la integración y evita inversión duplicada.",
-            "bullets": [
-              "Paciente atendido en CO → pedido en LABAC sin reingreso de datos.",
-              "Médico en consultorio → derivación medible → condición comercial del consultorio.",
-              "Web institucional + portal resultados + WhatsApp: canales distintos, una operación."
-            ]
+            "indicador": "Visibilidad en búsquedas locales (Google)",
+            "antes": "Sin posicionamiento",
+            "despues": "Primeras posiciones en búsquedas de laboratorio / clínica en la zona",
+            "impacto": "Presencia digital construida desde el día 1"
           }
         ]
       }
     },
     {
-      "id": "presupuesto-co",
-      "type": "book-section",
-      "label": "Ciudad Oeste",
-      "data": {
-        "title": "Presupuesto — Ciudad Oeste",
-        "subtitle": "Centro médico en apertura · USD 4.950",
-        "accentColor": "#4f46e5",
-        "cards": [
-          {
-            "type": "text",
-            "span": "3x1",
-            "tier": "focus",
-            "eyebrow": "Valor agregado",
-            "heading": "La tecnología se define desde cero, sin vicios operativos.",
-            "body": "Ciudad Oeste es la oportunidad de establecer el estándar del grupo antes del primer paciente."
-          },
-          {
-            "type": "text",
-            "span": "1x1",
-            "tier": "offering",
-            "offeringIndex": 1,
-            "eyebrow": "Sitio Web · USD 450",
-            "heading": "Entregables",
-            "body": "Presencia digital para captación y confianza.",
-            "bullets": [
-              "Investigación: arquitectura de contenidos, SEO, benchmarks.",
-              "Diseño UX/UI mobile-first para pacientes mayores.",
-              "Desarrollo Next.js, CMS y deploy.",
-              "Capacitación en gestión de contenidos."
-            ]
-          },
-          {
-            "type": "text",
-            "span": "1x1",
-            "tier": "offering",
-            "offeringIndex": 2,
-            "eyebrow": "Sistema de Turnos · USD 2.000",
-            "heading": "Entregables",
-            "body": "Agenda, recordatorios y reportes operativos.",
-            "bullets": [
-              "Auditoría de flujos de recepción y relevamiento de agenda actual.",
-              "Migración completa sin pérdida de datos.",
-              "Recordatorios WhatsApp + email nativos.",
-              "Órdenes y recetas impresas en recepción.",
-              "Reportes: pacientes por profesional, OS y caja."
-            ]
-          },
-          {
-            "type": "text",
-            "span": "1x1",
-            "tier": "offering",
-            "offeringIndex": 3,
-            "eyebrow": "Asistente WhatsApp · USD 2.500",
-            "heading": "Entregables",
-            "body": "Canal 24/7 que libera recepción.",
-            "bullets": [
-              "Mapeo de consultas frecuentes y flujos pre-consulta.",
-              "Desarrollo n8n + IA + PostgreSQL.",
-              "WhatsApp Business API + panel Chatwoot.",
-              "Capacitación de recepción y escalado humano."
-            ]
-          },
-          {
-            "type": "metric",
-            "span": "1x1",
-            "icon": "Hammer",
-            "value": "USD 4.950",
-            "label": "Proyecto completo",
-            "description": "Web + turnos + asistente WhatsApp."
-          },
-          {
-            "type": "metric",
-            "span": "1x1",
-            "icon": "Wrench",
-            "value": "USD 250",
-            "label": "Mantenimiento / mes",
-            "description": "Soporte, monitoreo y reentrenamiento IA post-capacitación."
-          },
-          {
-            "type": "metric",
-            "span": "1x1",
-            "icon": "CalendarCheck",
-            "value": "USD 7.950",
-            "label": "Total a 12 meses",
-            "description": "USD 4.950 proyecto + USD 250/mes × 12."
-          }
-        ]
-      }
-    },
-    {
-      "id": "presupuesto-labac",
-      "type": "book-section",
-      "label": "LABAC",
-      "data": {
-        "title": "Presupuesto — LABAC",
-        "subtitle": "Laboratorio bioquímico · USD 4.950",
-        "accentColor": "#1a5c38",
-        "cards": [
-          {
-            "type": "text",
-            "span": "3x1",
-            "tier": "focus",
-            "eyebrow": "Valor agregado",
-            "heading": "Recepción deja de ser call center de resultados.",
-            "body": "Web institucional separada, portal de entrega dedicado y DI BIO Chat con OCR para órdenes ilegibles."
-          },
-          {
-            "type": "text",
-            "span": "1x1",
-            "tier": "offering",
-            "offeringIndex": 1,
-            "eyebrow": "Sitio Web · USD 450",
-            "heading": "Entregables",
-            "body": "Web corporativa sin turnos mezclados con resultados.",
-            "bullets": [
-              "Jerarquía del laboratorio, sedes y servicios.",
-              "Separación clara: institucional vs portal de resultados.",
-              "Diseño UX/UI y SEO básico.",
-              "Capacitación en gestión de contenidos."
-            ]
-          },
-          {
-            "type": "text",
-            "span": "1x1",
-            "tier": "offering",
-            "offeringIndex": 2,
-            "eyebrow": "Sistema de Resultados · USD 2.000",
-            "heading": "Entregables",
-            "body": "Entrega digital con trazabilidad.",
-            "bullets": [
-              "Portal /resultados/[token] con estados de publicación.",
-              "Turnos fuera de la web institucional.",
-              "Base para métricas de derivación por médico.",
-              "Migración de flujos actuales de entrega."
-            ]
-          },
-          {
-            "type": "text",
-            "span": "1x1",
-            "tier": "offering",
-            "offeringIndex": 3,
-            "eyebrow": "DI BIO Chat · USD 2.500",
-            "heading": "Entregables",
-            "body": "WhatsApp inteligente con OCR e integración.",
-            "bullets": [
-              "Corpus de imágenes de recetas médicas reales.",
-              "OCR → carga Interpracsys con auditoría.",
-              "FAQs pre-análisis y cobertura por obra social.",
-              "Escalado humano en Chatwoot con contexto completo."
-            ]
-          },
-          {
-            "type": "metric",
-            "span": "1x1",
-            "icon": "Hammer",
-            "value": "USD 4.950",
-            "label": "Proyecto completo",
-            "description": "Web + resultados + DI BIO Chat."
-          },
-          {
-            "type": "metric",
-            "span": "1x1",
-            "icon": "Wrench",
-            "value": "USD 250",
-            "label": "Mantenimiento / mes",
-            "description": "Soporte, monitoreo y reentrenamiento IA post-capacitación."
-          },
-          {
-            "type": "metric",
-            "span": "1x1",
-            "icon": "CalendarCheck",
-            "value": "USD 7.950",
-            "label": "Total a 12 meses",
-            "description": "USD 4.950 proyecto + USD 250/mes × 12."
-          }
-        ]
-      }
-    },
-    {
-      "id": "futuro",
-      "type": "book-section",
-      "label": "Próximos pasos",
-      "data": {
-        "title": "Iteraciones próximas y desarrollos futuros",
-        "subtitle": "Lo que el paquete base habilita — y lo que viene después.",
-        "cards": [
-          {
-            "type": "text",
-            "span": "half",
-            "tier": "future",
-            "eyebrow": "Iteraciones próximas necesarias",
-            "heading": "Post-paquete base — prioridad operativa",
-            "body": "Requerimientos identificados en reunión que extienden el alcance una vez operando web, turnos/resultados y chat.",
-            "bullets": [
-              "Sistema de conciliaciones bancarias (LABAC).",
-              "Gestión de vacaciones con estados visibles.",
-              "Portal derivantes y contratistas — análisis en sitio para mineras.",
-              "Integración paciente Ciudad Oeste → LABAC.",
-              "Estandarización de protocolos de recepción en flujos digitales.",
-              "Módulo RRHH y organigrama digital.",
-              "Reportes administrativos consolidados multi-sede."
-            ]
-          },
-          {
-            "type": "text",
-            "span": "half",
-            "tier": "future",
-            "eyebrow": "Desarrollos a futuro",
-            "heading": "Horizonte estratégico del grupo",
-            "body": "Evoluciones que tienen sentido cuando la base web + chat ya opera en ambos negocios.",
-            "bullets": [
-              "App móvil corporativa unificada.",
-              "Historia clínica digital completa.",
-              "Telemedicina integrada al turnero.",
-              "LIS / resultados en tiempo real desde DI BIO.",
-              "LabVet — módulo veterinario.",
-              "Portal corporativo de obras sociales.",
-              "Dashboard directivo multi-sede."
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "id": "inversion",
-      "type": "book-section",
+      "id": "inversion-cierre",
+      "type": "inversion-cierre",
       "label": "Inversión",
       "data": {
-        "title": "Inversión unificada",
-        "subtitle": "Dos clínicas, un proyecto coordinado — USD 9.950 en cuatro pagos iguales.",
-        "cards": [
-          {
-            "type": "price-comparison",
-            "span": "3x1",
-            "eyebrow": "Referencia vs contratación conjunta",
-            "heading": "Por separado o unificado",
-            "individual": {
-              "label": "Por separado",
-              "tagline": "Referencia de valor por negocio",
-              "items": [
-                { "company": "Ciudad Oeste", "amount": 4950 },
-                { "company": "LABAC", "amount": 4950 }
-              ],
-              "total": 9900,
-              "totalLabel": "USD 9.900",
-              "detail": "Suma de referencia si cada empresa contrata por su cuenta."
-            },
-            "grupal": {
-              "label": "Unificado CO + LABAC",
-              "tagline": "Precio de contratación conjunta",
-              "recommended": true,
-              "total": 9950,
-              "totalLabel": "USD 9.950",
-              "detail": "Proyecto coordinado con integración CO → LABAC acelerada."
-            }
+        "title": "Inversión y próximos pasos",
+        "bajada": "Un sistema completo, en cuatro pagos. Arrancamos el lunes 7.",
+        "inversion": {
+          "precio_por_empresa_usd": 4950,
+          "precio_unificado_usd": 9950,
+          "nota_precio": "Al contratar ambas empresas en un mismo proyecto, el precio unificado representa un ahorro respecto a contratarlos por separado.",
+          "modalidad_pago": {
+            "cuotas": 4,
+            "monto_por_cuota_usd": 2487.5,
+            "descripcion": "4 pagos iguales de USD 2.487,50"
           },
-          {
-            "type": "text",
-            "span": "3x1",
-            "accent": true,
-            "eyebrow": "Forma de pago",
-            "heading": "USD 9.950 en cuatro pagos iguales de USD 2.487,50",
-            "body": "Sin porcentajes escalonados. Cronograma predecible durante los 4 meses de ejecución.",
-            "bullets": [
-              "Cuota 1: arranque + investigación + diseño.",
-              "Cuota 2: desarrollo core turnos/resultados + web.",
-              "Cuota 3: chat IA + integraciones.",
-              "Cuota 4: capacitación, migración y go-live."
-            ]
-          },
-          {
-            "type": "metric",
-            "span": "1x1",
-            "icon": "CircleDollarSign",
-            "value": "USD 2.487,50",
-            "label": "Cada cuota",
-            "description": "4 pagos iguales sobre USD 9.950."
-          },
-          {
-            "type": "metric",
-            "span": "1x1",
-            "icon": "Wrench",
-            "value": "USD 500",
-            "label": "Mantenimiento conjunto / mes",
-            "description": "USD 250 por empresa. Comienza post-capacitación."
-          },
-          {
-            "type": "metric",
-            "span": "1x1",
-            "icon": "CalendarCheck",
-            "value": "USD 15.950",
-            "label": "Total a 12 meses",
-            "description": "USD 9.950 proyecto + USD 500/mes × 12."
-          },
-          {
-            "type": "chart",
-            "chartType": "bar",
-            "span": "3x1",
-            "title": "Inversión por negocio vs unificado",
-            "subtitle": "Proyecto de implementación.",
-            "unit": "USD",
-            "colors": ["#4f46e5", "#1a5c38", "#0f766e"],
-            "data": [
-              { "label": "Ciudad Oeste", "value": 4950 },
-              { "label": "LABAC", "value": 4950 },
-              { "label": "Unificado", "value": 9950 }
-            ]
+          "mantenimiento_mensual": {
+            "descripcion": "Mantenimiento, actualizaciones y soporte técnico mensual",
+            "nota": "A definir según alcance acordado en kickoff"
           }
-        ]
-      }
-    },
-    {
-      "id": "cierre",
-      "type": "closing",
-      "label": "Cierre",
-      "data": {
-        "ctaHeading": "¿Agendamos la reunión de prioridades y kickoff con RRHH?",
-        "ctaBody": "Cada empresa puede avanzar sola si el timing lo requiere. Pero Ciudad Oeste y LABAC comparten pacientes, profesionales y objetivos de estandarización. Coordinar el proyecto acelera la integración CO → LABAC y reduce inversión duplicada.",
-        "summary": {
-          "intro": "Dos clínicas. Tres productos cada una. Un proyecto unificado de USD 9.950 en cuatro cuotas iguales.",
-          "buildRunNote": {
-            "heading": "Notas importantes",
-            "body": "Los costos de infraestructura (servidor, dominio, WhatsApp Business API) son independientes y a cargo de cada empresa. MacizoDigital asesora la contratación sin markup adicional. El mantenimiento mensual comienza una vez finalizado el proyecto y la capacitación. Presupuesto válido hasta el 27 de julio de 2026."
+        },
+        "proximos_pasos": [
+          {
+            "paso": 1,
+            "accion": "Confirmación del proyecto",
+            "descripcion": "Se firma la propuesta y se realiza el primer pago para iniciar.",
+            "timing": "Esta semana"
           },
-          "companies": [
-            {
-              "name": "Ciudad Oeste",
-              "tagline": "Centro médico en apertura",
-              "main": [
-                "Proyecto USD 4.950",
-                "Web + turnos + asistente WhatsApp",
-                "Mantenimiento USD 250/mes"
-              ],
-              "future": [
-                "Migración agenda actual",
-                "Reportes por profesional, OS y caja",
-                "Integración futura con LABAC"
-              ]
-            },
-            {
-              "name": "LABAC",
-              "tagline": "Laboratorio bioquímico",
-              "main": [
-                "Proyecto USD 4.950",
-                "Web + resultados + DI BIO Chat",
-                "Mantenimiento USD 250/mes"
-              ],
-              "future": [
-                "OCR + Interpracsys",
-                "Métricas de derivación médica",
-                "Conciliaciones bancarias"
-              ]
-            }
-          ],
-          "pricing": {
-            "buildLabel": "Proyecto unificado",
-            "buildAmount": "USD 9.950",
-            "buildDetail": "Ciudad Oeste + LABAC en paralelo.",
-            "buildPerCompany": "4 cuotas de USD 2.487,50",
-            "runLabel": "Mantenimiento conjunto",
-            "runAmount": "USD 500/mes",
-            "runDetail": "USD 250/mes por empresa.",
-            "runPerCompany": "Total 12 meses: USD 15.950"
+          {
+            "paso": 2,
+            "accion": "Kickoff con dedicación exclusiva",
+            "descripcion": "Sesión de trabajo con el equipo de LABAC y CO para mapear procesos, definir prioridades y arrancar el desarrollo.",
+            "timing": "Lunes 7 de julio",
+            "destacado": true
+          },
+          {
+            "paso": 3,
+            "accion": "Primeras entregas visibles",
+            "descripcion": "En las primeras 2 semanas: sitio web en staging, chatbot configurado con las preguntas frecuentes de la clínica y primera versión del sistema de turnos para revisión interna.",
+            "timing": "Semanas 1 y 2"
           }
+        ],
+        "cta": {
+          "texto": "¿Arrancamos el lunes 7?",
+          "whatsapp": true,
+          "email": true
         }
       }
     }

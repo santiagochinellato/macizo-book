@@ -3,6 +3,7 @@ import { loadPresentation } from "@/lib/config-loader";
 import { getRegistryEntry } from "@/lib/presentation-store";
 import { hasPresentationAccess } from "@/lib/session";
 import { PresentationApp } from "@/components/app/PresentationApp";
+import { ScrollPresentationApp } from "@/components/app/ScrollPresentationApp";
 import { AccessGate } from "@/components/access/AccessGate";
 
 interface PresentationWithAccessProps {
@@ -42,6 +43,10 @@ export async function PresentationWithAccess({ slug }: PresentationWithAccessPro
         agencyName={config.agency.name}
       />
     );
+  }
+
+  if (config.layoutMode === "scroll-deck") {
+    return <ScrollPresentationApp config={config} />;
   }
 
   return <PresentationApp config={config} />;
